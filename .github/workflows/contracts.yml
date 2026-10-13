@@ -19,3 +19,5 @@ jobs:
         run: node --test
       - name: Verify catalog CLI
         run: node scripts/validate-catalog.mjs tests/fixtures/catalog.json
+      - name: Verify snapshot CLI with synthetic data
+        run: node scripts/promote-catalog.mjs tests/fixtures/catalog.json "${RUNNER_TEMP}/catalog.snapshot.json"
