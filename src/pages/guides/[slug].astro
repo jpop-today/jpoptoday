@@ -1,0 +1,7 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { guides } from '../../content/guides';
+export function getStaticPaths() { return guides.map(guide => ({ params: { slug: guide.slug }, props: { guide } })); }
+const { guide } = Astro.props;
+---
+<Layout title={guide.title} description={guide.description}><article class="reading"><a class="back-link" href="/guides/">← 이용 가이드</a><h1>{guide.title}</h1><p>{guide.description}</p>{guide.sections.map(section => <section><h2>{section.title}</h2>{section.paragraphs.map(paragraph => <p>{paragraph}</p>)}</section>)}<p><a href="/search/">노래 찾기</a> · <a href="/favorites/">내 즐겨찾기</a> · <a href="/contact/">문의와 정정</a></p><p><a href="https://www.tjmedia.com/song/accompaniment_search">TJ 공식 곡 검색</a> · <a href="https://www.kygabang.com/">금영 공식 곡 검색</a></p></article></Layout>

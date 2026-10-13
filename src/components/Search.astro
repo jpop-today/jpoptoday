@@ -1,0 +1,9 @@
+---
+import Icon from './Icon.astro';
+---
+<form id="search-form" class="search-form" action="/search/" method="get" role="search">
+  <label class="search-box"><Icon name="search" /><span class="sr-only">곡명, 가수, 노래방 번호 검색</span><input id="query" type="search" name="q" placeholder="곡명 · 가수 · TJ / 금영 번호" autocomplete="off" /></label>
+  <button class="primary-button" type="submit">검색</button>
+</form>
+<div class="filters"><div class="filter-tabs" aria-label="번호 조건"><button type="button" data-filter="all" aria-pressed="true">전체</button><button type="button" data-filter="has-tj" aria-pressed="false">TJ 번호 있음</button><button type="button" data-filter="has-ky" aria-pressed="false">금영 번호 있음</button></div><span class="filter-note">관측 번호 · 재확인 필요</span></div>
+<div id="active-filters" class="active-filters" hidden><span id="filter-summary"></span><button type="button" id="clear-filters">조건 해제</button></div>

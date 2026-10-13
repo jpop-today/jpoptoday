@@ -2,11 +2,11 @@
 
 사용자는 스펙·재설계·수정·검증·통합·배포를 위임했다. 일상 작업에 같은 승인을 반복 요청하지 않는다. 기준은 https://github.com/jpop-today/docs 의 product/spec.md와 관련 ADR, 조직 규칙은 https://github.com/jpop-today/.github 의 AGENTS.md·CONTRIBUTING.md다. 공유 워크스페이스에서는 파일 범위·base SHA·담당을 공유하고 git 작업은 통합 담당자 한 명이 수행한다. 클라우드 기존 체크아웃을 사용하며 명시 요청 없이 worktree를 만들지 않는다.
 
-현재 저장소는 독립 계약 하네스·실제 원본 staging·호환 어댑터 단계다. 원본 kim75503/todayjpop의 dev/main 조사와 복사본 빌드가 가능해졌지만 운영 앱·실제 공개 데이터는 아직 이관되지 않았다. Cloudflare todayjpop 운영은 개인 원본 dev SHA6dbe5a65d1bd729c09393f746f715f4363089a43, npm run build→dist임을 API로 확인했다. 기존 source 연결·도메인을 유지하며 source SHA, 이력·라이선스·배포, 곡 ID·URL·저장 키를 보존한다. 기존 이력을 지우는 force push는 하지 않는다. 현재 동작을 검증한 증거 없이 기존 운영 사이트를 대체했다고 주장하지 않는다.
+현재 저장소는 Astro/TypeScript 정적 앱·독립 계약 하네스·원본 staging·호환 어댑터를 포함한다. 공개 read model은 ADR-004의 관측 번호이며 검증 카탈로그 v1과 다르다. Cloudflare todayjpop 운영은 개인 원본 dev SHA6dbe5a65d1bd729c09393f746f715f4363089a43, npm run build→dist임을 API로 확인했다. 조직 앱의 미리보기와 기존 운영 전환을 구분한다. 기존 source 연결·도메인, 이력·ID·URL·저장 키를 보존한다. 기존 이력을 지우는 force push는 하지 않는다. 실제 preview/production 상태는 docs의 실행·릴리스 기록으로 확인한다.
 
 ## 실행과 범위
 
-Node.js >=22에서 npm test. 실제 카탈로그 검증은 node scripts/validate-catalog.mjs <경로>, 후보 승격은 node scripts/promote-catalog.mjs <후보> <정상스냅샷>. 출력 디렉터리는 기존 경로를 사용하고 합성 fixture는 운영 파일에 승격하지 않는다. 사이트 빌드·타입·브라우저·배포 검증은 해당 앱이 이관·구현된 뒤 별도 실행한다.
+앱은 Node.js24 이상과 npm ci로 설치한다. npm test → npm run check → npm run build → npm run verify:dist → npm run test:e2e 순서다. 시스템 Chromium은 PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH로 지정하고 CI는 설치한 Playwright Chromium을 쓴다. 실제 카탈로그 검증은 node scripts/validate-catalog.mjs <경로>, 후보 승격은 node scripts/promote-catalog.mjs <후보> <정상스냅샷>. 합성 fixture와 관측 read model을 v1 운영 파일로 승격하지 않는다. npm run deploy:preview는 clean HEAD와 같은 sourceSha의 artifact만 별도 jpoptoday-preview 프로젝트로 배포한다. 모든 preview noindex·광고 없음은 현재 구현 단계의 계약이며 production 전환과 혼동하지 않는다.
 
 ## 불변 조건
 

@@ -1,57 +1,60 @@
 # jpop.today
 
-한국어로 JPOP 곡을 찾아 TJ·금영 노래방 번호를 비교하고 선곡을 준비하는 서비스.
+한국어로 JPOP를 찾아 TJ·금영 관측 번호를 비교하고 나만의 선곡 목록을 준비하는 정적 앱입니다.
 
-[운영 사이트](https://jpop.today) · [제품 스펙·설계·운영 문서](https://github.com/jpop-today/docs) · [조직 규칙](https://github.com/jpop-today/.github)
+[운영 사이트](https://jpop.today) · [제품 스펙과 운영 문서](https://github.com/jpop-today/docs) · [조직 규칙](https://github.com/jpop-today/.github)
 
-## 현재 단계
+## 현재 구현
 
-이 저장소는 프레임워크 독립 데이터 계약, 원본 staging 및 ID/URL/저장 호환 어댑터다. 운영 앱과 실제 검증된 공개 카탈로그는 아직 이관되지 않았다.
+Astro + TypeScript 정적 페이지, 브라우저 검색·번호 복사·즐겨찾기, 데이터 계약·실패 보존 하네스를 포함합니다. 기존 3,317개 ID를 유지하며 현재 검색 3,313개와 보관 4개를 구분합니다. 각 곡 상세와 가이드는 JavaScript 없이 본문을 읽을 수 있습니다. 이전 `/song?id=`, `/filter`, `.html`, `/#favorites-view`와 `jpop_today_favorites` 문자열·객체 저장 형식을 지원합니다.
 
-개인 원본 `kim75503/todayjpop`은 2026-10-13 Git 읽기·별도 복사본 로컬 빌드 조사를 진행했다. 기본 `dev`와 `main`은 다른 이력·차트 스냅샷이며 실제 Cloudflare 운영 브랜치와 배포 SHA는 별도 확인이 필요하다. 이전 README의 원본 접근 오류 기록을 현재 상태로 갱신했다. [조사 결과](https://github.com/jpop-today/docs/blob/main/discovery/current-state.md), [이관 절차](https://github.com/jpop-today/docs/blob/main/operations/migration.md)를 따른다.
+번호는 `observed-unverified` 또는 `unknown`인 기존 관측값입니다. 공식 최신 확인을 마친 검증 카탈로그 v1과 다릅니다. 같은 번호의 여러 ID를 자동 병합하지 않고 상세에 충돌 안내를 표시합니다. 출처·확인일을 임의 생성하지 않습니다. 가사·외부 앨범 이미지·광고 요청은 이 미리보기 artifact에 포함하지 않습니다.
 
-## 실행
+현재 운영 Cloudflare `todayjpop`은 개인 원본 `kim75503/todayjpop`의 dev SHA `6dbe5a65d1bd729c09393f746f715f4363089a43`에서 제공합니다. 조직 앱 미리보기는 별도 `jpoptoday-preview` 프로젝트로 배포합니다. 모든 미리보기는 noindex이며 실제 배포·운영 전환·AdSense 심사 상태는 [실행 기록](https://github.com/jpop-today/docs/blob/main/operations/status.md)으로 확인합니다.
 
-Node.js 22 이상, 외부 패키지 설치·DB·비밀 값이 필요 없다.
+## 개발과 검증
+
+앱 Node.js 24 이상, npm lockfile을 사용합니다. 기존 독립 계약은 Node22 CI도 유지합니다.
 
 ```sh
+npm ci
 npm test
-npm run validate:catalog -- tests/fixtures/catalog.json
+npm run check
+npm run build
+npm run verify:dist
+npx playwright install chromium
+npm run test:e2e
+npm run dev
 ```
 
-실제 후보를 검사하고 마지막 정상 파일을 교체할 때:
+시스템 Chromium이 있는 클라우드에서는 `PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH=/usr/bin/chromium npm run test:e2e`를 사용할 수 있습니다. Browser plugin이 없는 세션의 Playwright fallback이며 WebKit 검증과 실제 필드 Core Web Vitals는 별도 작업입니다.
+
+`npm run build`는 고정 staging과 보관된 차트 snapshot으로 dist만 생성하며 외부 수집을 하지 않습니다. build-info.json은 소스 SHA·관측 read model hash·원본 revision·개수·dirty 상태를 연결합니다. `verify:dist`는 3,317 정적 상세·canonical·noindex·허용 공개 필드·raw/도구/이미지/광고 제외를 실제 artifact에서 검사합니다.
 
 ```sh
+npm run deploy:preview
+```
+
+clean HEAD와 동일 SHA로 빌드·검증한 dist만 `jpoptoday-preview`에 배포합니다. 미리보기 프로젝트는 먼저 생성되어 있어야 합니다. CLOUDFLARE_API_TOKEN과 CLOUDFLARE_ACCOUNT_ID는 환경의 안전한 binding에서 사용하고 값은 출력·커밋하지 않습니다. 이 명령은 운영 도메인 전환 명령이 아닙니다.
+
+## 데이터 계약과 원본 복구
+
+```sh
+npm run validate:catalog -- tests/fixtures/catalog.json
 node scripts/validate-catalog.mjs /absolute/path/to/candidate.json
 node scripts/promote-catalog.mjs /absolute/path/to/candidate.json /absolute/path/to/snapshot.json
-```
-
-출력 디렉터리는 미리 있어야 하며 입력과 출력은 다른 파일이어야 한다. 검증 실패·깨진 JSON·빈 입력·쓰기 실패·교체 실패에서 기존 snapshot을 보존한다. 원본 수집기에 아직 연결되지 않았고, 기존 snapshot의 ID가 빠지거나 확인된 제공사 상태가 unknown으로 사라지는 전체 수집 후보도 거부한다. 번호의 진위·최신성·증거의 실질은 별도 검토 대상이다. [하네스 범위](https://github.com/jpop-today/docs/blob/main/engineering/harness.md)를 확인한다.
-
-합성 fixture의 곡·번호·출처는 운영 데이터가 아니다. 테스트 성공은 실제 데이터 출처 확인, 앱 빌드, 배포 또는 AdSense 승인과 구분한다.
-
-## 기준
-
-- [제품 스펙과 수용 기준](https://github.com/jpop-today/docs/blob/main/product/spec.md)
-- [목표 아키텍처](https://github.com/jpop-today/docs/blob/main/architecture/overview.md)
-- [DATA-001 계약](https://github.com/jpop-today/docs/blob/main/data/catalog-contract.md)
-- [협업과 작업 인계](https://github.com/jpop-today/docs/blob/main/operations/collaboration.md)
-- [배포·복구](https://github.com/jpop-today/docs/blob/main/operations/deployment.md)
-- [작업 큐](https://github.com/jpop-today/docs/blob/main/operations/roadmap.md)
-
-실행 코드는 이 저장소, 기준 문서는 docs, 조직 공통 규칙은 .github에 둔다. 새 UI·정적 상세·ID 어댑터·검토된 데이터는 스펙/ADR를 연결한 후속 구현으로 진행한다. 기존 조직 이력을 지우거나 새 앱 검증 전 운영 사이트를 대체하지 않는다.
-
-## 원본 이관과 호환 어댑터
-
-운영 Cloudflare project는 todayjpop, 개인 원본의 dev SHA6dbe5a65d1bd729c09393f746f715f4363089a43이다. 현재 source 연결·도메인은 변경하지 않았다. 토큰/Account ID 값은 환경 binding에서 읽고 출력하지 않는다.
-
-```sh
 npm run inspect:cloudflare -- --project todayjpop
 node scripts/import-legacy-staging.mjs /path/to/original-checkout 6dbe5a65d1bd729c09393f746f715f4363089a43 data/legacy-identity-baseline.json data/staging/legacy-catalog.json --check
 ```
 
-`--check`는 고정 원본 Git 객체와 완성된 기준선으로 재생성한 바이트가 같은지 확인한다. 일반 `npm test`는 외부 원본 checkout 없이 committed staging·ID 기준선도 검사한다. staging의3,317개는 등록3,299·현재차트전용14·이전차트보존4개이며 번호는 `observed-unverified` 또는 `unknown`이다. 가사·이미지·광고·번호 확인일은 복제/생성하지 않았다. 이것은 v1 공개 카탈로그 검증·앱 이관·배포 완료와 다르다.
+합성 fixture와 공개 관측 read model을 검증 카탈로그로 승격하지 않습니다. 검증된 whole-catalog에서 기존 ID 누락과 registered/unlisted→unknown 퇴행을 거부합니다. JSON 파싱·쓰기·rename 실패는 마지막 정상 snapshot을 보존합니다. importer --check에는 정확한 원본 Git 객체가 필요하며 일반 npm test는 외부 원본 없이 committed baseline/staging을 검사합니다.
 
-`contracts/legacy-compatibility.mjs`는 Node 의존성이 없는 브라우저 모듈이다. ID resolver와 옛 URL 변환, 기존 storage key를 읽는 즐겨찾기/최근 필터 어댑터를 제공한다. 읽기에는 쓰기가 없고 명시 migration은 원본 backup 이후 진행한다. 저장 실패는 session 상태와 진단을 반환하므로 앱에서 직전 session 결과를 이어 전달해야 한다. 실제 공개 화면 연결은 후속 앱 구현이다.
+## 문서와 다음 작업
 
-[호환성 실행 계약](https://github.com/jpop-today/docs/blob/main/engineering/legacy-compatibility.md) · [Cloudflare 실제 기준선](https://github.com/jpop-today/docs/blob/main/operations/cloudflare-baseline.md)
+- [제품 스펙](https://github.com/jpop-today/docs/blob/main/product/spec.md), [아키텍처와 ADR](https://github.com/jpop-today/docs/blob/main/architecture/overview.md)
+- [관측 read model 결정](https://github.com/jpop-today/docs/blob/main/adr/004-observed-preview-read-model.md), [공식 공유번호 대조](https://github.com/jpop-today/docs/blob/main/data/provider-evidence-20261013.md)
+- [앱 하네스](https://github.com/jpop-today/docs/blob/main/engineering/app-harness.md), [기존 URL/storage 계약](https://github.com/jpop-today/docs/blob/main/engineering/legacy-compatibility.md)
+- [지속 개발과 세션 재개](https://github.com/jpop-today/docs/blob/main/operations/continuous-development.md), [작업 큐](https://github.com/jpop-today/docs/blob/main/operations/roadmap.md)
+- [배포·복구](https://github.com/jpop-today/docs/blob/main/operations/deployment.md), [AdSense 공식 정책 조사](https://github.com/jpop-today/docs/blob/main/operations/adsense-policy-review-20261013.md)
+
+실행 코드는 이 저장소, 제품·설계·운영 기록은 docs, 조직 공통 규칙은 .github에서 관리합니다. 번호 정정·행별 근거 보강·콘텐츠 검토와 운영 전환 게이트를 다음 작업으로 이어갑니다. 개발·CI·미리보기 성공과 Google 심사 승인은 서로 다른 상태입니다.

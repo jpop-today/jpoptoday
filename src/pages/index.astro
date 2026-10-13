@@ -1,0 +1,7 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Search from '../components/Search.astro';
+import SongRow from '../components/SongRow.astro';
+import { initialSongs, currentSongs } from '../lib/catalog';
+---
+<Layout title="오늘 부를 JPOP 찾기"><section class="intro"><h1>오늘 부를 JPOP를 찾아보세요.</h1><p>곡명, 가수, 노래방 번호로 검색하고 나만의 선곡 목록을 만드세요.</p></section><Search /><section data-list-view="search"><div class="list-heading"><h2>노래 목록</h2><span id="result-count">{currentSongs.length.toLocaleString('ko-KR')}곡</span></div><div class="table-heading"><span>곡 / 가수</span><span>TJ</span><span>금영</span><span>저장</span></div><ul id="song-list" class="song-list">{initialSongs.map(song => <SongRow song={song} />)}</ul><p id="empty-message" hidden>일치하는 곡이 없습니다. 제목 일부나 가수로 다시 찾아보세요.</p><div class="list-actions"><button id="more" class="secondary-button" type="button">더 보기</button></div><p class="observation-note">번호는 기존 목록의 관측값입니다. 방문 전 제공사에서 다시 확인해 주세요.</p><noscript><p>조건 검색과 저장에는 JavaScript가 필요합니다. 위 곡 상세와 <a href="/guides/">이용 가이드</a>는 그대로 읽을 수 있습니다.</p></noscript></section></Layout>

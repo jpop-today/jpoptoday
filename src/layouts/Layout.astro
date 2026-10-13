@@ -1,0 +1,14 @@
+---
+import '../styles/global.css';
+const { title, description = 'JPOP 원제와 한글명으로 검색하고 TJ·금영 관측 번호를 비교하세요.', canonicalPath = Astro.url.pathname } = Astro.props;
+const canonical = new URL(canonicalPath, 'https://jpop.today').href;
+---
+<!doctype html><html lang="ko"><head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width" /><title>{title} | jpop.today</title><meta name="description" content={description} /><meta name="robots" content="noindex, nofollow" /><link rel="canonical" href={canonical} /><meta name="theme-color" content="#bc2343" /></head><body>
+  <a class="skip-link" href="#main">본문으로 건너뛰기</a>
+  <header class="site-header container"><a class="brand" href="/" aria-label="jpop.today 홈">jpop.<span>today</span></a><nav aria-label="주요 메뉴"><a href="/search/">노래 찾기</a><a href="/favorites/">즐겨찾기</a><a href="/guides/">이용 가이드</a></nav></header>
+  <main id="main" class="container"><slot /></main>
+  <footer class="site-footer container"><a class="brand" href="/">jpop.<span>today</span></a><nav aria-label="사이트 안내"><a href="/about/">서비스 소개</a><a href="/contact/">문의</a><a href="/privacy/">개인정보처리방침</a></nav></footer>
+  <p id="status" class="status" role="status" aria-live="polite" hidden></p>
+  <dialog id="copy-dialog"><h2>번호를 직접 복사하세요</h2><p>브라우저가 자동 복사를 허용하지 않았습니다.</p><textarea id="copy-text" readonly aria-label="복사할 번호 목록"></textarea><button id="close-copy" type="button">닫기</button></dialog>
+  <script>import '../scripts/app';</script>
+</body></html>
