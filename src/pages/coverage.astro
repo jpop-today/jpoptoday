@@ -1,0 +1,9 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { songs } from '../lib/catalog';
+const playlist = songs.filter(song => song.origin === 'playlist');
+const tj = playlist.filter(song => song.karaoke.tj.observedNumber).length;
+const ky = playlist.filter(song => song.karaoke.ky.observedNumber).length;
+const both = playlist.filter(song => song.karaoke.tj.observedNumber && song.karaoke.ky.observedNumber).length;
+---
+<Layout title="관리 목록의 번호 범위"><article class="reading"><h1>관리 목록의 번호 범위</h1><p>분모는 등록 목록의 {playlist.length.toLocaleString('ko-KR')}개 곡 식별자입니다. 차트 전용 항목은 제외합니다. 이는 업체 전체 수록률이 아닌 이 사이트가 보유한 관측 번호의 현황입니다.</p><table class="coverage-table"><thead><tr><th>구분</th><th>항목 수</th></tr></thead><tbody><tr><td>TJ 번호 관측</td><td>{tj.toLocaleString('ko-KR')}</td></tr><tr><td>금영 번호 관측</td><td>{ky.toLocaleString('ko-KR')}</td></tr><tr><td>양쪽 번호 관측</td><td>{both.toLocaleString('ko-KR')}</td></tr></tbody></table><p>같은 번호의 별도 ID·버전 후보가 포함되어 있어 중복을 제거한 공식 곡 수와 다를 수 있습니다. 빈 번호는 확인 필요이며 미수록으로 집계하지 않습니다. 공식 최신 확인을 완료한 수치가 아닙니다.</p><p><a href="/guides/tj-ky-numbers/">TJ와 금영 번호 이용 가이드</a> · <a href="/search/">노래 찾기</a></p></article></Layout>

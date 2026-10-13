@@ -1,0 +1,14 @@
+/index.html / 301
+/filter /search/ 301
+/filter.html /search/ 301
+/search.html /search/ 301
+/song.html /song/ 301
+/favorites.html /favorites/ 301
+/about.html /about/ 301
+/contact.html /contact/ 301
+/privacy.html /privacy/ 301
+/faq.html /faq/ 301
+/chart.html /chart/ 301
+/coverage.html /coverage/ 301
+/guides.html /guides/ 301
+/guides/:guide.html /guides/:guide/ 301

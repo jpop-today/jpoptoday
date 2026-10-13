@@ -1,0 +1,711 @@
+{
+  "source": "TJ Media TOP100 JPOP",
+  "sourceUrl": "https://www.tjmedia.com/chart/top100",
+  "fetchedAt": "2026-10-12T10:39:12.532Z",
+  "startDate": "2026-09-28",
+  "endDate": "2026-10-12",
+  "periodVerified": true,
+  "legacyRevision": "6dbe5a65d1bd729c09393f746f715f4363089a43",
+  "songs": [
+    {
+      "id": "tuki-晩餐歌",
+      "title": "晩餐歌",
+      "artist": "tuki.",
+      "tjNumber": "52788",
+      "rank": 1
+    },
+    {
+      "id": "official髭男dism-pretender",
+      "title": "Pretender",
+      "artist": "Official髭男dism",
+      "tjNumber": "68058",
+      "rank": 2
+    },
+    {
+      "id": "優里-ヘ-テルキ-ウス-ト-ラマ-super-rich-ost",
+      "title": "ベテルギウス(ドラマ'SUPER RICH' OST)",
+      "artist": "優里",
+      "tjNumber": "68553",
+      "rank": 3
+    },
+    {
+      "id": "vaundy-怪獣の花唄",
+      "title": "怪獣の花唄",
+      "artist": "Vaundy",
+      "tjNumber": "52988",
+      "rank": 4
+    },
+    {
+      "id": "高橋洋子-残酷な天使のテ-セ-新世紀エウ-ァンケ-リオン-op",
+      "title": "残酷な天使のテーゼ(新世紀エヴァンゲリオン OP)",
+      "artist": "高橋洋子",
+      "tjNumber": "25246",
+      "rank": 5
+    },
+    {
+      "id": "back-number-ヒロイン",
+      "title": "ヒロイン",
+      "artist": "back number",
+      "tjNumber": "27762",
+      "rank": 6
+    },
+    {
+      "id": "spyair-サムライハ-ト-some-like-it-hot-銀魂-ed",
+      "title": "サムライハート (Some Like it Hot)(銀魂 ED)",
+      "artist": "SPYAIR",
+      "tjNumber": "27527",
+      "rank": 7
+    },
+    {
+      "id": "米津玄師-lemon-ト-ラマ-アンナチュラル-ost",
+      "title": "Lemon(ドラマ'アンナチュラル' OST)",
+      "artist": "米津玄師",
+      "tjNumber": "28822",
+      "rank": 8
+    },
+    {
+      "id": "米津玄師-iris-out-劇場版-チェンソ-マン-レセ-篇-ost",
+      "title": "IRIS OUT('劇場版 チェンソーマン レゼ篇' OST)",
+      "artist": "米津玄師",
+      "tjNumber": "52959",
+      "rank": 9
+    },
+    {
+      "id": "米津玄師-and-宇多田ヒカル-jane-doe-劇場版-チェンソ-マン-レセ-篇-ost",
+      "title": "JANE DOE('劇場版 チェンソーマン レゼ篇' OST)",
+      "artist": "米津玄師 & 宇多田ヒカル",
+      "tjNumber": "52972",
+      "rank": 10
+    },
+    {
+      "id": "novelbright-walking-with-you",
+      "title": "Walking with you",
+      "artist": "Novelbright",
+      "tjNumber": "68419",
+      "rank": 11
+    },
+    {
+      "id": "優里-ト-ライフラワ",
+      "title": "ドライフラワー",
+      "artist": "優里",
+      "tjNumber": "68333",
+      "rank": 12
+    },
+    {
+      "id": "back-number-水平線",
+      "title": "水平線",
+      "artist": "back number",
+      "tjNumber": "68446",
+      "rank": 13
+    },
+    {
+      "id": "vaundy-踊り子",
+      "title": "踊り子",
+      "artist": "Vaundy",
+      "tjNumber": "68807",
+      "rank": 14
+    },
+    {
+      "id": "巡音ルカ-ルカルカ-ナイトフィ-ハ",
+      "title": "ルカルカ★ ナイトフィーバー",
+      "artist": "samfree(Feat.巡音ルカ)",
+      "tjNumber": "27031",
+      "rank": 15
+    },
+    {
+      "id": "ado-逆光-映画-one-piece-film-red-ost",
+      "title": "逆光(映画 'ONE PIECE FILM RED' OST)",
+      "artist": "Ado",
+      "tjNumber": "68868",
+      "rank": 16
+    },
+    {
+      "id": "米津玄師-kick-back-チェンソ-マン-op",
+      "title": "KICK BACK( 'チェンソーマン' OP)",
+      "artist": "米津玄師",
+      "tjNumber": "68677",
+      "rank": 17
+    },
+    {
+      "id": "優里-レオ",
+      "title": "レオ",
+      "artist": "優里",
+      "tjNumber": "52773",
+      "rank": 18
+    },
+    {
+      "id": "kana-boon-シルエット-naruto-ナルト-16th-op",
+      "title": "シルエット(NARUTO-ナルト- 16th OP)",
+      "artist": "KANA-BOON",
+      "tjNumber": "28214",
+      "rank": 19
+    },
+    {
+      "id": "akasaki-bunny-girl",
+      "title": "Bunny Girl",
+      "artist": "AKASAKI",
+      "tjNumber": "52693",
+      "rank": 20
+    },
+    {
+      "id": "tani-yuuki-w-x-y",
+      "title": "W / X / Y",
+      "artist": "Tani Yuuki",
+      "tjNumber": "52444",
+      "rank": 21
+    },
+    {
+      "id": "orangestar-feat-ia-henceforth",
+      "title": "Henceforth",
+      "artist": "Orangestar(Feat.IA)",
+      "tjNumber": "52679",
+      "rank": 22
+    },
+    {
+      "id": "mrs-green-apple-青と夏-映画-青夏-きみに恋した30日-ost",
+      "title": "青と夏(映画'青夏 きみに恋した30日' OST)",
+      "artist": "Mrs. Green Apple",
+      "tjNumber": "68127",
+      "rank": 23
+    },
+    {
+      "id": "deco-27-feat-初音ミク-モニタリンク",
+      "title": "モニタリング",
+      "artist": "DECO*27(Feat.初音ミク)",
+      "tjNumber": "52468",
+      "rank": 24
+    },
+    {
+      "id": "ヒ-ノキオヒ-feat-初音ミク-神っほ-いな",
+      "title": "神っぽいな",
+      "artist": "ピノキオピー(Feat.初音ミク)",
+      "tjNumber": "52678",
+      "rank": 25
+    },
+    {
+      "id": "tak-feat-初音ミク-重音テト-pppp",
+      "title": "PPPP",
+      "artist": "TAK(Feat.初音ミク,重音テト)",
+      "tjNumber": "52516",
+      "rank": 26
+    },
+    {
+      "id": "orangestar-feat-ia-アスノヨソ-ラ哨戒班",
+      "title": "アスノヨゾラ哨戒班",
+      "artist": "Orangestar(Feat.IA)",
+      "tjNumber": "27984",
+      "rank": 27
+    },
+    {
+      "id": "hump-back-拝啓-少年よ-ヘ-ネッセ-進研セ-ミ-高校講座-cm",
+      "title": "拝啓, 少年よ('ベネッセ 進研ゼミ 高校講座' CM)",
+      "artist": "Hump Back",
+      "tjNumber": "52756",
+      "rank": 28
+    },
+    {
+      "id": "mrs-green-apple-ライラック-アニメ-忘却ハ-ッテリ-ost",
+      "title": "ライラック(アニメ '忘却バッテリー' OST)",
+      "artist": "Mrs. GREEN APPLE",
+      "tjNumber": "68461",
+      "rank": 29
+    },
+    {
+      "id": "x-japan-endless-rain",
+      "title": "Endless Rain",
+      "artist": "X-JAPAN",
+      "tjNumber": "6773",
+      "rank": 30
+    },
+    {
+      "id": "back-number-高嶺の花子さん",
+      "title": "高嶺の花子さん",
+      "artist": "back number",
+      "tjNumber": "27805",
+      "rank": 31
+    },
+    {
+      "id": "yoasobi-夜に駆ける",
+      "title": "夜に駆ける",
+      "artist": "YOASOBI",
+      "tjNumber": "68381",
+      "rank": 32
+    },
+    {
+      "id": "あいみょん-マリ-コ-ルト",
+      "title": "マリーゴールド",
+      "artist": "あいみょん",
+      "tjNumber": "28927",
+      "rank": 33
+    },
+    {
+      "id": "松田聖子-青い珊瑚礁",
+      "title": "青い珊瑚礁",
+      "artist": "松田聖子",
+      "tjNumber": "27121",
+      "rank": 34
+    },
+    {
+      "id": "なとり-フ-ロホ-ス",
+      "title": "プロポーズ",
+      "artist": "なとり",
+      "tjNumber": "52402",
+      "rank": 35
+    },
+    {
+      "id": "amazarashi-僕か-死のうと思ったのは",
+      "title": "僕が死のうと思ったのは",
+      "artist": "amazarashi",
+      "tjNumber": "28688",
+      "rank": 36
+    },
+    {
+      "id": "椎名林檎-丸の内サテ-ィスティック",
+      "title": "丸の内サディスティック",
+      "artist": "椎名林檎",
+      "tjNumber": "25837",
+      "rank": 37
+    },
+    {
+      "id": "yoasobi-アイト-ル-推しの子-op",
+      "title": "アイドル(推しの子 OP)",
+      "artist": "YOASOBI",
+      "tjNumber": "68781",
+      "rank": 38
+    },
+    {
+      "id": "椎名もた-feat-鏡音リン-少女a",
+      "title": "少女A",
+      "artist": "椎名もた(Feat.鏡音リン)",
+      "tjNumber": "52498",
+      "rank": 39
+    },
+    {
+      "id": "imase-night-dancer",
+      "title": "NIGHT DANCER",
+      "artist": "imase",
+      "tjNumber": "68740",
+      "rank": 40
+    },
+    {
+      "id": "king-gnu-白日-ト-ラマ-イノセンス-冤罪弁護士-ost",
+      "title": "白日(ドラマ'イノセンス 冤罪弁護士' OST)",
+      "artist": "King Gnu",
+      "tjNumber": "68031",
+      "rank": 41
+    },
+    {
+      "id": "星野源-恋-ト-ラマ-逃け-るは恥た-か-役に立つ-ost",
+      "title": "恋(ドラマ'逃げるは恥だが役に立つ' OST)",
+      "artist": "星野源",
+      "tjNumber": "27982",
+      "rank": 42
+    },
+    {
+      "id": "vaundy-しわあわせ",
+      "title": "しわあわせ",
+      "artist": "Vaundy",
+      "tjNumber": "52412",
+      "rank": 43
+    },
+    {
+      "id": "kanaria-feat-gumi-酔いと-れ知らす",
+      "title": "酔いどれ知らず",
+      "artist": "Kanaria(Feat.GUMI)",
+      "tjNumber": "52465",
+      "rank": 44
+    },
+    {
+      "id": "official髭男dism-115万キロのフィルム",
+      "title": "115万キロのフィルム",
+      "artist": "Official髭男dism",
+      "tjNumber": "52994",
+      "rank": 45
+    },
+    {
+      "id": "mrs-green-apple-僕のこと",
+      "title": "僕のこと",
+      "artist": "Mrs. Green Apple",
+      "tjNumber": "68248",
+      "rank": 46
+    },
+    {
+      "id": "すりぃ-テレキャスタ-ヒ-ホ-イ",
+      "title": "テレキャスター ビーボーイ",
+      "artist": "すりぃ",
+      "tjNumber": "52671",
+      "rank": 47
+    },
+    {
+      "id": "radwimps-なんて-もないや-movie-ver-映画-君の名は-ost",
+      "title": "なんでもないや(Movie ver.)(映画'君の名は。' OST)",
+      "artist": "RADWIMPS",
+      "tjNumber": "27965",
+      "rank": 48
+    },
+    {
+      "id": "vaundy-恋風邪にのせて-彼とオオカミちゃんには騙されない-ost",
+      "title": "恋風邪にのせて('彼とオオカミちゃんには騙されない' OST)",
+      "artist": "Vaundy",
+      "tjNumber": "52428",
+      "rank": 49
+    },
+    {
+      "id": "tk-from-凛として時雨-unravel-東京喰種-op",
+      "title": "Unravel(東京喰種 OP)",
+      "artist": "TK From 凛として時雨",
+      "tjNumber": "28153",
+      "rank": 50
+    },
+    {
+      "id": "ado-私は最強-ウタ-from-one-piece-film-red",
+      "title": "私は最強(ウタ from ONE PIECE FILM RED)",
+      "artist": "Ado",
+      "tjNumber": "52717",
+      "rank": 51
+    },
+    {
+      "id": "チョ-キュ-メイ-貴方の恋人になりたい",
+      "title": "貴方の恋人になりたい",
+      "artist": "チョーキューメイ",
+      "tjNumber": "68815",
+      "rank": 52
+    },
+    {
+      "id": "あいみょん-愛を伝えたいた-とか",
+      "title": "愛を伝えたいだとか",
+      "artist": "あいみょん",
+      "tjNumber": "28907",
+      "rank": 53
+    },
+    {
+      "id": "ハ-シ-ャマハ-ティ-ス-みと-り-cv-諸星すみれ-ひ-んく-cv-長縄まりあ-しろ-cv-篠原侑-むらさき-cv-内山茉莉-ハ-シ-ャマハ-ティ-ス-のうた-アニメ-ちいかわ-ost",
+      "title": "パジャマパーティーズのうた(アニメ 'ちいかわ' OST)",
+      "artist": "パジャマパーティーズ みどり(CV.諸星すみれ),ぴんく(CV.長縄まりあ),しろ(CV.篠原侑),むらさき(CV.内山茉莉)",
+      "tjNumber": "68986",
+      "rank": 54
+    },
+    {
+      "id": "ユイカ-好きた-から",
+      "title": "好きだから。",
+      "artist": "『ユイカ』",
+      "tjNumber": "68523",
+      "rank": 55
+    },
+    {
+      "id": "mrs-green-apple-インフェルノ-炎炎ノ消防隊-op",
+      "title": "インフェルノ(炎炎ノ消防隊 OP)",
+      "artist": "Mrs. Green Apple",
+      "tjNumber": "68095",
+      "rank": 56
+    },
+    {
+      "id": "ヨルシカ-たた-君に晴れ",
+      "title": "ただ君に晴れ",
+      "artist": "ヨルシカ",
+      "tjNumber": "68061",
+      "rank": 57
+    },
+    {
+      "id": "back-number-花束",
+      "title": "花束",
+      "artist": "back number",
+      "tjNumber": "68719",
+      "rank": 58
+    },
+    {
+      "id": "鏡音リン-ロストワンの号哭",
+      "title": "ロストワンの号哭",
+      "artist": "鏡音リン",
+      "tjNumber": "27670",
+      "rank": 59
+    },
+    {
+      "id": "t-m-revolution-hot-limit",
+      "title": "HOT LIMIT",
+      "artist": "T.M.Revolution",
+      "tjNumber": "6816",
+      "rank": 60
+    },
+    {
+      "id": "涼宮ハルヒ-平野綾-god-knows-涼宮ハルヒの憂鬱-ost",
+      "title": "God knows...(涼宮ハルヒの憂鬱 OST)",
+      "artist": "涼宮ハルヒ(平野綾)",
+      "tjNumber": "26235",
+      "rank": 61
+    },
+    {
+      "id": "米津玄師-lady-コカコ-ラ-シ-ョ-シ-ア-cm",
+      "title": "LADY(コカコーラ 'ジョージア' CM)",
+      "artist": "米津玄師",
+      "tjNumber": "68495",
+      "rank": 62
+    },
+    {
+      "id": "leina-うたたね",
+      "title": "うたたね",
+      "artist": "Leina",
+      "tjNumber": "68961",
+      "rank": 63
+    },
+    {
+      "id": "なきそ-feat-初音ミク-いますく-輪廻",
+      "title": "いますぐ輪廻",
+      "artist": "なきそ(Feat.初音ミク)",
+      "tjNumber": "52668",
+      "rank": 64
+    },
+    {
+      "id": "尾崎豊-i-love-you",
+      "title": "I love you",
+      "artist": "尾崎豊",
+      "tjNumber": "25049",
+      "rank": 65
+    },
+    {
+      "id": "ヒク-チアイ-悪魔の子-進撃の巨人-ed",
+      "title": "悪魔の子(進撃の巨人 ED)",
+      "artist": "ヒグチアイ",
+      "tjNumber": "68571",
+      "rank": 66
+    },
+    {
+      "id": "ハ-ル-ン-feat-flower-シャルル",
+      "title": "シャルル",
+      "artist": "バルーン(Feat.Flower)",
+      "tjNumber": "28700",
+      "rank": 67
+    },
+    {
+      "id": "alia-かくれんほ",
+      "title": "かくれんぼ",
+      "artist": "ALIA",
+      "tjNumber": "52690",
+      "rank": 68
+    },
+    {
+      "id": "ado-うっせぇわ",
+      "title": "うっせぇわ",
+      "artist": "Ado",
+      "tjNumber": "68458",
+      "rank": 69
+    },
+    {
+      "id": "radwimps-前前前世-movie-ver-映画-君の名は-ost",
+      "title": "前前前世(Movie ver.)(映画'君の名は。' OST)",
+      "artist": "RADWIMPS",
+      "tjNumber": "27944",
+      "rank": 70
+    },
+    {
+      "id": "シト-レイン-鋼の錬金術師-fullmetal-alchemist-op",
+      "title": "レイン(鋼の錬金術師 FULLMETAL ALCHEMIST OP)",
+      "artist": "シド",
+      "tjNumber": "27062",
+      "rank": 71
+    },
+    {
+      "id": "mrs-green-apple-ケセラセラ-ト-ラマ-日曜の夜く-らいは-ost",
+      "title": "ケセラセラ(ドラマ '日曜の夜ぐらいは…' OST)",
+      "artist": "Mrs. GREEN APPLE",
+      "tjNumber": "52844",
+      "rank": 72
+    },
+    {
+      "id": "king-gnu-逆夢-映画-呪術廻戦-0-ed",
+      "title": "逆夢(映画'呪術廻戦 0' ED)",
+      "artist": "King Gnu",
+      "tjNumber": "68561",
+      "rank": 73
+    },
+    {
+      "id": "164-feat-gumi-天ノ弱",
+      "title": "天ノ弱",
+      "artist": "164(Feat.GUMI)",
+      "tjNumber": "28397",
+      "rank": 74
+    },
+    {
+      "id": "orangestar-feat-ia-daybreak-frontline",
+      "title": "DAYBREAK FRONTLINE",
+      "artist": "Orangestar(Feat.IA)",
+      "tjNumber": "90144",
+      "rank": 75
+    },
+    {
+      "id": "緑黄色社会-mela",
+      "title": "Mela!",
+      "artist": "緑黄色社会",
+      "tjNumber": "68562",
+      "rank": 76
+    },
+    {
+      "id": "official髭男dism-cry-baby-東京リヘ-ンシ-ャ-ス-op",
+      "title": "Cry Baby(東京リベンジャーズ OP)",
+      "artist": "Official髭男dism",
+      "tjNumber": "68407",
+      "rank": 77
+    },
+    {
+      "id": "unison-square-garden-シュカ-ソンク-と-ヒ-タ-ステッフ-血界戦線-ed",
+      "title": "シュガーソングと ビターステップ(血界戦線 ED)",
+      "artist": "Unison Square Garden",
+      "tjNumber": "27737",
+      "rank": 78
+    },
+    {
+      "id": "米津玄師-死神",
+      "title": "死神",
+      "artist": "米津玄師",
+      "tjNumber": "52430",
+      "rank": 79
+    },
+    {
+      "id": "ツミキ-feat-可不-フォニイ",
+      "title": "フォニイ",
+      "artist": "ツミキ(Feat.可不)",
+      "tjNumber": "52537",
+      "rank": 80
+    },
+    {
+      "id": "みきとp-feat-鏡音リン-ロキ",
+      "title": "ロキ",
+      "artist": "みきとP(Feat.鏡音リン)",
+      "tjNumber": "28961",
+      "rank": 81
+    },
+    {
+      "id": "bump-of-chicken-feat-初音ミク-ray",
+      "title": "Ray",
+      "artist": "BUMP OF CHICKEN(Feat.初音ミク)",
+      "tjNumber": "28109",
+      "rank": 82
+    },
+    {
+      "id": "蝶-p-feat-gumi-心做し",
+      "title": "心做し",
+      "artist": "蝶々P(Feat.GUMI)",
+      "tjNumber": "27906",
+      "rank": 83
+    },
+    {
+      "id": "優里-カ-テンコ-ル-アニメ-僕のヒ-ロ-アカテ-ミア-7期-op",
+      "title": "カーテンコール(アニメ '僕のヒーローアカデミア' 7期 OP)",
+      "artist": "優里",
+      "tjNumber": "52724",
+      "rank": 84
+    },
+    {
+      "id": "official髭男dism-tattoo-ト-ラマ-ヘ-ンテ-ィンク-トレイン-8時23分-明日-君と-ost",
+      "title": "TATTOO(ドラマ 'ペンディングトレインー8時23分、明日　君と' OST)",
+      "artist": "Official髭男dism",
+      "tjNumber": "68838",
+      "rank": 85
+    },
+    {
+      "id": "40mp-feat-初音ミク-恋愛裁判",
+      "title": "恋愛裁判",
+      "artist": "40mP(Feat.初音ミク)",
+      "tjNumber": "28424",
+      "rank": 86
+    },
+    {
+      "id": "creepy-nuts-bling-bang-bang-born-アニメ-マッシュル-mashle-神覚者候補選抜試験編-op",
+      "title": "Bling-Bang-Bang-Born(アニメ 'マッシュル-MASHLE- 神覚者候補選抜試験編' OP)",
+      "artist": "Creepy Nuts",
+      "tjNumber": "68950",
+      "rank": 87
+    },
+    {
+      "id": "back-number-ハッヒ-エント-映画-ほ-くは明日-昨日のきみとテ-トする-ost",
+      "title": "ハッピーエンド(映画'ぼくは明日、昨日のきみとデートする' OST)",
+      "artist": "back number",
+      "tjNumber": "28675",
+      "rank": 88
+    },
+    {
+      "id": "lisa-紅蓮華-鬼滅の刃-op",
+      "title": "紅蓮華(鬼滅の刃 OP)",
+      "artist": "LISA",
+      "tjNumber": "68047",
+      "rank": 89
+    },
+    {
+      "id": "mrs-green-apple-タ-ンスホ-ル-めさ-ましテレヒ-ost",
+      "title": "ダンスホール(めざましテレビ OST)",
+      "artist": "Mrs. GREEN APPLE",
+      "tjNumber": "68620",
+      "rank": 90
+    },
+    {
+      "id": "back-number-クリスマスソンク-5-9-私に恋したお坊さん-ost",
+      "title": "クリスマスソング(5→9~私に恋したお坊さん~ OST)",
+      "artist": "back number",
+      "tjNumber": "27807",
+      "rank": 91
+    },
+    {
+      "id": "trap-chick-feat-重音テト-execution-clap",
+      "title": "Execution Clap",
+      "artist": "TRAP CHICK(Feat.重音テト)",
+      "tjNumber": "52691",
+      "rank": 92
+    },
+    {
+      "id": "spyair-サクラミツツキ-銀魂-op",
+      "title": "サクラミツツキ(銀魂 OP)",
+      "artist": "SPYAIR",
+      "tjNumber": "27425",
+      "rank": 93
+    },
+    {
+      "id": "cutie-street-かわいいた-けし-ゃ-た-めて-すか",
+      "title": "かわいいだけじゃ だめですか?",
+      "artist": "CUTIE STREET",
+      "tjNumber": "52410",
+      "rank": 94
+    },
+    {
+      "id": "鏡音レン-悪ノ召使",
+      "title": "悪ノ召使",
+      "artist": "鏡音レン",
+      "tjNumber": "26944",
+      "rank": 95
+    },
+    {
+      "id": "spyair-オレンシ-映画-劇場版ハイキュ-コ-ミ捨て場の決戦-ost",
+      "title": "オレンジ(映画 '劇場版ハイキュー!! ゴミ捨て場の決戦' OST)",
+      "artist": "SPYAIR",
+      "tjNumber": "68999",
+      "rank": 96
+    },
+    {
+      "id": "kanaria-feat-gumi-king",
+      "title": "KING",
+      "artist": "Kanaria(Feat.GUMI)",
+      "tjNumber": "52470",
+      "rank": 97
+    },
+    {
+      "id": "キタニタツヤ-青のすみか-アニメ-呪術廻戦-第2期-op",
+      "title": "青のすみか(アニメ '呪術廻戦 第2期' OP)",
+      "artist": "キタニタツヤ",
+      "tjNumber": "68863",
+      "rank": 98
+    },
+    {
+      "id": "小野正利-departure-アニメ-hunter-hunter-ost",
+      "title": "departure!(アニメ 'HUNTER×HUNTER' OST)",
+      "artist": "小野正利",
+      "tjNumber": "68460",
+      "rank": 99
+    },
+    {
+      "id": "米津玄師-ヒ-スサイン-僕のヒ-ロ-アカテ-ミア-op",
+      "title": "ピースサイン(僕のヒーローアカデミア OP)",
+      "artist": "米津玄師",
+      "tjNumber": "28720",
+      "rank": 100
+    }
+  ]
+}
