@@ -6,5 +6,5 @@ const { song } = Astro.props as { song: Song };
 <li class="song-row" data-song-id={song.id}>
   <div class="song-name"><a href={songHref(song.id)}>{song.titleOriginal}</a><p>{[song.titleKo, song.artistKo || song.artistOriginal].filter(Boolean).join(' · ')}</p></div>
   {(['tj', 'ky'] as const).map(provider => <div class="number-cell"><span class="mobile-label">{provider === 'tj' ? 'TJ' : '금영'}</span>{song.karaoke[provider].observedNumber ? <button type="button" class:list={['number-button', { conflict: song.karaoke[provider].conflict }]} data-copy={song.karaoke[provider].observedNumber} aria-label={`${song.titleOriginal} ${provider === 'tj' ? 'TJ' : '금영'} 관측 번호 ${song.karaoke[provider].observedNumber} 복사`}>{song.karaoke[provider].observedNumber}<Icon name="copy" /></button> : <span class="unknown">확인 필요</span>}</div>)}
-  <button class="save-button" type="button" data-save={song.id} aria-pressed="false" aria-label={`${song.titleOriginal} 저장`}><Icon name="star" /></button>
+  <button class="save-button" type="button" data-save={song.id} aria-pressed="false" aria-label={`${song.titleOriginal} 저장`} disabled><Icon name="star" /></button>
 </li>

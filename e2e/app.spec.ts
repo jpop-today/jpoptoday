@@ -6,9 +6,20 @@ const pretender = catalog.songs.find(song => song.titleOriginal === 'Pretender' 
 const archived = catalog.songs.find(song => song.availability === 'archived')!;
 const pathFor = (id: string) => '/songs/' + encodeURIComponent(id) + '/';
 
+test('slow catalog keeps state controls disabled until handlers and storage are ready', async ({ page }) => {
+  await page.route('**/catalog.json', async route => { await new Promise(resolve => setTimeout(resolve, 750)); await route.continue(); });
+  await page.goto('/');
+  const filter = page.getByRole('button', { name: 'TJ 번호 있음', exact: true });
+  await expect(filter).toBeDisabled();
+  await filter.click();
+  await expect(filter).toHaveAttribute('aria-pressed', 'true');
+  await expect(page).toHaveURL(/number=has-tj/);
+});
+
 test('search, provider filters, URL restore and back navigation', async ({ page }) => {
   const errors: string[] = []; page.on('pageerror', error => errors.push(error.message));
   await page.goto('/'); await expect(page.locator('#song-list .song-row')).toHaveCount(5);
+  await expect(page.getByRole('button', { name: 'TJ 번호 있음', exact: true })).toBeEnabled();
   await page.getByRole('searchbox').fill('Official Pretender'); await page.getByRole('button', { name: '검색', exact: true }).click();
   await expect(page).toHaveURL(/q=Official\+Pretender/); await expect(page.locator('#song-list')).toContainText('Pretender');
   await page.getByRole('button', { name: 'TJ 번호 있음', exact: true }).click(); await expect(page).toHaveURL(/number=has-tj/);

@@ -71,6 +71,7 @@ async function initialize() {
   function syncSaveButtons() {
     const ids = savedIds();
     document.querySelectorAll<HTMLButtonElement>('[data-save]').forEach(button => {
+      button.disabled = false;
       const selected = ids.has(button.dataset.save);
       button.setAttribute('aria-pressed', String(selected));
       const song = songs.find(song => song.id === button.dataset.save);
@@ -92,7 +93,7 @@ async function initialize() {
     announce(favorites.mode === 'session' ? sessionAvailable ? '이 탭에서만 저장했습니다. 번호 목록을 복사해 두세요.' : '현재 화면에서만 저장했습니다. 이동 전에 번호 목록을 복사해 두세요.' : action === 'save' ? '즐겨찾기에 저장했습니다.' : '즐겨찾기에서 해제했습니다.');
   });
   syncSaveButtons();
-  if (!view) return;
+  if (!view) { document.documentElement.dataset.appReady = 'true'; return; }
 
   const form = byId('search-form') as HTMLFormElement;
   const query = byId('query') as HTMLInputElement;
@@ -191,4 +192,6 @@ async function initialize() {
     view.append(details);
   }
   render();
+  document.querySelectorAll<HTMLButtonElement>('[data-filter], #more, #copy-favorites').forEach(button => { button.disabled = false; });
+  document.documentElement.dataset.appReady = 'true';
 }
