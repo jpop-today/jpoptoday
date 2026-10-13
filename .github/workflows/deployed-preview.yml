@@ -1,18 +1,18 @@
 name: deployed-preview
 on:
   push:
-    branches: ['codex/5-astro-app-preview']
+    branches: ['codex/**']
     paths: ['.github/workflows/deployed-preview.yml']
   workflow_dispatch:
     inputs:
       deployment_url:
         description: Dedicated jpoptoday-preview deployment HTTPS URL
         required: true
-        default: 'https://b88c2b94.jpoptoday-preview.pages.dev'
+        default: 'https://363bb785.jpoptoday-preview.pages.dev'
       source_sha:
         description: Full source SHA recorded in the deployed build-info.json
         required: true
-        default: 'abef7b01637c9180998a221248868929cfabe5f0'
+        default: '279cc3e4ca823157c733f2ccdc726bfd01cd2f70'
 permissions:
   contents: read
 jobs:
@@ -20,12 +20,12 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 15
     env:
-      JPOP_TEST_BASE_URL: ${{ inputs.deployment_url || 'https://b88c2b94.jpoptoday-preview.pages.dev' }}
-      EXPECTED_SOURCE_SHA: ${{ inputs.source_sha || 'abef7b01637c9180998a221248868929cfabe5f0' }}
+      JPOP_TEST_BASE_URL: ${{ inputs.deployment_url || 'https://363bb785.jpoptoday-preview.pages.dev' }}
+      EXPECTED_SOURCE_SHA: ${{ inputs.source_sha || '279cc3e4ca823157c733f2ccdc726bfd01cd2f70' }}
     steps:
       - uses: actions/checkout@v4
         with:
-          ref: ${{ inputs.source_sha || 'abef7b01637c9180998a221248868929cfabe5f0' }}
+          ref: ${{ inputs.source_sha || '279cc3e4ca823157c733f2ccdc726bfd01cd2f70' }}
       - uses: actions/setup-node@v4
         with:
           node-version: '24'

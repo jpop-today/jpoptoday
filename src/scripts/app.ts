@@ -52,18 +52,24 @@ async function initialize() {
   let favorites = readFavorites(storage, resolver);
   const sessionKey = 'jpop_today_favorites.session.v1';
   let sessionAvailable = true;
-  if (favorites.mode === 'session') {
-    try {
-      const cached = sessionStorage.getItem(sessionKey);
-      if (cached !== null) {
-        const restored = readFavorites({ getItem: () => cached }, resolver);
-        if (Array.isArray(restored.values)) favorites = { ...favorites, values: restored.values, entries: restored.entries };
+  try {
+    const cached = sessionStorage.getItem(sessionKey);
+    if (cached !== null) {
+      const snapshot = JSON.parse(cached);
+      // A successful read does not imply that the previous write succeeded.
+      // Restore failed-write session state only against the same original bytes;
+      // never override another tab's newer persistent snapshot with stale cache.
+      const values = snapshot?.version === 1 && snapshot.originalRaw === favorites.raw && Array.isArray(snapshot.values)
+        ? snapshot.values : favorites.mode === 'session' && Array.isArray(snapshot) ? snapshot : null;
+      if (values) {
+        const restored = readFavorites({ getItem: () => JSON.stringify(values) }, resolver);
+        favorites = { ...favorites, mode: 'session', status: 'session-only', values: restored.values, entries: restored.entries };
       }
-    } catch { sessionAvailable = false; }
-  }
+    }
+  } catch { sessionAvailable = false; }
   function preserveSession() {
     try {
-      if (favorites.mode === 'session') sessionStorage.setItem(sessionKey, JSON.stringify(favorites.values));
+      if (favorites.mode === 'session') sessionStorage.setItem(sessionKey, JSON.stringify({ version: 1, originalRaw: favorites.raw, values: favorites.values }));
       else sessionStorage.removeItem(sessionKey);
     } catch { sessionAvailable = false; }
   }

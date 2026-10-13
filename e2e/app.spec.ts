@@ -50,6 +50,21 @@ test('corrupted storage remains intact while session favorites can be used', asy
   await page.goto('/favorites/'); await expect(page.locator('#song-list')).toContainText('アイドル');
   expect(await page.evaluate(() => localStorage.getItem('jpop_today_favorites'))).toBe('{broken-json');
 });
+test('successful reads with denied local writes still restore session favorites on navigation', async ({ page }) => {
+  await page.addInitScript(({ id }) => {
+    localStorage.setItem('jpop_today_favorites', JSON.stringify([{ id, note: 'preserve' }]));
+    const write = Storage.prototype.setItem;
+    Storage.prototype.setItem = function (key: string, value: string) {
+      if (this === localStorage && key === 'jpop_today_favorites') throw new DOMException('Full', 'QuotaExceededError');
+      return write.call(this, key, value);
+    };
+  }, { id: pretender.id });
+  await page.goto('/'); await page.getByRole('button', { name: 'アイドル 저장', exact: true }).click();
+  await expect(page.locator('#status')).toContainText('이 탭에서만');
+  await page.goto('/favorites/'); await expect(page.locator('#song-list')).toContainText('アイドル'); await expect(page.locator('#song-list')).toContainText('Pretender');
+  expect(await page.evaluate(() => JSON.parse(localStorage.getItem('jpop_today_favorites')!))).toEqual([{ id: pretender.id, note: 'preserve' }]);
+  await expect(page.locator('#storage-note')).toBeVisible();
+});
 test('clipboard denial opens a usable fallback and unknown numbers have no copy control', async ({ page }) => {
   await page.addInitScript(() => Object.defineProperty(navigator, 'clipboard', { configurable: true, value: { writeText: () => Promise.reject(new Error('Denied')) } }));
   await page.goto(pathFor(pretender.id)); await page.getByRole('button', { name: 'tj 번호 복사', exact: true }).click();
