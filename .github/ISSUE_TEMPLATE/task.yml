@@ -1,0 +1,27 @@
+name: 작업
+description: 스펙과 검증 기준이 있는 작업
+title: "[작업] "
+body:
+  - type: textarea
+    id: goal
+    attributes:
+      label: 목표와 사용자 동작
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: 저장소·파일 범위·스펙 ID·의존 작업
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: 완료 기준과 검증 방법
+    validations:
+      required: true
+  - type: textarea
+    id: status
+    attributes:
+      label: 담당·진행 상태·차단 원인
+      value: "상태: planned\n담당:\n차단 원인:"

@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "artists": [
+    {
+      "id": "fixture-artist",
+      "nameOriginal": "Fixture Artist",
+      "nameKo": "테스트 가수",
+      "aliases": []
+    }
+  ],
+  "songs": [
+    {
+      "id": "fixture-song",
+      "titleOriginal": "Fixture Song",
+      "titleKo": "테스트 곡",
+      "aliases": [],
+      "artistIds": [
+        "fixture-artist"
+      ],
+      "version": "fixture-original",
+      "karaoke": {
+        "tj": {
+          "status": "registered",
+          "number": "00042",
+          "sourceUrl": "https://example.com/test-only",
+          "checkedAt": "2026-10-13"
+        },
+        "ky": {
+          "status": "unknown",
+          "number": null
+        }
+      }
+    }
+  ]
+}

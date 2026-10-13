@@ -1,0 +1,21 @@
+name: contracts
+on:
+  push:
+    branches: [main, 'codex/**']
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  contracts:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Verify catalog contract
+        run: node --test
+      - name: Verify catalog CLI
+        run: node scripts/validate-catalog.mjs tests/fixtures/catalog.json
