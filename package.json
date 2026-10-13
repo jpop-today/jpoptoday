@@ -10,6 +10,8 @@
     "test": "node --test",
     "validate:catalog": "node scripts/validate-catalog.mjs",
     "promote:catalog": "node scripts/promote-catalog.mjs",
-    "audit:legacy": "node scripts/audit-legacy-source.mjs"
+    "audit:legacy": "node scripts/audit-legacy-source.mjs",
+    "import:legacy": "node scripts/import-legacy-staging.mjs",
+    "inspect:cloudflare": "python3 scripts/inspect-cloudflare.py"
   }
 }

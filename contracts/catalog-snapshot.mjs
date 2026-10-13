@@ -2,6 +2,7 @@ import * as filesystem from 'node:fs/promises';
 import { randomUUID } from 'node:crypto';
 import { basename, dirname, join, resolve } from 'node:path';
 import { validateCatalog } from './catalog.mjs';
+import { validateCatalogChange } from './catalog-change.mjs';
 
 export class CatalogSnapshotError extends Error {
   constructor(message, code, errors = []) {
@@ -53,6 +54,18 @@ export async function promoteCatalog(inputPath, snapshotPath, io = filesystem) {
   const errors = validateCatalog(catalog);
   if (errors.length)
     throw new CatalogSnapshotError('Catalog failed validation; snapshot was preserved', 'INVALID_CATALOG', errors);
+
+  if (outputStat) {
+    let previous;
+    try {
+      previous = JSON.parse(new TextDecoder('utf-8', { fatal: true, ignoreBOM: true }).decode(await io.readFile(outputPath)));
+    } catch {
+      throw new CatalogSnapshotError('Existing snapshot cannot be read as valid UTF-8 JSON; it was preserved', 'INVALID_EXISTING_SNAPSHOT');
+    }
+    const changeErrors = validateCatalogChange(previous, catalog);
+    if (changeErrors.length)
+      throw new CatalogSnapshotError('Whole-catalog update lost records or confirmed state; snapshot was preserved', 'INVALID_CATALOG_CHANGE', changeErrors);
+  }
 
   const stagedPath = join(outputDirectory, '.' + basename(outputPath) + '.' + randomUUID() + '.tmp');
   let handle;
