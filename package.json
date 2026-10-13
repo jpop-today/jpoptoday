@@ -1,6 +1,6 @@
 {
   "name": "jpoptoday",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
   "type": "module",
   "engines": {
@@ -19,7 +19,10 @@
     "promote:catalog": "node scripts/promote-catalog.mjs",
     "audit:legacy": "node scripts/audit-legacy-source.mjs",
     "import:legacy": "node scripts/import-legacy-staging.mjs",
-    "inspect:cloudflare": "python3 scripts/inspect-cloudflare.py"
+    "inspect:cloudflare": "python3 scripts/inspect-cloudflare.py",
+    "report:morning": "node scripts/build-report.mjs morning",
+    "report:completed": "node scripts/build-report.mjs completed",
+    "notify:discord": "node scripts/discord-notify.mjs"
   },
   "dependencies": {
     "astro": "^7.3.8"
