@@ -79,3 +79,9 @@ test('rejects missing providers and unsupported schema versions', () => {
   rejects(catalog, 'songs[0].karaoke.ky');
   rejects(catalog, 'schemaVersion');
 });
+
+test('rejects all-zero placeholder numbers', () => {
+  const catalog = sample();
+  catalog.songs[0].karaoke.tj.number = '00000';
+  rejects(catalog, 'songs[0].karaoke.tj.number');
+});

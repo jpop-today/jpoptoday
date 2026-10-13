@@ -72,8 +72,8 @@ export function validateCatalog(catalog) {
         continue;
       }
       if (item.status === 'registered') {
-        if (typeof item.number !== 'string' || !/^[0-9]{1,10}$/.test(item.number)) {
-          fail(itemPath + '.number', 'Expected a digit string of 1 to 10 characters');
+        if (typeof item.number !== 'string' || (!/^[0-9]{1,10}$/.test(item.number) || /^0+$/.test(item.number))) {
+          fail(itemPath + '.number', 'Expected a nonzero digit string of 1 to 10 characters');
         } else if (numbers[provider].has(item.number)) {
           fail(itemPath + '.number', 'Duplicate provider number; review identity/version mapping');
         } else {
