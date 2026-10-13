@@ -1,5 +1,5 @@
 name: 작업
-description: 스펙과 검증 기준이 있는 작업
+description: 스펙·파일 담당·검증·인계 기준이 있는 작업
 title: "[작업] "
 body:
   - type: textarea
@@ -9,19 +9,49 @@ body:
     validations:
       required: true
   - type: textarea
+    id: contract
+    attributes:
+      label: 스펙·작업 담당·기준 버전
+      description: 관련 스펙과 ADR을 연결하고 작업 시작 SHA를 기록하세요.
+      value: |
+        스펙 ID:
+        ADR:
+        담당 스레드/에이전트:
+        통합 담당자:
+        저장소:
+        브랜치:
+        기준 SHA:
+    validations:
+      required: true
+  - type: textarea
     id: scope
     attributes:
-      label: 저장소·파일 범위·스펙 ID·의존 작업
+      label: 파일 범위와 의존 작업
+      description: 변경 담당 파일과 다른 작업에 의존하는 내용을 적으세요. 공용 파일은 담당자를 한 명으로 정하세요.
+      value: |
+        변경 파일/디렉터리:
+        공용 파일 담당:
+        의존 Issue/PR:
     validations:
       required: true
   - type: textarea
     id: acceptance
     attributes:
       label: 완료 기준과 검증 방법
+      description: 사용자 동작, 데이터·URL 호환성, 해당 하네스 검증을 구체적으로 적으세요.
     validations:
       required: true
   - type: textarea
     id: status
     attributes:
-      label: 담당·진행 상태·차단 원인
-      value: "상태: planned\n담당:\n차단 원인:"
+      label: 상태와 인계
+      description: 실행한 검증과 미실행 검증을 구분하세요. 병합은 운영 배포 완료를 뜻하지 않습니다.
+      value: |
+        작업 상태: planned
+        검증: 미실행
+        PR/병합:
+        미리보기 URL/확인 SHA:
+        운영 배포 ID/URL/SHA:
+        차단 원인:
+        인계 파일/결과 SHA:
+        다음 작업:

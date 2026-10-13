@@ -8,6 +8,8 @@
   },
   "scripts": {
     "test": "node --test",
-    "validate:catalog": "node scripts/validate-catalog.mjs"
+    "validate:catalog": "node scripts/validate-catalog.mjs",
+    "promote:catalog": "node scripts/promote-catalog.mjs",
+    "audit:legacy": "node scripts/audit-legacy-source.mjs"
   }
 }
