@@ -1,0 +1,54 @@
+name: discord-report
+on:
+  schedule:
+    - cron: '0 0 * * *' # 09:00 Asia/Seoul; GitHub scheduling may be delayed.
+  workflow_run:
+    workflows: [app, contracts, deployed-preview]
+    types: [completed]
+  release:
+    types: [published]
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: Report type (morning = saved yesterday/plan, completed = saved actual result)
+        type: choice
+        options: [morning, completed, message]
+        default: completed
+      report_date:
+        description: KST YYYY-MM-DD, blank = today
+        type: string
+      title:
+        description: Manager message title
+        type: string
+      message:
+        description: Manager message text (no secrets)
+        type: string
+permissions:
+  contents: read
+concurrency:
+  group: discord-${{ github.event_name }}-${{ github.event.workflow_run.id || github.event.release.id || github.run_id }}
+  cancel-in-progress: false
+jobs:
+  notify:
+    if: github.event_name != 'workflow_run' || github.event.workflow_run.head_repository.full_name == github.repository
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      # Secret-bearing workflow_run always executes reviewed default-branch code.
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.repository.default_branch }}
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - name: Build factual report
+        env:
+          REPORT_MODE: ${{ github.event_name == 'schedule' && 'morning' || github.event_name == 'workflow_dispatch' && inputs.mode || 'event' }}
+          REPORT_DATE: ${{ inputs.report_date }}
+          MESSAGE_TITLE: ${{ inputs.title }}
+          MESSAGE_TEXT: ${{ inputs.message }}
+        run: node scripts/build-report.mjs "$REPORT_MODE" /tmp/jpop-report.json
+      - name: Deliver or explicitly skip missing secret
+        env:
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+        run: node scripts/discord-notify.mjs /tmp/jpop-report.json

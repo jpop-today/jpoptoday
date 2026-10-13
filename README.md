@@ -37,6 +37,24 @@ npm run deploy:preview
 
 clean HEAD와 동일 SHA로 빌드·검증한 dist만 `jpoptoday-preview`에 배포합니다. 미리보기 프로젝트는 먼저 생성되어 있어야 합니다. CLOUDFLARE_API_TOKEN과 CLOUDFLARE_ACCOUNT_ID는 환경의 안전한 binding에서 사용하고 값은 출력·커밋하지 않습니다. 이 명령은 운영 도메인 전환 명령이 아닙니다.
 
+## 매일 개발·Discord·릴리스
+
+Codex 관리자는 매일 09:00 Asia/Seoul 예약에서 새 하위 에이전트 3명을 배정합니다. 실제 지원 도구·환경·원격 기록을 확인하고 개발·검증·두 동료의 평가·교체·통합을 수행합니다. 운영 기준과 실제 예약 상태는 [일일 개발](https://github.com/jpop-today/docs/blob/main/operations/daily-development.md)에 있습니다. 원본의 파랑·분홍 및 파스텔 그라데이션을 유지합니다.
+
+GitHub Actions `discord-report`는 오전 09시(KST, UTC 00시) 전날 저장된 완료 결과·오늘 계획, CI 완료, 게시된 릴리스, 관리자 수동 보고를 알립니다. GitHub 예약은 지연될 수 있습니다. Actions가 AI 개발을 수행하는 것은 아니며, 기록 없는 전날 결과를 만들어내지 않습니다.
+
+운영자는 [소스 저장소 Actions secret 입력](https://github.com/jpop-today/jpoptoday/settings/secrets/actions/new)에서 **DISCORD_WEBHOOK_URL**을 추가하세요. 값은 Discord 채널의 연동 → 웹후크에서 복사하고 채팅·코드·보고 파일에 넣지 마세요. secret이 없으면 명시적으로 skipped이며 실제 전송은 확인되지 않습니다. CI 완료 알림은 trusted default branch의 송신기를 실행하고 fork의 코드를 secret과 함께 실행하지 않습니다.
+
+```sh
+npm run report:morning -- /tmp/jpop-morning.json
+npm run report:completed -- /tmp/jpop-completed.json
+npm run notify:discord -- /tmp/jpop-completed.json
+```
+
+송신기의 실전송은 Node24.5 이상을 사용하며 기존 proxy/CA와 TLS 검증을 유지합니다. CLI 종료 0은 sent 또는 missing-secret skipped, 종료 1은 failed입니다. webhook 목적지를 검증하고 비밀값·멘션을 제거하며, 429만 짧게 재시도합니다. POST timeout/5xx는 중복 방지를 위해 자동 재송신하지 않습니다.
+
+관리자는 의미 있는 검증된 변경에 `package.json`과 `releases/vX.Y.Z.md`를 갱신하고, PR 병합·CI·미리보기 확인 후 같은 main 소스에 `vX.Y.Z` 태그를 올립니다. `version-release`는 버전·main 이력·노트·전체 하네스를 확인한 뒤 실제 GitHub Release를 게시합니다. 배포·AdSense 상태는 릴리스 노트와 일일 보고에서 따로 확인합니다.
+
 ## 데이터 계약과 원본 복구
 
 ```sh
