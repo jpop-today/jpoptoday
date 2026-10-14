@@ -4,7 +4,7 @@ import { readFile, stat } from 'node:fs/promises';
 import path from 'node:path';
 const root = path.resolve('dist');
 const redirects = (await readFile(path.join(root, '_redirects'), 'utf8')).trim().split('\n').filter(Boolean).map(line => line.trim().split(/\s+/));
-const types = { '.html': 'text/html; charset=utf-8', '.js': 'text/javascript; charset=utf-8', '.css': 'text/css; charset=utf-8', '.json': 'application/json; charset=utf-8', '.txt': 'text/plain; charset=utf-8' };
+const types = { '.html': 'text/html; charset=utf-8', '.js': 'text/javascript; charset=utf-8', '.css': 'text/css; charset=utf-8', '.json': 'application/json; charset=utf-8', '.txt': 'text/plain; charset=utf-8', '.xml': 'application/xml; charset=utf-8' };
 http.createServer(async (request, response) => {
   try {
     const url = new URL(request.url, 'http://127.0.0.1');
@@ -18,7 +18,7 @@ http.createServer(async (request, response) => {
     const info = await stat(file).catch(() => null);
     if (info?.isDirectory()) file = path.join(file, 'index.html');
     const bytes = await readFile(file).catch(() => null);
-    response.writeHead(bytes ? 200 : 404, { 'Content-Type': bytes ? types[path.extname(file)] ?? 'application/octet-stream' : types['.html'], 'X-Robots-Tag': 'noindex, nofollow' });
+    response.writeHead(bytes ? 200 : 404, { 'Content-Type': bytes ? types[path.extname(file)] ?? 'application/octet-stream' : types['.html'], ...(!bytes || !['.html', '.xml'].includes(path.extname(file)) || bytes.toString().includes('content="noindex, follow"') ? { 'X-Robots-Tag': 'noindex, follow' } : {}) });
     response.end(bytes ?? await readFile(path.join(root, '404.html')));
   } catch { response.writeHead(404); response.end('Not found'); }
 }).listen(4321, '127.0.0.1', () => console.log('Built preview http://127.0.0.1:4321'));

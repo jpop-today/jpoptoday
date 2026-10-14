@@ -87,10 +87,105 @@ test('mobile keyboard search, overflow, current count and screenshots', async ({
   await page.getByRole('searchbox').fill('프리텐더'); await page.getByRole('searchbox').press('Enter'); await expect(page.locator('#song-list')).toContainText('Pretender');
   if (process.env.JPOP_SCREENSHOT_DIR) await page.screenshot({ path: process.env.JPOP_SCREENSHOT_DIR + '/mobile.png', fullPage: true });
 });
-test('public boundary and actual 404; preview excludes ads and robots allow', async ({ request }) => {
-  for (const path of ['/data/jpop-playlist.raw.json','/data/staging/legacy-catalog.json','/scripts/inspect-cloudflare.py','/missing-route-never-published']) {
+test('public boundary and actual 404; crawler behavior follows the artifact target without ads', async ({ request }) => {
+  for (const path of ['/data/jpop-playlist.raw.json','/data/staging/legacy-catalog.json','/data/reviewed/provider-corrections.json','/scripts/inspect-cloudflare.py','/AGENTS.md','/reports/daily/2026-10-14.json','/releases/v0.2.1.json','/missing-route-never-published']) {
     const response = await request.get(path); expect(response.status(), path).toBe(404);
   }
-  const root = await request.get('/'); expect(root.headers()['x-robots-tag']).toContain('noindex'); expect(await root.text()).not.toContain('googlesyndication');
-  expect(await (await request.get('/robots.txt')).text()).toContain('Disallow: /');
+  const root = await request.get('/'); const info = await (await request.get('/build-info.json')).json();
+  const html = await root.text(); expect(html).not.toContain('googlesyndication');
+  if (info.target === 'preview') { expect(root.headers()['x-robots-tag']).toContain('noindex'); expect(html).toContain('content="noindex, follow"'); expect(await (await request.get('/robots.txt')).text()).toContain('Disallow: /'); }
+  else { expect(root.headers()['x-robots-tag'] ?? '').not.toContain('noindex'); expect(html).toContain('content="index, follow"'); expect(await (await request.get('/robots.txt')).text()).toContain('Sitemap: https://jpop.today/sitemap.xml'); }
+  expect(await (await request.get('/favorites/')).text()).toContain('content="noindex, follow"');
+});
+
+test('reviewed corrections remove wrong-number copy controls and show the official evidence', async ({ page, request }) => {
+  const ledger = JSON.parse(readFileSync(new URL('../data/reviewed/provider-corrections.json', import.meta.url), 'utf8'));
+  const suppressed = ledger.entries.find((entry: { action: string }) => entry.action === 'suppress');
+  const confirmed = ledger.entries.find((entry: { action: string }) => entry.action === 'confirm');
+  expect(suppressed).toBeTruthy(); expect(confirmed).toBeTruthy();
+  await page.goto(pathFor(suppressed.songId));
+  await expect(page.getByRole('button', { name: `${suppressed.provider} 번호 복사`, exact: true })).toHaveCount(0);
+  await expect(page.locator('main')).toContainText(suppressed.reason);
+  await expect(page.locator('main')).toContainText('미수록을 뜻하지 않습니다');
+  if (process.env.JPOP_SCREENSHOT_DIR) await page.screenshot({ path: process.env.JPOP_SCREENSHOT_DIR + '/suppressed-detail.png', fullPage: true });
+  await page.goto(pathFor(confirmed.songId));
+  await expect(page.getByRole('button', { name: `${confirmed.provider} 번호 복사`, exact: true })).toHaveAttribute('data-copy', confirmed.number);
+  await expect(page.locator('main')).toContainText(confirmed.evidence.title);
+  await expect(page.locator(`a[href="${confirmed.evidence.url}"]`)).toHaveCount(1);
+  if (process.env.JPOP_SCREENSHOT_DIR) await page.screenshot({ path: process.env.JPOP_SCREENSHOT_DIR + '/reviewed-detail.png', fullPage: true });
+  const publicData = await (await request.get('/catalog.json')).json();
+  expect(publicData.version).toBe(2); expect(JSON.stringify(publicData)).not.toContain('responseSha256');
+  const suppressedSong = publicData.songs.find((song: Song) => song.id === suppressed.songId);
+  await page.goto('/search/?q=' + encodeURIComponent(suppressedSong.titleOriginal) + '&number=has-' + suppressed.provider);
+  await expect(page.locator('html')).toHaveAttribute('data-app-ready', 'true');
+  await expect(page.locator(`[data-song-id="${suppressed.songId}"]`)).toHaveCount(0);
+  await page.evaluate(id => localStorage.setItem('jpop_today_favorites', JSON.stringify([id])), suppressed.songId);
+  await page.addInitScript(() => Object.defineProperty(navigator, 'clipboard', { configurable: true, value: { writeText: () => Promise.reject(new Error('Denied')) } }));
+  await page.goto('/favorites/');
+  await expect(page.locator(`[data-song-id="${suppressed.songId}"]`)).toBeVisible();
+  await expect(page.locator(`[data-song-id="${suppressed.songId}"] [data-copy="${suppressed.expectedObservedNumber}"]`)).toHaveCount(0);
+  await page.getByRole('button', { name: '번호 목록 복사', exact: true }).click();
+  await expect(page.getByRole('dialog')).toBeVisible();
+  await expect(page.locator('#copy-text')).toHaveValue(`${suppressedSong.titleOriginal} · ${suppressedSong.artistOriginal} | TJ ${suppressedSong.karaoke.tj.observedNumber ?? '확인 필요'} | 금영 ${suppressedSong.karaoke.ky.observedNumber ?? '확인 필요'}`);
+});
+
+test('chart ranks link to stable identities after snapshot rank changes', async ({ page }) => {
+  const chart = JSON.parse(readFileSync(new URL('../data/chart-snapshot.json', import.meta.url), 'utf8'));
+  await page.goto('/chart/'); await expect(page.locator('.chart-entry')).toHaveCount(100);
+  for (const rank of [1, 20, 50, 100]) {
+    const row = page.locator('.chart-entry').nth(rank - 1);
+    await expect(row.locator('.chart-rank')).toHaveText(String(rank));
+    await expect(row.locator('.song-name a')).toHaveAttribute('href', pathFor(chart.songs[rank - 1].canonicalId));
+  }
+  await expect(page.locator('main')).toContainText(chart.endDate);
+});
+
+test('original blue-pink branding and pink-mint-blue background remain visible without mobile overflow', async ({ page }) => {
+  const errors: string[] = [];
+  page.on('pageerror', error => errors.push(error.message));
+  page.on('console', message => { if (message.type() === 'error') errors.push(message.text()); });
+  await page.goto('/');
+  await expect(page).toHaveTitle(/jpop\.today/);
+  await expect(page.locator('h1')).toBeVisible();
+  await expect(page.getByRole('searchbox')).toBeEnabled();
+  const colors = await page.evaluate(() => ({
+    brand: getComputedStyle(document.querySelector('.site-header .brand span')!).backgroundImage,
+    body: getComputedStyle(document.body).backgroundImage,
+  }));
+  expect(colors.brand).toBe('linear-gradient(135deg, rgb(79, 124, 255), rgb(255, 122, 168))');
+  for (const color of ['rgba(255, 122, 168, 0.18)', 'rgba(77, 199, 183, 0.16)', 'rgb(238, 245, 255)']) expect(colors.body).toContain(color);
+  await page.setViewportSize({ width: 360, height: 800 });
+  await page.goto('/chart/');
+  await expect(page.locator('.chart-entry')).toHaveCount(100);
+  expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
+  if (process.env.JPOP_SCREENSHOT_DIR) await page.screenshot({ path: process.env.JPOP_SCREENSHOT_DIR + '/chart-mobile.png', fullPage: false });
+  expect(errors).toEqual([]);
+});
+
+test('actual sitemap and route metadata enforce preview and reviewed-production boundaries', async ({ request }) => {
+  const info = await (await request.get('/build-info.json')).json();
+  const publicData = await (await request.get('/catalog.json')).json();
+  const reviewed = publicData.songs.find((song: Song) => song.availability === 'current' && ['tj', 'ky'].some(provider => {
+    const value = song.karaoke[provider as 'tj' | 'ky'];
+    return value.status === 'provider-confirmed' && value.evidence && !value.conflict;
+  }));
+  const unreviewed = publicData.songs.find((song: Song) => song.availability === 'current' && ['tj', 'ky'].every(provider => song.karaoke[provider as 'tj' | 'ky'].status !== 'provider-confirmed'));
+  expect(reviewed).toBeTruthy(); expect(unreviewed).toBeTruthy();
+  const sitemapResponse = await request.get('/sitemap.xml'); expect(sitemapResponse.ok()).toBe(true);
+  const sitemap = await sitemapResponse.text();
+  for (const route of ['/search/', '/favorites/', '/song/', pathFor(unreviewed.id), pathFor(archived.id)]) {
+    const response = await request.get(route);
+    expect(await response.text(), route).toContain('content="noindex, follow"');
+    expect(sitemap, route).not.toContain('https://jpop.today' + route);
+  }
+  const reviewedHtml = await (await request.get(pathFor(reviewed.id))).text();
+  if (info.target === 'preview') {
+    expect(reviewedHtml).toContain('content="noindex, follow"');
+    expect(sitemap).not.toContain('<loc>');
+  } else {
+    expect(info.target).toBe('production');
+    expect(reviewedHtml).toContain('content="index, follow"');
+    expect(sitemap).toContain('<loc>https://jpop.today' + pathFor(reviewed.id) + '</loc>');
+    expect(sitemap).toContain('<loc>https://jpop.today/</loc>');
+  }
 });

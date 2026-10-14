@@ -36,7 +36,7 @@ async function initialize() {
     const response = await fetch('/catalog.json');
     if (!response.ok) throw new Error('Catalog unavailable');
     const payload = await response.json();
-    if (payload.version !== 1 || !Array.isArray(payload.songs) || !payload.songs.length) throw new Error('Invalid catalog');
+    if (![1, 2].includes(payload.version) || !Array.isArray(payload.songs) || !payload.songs.length) throw new Error('Invalid catalog');
     songs = payload.songs;
   } catch {
     announce('목록을 불러오지 못했습니다. 새로고침하거나 표시된 곡 상세를 이용해 주세요.');
@@ -152,8 +152,9 @@ async function initialize() {
       const label = document.createElement('span'); label.className = 'mobile-label'; label.textContent = provider === 'tj' ? 'TJ' : '금영'; cell.append(label);
       const value = song.karaoke[provider];
       if (value.observedNumber) { const button = document.createElement('button'); button.type = 'button'; button.className = 'number-button' + (value.conflict ? ' conflict' : '');
-        button.dataset.copy = value.observedNumber; button.setAttribute('aria-label', `${song.titleOriginal} ${label.textContent} 관측 번호 ${value.observedNumber} 복사`);
+        button.dataset.copy = value.observedNumber; button.setAttribute('aria-label', `${song.titleOriginal} ${label.textContent} ${value.status === 'provider-confirmed' ? '공식 확인' : '관측'} 번호 ${value.observedNumber} 복사`);
         button.append(document.createTextNode(value.observedNumber), icon('copy')); cell.append(button);
+        if (value.status === 'provider-confirmed') { const badge = document.createElement('small'); badge.className = 'verification-badge'; badge.textContent = '공식 확인'; cell.append(badge); }
       } else { const unknown = document.createElement('span'); unknown.className = 'unknown'; unknown.textContent = '확인 필요'; cell.append(unknown); }
       li.append(cell);
     }

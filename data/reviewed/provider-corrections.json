@@ -1,0 +1,652 @@
+{
+  "ledgerVersion": 1,
+  "purpose": "reviewed-provider-corrections",
+  "legacyRevision": "6dbe5a65d1bd729c09393f746f715f4363089a43",
+  "entries": [
+    {
+      "songId": "jpop-playlist-椎名林檎-丸ノ内サテ-ィスティック-da51e27aca",
+      "provider": "tj",
+      "action": "confirm",
+      "expectedObservedNumber": "25837",
+      "number": "25837",
+      "evidence": {
+        "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=25837&strWord=Y",
+        "checkedAt": "2026-10-14T14:17:51.429368+09:00",
+        "title": "丸の内サディスティック",
+        "artist": "椎名林檎",
+        "responseSha256": "f4cae9c5ad0ce252c22043329b5ca270bd1d99f84e6b04c3b50856d0b7598201"
+      },
+      "reason": "원본의 丸ノ内 표기와 TJ의 丸の内 표기는 제목의 ノ/の 차이이며 곡명과 가수 椎名林檎가 대응합니다. ID는 합치지 않습니다."
+    },
+    {
+      "songId": "jpop-playlist-椎名林檎-丸ノ内サテ-ィスティック-da51e27aca",
+      "provider": "ky",
+      "action": "confirm",
+      "expectedObservedNumber": "40074",
+      "number": "40074",
+      "evidence": {
+        "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=40074",
+        "checkedAt": "2026-10-14T14:17:53.656906+09:00",
+        "title": "丸ノ内サディスティック",
+        "artist": "椎名林檎",
+        "responseSha256": "1537c5d01e3612286504625827b12d2faf2681738e5196a5cb8783d74371e9ba"
+      },
+      "reason": "금영 공식 번호 검색의 제목 丸ノ内サディスティック와 가수 椎名林檎가 원본 곡과 일치합니다."
+    },
+    {
+      "songId": "椎名林檎-丸の内サテ-ィスティック",
+      "provider": "tj",
+      "action": "confirm",
+      "expectedObservedNumber": "25837",
+      "number": "25837",
+      "evidence": {
+        "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=25837&strWord=Y",
+        "checkedAt": "2026-10-14T14:17:51.429368+09:00",
+        "title": "丸の内サディスティック",
+        "artist": "椎名林檎",
+        "responseSha256": "f4cae9c5ad0ce252c22043329b5ca270bd1d99f84e6b04c3b50856d0b7598201"
+      },
+      "reason": "TJ 공식 번호 검색의 제목 丸の内サディスティック와 가수 椎名林檎가 원본 차트 곡과 일치합니다."
+    },
+    {
+      "songId": "椎名林檎-丸の内サテ-ィスティック",
+      "provider": "ky",
+      "action": "confirm",
+      "expectedObservedNumber": null,
+      "number": "40074",
+      "evidence": {
+        "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=40074",
+        "checkedAt": "2026-10-14T14:17:53.656906+09:00",
+        "title": "丸ノ内サディスティック",
+        "artist": "椎名林檎",
+        "responseSha256": "1537c5d01e3612286504625827b12d2faf2681738e5196a5cb8783d74371e9ba"
+      },
+      "reason": "금영 공식 결과의 丸ノ内/丸の内 표기 차이를 검토했고 같은 가수의 곡명과 대응합니다. 원본에 없던 금영 번호를 별도 근거로 추가합니다."
+    },
+    {
+      "songId": "jpop-playlist-radwimps-前前前世-original-ver-1ff3eb38b9",
+      "provider": "tj",
+      "action": "suppress",
+      "expectedObservedNumber": "27944",
+      "number": null,
+      "evidence": {
+        "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=27944&strWord=Y",
+        "checkedAt": "2026-10-14T14:17:53.032754+09:00",
+        "title": "前前前世(Movie ver.)(映画'君の名は。' OST)",
+        "artist": "RADWIMPS",
+        "responseSha256": "5a75a77e73b82e95a1b431966d252a87e408978d143ba8726e9447eed90d04df"
+      },
+      "reason": "TJ 27944은 공식 검색에서 movie 버전으로 표시됩니다. 별도 original 버전의 번호로 확인할 수 없어 표시와 복사를 보류합니다."
+    },
+    {
+      "songId": "jpop-playlist-radwimps-前前前世-original-ver-1ff3eb38b9",
+      "provider": "ky",
+      "action": "suppress",
+      "expectedObservedNumber": "44067",
+      "number": null,
+      "evidence": {
+        "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=44067",
+        "checkedAt": "2026-10-14T14:17:56.091445+09:00",
+        "title": "前前前世(movie ver.)(\"君の名は。\"OST)",
+        "artist": "RADWIMPS",
+        "responseSha256": "4c8ed0fa25309315462b9ea032a4721b068983c657ce74bc2aeda43bc05b2374"
+      },
+      "reason": "금영 44067은 공식 검색에서 movie 버전으로 표시됩니다. 별도 original 버전의 번호로 확인할 수 없어 표시와 복사를 보류합니다."
+    },
+    {
+      "songId": "radwimps-前前前世-movie-ver-映画-君の名は-ost",
+      "provider": "tj",
+      "action": "confirm",
+      "expectedObservedNumber": "27944",
+      "number": "27944",
+      "evidence": {
+        "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=27944&strWord=Y",
+        "checkedAt": "2026-10-14T14:17:53.032754+09:00",
+        "title": "前前前世(Movie ver.)(映画'君の名は。' OST)",
+        "artist": "RADWIMPS",
+        "responseSha256": "5a75a77e73b82e95a1b431966d252a87e408978d143ba8726e9447eed90d04df"
+      },
+      "reason": "TJ 공식 번호 검색의 제목·가수·movie 버전이 이 곡의 원본 차트 표기와 일치합니다."
+    },
+    {
+      "songId": "radwimps-前前前世-movie-ver-映画-君の名は-ost",
+      "provider": "ky",
+      "action": "confirm",
+      "expectedObservedNumber": null,
+      "number": "44067",
+      "evidence": {
+        "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=44067",
+        "checkedAt": "2026-10-14T14:17:56.091445+09:00",
+        "title": "前前前世(movie ver.)(\"君の名は。\"OST)",
+        "artist": "RADWIMPS",
+        "responseSha256": "4c8ed0fa25309315462b9ea032a4721b068983c657ce74bc2aeda43bc05b2374"
+      },
+      "reason": "금영 공식 검색에서 같은 가수의 전전전세 movie 버전 44067을 확인했습니다. 원본에 없던 금영 번호를 별도 확인 근거로 추가합니다."
+    },
+    {
+      "songId": "hump-back-拝啓-少年よ-ヘ-ネッセ-進研セ-ミ-高校講座-cm",
+      "provider": "tj",
+      "action": "confirm",
+      "expectedObservedNumber": "52756",
+      "number": "52756",
+      "evidence": {
+        "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=52756&strWord=Y",
+        "checkedAt": "2026-10-14T14:17:54.373164+09:00",
+        "title": "拝啓, 少年よ('ベネッセ 進研ゼミ 高校講座' CM)",
+        "artist": "Hump Back",
+        "responseSha256": "3c15821b6215c0bcf9d8ec4eb2b61512352064fb8fc0cf8c574e603a9e47c0dc"
+      },
+      "reason": "TJ 공식 번호 검색의 제목·CM 부제·가수 Hump Back이 원본 차트 표기와 일치합니다."
+    },
+    {
+      "songId": "hump-back-拝啓-少年よ-ヘ-ネッセ-進研セ-ミ-高校講座-cm",
+      "provider": "ky",
+      "action": "confirm",
+      "expectedObservedNumber": null,
+      "number": "76548",
+      "evidence": {
+        "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=76548",
+        "checkedAt": "2026-10-14T14:17:57.828211+09:00",
+        "title": "拝啓、少年よ",
+        "artist": "Hump Back",
+        "responseSha256": "118110b1e8f38bc6dba1bce8a74704e8764e29fa1fd317b54a745f00ae0f5583"
+      },
+      "reason": "금영 공식 검색의 拝啓、少年よ와 Hump Back이 대응합니다. 제목의 구두점과 TJ의 CM 부제 차이를 검토한 뒤 원본에 없던 금영 번호를 추가합니다."
+    },
+    {
+      "songId": "jpop-playlist-hump-back-拝啓-少年よ-29d81a757e",
+      "provider": "tj",
+      "action": "confirm",
+      "expectedObservedNumber": "52756",
+      "number": "52756",
+      "evidence": {
+        "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=52756&strWord=Y",
+        "checkedAt": "2026-10-14T14:17:54.373164+09:00",
+        "title": "拝啓, 少年よ('ベネッセ 進研ゼミ 高校講座' CM)",
+        "artist": "Hump Back",
+        "responseSha256": "3c15821b6215c0bcf9d8ec4eb2b61512352064fb8fc0cf8c574e603a9e47c0dc"
+      },
+      "reason": "원본 拝啓、少年よ와 TJ의 拝啓, 少年よ는 구두점 차이이며 가수 Hump Back이 일치합니다. TJ의 CM 부제는 공식 표기 그대로 보존합니다."
+    },
+    {
+      "songId": "jpop-playlist-hump-back-拝啓-少年よ-29d81a757e",
+      "provider": "ky",
+      "action": "confirm",
+      "expectedObservedNumber": "76548",
+      "number": "76548",
+      "evidence": {
+        "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=76548",
+        "checkedAt": "2026-10-14T14:17:57.828211+09:00",
+        "title": "拝啓、少年よ",
+        "artist": "Hump Back",
+        "responseSha256": "118110b1e8f38bc6dba1bce8a74704e8764e29fa1fd317b54a745f00ae0f5583"
+      },
+      "reason": "금영 공식 번호 검색의 제목 拝啓、少年よ와 가수 Hump Back이 원본 곡과 일치합니다."
+    },
+    {
+      "songId": "jpop-playlist-leina-うたたね-レコおと-0edbc5afc9",
+      "provider": "tj",
+      "action": "suppress",
+      "expectedObservedNumber": "68961",
+      "number": null,
+      "evidence": {
+        "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=68961&strWord=Y",
+        "checkedAt": "2026-10-14T14:17:56.490564+09:00",
+        "title": "うたたね",
+        "artist": "Leina",
+        "responseSha256": "0da57b152e75e7f6b45f1024b3beedd9b4f3fbdb373ec19e80c232881056305c"
+      },
+      "reason": "공식 제목은 うたたね이며 원본의 《レコおと》 표기를 확인해 주지 않습니다. 다른 녹음·버전인지 확인하지 못해 이 곡의 번호 표시와 복사를 보류합니다."
+    },
+    {
+      "songId": "jpop-playlist-leina-うたたね-レコおと-0edbc5afc9",
+      "provider": "ky",
+      "action": "suppress",
+      "expectedObservedNumber": "57805",
+      "number": null,
+      "evidence": {
+        "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=57805",
+        "checkedAt": "2026-10-14T14:17:59.278515+09:00",
+        "title": "うたたね",
+        "artist": "Leina",
+        "responseSha256": "5b57d9cde08597c7c4c4f69d32a7c943d20cf2e98bc9cce0d9de3e1c6d531acf"
+      },
+      "reason": "공식 제목은 うたたね이며 원본의 《レコおと》 표기를 확인해 주지 않습니다. 다른 녹음·버전인지 확인하지 못해 이 곡의 번호 표시와 복사를 보류합니다."
+    },
+    {
+      "songId": "leina-うたたね",
+      "provider": "tj",
+      "action": "confirm",
+      "expectedObservedNumber": "68961",
+      "number": "68961",
+      "evidence": {
+        "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=68961&strWord=Y",
+        "checkedAt": "2026-10-14T14:17:56.490564+09:00",
+        "title": "うたたね",
+        "artist": "Leina",
+        "responseSha256": "0da57b152e75e7f6b45f1024b3beedd9b4f3fbdb373ec19e80c232881056305c"
+      },
+      "reason": "TJ 공식 번호 검색의 제목 うたたね와 가수 Leina가 원본 차트 곡과 일치합니다."
+    },
+    {
+      "songId": "leina-うたたね",
+      "provider": "ky",
+      "action": "confirm",
+      "expectedObservedNumber": null,
+      "number": "57805",
+      "evidence": {
+        "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=57805",
+        "checkedAt": "2026-10-14T14:17:59.278515+09:00",
+        "title": "うたたね",
+        "artist": "Leina",
+        "responseSha256": "5b57d9cde08597c7c4c4f69d32a7c943d20cf2e98bc9cce0d9de3e1c6d531acf"
+      },
+      "reason": "금영 공식 번호 검색의 제목 うたたね와 가수 Leina가 원본 차트 곡과 일치해 원본에 없던 금영 번호를 추가합니다."
+    },
+    {
+      "songId": "jpop-playlist-butter-fly-71e0adeb5b",
+      "provider": "tj",
+      "action": "confirm",
+      "expectedObservedNumber": "81866",
+      "number": "81866",
+      "evidence": {
+        "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=KOR&strType=16&searchTxt=81866&strWord=Y",
+        "checkedAt": "2026-10-14T14:17:58.279840+09:00",
+        "title": "Butter-Fly(디지몬어드벤처OST)",
+        "artist": "전영호",
+        "responseSha256": "313ca4fcb19fd30f8f336c567e125131ce12f0dadec37672ba8b04a50922f81b"
+      },
+      "reason": "TJ 국내곡 번호 검색에서 Butter-Fly(디지몬어드벤처OST)와 전영호를 확인했습니다. 원본 곡명과 가수가 대응합니다."
+    },
+    {
+      "songId": "jpop-playlist-butter-fly-71e0adeb5b",
+      "provider": "ky",
+      "action": "confirm",
+      "expectedObservedNumber": "40554",
+      "number": "51714",
+      "evidence": {
+        "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=51714",
+        "checkedAt": "2026-10-14T14:18:00.106477+09:00",
+        "title": "Butter-fly(만화 \"디지몬 어드벤처\")",
+        "artist": "전영호",
+        "responseSha256": "a4303401cb1bcd33bf90022ec0a039a9d3992ec860e475567f4d6a5887c64cb3"
+      },
+      "reason": "원본 금영 40554의 공식 가수는 和田光司였습니다. 전영호의 공식 Butter-fly 번호 51714를 확인해 이 곡의 유효 금영 번호를 교체합니다."
+    },
+    {
+      "songId": "jpop-playlist-和田光司-butter-fly-106e35d9b9",
+      "provider": "tj",
+      "action": "confirm",
+      "expectedObservedNumber": "25589",
+      "number": "25589",
+      "evidence": {
+        "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=25589&strWord=Y",
+        "checkedAt": "2026-10-14T14:17:59.705309+09:00",
+        "title": "Butter-Fly(デジモンアドベンチャーOP)",
+        "artist": "和田光司",
+        "responseSha256": "867fda64f26819dec0705730075eb8d39a3799fbc5ef86eef10bfbd765ea0c9e"
+      },
+      "reason": "TJ 공식 번호 검색의 Butter-Fly와 和田光司가 원본 곡과 대응하며 디지몬 OP 부제를 보존합니다."
+    },
+    {
+      "songId": "jpop-playlist-和田光司-butter-fly-106e35d9b9",
+      "provider": "ky",
+      "action": "confirm",
+      "expectedObservedNumber": "40554",
+      "number": "40554",
+      "evidence": {
+        "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=40554",
+        "checkedAt": "2026-10-14T14:18:02.242052+09:00",
+        "title": "Butter-Fly (\"デジモンアドベンチャー\"OP)",
+        "artist": "和田光司",
+        "responseSha256": "3f09841934dc33d34492be9625eaf1ff4e9817e9509975649562b1dad2c14c89"
+      },
+      "reason": "금영 공식 번호 검색의 Butter-Fly와 和田光司가 원본 곡과 대응하며 디지몬 OP 부제를 보존합니다."
+    },
+    {
+      "songId": "jpop-playlist-中島美嘉-3c88d9a0a8",
+      "provider": "tj",
+      "action": "suppress",
+      "expectedObservedNumber": "62161",
+      "number": null,
+      "evidence": {
+        "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=62161&strWord=Y",
+        "checkedAt": "2026-10-14T14:18:00.724958+09:00",
+        "title": "MR 雪の華",
+        "artist": "中島美嘉",
+        "responseSha256": "df392a563fc4c77fb0381dfdc8ac899c40f9ca6479a0b4ca71ba06a7803d419d"
+      },
+      "reason": "TJ 62161의 공식 제목은 MR 雪の華입니다. 원본의 한국어 제목 눈의 꽃만으로 MR 버전의 정체성을 확인하지 못해 번호 표시와 복사를 보류합니다."
+    },
+    {
+      "songId": "jpop-playlist-中島美嘉-3c88d9a0a8",
+      "provider": "ky",
+      "action": "suppress",
+      "expectedObservedNumber": "41637",
+      "number": null,
+      "evidence": {
+        "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=41637",
+        "checkedAt": "2026-10-14T14:18:02.677390+09:00",
+        "title": "雪の華",
+        "artist": "中島美嘉",
+        "responseSha256": "d31156c3c05a3e366ab5d429dbefab97a5569ba1c785b8c63d1cc8c86d40c12a"
+      },
+      "reason": "금영 공식 결과는 中島美嘉의 雪の華입니다. 원본의 한국어 제목 눈의 꽃과 별도 MR 관측 번호를 가진 행의 언어·버전 정체성을 확인하지 못해 번호 사용을 보류합니다."
+    },
+    {
+      "songId": "jpop-playlist-中島美嘉-雪の華-1aab071dd8",
+      "provider": "tj",
+      "action": "confirm",
+      "expectedObservedNumber": "25627",
+      "number": "25627",
+      "evidence": {
+        "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=25627&strWord=Y",
+        "checkedAt": "2026-10-14T14:18:02.717672+09:00",
+        "title": "雪の華",
+        "artist": "中島美嘉",
+        "responseSha256": "0399a473fb6fd081d6d749644017554e278076f232b1877d904b70d97a57d3f2"
+      },
+      "reason": "TJ 공식 번호 검색의 제목 雪の華와 가수 中島美嘉가 원본 곡과 일치합니다."
+    },
+    {
+      "songId": "jpop-playlist-中島美嘉-雪の華-1aab071dd8",
+      "provider": "ky",
+      "action": "confirm",
+      "expectedObservedNumber": "41637",
+      "number": "41637",
+      "evidence": {
+        "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=41637",
+        "checkedAt": "2026-10-14T14:18:02.677390+09:00",
+        "title": "雪の華",
+        "artist": "中島美嘉",
+        "responseSha256": "d31156c3c05a3e366ab5d429dbefab97a5569ba1c785b8c63d1cc8c86d40c12a"
+      },
+      "reason": "금영 공식 번호 검색의 제목 雪の華와 가수 中島美嘉가 원본 곡과 일치합니다."
+    },
+    {
+      "songId": "jpop-playlist-supercell-ワ-ルト-イス-マイン-59499634d4",
+      "provider": "tj",
+      "action": "confirm",
+      "expectedObservedNumber": "28285",
+      "number": "28285",
+      "evidence": {
+        "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=28285&strWord=Y",
+        "checkedAt": "2026-10-14T14:18:03.286336+09:00",
+        "title": "60이상 반주기 전용곡 ワールドイズマイン",
+        "artist": "supercell(Feat.初音ミク)",
+        "responseSha256": "b0e7670a6525ac7114e81f083d110cfb6a12cc3e735f3f790b1cd26e7978e3cf"
+      },
+      "reason": "TJ 공식 곡명과 supercell(Feat.初音ミク)가 원본 곡과 대응합니다. 공식 결과의 '60이상 반주기 전용곡' 기기 제한 표기를 함께 확인해 주세요."
+    },
+    {
+      "songId": "jpop-playlist-supercell-ワ-ルト-イス-マイン-59499634d4",
+      "provider": "ky",
+      "action": "confirm",
+      "expectedObservedNumber": "43011",
+      "number": "43011",
+      "evidence": {
+        "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=43011",
+        "checkedAt": "2026-10-14T14:18:04.525494+09:00",
+        "title": "ワールドイズマイン",
+        "artist": "supercell feat.初音ミク",
+        "responseSha256": "aaffb50f113e21dd51f0f6b8c0319af854f5af9d11b8536dee3a7eff2a804f3b"
+      },
+      "reason": "금영 공식 제목 ワールドイズマイン과 supercell feat.初音ミク가 원본 supercell 곡과 대응합니다."
+    },
+    {
+      "songId": "jpop-playlist-ワ-ルト-イス-マイン-d1f861df09",
+      "provider": "tj",
+      "action": "suppress",
+      "expectedObservedNumber": "26941",
+      "number": null,
+      "evidence": {
+        "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=26941&strWord=Y",
+        "checkedAt": "2026-10-14T14:18:03.610106+09:00",
+        "title": "World is Mine",
+        "artist": "初音ミク",
+        "responseSha256": "153e6cc4d34b5917a59a4997d2c918983d200858d3f6937ee7ec593b3979b8b7"
+      },
+      "reason": "공식 결과는 World is Mine / 初音ミク입니다. 원본 가수가 보컬로이드라는 분류로만 기록돼 가수·녹음 정체성을 확정하지 못했으므로 번호 사용을 보류합니다."
+    },
+    {
+      "songId": "jpop-playlist-ワ-ルト-イス-マイン-d1f861df09",
+      "provider": "ky",
+      "action": "suppress",
+      "expectedObservedNumber": "43011",
+      "number": null,
+      "evidence": {
+        "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=43011",
+        "checkedAt": "2026-10-14T14:18:04.525494+09:00",
+        "title": "ワールドイズマイン",
+        "artist": "supercell feat.初音ミク",
+        "responseSha256": "aaffb50f113e21dd51f0f6b8c0319af854f5af9d11b8536dee3a7eff2a804f3b"
+      },
+      "reason": "공식 가수는 supercell feat.初音ミク입니다. 원본 가수가 보컬로이드라는 분류로만 기록돼 가수·녹음 정체성을 확정하지 못했으므로 번호 사용을 보류합니다."
+    },
+    {
+      "songId": "jpop-playlist-don-t-say-lazy-ca9960cc97",
+      "provider": "ky",
+      "action": "suppress",
+      "expectedObservedNumber": "43060",
+      "number": null,
+      "evidence": {
+        "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=43060",
+        "checkedAt": "2026-10-14T14:18:05.811871+09:00",
+        "title": "Don't say \"lazy\" (\"けいおん!\"ED)",
+        "artist": "桜高軽音部",
+        "responseSha256": "4b4b3d6197e76d06958c9a08e3253b10cd57e1ec6f92b69be03e5c0f3b0a036f"
+      },
+      "reason": "공식 가수는 桜高軽音部입니다. 원본의 사쿠라고 경음부 표기와 별도 TJ 관측 번호를 가진 행의 가수·버전 정체성을 확인하지 못해 금영 번호 사용을 보류합니다."
+    },
+    {
+      "songId": "jpop-playlist-v-don-t-say-lazy-a5102a0589",
+      "provider": "ky",
+      "action": "suppress",
+      "expectedObservedNumber": "43060",
+      "number": null,
+      "evidence": {
+        "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=43060",
+        "checkedAt": "2026-10-14T14:18:05.811871+09:00",
+        "title": "Don't say \"lazy\" (\"けいおん!\"ED)",
+        "artist": "桜高軽音部",
+        "responseSha256": "4b4b3d6197e76d06958c9a08e3253b10cd57e1ec6f92b69be03e5c0f3b0a036f"
+      },
+      "reason": "금영 43060의 공식 가수는 桜高軽音部입니다. V급밴드의 곡 또는 같은 녹음이라고 확인할 근거가 없어 이 곡의 번호 표시와 복사를 보류합니다."
+    },
+    {
+      "songId": "jpop-playlist-桜高軽音部-don-t-say-lazy-fb29186706",
+      "provider": "tj",
+      "action": "confirm",
+      "expectedObservedNumber": "26908",
+      "number": "26908",
+      "evidence": {
+        "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=26908&strWord=Y",
+        "checkedAt": "2026-10-14T14:18:04.848817+09:00",
+        "title": "Don’t say “lazy”(けいおん! ED)",
+        "artist": "桜高軽音部",
+        "responseSha256": "a696ac493c5554eecd15cc6ed6360d9a4d32fe82899be434e7e94f10392f6038"
+      },
+      "reason": "TJ 공식 제목 Don’t say “lazy”와 가수 桜高軽音部가 원본 곡과 일치하며 케이온 ED 부제를 보존합니다."
+    },
+    {
+      "songId": "jpop-playlist-桜高軽音部-don-t-say-lazy-fb29186706",
+      "provider": "ky",
+      "action": "confirm",
+      "expectedObservedNumber": "43060",
+      "number": "43060",
+      "evidence": {
+        "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=43060",
+        "checkedAt": "2026-10-14T14:18:05.811871+09:00",
+        "title": "Don't say \"lazy\" (\"けいおん!\"ED)",
+        "artist": "桜高軽音部",
+        "responseSha256": "4b4b3d6197e76d06958c9a08e3253b10cd57e1ec6f92b69be03e5c0f3b0a036f"
+      },
+      "reason": "금영 공식 제목과 桜高軽音部가 원본 곡과 대응합니다. 인용부호 표기 차이를 검토하고 공식 케이온 ED 부제를 보존합니다."
+    },
+    {
+      "songId": "jpop-playlist-song-a9ab46307a",
+      "provider": "tj",
+      "action": "confirm",
+      "expectedObservedNumber": "84739",
+      "number": "84739",
+      "evidence": {
+        "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=KOR&strType=16&searchTxt=84739&strWord=Y",
+        "checkedAt": "2026-10-14T14:18:05.514502+09:00",
+        "title": "내 꿈은 파티시엘(꿈빛파티시엘OST)",
+        "artist": "IU",
+        "responseSha256": "ee56f6cc50508c60956c7279936a42679f13191dd97010113224bd469a8c2b27"
+      },
+      "reason": "TJ 국내곡 번호 검색의 내 꿈은 파티시엘과 IU가 원본 제목·가수 아이유와 대응합니다. 공식 꿈빛파티시엘 OST 부제를 보존합니다."
+    },
+    {
+      "songId": "jpop-playlist-song-a9ab46307a",
+      "provider": "ky",
+      "action": "suppress",
+      "expectedObservedNumber": "44671",
+      "number": null,
+      "evidence": {
+        "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=44671",
+        "checkedAt": "2026-10-14T14:18:08.158581+09:00",
+        "title": "夢にエール!パティシエール♪ (\"夢色パティ..",
+        "artist": "五條真由美",
+        "responseSha256": "bb37f840f889711b4d2bbfd947ab6afb6cd904a090e0477807a35f7b236c25ba"
+      },
+      "reason": "금영 44671의 공식 결과는 夢にエール!パティシエール♪ / 五條真由美입니다. 아이유의 한국어 곡 번호로 확인할 수 없어 표시와 복사를 보류합니다."
+    },
+    {
+      "songId": "jpop-playlist-五條真由美-夢にエ-ル-ハ-ティシエ-ル-23b7562bb2",
+      "provider": "tj",
+      "action": "confirm",
+      "expectedObservedNumber": "68414",
+      "number": "68414",
+      "evidence": {
+        "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=68414&strWord=Y",
+        "checkedAt": "2026-10-14T14:18:06.064389+09:00",
+        "title": "夢にエール！パティシエール♪(夢色パティシエール OP)",
+        "artist": "五條真由美",
+        "responseSha256": "83f06f55f1c6ae3d12a51a1abebfeda22c463788a36f490d069dae6de4fdb7c8"
+      },
+      "reason": "TJ 공식 번호 검색의 夢にエール！パティシエール♪와 五條真由美가 원본 곡과 대응하며 애니메이션 OP 부제를 보존합니다."
+    },
+    {
+      "songId": "jpop-playlist-五條真由美-夢にエ-ル-ハ-ティシエ-ル-23b7562bb2",
+      "provider": "ky",
+      "action": "confirm",
+      "expectedObservedNumber": "44671",
+      "number": "44671",
+      "evidence": {
+        "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=44671",
+        "checkedAt": "2026-10-14T14:18:08.158581+09:00",
+        "title": "夢にエール!パティシエール♪ (\"夢色パティ..",
+        "artist": "五條真由美",
+        "responseSha256": "bb37f840f889711b4d2bbfd947ab6afb6cd904a090e0477807a35f7b236c25ba"
+      },
+      "reason": "금영 공식 결과의 주 제목 夢にエール!パティシエール♪와 가수 五條真由美가 원본 곡과 대응합니다. 실제 말줄임된 공식 부제를 임의로 복원하지 않습니다."
+    },
+    {
+      "songId": "jpop-playlist-ツミキ-フォニイ-a5e8ebf8d0",
+      "provider": "tj",
+      "action": "confirm",
+      "expectedObservedNumber": "52537",
+      "number": "52537",
+      "evidence": {
+        "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=52537&strWord=Y",
+        "checkedAt": "2026-10-14T14:18:06.322292+09:00",
+        "title": "フォニイ",
+        "artist": "ツミキ(Feat.可不)",
+        "responseSha256": "92f27f6dcd44a255906db7cb82cb37c7b00ac8578f1faf0a833788d589a9dc16"
+      },
+      "reason": "TJ 공식 번호 검색의 제목 フォニイ와 가수 ツミキ(Feat.可不)가 원본 곡과 대응합니다."
+    },
+    {
+      "songId": "jpop-playlist-ツミキ-フォニイ-a5e8ebf8d0",
+      "provider": "ky",
+      "action": "confirm",
+      "expectedObservedNumber": "57803",
+      "number": "57803",
+      "evidence": {
+        "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=57803",
+        "checkedAt": "2026-10-14T14:18:08.551976+09:00",
+        "title": "フォニイ",
+        "artist": "ツミキ feat.可不",
+        "responseSha256": "9f9b9d6ee4951ad904be4344f836ada63fd0d89bf8d3d91309cb26a3b5b2b93c"
+      },
+      "reason": "금영 공식 번호 검색의 제목이 포니와 일치하며 공식 가수는 ツミキ feat.可不로 표시됩니다."
+    },
+    {
+      "songId": "jpop-playlist-ナナヲアカリ-チュ-リンク-ラフ-feat-sou-0adf58fbdd",
+      "provider": "tj",
+      "action": "confirm",
+      "expectedObservedNumber": "52536",
+      "number": "52536",
+      "evidence": {
+        "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=52536&strWord=Y",
+        "checkedAt": "2026-10-14T14:18:08.573254+09:00",
+        "title": "チューリングラブ",
+        "artist": "ナナヲアカリ(Feat.Sou)",
+        "responseSha256": "07fa165f654134e3050d1f2bb50820fbe680cc28dcfb302db65f33034f097969"
+      },
+      "reason": "TJ 공식 번호 검색에서 튜링 러브와 ナナヲアカリ(Feat.Sou)를 확인했습니다. 원본의 feat.Sou 표기와 대응합니다."
+    },
+    {
+      "songId": "jpop-playlist-ナナヲアカリ-チュ-リンク-ラフ-feat-sou-0adf58fbdd",
+      "provider": "ky",
+      "action": "suppress",
+      "expectedObservedNumber": "57803",
+      "number": null,
+      "evidence": {
+        "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=57803",
+        "checkedAt": "2026-10-14T14:18:08.551976+09:00",
+        "title": "フォニイ",
+        "artist": "ツミキ feat.可不",
+        "responseSha256": "9f9b9d6ee4951ad904be4344f836ada63fd0d89bf8d3d91309cb26a3b5b2b93c"
+      },
+      "reason": "금영 57803의 공식 결과는 포니입니다. 튜링 러브의 번호로 확인할 수 없어 표시와 복사를 보류합니다. 금영 대체 번호는 미확인입니다."
+    },
+    {
+      "songId": "jpop-playlist-song-b781ffa754",
+      "provider": "tj",
+      "action": "confirm",
+      "expectedObservedNumber": "44108",
+      "number": "44108",
+      "evidence": {
+        "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=KOR&strType=16&searchTxt=44108&strWord=Y",
+        "checkedAt": "2026-10-14T14:18:08.952055+09:00",
+        "title": "최종화 (The Last Flower)",
+        "artist": "아이리 칸나",
+        "responseSha256": "280dd05cf857593c18ec937dbd16d744be2f9466aabc5da939e92e0e4a50cf5c"
+      },
+      "reason": "TJ 국내곡 번호 검색의 최종화 (The Last Flower)와 아이리 칸나가 원본 곡과 대응합니다."
+    },
+    {
+      "songId": "jpop-playlist-song-b781ffa754",
+      "provider": "ky",
+      "action": "confirm",
+      "expectedObservedNumber": "80603",
+      "number": "80603",
+      "evidence": {
+        "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=80603",
+        "checkedAt": "2026-10-14T14:18:10.481184+09:00",
+        "title": "최종화 (The Last Flower)",
+        "artist": "아이리 칸나",
+        "responseSha256": "614577a6e76d1d677ce5abde935ea345364259515f0f68bd4c49a396530ac161"
+      },
+      "reason": "금영 공식 번호 검색의 최종화 (The Last Flower)와 아이리 칸나가 원본 곡과 대응합니다."
+    },
+    {
+      "songId": "jpop-playlist-最終花-5c6619182b",
+      "provider": "ky",
+      "action": "suppress",
+      "expectedObservedNumber": "80603",
+      "number": null,
+      "evidence": {
+        "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=80603",
+        "checkedAt": "2026-10-14T14:18:10.481184+09:00",
+        "title": "최종화 (The Last Flower)",
+        "artist": "아이리 칸나",
+        "responseSha256": "614577a6e76d1d677ce5abde935ea345364259515f0f68bd4c49a396530ac161"
+      },
+      "reason": "금영 공식 제목은 최종화 (The Last Flower)입니다. 원본 最終花 표기가 번역 제목인지 다른 언어·녹음 버전인지 확인하지 못해 이 곡의 번호 사용을 보류합니다."
+    }
+  ]
+}

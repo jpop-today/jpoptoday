@@ -1,10 +1,13 @@
 ---
 import '../styles/global.css';
+import { target } from '../lib/catalog';
+import { robotsFor } from '../../contracts/publication.mjs';
 const { title, description = 'JPOP 원제와 한글명으로 검색하고 TJ·금영 관측 번호를 비교하세요.', canonicalPath = Astro.url.pathname } = Astro.props;
 const canonical = new URL(canonicalPath, 'https://jpop.today').href;
+const robots = robotsFor(target, Astro.url.pathname, Astro.props.song);
 const favicon = 'data:image/svg+xml,' + encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><defs><linearGradient id="brand" x2="1" y2="1"><stop stop-color="#4f7cff"/><stop offset="1" stop-color="#ff7aa8"/></linearGradient></defs><rect width="64" height="64" rx="16" fill="url(#brand)"/><path d="M38 14v30a8 8 0 1 1-5-7V19l15-4v7z" fill="white"/></svg>');
 ---
-<!doctype html><html lang="ko"><head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width" /><title>{title} | jpop.today</title><meta name="description" content={description} /><meta name="robots" content="noindex, nofollow" /><link rel="canonical" href={canonical} /><link rel="icon" type="image/svg+xml" href={favicon} /><meta name="theme-color" content="#f7f9fc" /></head><body>
+<!doctype html><html lang="ko"><head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width" /><title>{title} | jpop.today</title><meta name="description" content={description} /><meta name="robots" content={robots} /><link rel="canonical" href={canonical} /><link rel="icon" type="image/svg+xml" href={favicon} /><meta name="theme-color" content="#f7f9fc" /></head><body>
   <a class="skip-link" href="#main">본문으로 건너뛰기</a>
   <header class="site-header container"><a class="brand" href="/" aria-label="jpop.today 홈">jpop.<span>today</span></a><nav aria-label="주요 메뉴"><a href="/search/">노래 찾기</a><a href="/favorites/">즐겨찾기</a><a href="/guides/">이용 가이드</a></nav></header>
   <main id="main" class="container"><slot /></main>

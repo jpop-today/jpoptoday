@@ -3,7 +3,7 @@ on:
   schedule:
     - cron: '0 0 * * *' # 09:00 Asia/Seoul; GitHub scheduling may be delayed.
   workflow_run:
-    workflows: [app, contracts, deployed-preview]
+    workflows: [app, contracts, deployed-preview, production-deploy]
     types: [completed]
   release:
     types: [published]

@@ -1,6 +1,6 @@
 {
   "name": "jpoptoday",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "private": true,
   "type": "module",
   "engines": {
@@ -10,7 +10,7 @@
     "test": "node --test tests/*.test.mjs",
     "dev": "astro dev --host 0.0.0.0",
     "check": "astro check",
-    "build": "astro build",
+    "build": "astro build && node scripts/finalize-artifact.mjs",
     "preview": "astro preview --host 0.0.0.0",
     "verify:dist": "node scripts/verify-dist.mjs",
     "test:e2e": "playwright test",
@@ -22,7 +22,9 @@
     "inspect:cloudflare": "python3 scripts/inspect-cloudflare.py",
     "report:morning": "node scripts/build-report.mjs morning",
     "report:completed": "node scripts/build-report.mjs completed",
-    "notify:discord": "node scripts/discord-notify.mjs"
+    "notify:discord": "node scripts/discord-notify.mjs",
+    "deploy:production": "node scripts/deploy-production.mjs",
+    "manage:production": "python3 scripts/manage-production.py"
   },
   "dependencies": {
     "astro": "^7.3.8"

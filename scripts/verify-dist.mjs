@@ -4,12 +4,16 @@ import { lstat, readFile, readdir } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { isDeepStrictEqual } from 'node:util';
+import { buildPublicCatalog } from '../contracts/public-catalog.mjs';
+import { applyProviderCorrections } from '../contracts/provider-corrections.mjs';
+import { buildTarget, robotsFor } from '../contracts/publication.mjs';
+import { validateChartSnapshot } from './import-chart-snapshot.mjs';
 
 const projectRoot = fileURLToPath(new URL('../', import.meta.url));
 const origin = 'https://jpop.today';
 const songFields = ['id', 'titleOriginal', 'titleKo', 'artistOriginal', 'artistKo', 'tags', 'availability', 'origin', 'karaoke'];
-const numberFields = ['status', 'observedNumber', 'conflict'];
-const metadataFields = ['schemaVersion', 'sourceSha', 'legacyRevision', 'catalogSha256', 'songCount', 'currentSongCount', 'dirty'];
+const numberFields = ['status', 'observedNumber', 'conflict', 'evidence', 'correction'];
+const metadataFields = ['schemaVersion', 'sourceSha', 'legacyRevision', 'catalogSha256', 'target', 'ledgerSha256', 'chartSha256', 'songCount', 'currentSongCount', 'dirty'];
 const privateSegments = new Set(['.git', '.github', '.agents', '.codex', 'node_modules', 'data', 'raw', 'staging', 'contracts', 'scripts', 'tests', 'docs', 'src', 'reports', 'releases']);
 const decodeUtf8 = bytes => new TextDecoder('utf-8', { fatal: true }).decode(bytes);
 const digest = bytes => createHash('sha256').update(bytes).digest('hex');
@@ -49,7 +53,7 @@ async function walk(directory, relative = '') {
     if (stat.isDirectory()) files.push(...await walk(file, child));
     else {
       requireCondition(stat.isFile(), `${child}: only regular files may be published`);
-      const permitted = ['_headers', '_redirects', 'robots.txt', 'catalog.json', 'build-info.json'].includes(child)
+      const permitted = ['_headers', '_redirects', 'robots.txt', 'catalog.json', 'build-info.json', 'sitemap.xml'].includes(child)
         || child.endsWith('.html')
         || /^_astro\/[A-Za-z0-9_.-]+\.(?:css|js)$/.test(child);
       requireCondition(permitted, `${child}: unapproved artifact file type or location`);
@@ -59,31 +63,9 @@ async function walk(directory, relative = '') {
   return files;
 }
 
-function publicProjection(staging) {
-  requireCondition(staging?.stagingVersion === 1 && staging.purpose === 'legacy-catalog-staging', 'staging: unsupported input');
-  requireCondition(Array.isArray(staging.songs) && staging.songs.length === 3317, 'staging: expected all 3,317 legacy IDs');
-  const shared = { tj: new Map(), ky: new Map() };
-  for (const song of staging.songs) {
-    for (const provider of ['tj', 'ky']) {
-      const number = song.karaoke?.[provider]?.observedNumber;
-      if (!number) continue;
-      if (!shared[provider].has(number)) shared[provider].set(number, new Set());
-      shared[provider].get(number).add(song.id);
-    }
-  }
-  return staging.songs.map(song => ({
-    ...Object.fromEntries(songFields.filter(field => field !== 'karaoke').map(field => [field, song[field]])),
-    karaoke: Object.fromEntries(['tj', 'ky'].map(provider => [provider, {
-      status: song.karaoke[provider].status,
-      observedNumber: song.karaoke[provider].observedNumber,
-      conflict: (shared[provider].get(song.karaoke[provider].observedNumber)?.size ?? 0) > 1,
-    }])),
-  }));
-}
-
 function verifyCatalog(catalog, expected) {
   exactFields(catalog, ['version', 'songs'], 'catalog.json');
-  requireCondition(catalog.version === 1 && Array.isArray(catalog.songs), 'catalog.json: unsupported public read model');
+  requireCondition(catalog.version === 2 && Array.isArray(catalog.songs), 'catalog.json: unsupported public read model');
   const expectedById = new Map(expected.map(song => [song.id, song]));
   requireCondition(expectedById.size === expected.length, 'staging: duplicate legacy ID');
   requireCondition(catalog.songs.length === expected.length, 'catalog.json: legacy ID count changed');
@@ -103,7 +85,7 @@ function verifyCatalog(catalog, expected) {
       const entry = song.karaoke[provider];
       exactFields(entry, numberFields, `${song.id}: ${provider}`);
       requireCondition(typeof entry.conflict === 'boolean', `${song.id}: ${provider} conflict must be boolean`);
-      requireCondition(entry.status === 'observed-unverified' || entry.status === 'unknown', `${song.id}: ${provider} cannot claim verified status`);
+      requireCondition(['observed-unverified', 'provider-confirmed', 'unknown'].includes(entry.status), `${song.id}: ${provider} cannot claim verified status`);
       requireCondition(entry.status === 'unknown' ? entry.observedNumber === null && !entry.conflict : typeof entry.observedNumber === 'string' && /^[0-9]{1,10}$/.test(entry.observedNumber), `${song.id}: ${provider} invalid observed number`);
     }
     requireCondition(expectedById.has(song.id) && isDeepStrictEqual(song, expectedById.get(song.id)), `${song.id}: public fields differ from the staging projection`);
@@ -136,13 +118,14 @@ function canonicalFor(file) {
   return `${origin}/${route.split('/').map(encodeURIComponent).join('/')}`;
 }
 
-function verifyHtml(html, file, song, canonicals) {
+function verifyHtml(html, file, song, canonicals, target) {
   const canonicalsOnPage = [...html.matchAll(/<link\b[^>]*>/gi)].map(match => attributes(match[0])).filter(attr => attr.rel?.toLowerCase().split(/\s+/).includes('canonical'));
   requireCondition(canonicalsOnPage.length === 1 && canonicalsOnPage[0].href === canonicalFor(file), `${file}: canonical must match the encoded static route`);
   requireCondition(!canonicals.has(canonicalsOnPage[0].href), `${file}: duplicate canonical`);
   canonicals.add(canonicalsOnPage[0].href);
   const robots = [...html.matchAll(/<meta\b[^>]*>/gi)].map(match => attributes(match[0])).filter(attr => attr.name?.toLowerCase() === 'robots');
-  requireCondition(robots.length === 1 && /(?:^|[,\s])noindex(?:$|[,\s])/i.test(robots[0].content ?? ''), `${file}: preview must have one robots noindex meta tag`);
+  const route = file === 'index.html' ? '/' : file.endsWith('/index.html') ? '/' + file.slice(0, -'index.html'.length) : '/' + file;
+  requireCondition(robots.length === 1 && robots[0].content === robotsFor(target, route, song), `${file}: robots meta differs from publication policy`);
   const title = normalized(decodeEntities(/<title\b[^>]*>([\s\S]*?)<\/title>/i.exec(html)?.[1] ?? ''));
   requireCondition(title.length > 0, `${file}: missing document title`);
   requireCondition(!/<(?:img|image|picture)\b/i.test(html), `${file}: image elements are outside this preview's public boundary`);
@@ -164,7 +147,7 @@ function verifyHtml(html, file, song, canonicals) {
   if (song.availability === 'archived') requireCondition(text.includes('보관'), `${file}: archived status must be visible`);
 }
 
-function verifyHeaders(headers, robots) {
+function verifyHeaders(headers, robots, target) {
   const lines = headers.split(/\r?\n/);
   const rule = lines.findIndex(line => line.trim() === '/*');
   requireCondition(rule >= 0, '_headers: missing /* preview rule');
@@ -173,16 +156,19 @@ function verifyHeaders(headers, robots) {
     if (line.trim() && !/^\s/.test(line) && !/^#/.test(line)) break;
     values.push(line);
   }
-  requireCondition(values.some(line => /^\s+X-Robots-Tag\s*:\s*.*\bnoindex\b/i.test(line)), '_headers: /* must set X-Robots-Tag: noindex');
+  const blocked = values.some(line => /^\s+X-Robots-Tag\s*:\s*.*\bnoindex\b/i.test(line));
+  requireCondition(blocked === (target === 'preview'), '_headers: incorrect blanket crawler boundary');
   const group = /(?:^|\n)\s*User-agent:\s*\*\s*(?:\r?\n)([\s\S]*?)(?=(?:^|\n)\s*User-agent:|$)/im.exec(robots)?.[1];
-  requireCondition(group && /^\s*Disallow:\s*\/\s*$/im.test(group) && !/^\s*Allow:\s*\S/im.test(group), 'robots.txt: preview must disallow / for all crawlers');
+  requireCondition(group && (target === 'preview' ? /^\s*Disallow:\s*\/\s*$/im.test(group) && !/^\s*Allow:\s*\S/im.test(group) : /^\s*Allow:\s*\/\s*$/im.test(group) && !/^\s*Disallow:\s*\/\s*$/im.test(group) && robots.includes('Sitemap: https://jpop.today/sitemap.xml')), 'robots.txt: incorrect target policy');
 }
 
 function verifyPrivateBoundary(text, file) {
-  requireCondition(!/(?:jpop-playlist\.raw|legacy-catalog\.json|legacy-identity-baseline)/i.test(text), `${file}: private staging or evidence payload is forbidden`);
+  requireCondition(!/(?:jpop-playlist\.raw|legacy-catalog\.json|legacy-identity-baseline)/i.test(text), `${file}: private staging or unreviewed evidence payload is forbidden`);
+  requireCondition(!/responseSha256\s*["']?\s*:/i.test(text), `${file}: internal response hash is forbidden`);
   const fields = /(["'](?:stagingVersion|unresolvedAliases|evidence|refs)["']|\b(?:stagingVersion|unresolvedAliases|evidence|refs))\s*:/gi;
   for (const match of text.matchAll(fields)) {
     const field = match[1].replace(/["']/g, '');
+    if (file === 'catalog.json' && field === 'evidence') continue; // exact reviewed projection was validated above
     // The reviewed-alias resolver returns evidence from its argument. It is
     // executable compatibility code, not a serialized evidence record. Only
     // this unquoted same-property member access is permitted in JS assets;
@@ -190,12 +176,12 @@ function verifyPrivateBoundary(text, file) {
     const runtimeMember = file.endsWith('.js') && !/["']/.test(match[1])
       && ['evidence', 'refs'].includes(field)
       && new RegExp(`^\\s*[$A-Z_a-z][$\\w]*\\.${field}\\s*(?=[,}])`).test(text.slice(match.index + match[0].length));
-    requireCondition(runtimeMember, `${file}: private staging or evidence payload is forbidden`);
+    requireCondition(runtimeMember, `${file}: private staging or unreviewed evidence payload is forbidden`);
   }
 }
 
 /** Validate a built preview; this function never writes or publishes files. */
-export async function verifyDist({ distPath = path.join(projectRoot, 'dist'), stagingPath = path.join(projectRoot, 'data/staging/legacy-catalog.json'), expectedSourceSha = process.env.GITHUB_SHA } = {}) {
+export async function verifyDist({ distPath = path.join(projectRoot, 'dist'), stagingPath = path.join(projectRoot, 'data/staging/legacy-catalog.json'), expectedSourceSha = process.env.EXPECTED_SOURCE_SHA ?? process.env.GITHUB_SHA, expectedTarget = process.env.JPOP_BUILD_TARGET } = {}) {
   const directory = path.resolve(distPath);
   const files = await walk(directory);
   const fileSet = new Set(files);
@@ -203,10 +189,16 @@ export async function verifyDist({ distPath = path.join(projectRoot, 'dist'), st
   const staging = parseJson(await readText(stagingPath, 'staging'), 'staging');
   const catalogText = await readText(path.join(directory, 'catalog.json'), 'catalog.json');
   const catalog = parseJson(catalogText, 'catalog.json');
-  verifyCatalog(catalog, publicProjection(staging));
+  const ledger = parseJson(await readText(path.join(projectRoot, 'data/reviewed/provider-corrections.json'), 'ledger'), 'ledger');
+  const chart = parseJson(await readText(path.join(projectRoot, 'data/chart-snapshot.json'), 'chart'), 'chart');
+  validateChartSnapshot(chart, staging);
+  verifyCatalog(catalog, applyProviderCorrections(buildPublicCatalog(staging).songs, staging, ledger));
   const metadata = parseJson(await readText(path.join(directory, 'build-info.json'), 'build-info.json'), 'build-info.json');
   exactFields(metadata, metadataFields, 'build-info.json');
-  requireCondition(metadata.schemaVersion === 1 && fullSha(metadata.sourceSha), 'build-info.json: sourceSha must be a full lowercase commit SHA');
+  requireCondition(metadata.schemaVersion === 2 && fullSha(metadata.sourceSha), 'build-info.json: sourceSha must be a full lowercase commit SHA');
+  buildTarget(metadata.target);
+  requireCondition(!expectedTarget || metadata.target === expectedTarget, 'build-info.json: target differs from required deployment target');
+  requireCondition(metadata.ledgerSha256 === digest(JSON.stringify(ledger)) && metadata.chartSha256 === digest(JSON.stringify(chart)), 'build-info.json: pinned ledger/chart differs from build input');
   requireCondition(!expectedSourceSha || metadata.sourceSha === expectedSourceSha, 'build-info.json: sourceSha differs from the CI source SHA');
   requireCondition(metadata.legacyRevision === staging.revision && fullSha(metadata.legacyRevision), 'build-info.json: legacy revision differs from staging');
   requireCondition(metadata.catalogSha256 === digest(Buffer.from(catalogText)), 'build-info.json: catalog bytes do not match catalogSha256');
@@ -223,19 +215,26 @@ export async function verifyDist({ distPath = path.join(projectRoot, 'dist'), st
     verifyPrivateBoundary(text, file);
     requireCondition(!/(?:["'](?:lyrics|lyric|imageUrl|image_url|thumbnailUrl)["']|\b(?:lyrics|lyric|imageUrl|image_url|thumbnailUrl))\s*:/i.test(text) && !/url\(\s*["']?\s*(?:https?:)?\/\//i.test(text), `${file}: lyrics or external image payload is forbidden`);
     if (file.endsWith('.html')) {
-      verifyHtml(text, file, songByFile.get(file), canonicals);
+      verifyHtml(text, file, songByFile.get(file), canonicals, metadata.target);
       htmlCount += 1;
     }
   }
-  verifyHeaders(await readText(path.join(directory, '_headers'), '_headers'), await readText(path.join(directory, 'robots.txt'), 'robots.txt'));
-  return { sourceSha: metadata.sourceSha, dirty: metadata.dirty, files: files.length, htmlPages: htmlCount, songs: catalog.songs.length, currentSongs: 3313, archivedSongs: 4 };
+  verifyHeaders(await readText(path.join(directory, '_headers'), '_headers'), await readText(path.join(directory, 'robots.txt'), 'robots.txt'), metadata.target);
+  const sitemap = await readText(path.join(directory, 'sitemap.xml'), 'sitemap.xml');
+  const expectedUrls = files.filter(file => file.endsWith('.html')).filter(file => {
+    const route = file === 'index.html' ? '/' : file.endsWith('/index.html') ? '/' + file.slice(0, -'index.html'.length) : '/' + file;
+    return robotsFor(metadata.target, route, songByFile.get(file)) === 'index, follow';
+  }).map(canonicalFor).sort();
+  const sitemapUrls = [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map(match => decodeEntities(match[1])).sort();
+  requireCondition(isDeepStrictEqual(sitemapUrls, expectedUrls), 'sitemap.xml: differs from reviewed indexable routes');
+  return { sourceSha: metadata.sourceSha, target: metadata.target, indexedPages: expectedUrls.length, dirty: metadata.dirty, files: files.length, htmlPages: htmlCount, songs: catalog.songs.length, currentSongs: 3313, archivedSongs: 4 };
 }
 
 if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
   try {
     requireCondition(process.argv.length <= 3, 'Usage: node scripts/verify-dist.mjs [dist-directory]');
     const result = await verifyDist({ distPath: process.argv[2] ? path.resolve(process.argv[2]) : undefined });
-    console.log(`Verified preview artifact: ${result.songs} static songs (${result.currentSongs} current, ${result.archivedSongs} archived), ${result.htmlPages} noindex HTML pages, ${result.files} files; source ${result.sourceSha}${result.dirty ? ' (dirty local build)' : ''}`);
+    console.log(`Verified ${result.target} artifact: ${result.songs} static songs (${result.currentSongs} current, ${result.archivedSongs} archived), ${result.htmlPages} HTML pages (${result.indexedPages} indexable), ${result.files} files; source ${result.sourceSha}${result.dirty ? ' (dirty local build)' : ''}`);
   } catch (error) {
     console.error(`Artifact verification failed: ${error.message}`);
     process.exitCode = 1;

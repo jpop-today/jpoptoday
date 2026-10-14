@@ -2,14 +2,12 @@
 import Layout from '../layouts/Layout.astro';
 import SongRow from '../components/SongRow.astro';
 import chart from '../../data/chart-snapshot.json';
-import staging from '../../data/staging/legacy-catalog.json';
 import { songs } from '../lib/catalog';
 const chartSongs = chart.songs.map((row, index) => {
-  const identity = staging.songs.find(song => song.refs.some(ref => ref.source === 2 && ref.index === index));
-  const song = songs.find(song => song.id === identity?.id);
-  if (!song || row.rank !== index + 1 || song.karaoke.tj.observedNumber !== row.tjNumber) throw new Error('Chart identity mismatch');
+  const song = songs.find(song => song.id === row.canonicalId);
+  if (!song || row.rank !== index + 1) throw new Error('Chart identity mismatch');
   return song;
 });
 if (chartSongs.length !== 100 || new Set(chartSongs.map(song => song.id)).size !== 100) throw new Error('Incomplete chart');
 ---
-<Layout title="TJ JPOP 차트 기록"><section class="intro"><h1>TJ JPOP 차트 기록</h1><p>집계 요청 기간 {chart.startDate} ~ {chart.endDate}</p></section><p class="notice">가져온 시각: {chart.fetchedAt} (UTC). 보관된 스냅샷이며 오늘의 최신 순위를 뜻하지 않습니다. 순서는 TJ 원본 순위이며 금영 번호는 관리 목록의 관측값입니다.</p><p><a href={chart.sourceUrl}>TJ 원본 차트</a> · <a href="/guides/read-tj-chart/">차트 읽는 법</a></p><ol class="song-list chart-list">{chartSongs.map((song, index) => <li class="chart-entry"><span class="chart-rank">{index + 1}</span><ul class="song-list"><SongRow song={song} /></ul></li>)}</ol></Layout>
+<Layout title="TJ JPOP 차트 기록"><section class="intro"><h1>TJ JPOP 차트 기록</h1><p>집계 요청 기간 {chart.startDate} ~ {chart.endDate}</p></section><p class="notice">가져온 시각: {chart.fetchedAt} (UTC). 보관된 스냅샷이며 오늘의 최신 순위를 뜻하지 않습니다. 순서는 TJ 원본 순위입니다. 번호별 공식 확인 여부는 곡 상세에서 확인하세요. 요청 기간이 응답에서 별도로 확인된 집계 기간을 뜻하지는 않습니다.</p><p><a href={chart.sourceUrl}>TJ 원본 차트</a> · <a href="/guides/read-tj-chart/">차트 읽는 법</a></p><ol class="song-list chart-list">{chartSongs.map((song, index) => <li class="chart-entry"><span class="chart-rank">{index + 1}</span><ul class="song-list"><SongRow song={song} /></ul></li>)}</ol></Layout>
