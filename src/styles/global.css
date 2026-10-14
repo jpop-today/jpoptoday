@@ -57,3 +57,7 @@ button svg{flex-shrink:0}button{background:#fff;border:1px solid var(--border);b
 .chart-entry{display:grid;grid-template-columns:44px minmax(0,1fr);align-items:center}.chart-entry>ul{min-width:0}.chart-rank{font-variant-numeric:tabular-nums;color:var(--muted);font-size:18px;text-align:center}.chart-list{margin-bottom:36px}@media(max-width:600px){.chart-entry{grid-template-columns:28px minmax(0,1fr)}.chart-rank{font-size:14px;align-self:start;margin-top:18px}}
 
 button:disabled{opacity:.5;cursor:wait}
+
+.verification-badge { display: block; color: #284fc7; font-size: .72rem; margin-top: .25rem; }
+.verification-note { font-size: .86rem; line-height: 1.7; overflow-wrap: anywhere; }
+.home-links { margin: -1rem 0 1.5rem; }

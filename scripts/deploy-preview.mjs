@@ -7,7 +7,7 @@ const project = 'jpoptoday-preview';
 const git = args => execFileSync('git', args, { cwd: root, encoding: 'utf8' }).trim();
 const sha = git(['rev-parse', 'HEAD']);
 if (git(['status', '--porcelain'])) throw new Error('Commit all source changes before preview deployment');
-const artifact = await verifyDist({ expectedSourceSha: sha });
+const artifact = await verifyDist({ expectedSourceSha: sha, expectedTarget: 'preview' });
 const scrub = value => [process.env.CLOUDFLARE_API_TOKEN, process.env.CLOUDFLARE_ACCOUNT_ID].filter(Boolean).reduce((out, secret) => out.split(secret).join('[redacted]'), value);
 const cli = fileURLToPath(new URL('../node_modules/wrangler/bin/wrangler.js', import.meta.url));
 const result = spawnSync(process.execPath, [cli, 'pages', 'deploy', 'dist', '--project-name', project,

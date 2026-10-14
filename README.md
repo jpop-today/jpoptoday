@@ -8,9 +8,9 @@
 
 Astro + TypeScript 정적 페이지, 브라우저 검색·번호 복사·즐겨찾기, 데이터 계약·실패 보존 하네스를 포함합니다. 기존 3,317개 ID를 유지하며 현재 검색 3,313개와 보관 4개를 구분합니다. 각 곡 상세와 가이드는 JavaScript 없이 본문을 읽을 수 있습니다. 이전 `/song?id=`, `/filter`, `.html`, `/#favorites-view`와 `jpop_today_favorites` 문자열·객체 저장 형식을 지원합니다.
 
-번호는 `observed-unverified` 또는 `unknown`인 기존 관측값입니다. 공식 최신 확인을 마친 검증 카탈로그 v1과 다릅니다. 같은 번호의 여러 ID를 자동 병합하지 않고 상세에 충돌 안내를 표시합니다. 출처·확인일을 임의 생성하지 않습니다. 가사·외부 앨범 이미지·광고 요청은 이 미리보기 artifact에 포함하지 않습니다.
+번호는 관측값과 공식 대조 결과를 구분합니다. 원본 staging은 그대로 두고 검토한 correction ledger를 공개 v2 read model에 적용합니다. 공식 확인에는 제목·가수·확인일·제공사 조회 링크를 표시하고, 반증되거나 버전이 불명확한 번호는 검색·복사에서 제외합니다. 빈 값은 `unknown`이며 미수록으로 단정하지 않습니다. 모든 3,317 ID와 저장 키는 유지합니다. 가사·외부 이미지·광고 요청을 발행하지 않습니다.
 
-운영 Cloudflare `todayjpop`은 개인 원본 `kim75503/todayjpop`의 dev에 연결되어 자동 데이터 갱신을 제공합니다. 최초 기준선은 `6dbe5a65d1bd729c09393f746f715f4363089a43`, 2026-10-14 실제 재조회 소스는 `94d615f5e355f4b00ebbb824547ac6dfa034ad18`입니다. 최신 SHA는 [운영 기준선](https://github.com/jpop-today/docs/blob/main/operations/cloudflare-baseline.md)에서 다시 확인합니다. 조직 앱 미리보기는 별도 `jpoptoday-preview` 프로젝트로 배포합니다. 모든 미리보기는 noindex이며 실제 배포·운영 전환·AdSense 심사 상태는 [실행 기록](https://github.com/jpop-today/docs/blob/main/operations/status.md)으로 확인합니다.
+기존 Cloudflare `todayjpop` 프로젝트와 `jpop.today` origin을 유지하는 운영 전환을 지원합니다. Git 연결 metadata는 개인 원본에 남을 수 있지만 자동 배포를 가역적으로 중지하고 조직의 검증된 artifact를 직접 배포합니다. 별도 `jpoptoday-preview`는 전체 noindex이며 production은 검토된 콘텐츠와 근거가 있는 상세만 색인합니다. 실제 현재 SHA·자동 배포 설정·복구·AdSense 상태는 [운영 기록](https://github.com/jpop-today/docs/blob/main/operations/status.md)에서 재확인합니다.
 
 ## 개발과 검증
 
@@ -29,17 +29,17 @@ npm run dev
 
 시스템 Chromium이 있는 클라우드에서는 `PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH=/usr/bin/chromium npm run test:e2e`를 사용할 수 있습니다. Browser plugin이 없는 세션의 Playwright fallback이며 WebKit 검증과 실제 필드 Core Web Vitals는 별도 작업입니다.
 
-`npm run build`는 고정 staging과 보관된 차트 snapshot으로 dist만 생성하며 외부 수집을 하지 않습니다. build-info.json은 소스 SHA·관측 read model hash·원본 revision·개수·dirty 상태를 연결합니다. `verify:dist`는 3,317 정적 상세·canonical·noindex·허용 공개 필드·raw/도구/이미지/광고 제외를 실제 artifact에서 검사합니다.
+`npm run build`는 고정 staging·검토 ledger·보관 차트로 dist만 생성하며 외부 수집을 하지 않습니다. 기본 target은 preview, `JPOP_BUILD_TARGET=production npm run build`는 운영 artifact를 생성합니다. build-info는 target·소스 SHA·catalog/ledger/chart hash·원본 revision·개수·dirty를 연결합니다. `verify:dist`는 상세·canonical·mode별 robots/sitemap·허용 공개 필드·비공개 원본/도구/이미지/광고 제외를 검사합니다.
 
 ```sh
 npm run deploy:preview
 ```
 
-clean HEAD와 동일 SHA로 빌드·검증한 dist만 `jpoptoday-preview`에 배포합니다. 미리보기 프로젝트는 먼저 생성되어 있어야 합니다. CLOUDFLARE_API_TOKEN과 CLOUDFLARE_ACCOUNT_ID는 환경의 안전한 binding에서 사용하고 값은 출력·커밋하지 않습니다. 이 명령은 운영 도메인 전환 명령이 아닙니다.
+clean HEAD와 동일 SHA로 빌드·검증한 dist만 `jpoptoday-preview`에 배포합니다. 미리보기 프로젝트는 먼저 생성되어 있어야 합니다. CLOUDFLARE_API_TOKEN과 CLOUDFLARE_ACCOUNT_ID는 환경의 안전한 binding에서 사용하고 값은 출력·커밋하지 않습니다. 운영은 `JPOP_BUILD_TARGET=production npm run build` 후 `npm run deploy:production`으로 기존 todayjpop/dev에 배포합니다. 반드시 동일 SHA CI·noindex preview·복구 게이트를 먼저 검증하고 개인 원본 자동 배포를 중단해야 합니다. `manage:production`의 inspect/pause/restore/rollback은 복구 설정과 실제 API 확인을 지원합니다. Actions 운영 workflow는 입력 SHA의 main 이력·CI·같은 reviewed input preview를 확인하며 CF secret 미설정은 explicit skipped로 기록합니다. cloud binding을 Actions에 복사하지 않습니다.
 
 ## 매일 개발·Discord·릴리스
 
-Codex 관리자는 매일 09:00 Asia/Seoul 예약에서 새 하위 에이전트 3명을 배정합니다. 실제 지원 도구·환경·원격 기록을 확인하고 개발·검증·두 동료의 평가·교체·통합을 수행합니다. 운영 기준과 실제 예약 상태는 [일일 개발](https://github.com/jpop-today/docs/blob/main/operations/daily-development.md)에 있습니다. 원본의 파랑·분홍 및 파스텔 그라데이션을 유지합니다.
+Codex 관리자는 매일 09:00 Asia/Seoul 예약에서 새 하위 에이전트 3명을 배정합니다. 중간 한도 중단을 이어가기 위한 매시간 재개 점검도 같은 채팅에 등록했습니다. 활성 실행 중에는 중복 수정하지 않습니다. 토큰 초기화 이벤트나 24시간 연속 실행을 보장하지 않습니다. 실제 지원 도구·환경·원격 기록을 확인하고 개발·검증·두 동료의 평가·교체·통합을 수행합니다. 운영 기준과 실제 예약 상태는 [일일 개발](https://github.com/jpop-today/docs/blob/main/operations/daily-development.md)에 있습니다. 원본의 파랑·분홍 및 파스텔 그라데이션을 유지합니다.
 
 GitHub Actions `discord-report`는 오전 09시(KST, UTC 00시) 전날 저장된 완료 결과·오늘 계획, CI 완료, 게시된 릴리스, 관리자 수동 보고를 알립니다. GitHub 예약은 지연될 수 있습니다. Actions가 AI 개발을 수행하는 것은 아니며, 기록 없는 전날 결과를 만들어내지 않습니다.
 
