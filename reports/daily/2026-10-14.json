@@ -81,6 +81,23 @@
       "evidence": [
         "engineering/design/preview-20261014-qa.md"
       ]
+    },
+    {
+      "before": "새앱은전용preview만이며번호정정ledger와최신차트반영/실제운영전환이남음",
+      "after": "43reviewedentries/100canonicalchart/원본호환성을같은SHA실제jpop.today·복구·remote14로확인하고v0.3.0게시",
+      "evidence": [
+        "pull/14",
+        "actions/runs/38519245940",
+        "releases/tag/v0.3.0"
+      ]
+    },
+    {
+      "before": "09시개발예약만있고token초기화후재개트리거없음",
+      "after": "samechat hourly재개점검등록·실제첫14:57:43관측,active중중복수정skip",
+      "evidence": [
+        "docs/operations/automation.json",
+        "docs/operations/continuous-development.md"
+      ]
     }
   ],
   "verification": [
@@ -117,6 +134,45 @@
       "details": "reports/releases 하위 HTML의 실수 공개 거부; 기존 clean release artifact 통과 유지",
       "checkedAt": "2026-10-14T00:28:56.120053+00:00",
       "initialAttempt": "잘못된directory인자 때문에기본dist를읽어expected rejection실패. 실제distPath로수정하여두금지경로거부/기존cleanartifact통과 재확인."
+    },
+    {
+      "name": "v0.3.0 contracts/type/artifact",
+      "result": "passed",
+      "tests": 204,
+      "typeErrors": 0,
+      "typeWarnings": 0,
+      "htmlPages": 3333,
+      "files": 3341,
+      "staticIds": 3317,
+      "sourceSha": "b0f4a48fadf3c28af5ccb161b6d49ae95c0716e8",
+      "evidence": [
+        "actions/runs/38517512773",
+        "actions/runs/38519245940"
+      ]
+    },
+    {
+      "name": "actualpreview/productionbrowser",
+      "result": "passed",
+      "previewTests": 14,
+      "productionTests": 14,
+      "sourceSha": "b0f4a48fadf3c28af5ccb161b6d49ae95c0716e8",
+      "evidence": [
+        "actions/runs/38517673196",
+        "actions/runs/38519245940"
+      ]
+    },
+    {
+      "name": "productionHTTP/recovery",
+      "result": "passed",
+      "httpChecks": 26,
+      "originalHttp": true,
+      "restoredHttp": true,
+      "note": "초기defaultmetadata잔류probe실패보존·새diagnosticquery와원본문바이트로확인",
+      "evidence": [
+        "operations/releases/production-http-v0.3.0-20261014.json",
+        "operations/releases/production-rollback-probe-failed-v0.3.0-20261014.json",
+        "operations/releases/production-rollback-http-v0.3.0-20261014.json"
+      ]
     }
   ],
   "release": {
