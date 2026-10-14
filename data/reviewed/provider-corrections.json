@@ -647,6 +647,306 @@
         "responseSha256": "614577a6e76d1d677ce5abde935ea345364259515f0f68bd4c49a396530ac161"
       },
       "reason": "금영 공식 제목은 최종화 (The Last Flower)입니다. 원본 最終花 표기가 번역 제목인지 다른 언어·녹음 버전인지 확인하지 못해 이 곡의 번호 사용을 보류합니다."
+    },
+    {
+      "songId": "jpop-playlist-tuki-晩餐歌-9ccdde9634",
+      "provider": "tj",
+      "action": "confirm",
+      "expectedObservedNumber": "52788",
+      "number": "52788",
+      "evidence": {
+        "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=52788&strWord=Y",
+        "checkedAt": "2026-10-15T03:03:29.916792+09:00",
+        "title": "晩餐歌",
+        "artist": "tuki.",
+        "responseSha256": "14abaca062b775b697539a7386dfca73b7eb4b99e66dfcb509b30c144292667c"
+      },
+      "reason": "공식 번호 검색의 晩餐歌와 tuki.가 원본 제목·가수와 일치합니다."
+    },
+    {
+      "songId": "jpop-playlist-tuki-晩餐歌-9ccdde9634",
+      "provider": "ky",
+      "action": "confirm",
+      "expectedObservedNumber": "57828",
+      "number": "57828",
+      "evidence": {
+        "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=57828",
+        "checkedAt": "2026-10-15T03:03:32.395521+09:00",
+        "title": "晩餐歌",
+        "artist": "tuki.",
+        "responseSha256": "9ca6c7925ee9e8d69e033455758e8c6a5e28ea049d8df287ef3767550c14c352"
+      },
+      "reason": "공식 번호 검색의 晩餐歌와 tuki.가 원본 제목·가수와 일치합니다."
+    },
+    {
+      "songId": "jpop-playlist-official髭男dism-pretender-89fe1cbab6",
+      "provider": "tj",
+      "action": "confirm",
+      "expectedObservedNumber": "68058",
+      "number": "68058",
+      "evidence": {
+        "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=68058&strWord=Y",
+        "checkedAt": "2026-10-15T03:03:31.931967+09:00",
+        "title": "Pretender",
+        "artist": "Official髭男dism",
+        "responseSha256": "7ce0a9f03124607bc73cabd8d5acd862062777366c4d2699baf43379003c6311"
+      },
+      "reason": "공식 번호 검색의 Pretender와 Official髭男dism이 원본 제목·가수와 대응합니다."
+    },
+    {
+      "songId": "jpop-playlist-official髭男dism-pretender-89fe1cbab6",
+      "provider": "ky",
+      "action": "confirm",
+      "expectedObservedNumber": "44438",
+      "number": "44438",
+      "evidence": {
+        "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=44438",
+        "checkedAt": "2026-10-15T03:03:35.207126+09:00",
+        "title": "Pretender (映画\"コンフィデンスマンJP\")",
+        "artist": "Official髭男dism",
+        "responseSha256": "391d447e399960740acff76bf9552c229a70f9b0535539e4ef5897e6fe633c88"
+      },
+      "reason": "공식 번호 검색의 Pretender와 Official髭男dism이 원본 제목·가수와 대응합니다. 금영의 영화 コンフィデンスマンJP 부제는 공식 표기 그대로 보존하며 별도 버전으로 추정하지 않습니다."
+    },
+    {
+      "songId": "jpop-playlist-vaundy-怪獣の花唄-cd1e6ddba7",
+      "provider": "tj",
+      "action": "confirm",
+      "expectedObservedNumber": "52988",
+      "number": "52988",
+      "evidence": {
+        "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=52988&strWord=Y",
+        "checkedAt": "2026-10-15T03:03:33.094945+09:00",
+        "title": "怪獣の花唄",
+        "artist": "Vaundy",
+        "responseSha256": "5002f940cc4c84e851276fd9e9981eb8bea4609e6bae0b76412b6fd1e12c9c4d"
+      },
+      "reason": "공식 번호 검색의 怪獣の花唄와 Vaundy가 원본 제목·가수와 일치합니다."
+    },
+    {
+      "songId": "jpop-playlist-vaundy-怪獣の花唄-cd1e6ddba7",
+      "provider": "ky",
+      "action": "confirm",
+      "expectedObservedNumber": "57775",
+      "number": "57775",
+      "evidence": {
+        "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=57775",
+        "checkedAt": "2026-10-15T03:03:36.605608+09:00",
+        "title": "怪獣の花唄",
+        "artist": "Vaundy",
+        "responseSha256": "8fdd3d4523f640c22dc32f91ad3096281d93a7767492033fc4d630d89801459f"
+      },
+      "reason": "공식 번호 검색의 怪獣の花唄와 Vaundy가 원본 제목·가수와 일치합니다."
+    },
+    {
+      "songId": "jpop-playlist-優里-ヘ-テルキ-ウス-73cf88ae11",
+      "provider": "tj",
+      "action": "confirm",
+      "expectedObservedNumber": "68553",
+      "number": "68553",
+      "evidence": {
+        "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=68553&strWord=Y",
+        "checkedAt": "2026-10-15T03:03:35.906179+09:00",
+        "title": "ベテルギウス(ドラマ'SUPER RICH' OST)",
+        "artist": "優里",
+        "responseSha256": "7be80e5821e37019ef807a735e0edeba258dac0b3173e214953a6c428904f34e"
+      },
+      "reason": "공식 번호 검색의 ベテルギウス와 優里가 원본 제목·가수와 대응합니다. 제공사의 SUPER RICH 드라마 부제를 공식 표기 그대로 보존합니다."
+    },
+    {
+      "songId": "jpop-playlist-優里-ヘ-テルキ-ウス-73cf88ae11",
+      "provider": "ky",
+      "action": "confirm",
+      "expectedObservedNumber": "44746",
+      "number": "44746",
+      "evidence": {
+        "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=44746",
+        "checkedAt": "2026-10-15T03:03:39.854415+09:00",
+        "title": "ベテルギウス (ドラマ\"SUPER RICH\")",
+        "artist": "優里",
+        "responseSha256": "6ab41f33502aede4f3dcbcc2d210837a1897d392439a9ebff2df859bfb42b3ec"
+      },
+      "reason": "공식 번호 검색의 ベテルギウス와 優里가 원본 제목·가수와 대응합니다. 제공사의 SUPER RICH 드라마 부제를 공식 표기 그대로 보존합니다."
+    },
+    {
+      "songId": "jpop-playlist-高橋洋子-残酷な天使のテ-セ-e2b770fb52",
+      "provider": "tj",
+      "action": "confirm",
+      "expectedObservedNumber": "25246",
+      "number": "25246",
+      "evidence": {
+        "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=25246&strWord=Y",
+        "checkedAt": "2026-10-15T03:03:37.371398+09:00",
+        "title": "残酷な天使のテーゼ(新世紀エヴァンゲリオン OP)",
+        "artist": "高橋洋子",
+        "responseSha256": "1ba715a1126c192a293d25860ea46d01c316d4cbf9e980b3fd10aa798135c8d7"
+      },
+      "reason": "공식 번호 검색의 残酷な天使のテーゼ와 高橋洋子가 원본 제목·가수와 대응합니다. 제공사의 新世紀エヴァンゲリオン OP 부제를 공식 표기 그대로 보존합니다."
+    },
+    {
+      "songId": "jpop-playlist-高橋洋子-残酷な天使のテ-セ-e2b770fb52",
+      "provider": "ky",
+      "action": "confirm",
+      "expectedObservedNumber": "41645",
+      "number": "41645",
+      "evidence": {
+        "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=41645",
+        "checkedAt": "2026-10-15T03:03:40.731054+09:00",
+        "title": "残酷な天使のテーゼ (\"新世紀エヴァンゲリオン\"OP)",
+        "artist": "高橋洋子",
+        "responseSha256": "e55d654bedec41eae5dbba60fb539f6ad912d09ebacc33c0b52a6bad67ac7726"
+      },
+      "reason": "공식 번호 검색의 残酷な天使のテーゼ와 高橋洋子가 원본 제목·가수와 대응합니다. 제공사의 新世紀エヴァンゲリオン OP 부제를 공식 표기 그대로 보존합니다."
+    },
+    {
+      "songId": "jpop-playlist-back-number-ヒロイン-ae2d342933",
+      "provider": "tj",
+      "action": "confirm",
+      "expectedObservedNumber": "27762",
+      "number": "27762",
+      "evidence": {
+        "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=27762&strWord=Y",
+        "checkedAt": "2026-10-15T03:03:40.701401+09:00",
+        "title": "ヒロイン",
+        "artist": "back number",
+        "responseSha256": "92784dc468b7dd6c09393d55808ee0fc56a99ab52987e0941f9eaf08962369d4"
+      },
+      "reason": "공식 번호 검색의 ヒロイン과 back number가 원본 제목·가수와 일치합니다."
+    },
+    {
+      "songId": "jpop-playlist-back-number-ヒロイン-ae2d342933",
+      "provider": "ky",
+      "action": "confirm",
+      "expectedObservedNumber": "43998",
+      "number": "43998",
+      "evidence": {
+        "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=43998",
+        "checkedAt": "2026-10-15T03:03:44.033446+09:00",
+        "title": "ヒロイン",
+        "artist": "back number",
+        "responseSha256": "f296e3d4acbb7fb689b4ad8566aed0129caed8f8fa0b02826ecec99944a37062"
+      },
+      "reason": "공식 번호 검색의 ヒロイン과 back number가 원본 제목·가수와 일치합니다."
+    },
+    {
+      "songId": "jpop-playlist-spyair-サムライハ-ト-some-like-it-hot-3414d0a48e",
+      "provider": "tj",
+      "action": "confirm",
+      "expectedObservedNumber": "27527",
+      "number": "27527",
+      "evidence": {
+        "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=27527&strWord=Y",
+        "checkedAt": "2026-10-15T03:03:41.493546+09:00",
+        "title": "サムライハート (Some Like it Hot)(銀魂 ED)",
+        "artist": "SPYAIR",
+        "responseSha256": "bdc1fa3aa3402eeecdcd10e730d3689ff011a86cc9e3d1823c4c26d0c4eb3838"
+      },
+      "reason": "원본 サムライハート(Some Like It Hot!!)와 공식 검색의 サムライハート가 같은 가수 SPYAIR의 곡으로 대응합니다. 제공사별 공백·it/It·느낌표 표기 차이와 銀魂 ED 부제를 검토했으며 공식 제목을 그대로 보존합니다."
+    },
+    {
+      "songId": "jpop-playlist-spyair-サムライハ-ト-some-like-it-hot-3414d0a48e",
+      "provider": "ky",
+      "action": "confirm",
+      "expectedObservedNumber": "43372",
+      "number": "43372",
+      "evidence": {
+        "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=43372",
+        "checkedAt": "2026-10-15T03:03:44.173265+09:00",
+        "title": "サムライハート (Some Like It Hot!!) (\"銀魂\"ED)",
+        "artist": "SPYAIR",
+        "responseSha256": "a9cf41213631b8f3e5abad6d051cde81f4b2c7510346595ebb227d5bf81545cf"
+      },
+      "reason": "원본 サムライハート(Some Like It Hot!!)와 공식 검색의 サムライハート가 같은 가수 SPYAIR의 곡으로 대응합니다. 제공사별 공백·it/It·느낌표 표기 차이와 銀魂 ED 부제를 검토했으며 공식 제목을 그대로 보존합니다."
+    },
+    {
+      "songId": "jpop-playlist-米津玄師-lemon-656053b8dd",
+      "provider": "tj",
+      "action": "confirm",
+      "expectedObservedNumber": "28822",
+      "number": "28822",
+      "evidence": {
+        "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=28822&strWord=Y",
+        "checkedAt": "2026-10-15T03:03:44.695792+09:00",
+        "title": "Lemon(ドラマ'アンナチュラル' OST)",
+        "artist": "米津玄師",
+        "responseSha256": "19d1371d4ab4cf292207cb1cda5ac4078ad8038e4d518b518dc04c6485593899"
+      },
+      "reason": "공식 번호 검색의 Lemon과 米津玄師가 원본 제목·가수와 대응합니다. 제공사의 アンナチュラル 드라마 부제를 공식 표기 그대로 보존합니다."
+    },
+    {
+      "songId": "jpop-playlist-米津玄師-lemon-656053b8dd",
+      "provider": "ky",
+      "action": "confirm",
+      "expectedObservedNumber": "44253",
+      "number": "44253",
+      "evidence": {
+        "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=44253",
+        "checkedAt": "2026-10-15T03:03:47.031339+09:00",
+        "title": "Lemon (ドラマ\"アンナチュラル\")",
+        "artist": "米津玄師",
+        "responseSha256": "99ae24f5fbb2f864230580853358b92cf6ba6b0b232a09227db89ffdff3de76c"
+      },
+      "reason": "공식 번호 검색의 Lemon과 米津玄師가 원본 제목·가수와 대응합니다. 제공사의 アンナチュラル 드라마 부제를 공식 표기 그대로 보존합니다."
+    },
+    {
+      "songId": "jpop-playlist-米津玄師-iris-out-f940512a4c",
+      "provider": "tj",
+      "action": "confirm",
+      "expectedObservedNumber": "52959",
+      "number": "52959",
+      "evidence": {
+        "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=52959&strWord=Y",
+        "checkedAt": "2026-10-15T03:03:45.029594+09:00",
+        "title": "IRIS OUT('劇場版 チェンソーマン レゼ篇' OST)",
+        "artist": "米津玄師",
+        "responseSha256": "f4bc975b9f1088c7ad072bad34e6fde6ddc14058c7d81ff00d6b06a236bd50cb"
+      },
+      "reason": "공식 번호 검색의 IRIS OUT와 米津玄師가 원본 제목·가수와 대응합니다. 제공사의 チェンソーマン レゼ篇 OST 부제를 공식 표기 그대로 보존합니다."
+    },
+    {
+      "songId": "jpop-playlist-米津玄師-iris-out-f940512a4c",
+      "provider": "ky",
+      "action": "confirm",
+      "expectedObservedNumber": "57785",
+      "number": "57785",
+      "evidence": {
+        "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=57785",
+        "checkedAt": "2026-10-15T03:03:47.198363+09:00",
+        "title": "IRIS OUT (\"チェンソーマン レゼ篇\"OST)",
+        "artist": "米津玄師",
+        "responseSha256": "60c7c0532fd418d5e195b6b9db7b895cb828f9d68f43a318ae1fa8718575e834"
+      },
+      "reason": "공식 번호 검색의 IRIS OUT와 米津玄師가 원본 제목·가수와 대응합니다. 제공사의 チェンソーマン レゼ篇 OST 부제를 공식 표기 그대로 보존합니다."
+    },
+    {
+      "songId": "jpop-playlist-米津玄師-宇多田ヒカル-jane-doe-9679a6d5fb",
+      "provider": "tj",
+      "action": "confirm",
+      "expectedObservedNumber": "52972",
+      "number": "52972",
+      "evidence": {
+        "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=52972&strWord=Y",
+        "checkedAt": "2026-10-15T03:03:47.678068+09:00",
+        "title": "JANE DOE('劇場版 チェンソーマン レゼ篇' OST)",
+        "artist": "米津玄師 & 宇多田ヒカル",
+        "responseSha256": "743d8711c14ae6f92b529aeb4b59c338f5ff422cd1bcc1b593f1579fba8520c6"
+      },
+      "reason": "공식 번호 검색의 JANE DOE와 두 가수 米津玄師·宇多田ヒカル이 원본 제목·공동명의와 대응합니다. 원본의 전각 쉼표와 제공사별 &/、 연결기호 차이를 검토하고 OST 부제·공식 가수 표기를 그대로 보존합니다. 가수 정체성이나 ID를 자동 병합하지 않습니다."
+    },
+    {
+      "songId": "jpop-playlist-米津玄師-宇多田ヒカル-jane-doe-9679a6d5fb",
+      "provider": "ky",
+      "action": "confirm",
+      "expectedObservedNumber": "57784",
+      "number": "57784",
+      "evidence": {
+        "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=57784",
+        "checkedAt": "2026-10-15T03:03:50.023395+09:00",
+        "title": "JANE DOE (\"チェンソーマン レゼ篇\"OST)",
+        "artist": "米津玄師、宇多田ヒカル",
+        "responseSha256": "53d9a05ca4f2c04e7c8383ba1415ddcb8f308c2ac674009d3265d7e22cf5a23a"
+      },
+      "reason": "공식 번호 검색의 JANE DOE와 두 가수 米津玄師·宇多田ヒカル이 원본 제목·공동명의와 대응합니다. 원본의 전각 쉼표와 제공사별 &/、 연결기호 차이를 검토하고 OST 부제·공식 가수 표기를 그대로 보존합니다. 가수 정체성이나 ID를 자동 병합하지 않습니다."
     }
   ]
 }

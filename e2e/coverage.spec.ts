@@ -3,8 +3,8 @@ import type { Song } from '../src/lib/catalog';
 
 const pathFor = (id: string) => '/songs/' + encodeURIComponent(id) + '/';
 const counts = {
-  'provider-confirmed': { tj: '12', ky: '10' },
-  'observed-unverified': { tj: '3,123', ky: '2,481' },
+  'provider-confirmed': { tj: '22', ky: '20' },
+  'observed-unverified': { tj: '3,113', ky: '2,471' },
   unknown: { tj: '164', ky: '808' },
 };
 
@@ -20,9 +20,9 @@ test('coverage distinguishes provider numbers, song IDs and unknown within the p
       await expect(row.locator(`td[data-provider="${provider}"]`)).toHaveText(count);
     }
   }
-  await expect(page.locator('[data-coverage="confirmed-numbers"]')).toHaveText('22건');
-  await expect(page.locator('[data-coverage="confirmed-songs"]')).toHaveText('12개');
-  await expect(page.locator('[data-coverage="listed-songs"]')).toHaveText('10개');
+  await expect(page.locator('[data-coverage="confirmed-numbers"]')).toHaveText('42건');
+  await expect(page.locator('[data-coverage="confirmed-songs"]')).toHaveText('22개');
+  await expect(page.locator('[data-coverage="listed-songs"]')).toHaveText('20개');
   await expect(page.locator('#coverage-count-note')).toContainText('4건은 같은 번호의 다른 항목과 충돌');
   await expect(page.locator('.coverage-note')).toContainText('확인 필요는 미수록이 아닙니다');
   await expect(page.locator('.coverage-note')).toContainText('보류한 13건도 ‘확인 필요’에 포함');
@@ -36,8 +36,8 @@ test('coverage exposes reviewed string numbers and their official identity, time
     return value.status === 'provider-confirmed' && value.evidence && !value.conflict;
   }));
   await page.goto('/coverage/');
-  await expect(page.locator('.reviewed-song')).toHaveCount(10);
-  await expect(page.locator('.reviewed-number strong')).toHaveCount(18);
+  await expect(page.locator('.reviewed-song')).toHaveCount(20);
+  await expect(page.locator('.reviewed-number strong')).toHaveCount(38);
   for (const song of reviewed) {
     const row = page.locator(`.reviewed-song[data-song-id="${song.id}"]`);
     await expect(row.locator('h3 .song-detail-link')).toHaveAttribute('href', pathFor(song.id));

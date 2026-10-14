@@ -10,7 +10,7 @@ export function indexableSong(song) {
 }
 export function indexableRoute(pathname, song) {
   if (pathname.startsWith('/songs/')) return Boolean(indexableSong(song));
-  return ['/', '/about/', '/contact/', '/privacy/', '/faq/', '/coverage/', '/chart/', '/guides/'].includes(pathname)
+  return ['/', '/about/', '/contact/', '/privacy/', '/faq/', '/coverage/', '/chart/', '/guides/', '/artists/'].includes(pathname)
     || /^\/guides\/[a-z0-9-]+\/$/.test(pathname);
 }
 export function robotsFor(target, pathname, song) {
