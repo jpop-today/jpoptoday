@@ -1,0 +1,363 @@
+{
+  "schemaVersion": 1,
+  "runId": "resume-20261014-2000",
+  "date": "2026-10-14",
+  "timezone": "Asia/Seoul",
+  "phase": "complete",
+  "recordedAt": "2026-10-14T17:17:33+00:00",
+  "issue": "https://github.com/jpop-today/jpoptoday/issues/15",
+  "spec": [
+    "RELEASE-001",
+    "HARNESS-001",
+    "CONTENT-001",
+    "SONG-001",
+    "DESIGN-001"
+  ],
+  "base": {
+    "source": "3422391c3f4876cd68e324eeadbb5219fd243959",
+    "docs": "648e5b338b56f292cb652728cdc997860a8db840",
+    "organization": "b7aad18fe2f793453b6505bb150f359d05ae3554"
+  },
+  "branch": "codex/15-deployment-healthcheck-20261014",
+  "environment": {
+    "revision": "99",
+    "observationsCurrent": true,
+    "running": true,
+    "networkEnforced": true,
+    "cloudflareBindingsReady": true
+  },
+  "previousAttempt": {
+    "runId": "resume-20261014-1600",
+    "state": "blocked",
+    "workers": [
+      "/root/resume_1600_content",
+      "/root/resume_1600_ui",
+      "/root/resume_1600_harness"
+    ],
+    "failure": "All three agent turns returned usage-limit error before implementation. No file edits, tests, reviews, release or deployment.",
+    "ranking": "not_comparable; no scores or replacement manufactured"
+  },
+  "workers": [
+    {
+      "id": "/root/resume_2000_content",
+      "role": "content",
+      "files": [
+        "src/content/guides.ts",
+        "docs/content/number-checking-guide-20261014.md"
+      ]
+    },
+    {
+      "id": "/root/resume_2000_ui",
+      "role": "app-design",
+      "files": [
+        "src/pages/coverage.astro",
+        "e2e/coverage.spec.ts",
+        "docs/engineering/coverage-ui-20261014.md"
+      ]
+    },
+    {
+      "id": "/root/resume_2000_harness",
+      "role": "harness-quality",
+      "files": [
+        "scripts/verify-deployment.mjs",
+        "tests/deployment-healthcheck.test.mjs",
+        "docs/engineering/deployment-healthcheck-20261014.md"
+      ]
+    }
+  ],
+  "rootOnly": [
+    "Git",
+    "package",
+    "lockfile",
+    "CI",
+    "shared contracts",
+    "deployment",
+    "reports"
+  ],
+  "tieBreakOrder": [
+    "/root/resume_2000_ui",
+    "/root/resume_2000_content",
+    "/root/resume_2000_harness"
+  ],
+  "reviews": [
+    {
+      "reviewer": "/root/resume_2000_ui",
+      "candidate": "/root/resume_2000_content",
+      "scores": {
+        "correctness": 5,
+        "evidence": 5,
+        "value": 5,
+        "maintainability": 4
+      },
+      "reason": "기존4guide/mapper 보존과 세정정사례·4official URL/실제checkedAt를ledger와직접대조. 단일guide JS-off/출처/footer 렌더와root19PASS/PNG읽기. 유지보수4: 자료의guide/ledger/doc 수동중복을정정때대조해야함",
+      "evidence": [
+        "src/content/guides.ts",
+        "content/number-checking-guide-20261014.md",
+        "e2e/guide.spec.ts",
+        "rootpreview19PASS+mobilePNG직접읽기"
+      ],
+      "acceptance": "Final assigned artifact accepted; newcleanCI/preview/production/rollback are root pending at peer review, not claimed by worker"
+    },
+    {
+      "reviewer": "/root/resume_2000_harness",
+      "candidate": "/root/resume_2000_content",
+      "scores": {
+        "correctness": 5,
+        "evidence": 5,
+        "value": 5,
+        "maintainability": 4
+      },
+      "reason": "기존4guide byte보존 assertion·4officialsources정확match와9번호/movie확인·original보류/Turing반증대조. rootpreview/production19로그와guidePNG직접읽기. 유지보수4: dated사례문구/sources/doc을ledger변경시함께검토해야함",
+      "evidence": [
+        "src/content/guides.ts",
+        "data/reviewed/provider-corrections.json",
+        "content/number-checking-guide-20261014.md",
+        "preview19/production19/rootguide360"
+      ],
+      "acceptance": "Final assigned artifact accepted; newcleanCI/preview/production/rollback are root pending at peer review, not claimed by worker"
+    },
+    {
+      "reviewer": "/root/resume_2000_content",
+      "candidate": "/root/resume_2000_ui",
+      "scores": {
+        "correctness": 5,
+        "evidence": 5,
+        "value": 5,
+        "maintainability": 4
+      },
+      "reason": "독립projection TJ12/3123/164 KY10/2481/808·분모3299/목록10ID18번호/suppress13/conflict4 assertion PASS. 실제19로그/PNG3/evidence dirtybase342읽기. 유지보수4: publication/safeNumber/E2E고정기준선갱신동기화필요",
+      "evidence": [
+        "src/pages/coverage.astro",
+        "e2e/coverage.spec.ts",
+        "engineering/coverage-ui-20261014.md",
+        "engineering/design/coverage-20261014-mobile.png"
+      ],
+      "acceptance": "Final assigned artifact accepted; newcleanCI/preview/production/rollback are root pending at peer review, not claimed by worker"
+    },
+    {
+      "reviewer": "/root/resume_2000_harness",
+      "candidate": "/root/resume_2000_ui",
+      "scores": {
+        "correctness": 5,
+        "evidence": 5,
+        "value": 5,
+        "maintainability": 4
+      },
+      "reason": "독립분모·사업자상태·10ID18번호대조, KY51714정정/KY57803억제·stablehref와근거조건확인. 두target19로그/desktop-mobile이미지직접읽기. 유지보수4: 공식ledger갱신때고정E2E합계와docs기준선을수동대조",
+      "evidence": [
+        "src/pages/coverage.astro",
+        "e2e/coverage.spec.ts",
+        "data/reviewed/provider-corrections.json",
+        "preview19+production19/PNG"
+      ],
+      "acceptance": "Final assigned artifact accepted; newcleanCI/preview/production/rollback are root pending at peer review, not claimed by worker"
+    },
+    {
+      "reviewer": "/root/resume_2000_content",
+      "candidate": "/root/resume_2000_harness",
+      "scores": {
+        "correctness": 5,
+        "evidence": 5,
+        "value": 5,
+        "maintainability": 4
+      },
+      "reason": "최종70case/fullrawhref·label·occurrence보완읽기. root274PASS/actualv03025checks1attempt35.682s와두실패receipt직접확인. 저장detail실제raw를독립정규화해expectedbyte일치. 유지보수4: 고정routes/홈assetregex/CFexactmarkup·decoder의보수적수동관리",
+      "evidence": [
+        "scripts/verify-deployment.mjs",
+        "tests/deployment-healthcheck.test.mjs",
+        "engineering/deployment-healthcheck-20261014.md",
+        "operations/runs/resume-20261014-2000-healthcheck-baseline-complete.json"
+      ],
+      "acceptance": "Final assigned artifact accepted; newcleanCI/preview/production/rollback are root pending at peer review, not claimed by worker"
+    },
+    {
+      "reviewer": "/root/resume_2000_ui",
+      "candidate": "/root/resume_2000_harness",
+      "scores": {
+        "correctness": 5,
+        "evidence": 5,
+        "value": 5,
+        "maintainability": 4
+      },
+      "reason": "70case/새13querynegative와전체274PASS/actualv03025PASS 직접읽기. fullmailto payload+label/UTF8XOR/공유발생횟수·decoder1·wholebytes,source/digests/deadline/exclusive보존확인. 유지보수4: 중요guide/asset표본확장은staticRoutes/fixture에별도반영필요",
+      "evidence": [
+        "scripts/verify-deployment.mjs",
+        "tests/deployment-healthcheck.test.mjs",
+        "operations/runs/resume-20261014-2000-healthcheck-failed-detail-transform.json",
+        "operations/runs/resume-20261014-2000-healthcheck-baseline-complete.json"
+      ],
+      "acceptance": "Final assigned artifact accepted; newcleanCI/preview/production/rollback are root pending at peer review, not claimed by worker"
+    }
+  ],
+  "reviewStatus": "six_real_final_reviews_verified",
+  "baseline": {
+    "productionSha": "b0f4a48fadf3c28af5ccb161b6d49ae95c0716e8",
+    "deploymentId": "2be02785-8a37-4bba-a713-08847a2fa6f7",
+    "automaticProduction": false,
+    "automaticPreview": "none",
+    "httpChecks": 26,
+    "httpPassed": true,
+    "evidence": "resume-20261014-2000-baseline-http.json"
+  },
+  "release": {
+    "version": "0.3.1",
+    "state": "published",
+    "sourceSha": "67c7ee094afa9b0734a67bb56052a9b9be30c7a2",
+    "publishedAt": "2026-10-14T12:05:40Z",
+    "url": "https://github.com/jpop-today/jpoptoday/releases/tag/v0.3.1",
+    "tagObjectSha": "32294ff0d0c4fa5134e7782d757bd232b052c26b",
+    "draft": false,
+    "prerelease": false,
+    "workflowRun": "38561090043"
+  },
+  "adsense": {
+    "state": "unknown",
+    "technicalStage": "production-preparing"
+  },
+  "notifications": {
+    "progress": "sent",
+    "runId": "38556810485",
+    "sentAt": "2026-10-14T11:28:36.920Z",
+    "release": {
+      "state": "sent",
+      "runId": "38561090043",
+      "sentAt": "2026-10-14T12:05:41.520Z",
+      "attempts": 1
+    },
+    "completed": {
+      "state": "pending_publication",
+      "date": "2026-10-14",
+      "reason": "Dispatch saved completed report after docs/report merge; actual dispatch time Oct15 KST will be recorded separately"
+    }
+  },
+  "automation": {
+    "daily09Changed": false,
+    "hourlyChanged": false,
+    "overlappingPrompts": "coalesced into current root; no duplicate teams for repeated prompt",
+    "daily09Enabled": true,
+    "hourlyEnabled": true,
+    "hourlyLastObserved": "2026-10-14T17:02:04.999472+00:00",
+    "verifiedAt": "2026-10-14T17:17:33+00:00",
+    "method": "actual automations_peek; two original automations; neither schedule changed",
+    "dailyLastObserved": "2026-10-13T23:58:56.467334+00:00"
+  },
+  "reviewEvidence": "resume-20261014-2000-reviews.json",
+  "rotation": {
+    "state": "replacement_created",
+    "retired": "/root/resume_2000_ui",
+    "replacement": "/root/replacement_2000_release_gate",
+    "reason": "38/38/38; allfourcriterion-sums tie; predefinedUI fallback",
+    "physicalDeletion": false
+  },
+  "sourcePullRequest": {
+    "number": 17,
+    "url": "https://github.com/jpop-today/jpoptoday/pull/17",
+    "headSha": "c34406f133dbfca582dea28fdc3fbb0405940721",
+    "state": "merged",
+    "nativeAppAttachment": "blocked - codex_app attach call did not return; no confirmed native attachment",
+    "mergeSha": "67c7ee094afa9b0734a67bb56052a9b9be30c7a2"
+  },
+  "ci": {
+    "mainApp": "38558414384",
+    "mainContracts": "38558414455",
+    "conclusion": "success",
+    "preview": "38559218411",
+    "productionVerifyOnly": "38560667808",
+    "release": "38561090043",
+    "automaticProductionDeploy": "skipped: verify-only and incompletely configured CF Actions bindings; actual deployment root managed"
+  },
+  "preview": {
+    "url": "https://fd99455a.jpoptoday-preview.pages.dev",
+    "sourceSha": "67c7ee094afa9b0734a67bb56052a9b9be30c7a2",
+    "noindex": true,
+    "ads": false,
+    "state": "shipped-and-verified",
+    "deploymentId": "fd99455a-f83c-4505-8fd9-997b2b60a786",
+    "createdOn": "2026-10-14T11:45:43.668435Z",
+    "httpChecks": 25,
+    "httpPassed": true,
+    "remoteBrowserRun": "38559218411",
+    "remoteBrowserPassed": 19
+  },
+  "production": {
+    "url": "https://jpop.today",
+    "project": "todayjpop",
+    "branch": "dev",
+    "sourceSha": "67c7ee094afa9b0734a67bb56052a9b9be30c7a2",
+    "deploymentId": "693b37f6-dcb2-476a-aa8c-45869df45b8f",
+    "createdOn": "2026-10-14T11:52:34.417835Z",
+    "method": "manager managed cloud bindings",
+    "automaticProduction": false,
+    "automaticPreview": "none",
+    "firstHttpPassed": true,
+    "firstHttpChecks": 25,
+    "ads": false,
+    "recovery": "actual previous production restored then new production restored and full HTTP verified",
+    "rollbackHttpPassed": true,
+    "rollbackSha": "b0f4a48fadf3c28af5ccb161b6d49ae95c0716e8",
+    "restoreApiId": "693b37f6-dcb2-476a-aa8c-45869df45b8f",
+    "firstRestoreHttpPassed": false,
+    "firstRestoreReason": "METADATA_MISMATCH after six bounded attempts",
+    "restoreDiagnostic": {
+      "checkedAt": "2026-10-14T11:58:15.375Z",
+      "immutableAndCustomDomainSourceMatches": true,
+      "scope": "metadata only; full final HTTP rerun after changed observed state"
+    },
+    "restoreFinalHttpPassed": true,
+    "restoreFinalHttpChecks": 25,
+    "restoreFinalCheckedAt": "2026-10-14T12:00:51.402Z",
+    "verificationRun": "38560667808",
+    "verificationState": "success",
+    "remoteBrowserPassed": 19,
+    "firstRestoreDetails": "attempt3 BODY_MISMATCH after metadata matched M, 3 checks; other stale metadata attempts; final METADATA_MISMATCH. Failure preserved, later changed observed state and full new25 HTTP passed.",
+    "latestHttpRecheck": {
+      "checkedAt": "2026-10-14T17:04:57.222Z",
+      "passed": true,
+      "attempts": 1,
+      "checks": 25,
+      "evidence": "resume-20261014-2000-final-http-recheck.json",
+      "apiEvidence": "resume-20261014-2000-final-api-recheck.json",
+      "sourceSha": "67c7ee094afa9b0734a67bb56052a9b9be30c7a2",
+      "deploymentId": "693b37f6-dcb2-476a-aa8c-45869df45b8f"
+    }
+  },
+  "overlappingResume": {
+    "observed": "2026-10-14T11:58Z approximate; actual prompt received during root run",
+    "action": "coalesced; no new worker/team/Git/deployment duplicate"
+  },
+  "productCompletedAt": "2026-10-14T12:05:40Z",
+  "publicationBoundary": "Product released Oct14 KST; unfinished docs/report publication resumed Oct15 KST in same run. No new product release or deployment.",
+  "environmentRecheck": {
+    "revision": "137",
+    "observationsCurrent": true,
+    "running": true,
+    "connectedGitHubMain": "67c7ee094afa9b0734a67bb56052a9b9be30c7a2",
+    "cloudflareBindingsReady": true,
+    "checkedAt": "2026-10-14T17:17:33+00:00"
+  },
+  "replacementAcceptanceEvidence": "resume-20261014-2000-reviews.json",
+  "verification": {
+    "unit": 274,
+    "typeErrors": 0,
+    "typeWarnings": 0,
+    "previewLocalBrowser": 19,
+    "productionLocalBrowser": 19,
+    "previewRemoteBrowser": 19,
+    "productionRemoteBrowser": 19,
+    "cleanArtifacts": {
+      "html": 3334,
+      "files": 3343,
+      "ids": 3317,
+      "previewIndex": 0,
+      "productionIndex": 25
+    },
+    "fullCIArchiveComparison": "blocked: download403; not substituted by sameSHA rebuild and HTTP sample checks",
+    "ciEvidence": "resume-20261014-2000-ci-reproducibility.json"
+  },
+  "remaining": [
+    "Issue15 CF Actions bindings and actual auto-deploy verification; cloud-managed release remains possible",
+    "Issue6 unreviewed provider/title/artist/version evidence and original content",
+    "Full metadata redistribution rights and real contact handling unknown",
+    "Google account, ownership, application and actual review unknown; operator identity/legal consent steps"
+  ]
+}
