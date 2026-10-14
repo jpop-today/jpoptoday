@@ -20,7 +20,7 @@ function list(values, fallback) {
 export function morningReport({ date, previous = null }) {
   validateDate(date);
   const yesterday = previousDate(date);
-  if (previous && (previous.date !== yesterday || previous.phase !== 'complete')) throw new Error('Previous report must describe the previous Korean calendar day');
+  if (previous) validateCompleteReport(previous, yesterday);
   return {
     schemaVersion: 1, date, timezone: 'Asia/Seoul', phase: 'plan',
     title: `${date} 오전 09시 · jpop.today`,
@@ -53,7 +53,8 @@ export function eventReport(eventName, event) {
 export function validateCompleteReport(report, expectedDate) {
   validateDate(expectedDate);
   if (report.schemaVersion !== 1 || report.date !== expectedDate || report.timezone !== 'Asia/Seoul' || report.phase !== 'complete') throw new Error('Invalid completed report identity');
-  if (typeof report.title !== 'string' || typeof report.summary !== 'string' || !Array.isArray(report.fields) || !Array.isArray(report.completed) || !Array.isArray(report.nextPlan)) throw new Error('Invalid completed report content');
+  const text = value => typeof value === 'string' && Boolean(value.trim());
+  if (!text(report.title) || !text(report.summary) || !Array.isArray(report.fields) || report.fields.length > 25 || !report.fields.every(field => field && text(field.name) && text(field.value) && (field.inline === undefined || typeof field.inline === 'boolean')) || !Array.isArray(report.completed) || !report.completed.every(text) || !Array.isArray(report.nextPlan) || !report.nextPlan.every(text)) throw new Error('Invalid completed report content');
   return report;
 }
 export function evaluateTeam(workers, reviews) {
@@ -78,7 +79,11 @@ export function evaluateTeam(workers, reviews) {
   return { totals, lowest: workers.filter(w => totals[w] === minimum), maximum: 40 };
 }
 async function optionalJson(path) {
-  try { return JSON.parse(await readFile(path, 'utf8')); }
+  try {
+    const value = JSON.parse(await readFile(path, 'utf8'));
+    if (!value || typeof value !== 'object' || Array.isArray(value)) throw new Error('Invalid stored report object');
+    return value;
+  }
   catch (error) { if (error.code === 'ENOENT') return null; throw new Error('Stored report unreadable'); }
 }
 export async function main(args = process.argv.slice(2), env = process.env) {
