@@ -58,6 +58,25 @@ async function fixture(t, target = 'production') {
 function code(code) { return error => error instanceof DeploymentVerificationError && error.code === code; }
 function changedInfo(f, changes) { return new Response(JSON.stringify({ ...f.info, ...changes })); }
 
+test('new artist directory is pinned while a previous artifact without it remains recoverable', async t => {
+  const legacy = await fixture(t);
+  const oldReceipt = await verifyDeployment(legacy.options);
+  assert.equal(oldReceipt.passed, true);
+  assert.equal(legacy.calls.some(call => call.url.pathname === '/artists/'), false);
+  const current = await fixture(t);
+  await mkdir(path.join(current.dist, 'artists'));
+  const bytes = Buffer.from('<h1>Checked artist directory</h1>');
+  await writeFile(path.join(current.dist, 'artists/index.html'), bytes);
+  current.resources.set('/artists/', bytes);
+  const result = await verifyDeployment(current.options);
+  assert.equal(result.passed, true);
+  assert.ok(result.attempts[0].checks.some(check => check.path === '/artists/' && check.passed));
+  current.resources.set('/artists/', Buffer.from('<h1>Stale directory</h1>'));
+  const stale = await verifyDeployment(current.options);
+  assert.equal(stale.passed, false);
+  assert.equal(stale.code, 'BODY_MISMATCH');
+});
+
 test('strict target-specific origin allowlist rejects credentials, normalization, paths, query and fragment', () => {
   assert.equal(validateDeploymentUrl('https://jpop.today/', 'production'), 'https://jpop.today');
   assert.equal(validateDeploymentUrl('https://2be02785.todayjpop.pages.dev', 'production'), 'https://2be02785.todayjpop.pages.dev');

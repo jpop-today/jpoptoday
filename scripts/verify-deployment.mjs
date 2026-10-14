@@ -244,6 +244,13 @@ export async function verifyDeployment({ url, distPath, outputPath, expectedSour
     ...['search', 'favorites', 'song', 'guides', 'guides/tj-ky-numbers', 'about', 'contact', 'privacy', 'faq', 'coverage', 'chart'].map(route => [`/${route}/`, `${route}/index.html`]),
     ...detailPaths.map(route => [route, detailFile(route, new Set(catalog.songs.map(song => song.id)))]),
   ]);
+  // A previous frozen release may predate this directory; recovery checks still use its bytes.
+  try {
+    await lstat(path.join(root, 'artists/index.html'));
+    staticRoutes.set('/artists/', 'artists/index.html');
+  } catch (error) {
+    if (error.code !== 'ENOENT') fail('INVALID_ARTIFACT');
+  }
   const resources = [];
   for (const [route, file] of staticRoutes) resources.push({ route, bytes: await localBytes(root, file, maxResponseBytes) });
   const home = resources[0].bytes.toString('utf8');

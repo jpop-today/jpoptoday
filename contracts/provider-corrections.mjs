@@ -69,6 +69,13 @@ function officialLookup(value, provider, lookupNumber) {
     fail('Invalid official numeric lookup query');
 }
 
+/** Reuse the ledger's exact numeric URL rules when displaying confirmed evidence. */
+export function officialLookupMatches(value, provider, lookupNumber) {
+  if (!providers.includes(provider) || !number(lookupNumber)) return false;
+  try { officialLookup(value, provider, lookupNumber); return true; }
+  catch { return false; }
+}
+
 /** Shape/provenance validation cannot replace human title/artist/version review. */
 export function validateProviderCorrections(ledger, staging, { now = new Date() } = {}) {
   exactKeys(ledger, ['ledgerVersion', 'purpose', 'legacyRevision', 'entries'], 'Invalid correction ledger fields');
