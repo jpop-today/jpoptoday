@@ -10,7 +10,7 @@ Astro + TypeScript 정적 페이지, 브라우저 검색·번호 복사·즐겨�
 
 번호는 `observed-unverified` 또는 `unknown`인 기존 관측값입니다. 공식 최신 확인을 마친 검증 카탈로그 v1과 다릅니다. 같은 번호의 여러 ID를 자동 병합하지 않고 상세에 충돌 안내를 표시합니다. 출처·확인일을 임의 생성하지 않습니다. 가사·외부 앨범 이미지·광고 요청은 이 미리보기 artifact에 포함하지 않습니다.
 
-현재 운영 Cloudflare `todayjpop`은 개인 원본 `kim75503/todayjpop`의 dev SHA `6dbe5a65d1bd729c09393f746f715f4363089a43`에서 제공합니다. 조직 앱 미리보기는 별도 `jpoptoday-preview` 프로젝트로 배포합니다. 모든 미리보기는 noindex이며 실제 배포·운영 전환·AdSense 심사 상태는 [실행 기록](https://github.com/jpop-today/docs/blob/main/operations/status.md)으로 확인합니다.
+운영 Cloudflare `todayjpop`은 개인 원본 `kim75503/todayjpop`의 dev에 연결되어 자동 데이터 갱신을 제공합니다. 최초 기준선은 `6dbe5a65d1bd729c09393f746f715f4363089a43`, 2026-10-14 실제 재조회 소스는 `94d615f5e355f4b00ebbb824547ac6dfa034ad18`입니다. 최신 SHA는 [운영 기준선](https://github.com/jpop-today/docs/blob/main/operations/cloudflare-baseline.md)에서 다시 확인합니다. 조직 앱 미리보기는 별도 `jpoptoday-preview` 프로젝트로 배포합니다. 모든 미리보기는 noindex이며 실제 배포·운영 전환·AdSense 심사 상태는 [실행 기록](https://github.com/jpop-today/docs/blob/main/operations/status.md)으로 확인합니다.
 
 ## 개발과 검증
 

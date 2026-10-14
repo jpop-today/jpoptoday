@@ -1,0 +1,305 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-14",
+  "timezone": "Asia/Seoul",
+  "phase": "complete",
+  "runId": "daily-20261014",
+  "recordedAt": "2026-10-14T00:27:25.276691+00:00",
+  "scheduledAt": "2026-10-14T09:00:00+09:00",
+  "observedAutomationStart": "2026-10-13T23:58:56.467334+00:00",
+  "title": "2026-10-14 · jpop.today 완료 보고",
+  "summary": "오늘 새3명의 독립검토에서 찾은 오전보고P2와faviconP3를 수정했습니다. v0.2.0·v0.2.1을 게시하고 같은소스를Cloudflare미리보기·원격브라우저로 검증했습니다.",
+  "fields": [
+    {
+      "name": "어제→오늘 개선",
+      "value": "어제는 코드·146테스트와 예약등록 완료. 오늘 첫예약실행·실제Discord·같은SHA배포/릴리스 완료. 보고검증 누락·favicon404 수정, 148테스트·원격Chromium10 PASS."
+    },
+    {
+      "name": "자료·팀",
+      "value": "공식2그룹/4ID와4번호 재확인. 자료40/UI39/하네스39; 사전동률순서로UI교체·새재현담당 영입. 코드·평가이력 보존."
+    },
+    {
+      "name": "다음 계획",
+      "value": "공식KY57803/TJ27944 정정후보의reviewed ledger와 ID/URL/storage보존 검토. 최신운영차트100ID 변화0·순위46개 변경 반영 검토. 콘텐츠·운영전환·AdSense실제계정 근거 준비."
+    },
+    {
+      "name": "운영·승인",
+      "value": "새앱은 noindex/광고없는 전용preview. 기존jpop.today는개인dev 자동갱신94d615f. 조직운영전환·전체번호정정·Google실제심사승인은아직미확인."
+    }
+  ],
+  "url": "https://github.com/jpop-today/jpoptoday/releases/tag/v0.2.1",
+  "completed": [
+    "source PR10·11 검증 후 병합",
+    "v0.2.0·v0.2.1 실제 GitHubRelease 게시 및 동일SHA Cloudflarepreview배포",
+    "148unit/type0error0warning/artifact3333HTML3340files/remoteChromium10 PASS",
+    "전일보고 JSON 스키마/시간대/본문 검증과 원본보존 회귀 추가",
+    "favicon자동404를 원본gradient 자체SVG아이콘으로 해소·콘솔0 확인",
+    "새3명 배정·실제6동료리뷰·사전동률규칙의교체·재현담당 인계",
+    "KY57803/TJ27944 등 공식4번호와원본4ID 재확인",
+    "관리자·릴리스 Discord 실제 sent 확인",
+    "기존운영94d615f 갱신 재조회·차트100ID증감0/순위46개 변경 확인"
+  ],
+  "nextPlan": [
+    "Issue6 reviewed correction ledger: 튜링러브KY57803 반증·대체번호unknown, 전전전세 original/movie 정체성 분리",
+    "최신94d615f 차트 기간/순위 갱신을 고정snapshot과 ID/저장 호환으로 검토",
+    "공개콘텐츠·문의/개인정보·색인·업데이트책임과 동일SHA 운영전환 게이트 확인",
+    "Google계정/심사 실제상태 근거확인; noindex 관측preview를 신청사이트로 쓰지않음"
+  ],
+  "improvements": [
+    {
+      "before": "전일은 보고/릴리스 코드를 구현했고 라이브발송·0.2게시 미실행",
+      "after": "오늘 첫예약재개·manager/releaseDiscord 실제sent 및0.2.1Release/preview게시",
+      "evidence": [
+        "actions/runs/38487575652",
+        "actions/runs/38489299392"
+      ]
+    },
+    {
+      "before": "morning date/phase만검사해schema99/UTC완료가소비됨",
+      "after": "정상complete schema/timezone/body 검증·null/array 거부·원본보존",
+      "evidence": [
+        "pull/11",
+        "tests/report-cli.test.mjs",
+        "operations/report-artifact-audit-20261014.md"
+      ]
+    },
+    {
+      "before": "freshdesktopfavicon.ico404 console error1",
+      "after": "자체gradientSVG data icon·error/warning/pageerror/자동요청0",
+      "evidence": [
+        "engineering/design/preview-20261014-qa.md"
+      ]
+    }
+  ],
+  "verification": [
+    {
+      "name": "Node24.19 unit",
+      "command": "npm test",
+      "result": "passed",
+      "tests": 148,
+      "sourceSha": "d040daa0627d32e35f5a9238be174f8a483617d9"
+    },
+    {
+      "name": "type/static/publicboundary",
+      "command": "ASTRO_TELEMETRY_DISABLED=1 npm run check/build; npm run verify:dist",
+      "result": "passed",
+      "htmlPages": 3333,
+      "files": 3340
+    },
+    {
+      "name": "sameSHA deployed Chromium",
+      "result": "passed",
+      "tests": 10,
+      "url": "https://github.com/jpop-today/jpoptoday/actions/runs/38489262480"
+    },
+    {
+      "name": "sameSHA HTTPS HTTP",
+      "result": "passed",
+      "checks": 13,
+      "evidence": "docs/operations/releases/preview-http-v0.2.1-20261014.json"
+    },
+    {
+      "name": "Post-release operations record artifact boundary",
+      "result": "passed",
+      "checks": 2,
+      "details": "reports/releases 하위 HTML의 실수 공개 거부; 기존 clean release artifact 통과 유지",
+      "checkedAt": "2026-10-14T00:28:56.120053+00:00",
+      "initialAttempt": "잘못된directory인자 때문에기본dist를읽어expected rejection실패. 실제distPath로수정하여두금지경로거부/기존cleanartifact통과 재확인."
+    }
+  ],
+  "release": {
+    "version": "0.2.1",
+    "state": "published",
+    "url": "https://github.com/jpop-today/jpoptoday/releases/tag/v0.2.1",
+    "sourceSha": "d040daa0627d32e35f5a9238be174f8a483617d9",
+    "publishedAt": "2026-10-14T00:18:15Z",
+    "gate": "https://github.com/jpop-today/jpoptoday/actions/runs/38489299392"
+  },
+  "preview": {
+    "url": "https://12a43fb9.jpoptoday-preview.pages.dev",
+    "deploymentId": "12a43fb9-4dab-4041-9685-21a9d0d3dac2",
+    "sourceSha": "d040daa0627d32e35f5a9238be174f8a483617d9",
+    "state": "shipped",
+    "noindex": true,
+    "ads": false
+  },
+  "production": {
+    "project": "todayjpop",
+    "repository": "kim75503/todayjpop",
+    "branch": "dev",
+    "sourceSha": "94d615f5e355f4b00ebbb824547ac6dfa034ad18",
+    "deploymentId": "3f622896-f6c3-4cb0-b39d-b6b9678d6d0c",
+    "organizationMigration": false,
+    "chartIdsAdded": 0,
+    "chartIdsRemoved": 0,
+    "chartRanksChanged": 46
+  },
+  "adsense": {
+    "state": "unknown",
+    "blockers": [
+      "실제Google계정/심사통지 미확인",
+      "공식번호/원곡version/권리·콘텐츠·운영전환 게이트"
+    ]
+  },
+  "team": {
+    "workers": [
+      "daily_20261014_evidence",
+      "daily_20261014_ui",
+      "daily_20261014_harness"
+    ],
+    "reviews": [
+      {
+        "reviewer": "daily_20261014_evidence",
+        "candidate": "daily_20261014_ui",
+        "scores": {
+          "correctness": 5,
+          "evidence": 5,
+          "value": 5,
+          "maintainability": 4
+        },
+        "reason": "할당된 desktop/mobile·HTTP·팔레트·favicon 검증을 충족하고 로컬/원격, clean/dirty artifact, root 수정과 담당자 재검증을 정확히 구분했다. 실제 JSON·캡처를 읽고 20 HTTP 기록, CSS 해시, 픽셀 차이와 대비 수치를 독립 대조했다. 전체 재실행 명령이 임시 스크립트에 의존해 다음 세션의 동일 감사 재현에는 보완 여지가 있다.",
+        "evidence": [
+          "engineering/design/preview-20261014-qa.md:18 sourceSha/remote dirty일치",
+          "engineering/design/preview-20261014-qa.md:38 실제 evidence.json과캡처 직접열기",
+          "engineering/design/preview-20261014-qa.md:50 SHA/픽셀차이 독립재계산",
+          "engineering/design/preview-20261014-qa.md:64 대비독립계산",
+          "engineering/design/preview-20261014-qa.md:114 전체감사/tmpscript 재확보 필요"
+        ]
+      },
+      {
+        "reviewer": "daily_20261014_evidence",
+        "candidate": "daily_20261014_harness",
+        "scores": {
+          "correctness": 5,
+          "evidence": 5,
+          "value": 5,
+          "maintainability": 4
+        },
+        "reason": "24개 기준선·P2 재현·수정 후 39개 확인과 실제/모의 POST 구분이라는 할당 기준을 충족했다. 원 재현 산출물, 수정 후 실패 기록, 독립 손상 사례와 대상 코드 해시를 실제 읽어 문서와 대조했다. 24/39개 전체 감사의 실행 도구가 임시 경로에 남아 동일 재실행의 영속성이 부족하다.",
+        "evidence": [
+          "operations/report-artifact-audit-20261014.md:9 실제script과0600stdout/stderr",
+          "operations/report-artifact-audit-20261014.md:24 최초out-30결함확인",
+          "operations/report-artifact-audit-20261014.md:32 원사례·13손상·원본보존assertions읽기·hash일치",
+          "operations/report-artifact-audit-20261014.md:17 fetchImpl mock POST assertions",
+          "operations/report-artifact-audit-20261014.md:34 실제6리뷰/수동의미게이트"
+        ]
+      },
+      {
+        "reviewer": "daily_20261014_ui",
+        "candidate": "daily_20261014_evidence",
+        "scores": {
+          "correctness": 5,
+          "evidence": 5,
+          "value": 5,
+          "maintainability": 5
+        },
+        "reason": "관측값·공식 결과·정정 후보·unknown을 정확히 구분하고, 잘못된 번호 연결과 original/movie 버전 병합을 예방하는 근거를 제공했다. 원본·ID·공개 데이터 소유권을 지키며 후속 정정 조건을 구체적으로 남겼다.",
+        "evidence": [
+          "data/provider-review-20261014.md:27 raw/generated/chart/staging4ID 독립확인",
+          "data/provider-review-20261014.md:52 5hash독립재계산일치",
+          "data/provider-review-20261014.md:79 공식응답기록읽기/리뷰어추가HTTP아님",
+          "data/provider-review-20261014.md:44 unknown유지확인",
+          "data/provider-review-20261014.md:97 링크/호환gate"
+        ]
+      },
+      {
+        "reviewer": "daily_20261014_ui",
+        "candidate": "daily_20261014_harness",
+        "scores": {
+          "correctness": 5,
+          "evidence": 5,
+          "value": 5,
+          "maintainability": 5
+        },
+        "reason": "실제 CLI의 오전 보고 결함을 발견하고 정확한 원 재현·수용 기준·수정 후 실패 보존을 확인했다. 감사자의 검증과 root의 코드 수정 소유권, mock sent와 실제 송신, 로컬 환경 binding과 Actions Secret을 구분했다.",
+        "evidence": [
+          "operations/report-artifact-audit-20261014.md:24 최초out-30실제읽기",
+          "operations/report-artifact-audit-20261014.md:32 13손상/기록직접읽기/독립4assertionsPASS/hash일치",
+          "operations/report-artifact-audit-20261014.md:17 mock구현읽기/실제skip로그확인",
+          "operations/report-artifact-audit-20261014.md:34 의미게이트",
+          "operations/report-artifact-audit-20261014.md:42 직접 vs root라이브구분"
+        ]
+      },
+      {
+        "reviewer": "daily_20261014_harness",
+        "candidate": "daily_20261014_evidence",
+        "scores": {
+          "correctness": 5,
+          "evidence": 5,
+          "value": 5,
+          "maintainability": 5
+        },
+        "reason": "2그룹·4 stable ID를 조사하고 번호·버전 충돌, 후보와 미확인을 구분했다. 원본 4파일·staging 해시와 행·ID를 직접 재확인했으며 공식 조회의 URL·파라미터·시각·응답 해시가 명시돼 있다. 원본·ID·관측값을 보존하고 다음 후보의 검증 조건과 미실행 범위를 명시했다.",
+        "evidence": [
+          "data/provider-review-20261014.md:27 raw/generated/chart/TSV tuple대조",
+          "data/provider-review-20261014.md:32 ID baseline실제확인",
+          "data/provider-review-20261014.md:52 5hash독립재계산",
+          "data/provider-review-20261014.md:79 조회기록실제읽기",
+          "data/provider-review-20261014.md:44 검색0!=unlisted",
+          "data/provider-review-20261014.md:97 링크8/8존재"
+        ]
+      },
+      {
+        "reviewer": "daily_20261014_harness",
+        "candidate": "daily_20261014_ui",
+        "scores": {
+          "correctness": 5,
+          "evidence": 5,
+          "value": 5,
+          "maintainability": 5
+        },
+        "reason": "정확성·증거·사용자 가치는 앞선 실제 검토 결과를 유지한다. 유지보수성의 P3는 해결됐다. 문서의 캡처3개가 저장소 내부 상대경로를 사용하며, 실제 파일 존재·이미지 크기·임시 원본과의 바이트 동일성을 직접 확인했다.",
+        "evidence": [
+          "engineering/design/preview-20261014-qa.md:122 desktop1440×1100 SHA b278fb1af138102fd231f32832536b2529dbfb0c4fe5082fe0beaa8f636e0762",
+          "engineering/design/preview-20261014-qa.md:123 mobile360×800 SHA e059daec45088f090a8f86ad95a3958a9c426bf72e2062c06d3988c972848175",
+          "engineering/design/preview-20261014-qa.md:124 fallback360×800 SHA 90e2330c0ed81e942af5afdc5ef6e3c3ce0f4322f3829b3c96093feab2cc907a",
+          "engineering/design/preview-20261014-qa.md:116 임시로그지속성구분·122-124 상대링크 실제재독"
+        ]
+      }
+    ],
+    "rotation": {
+      "totals": {
+        "daily_20261014_evidence": 40,
+        "daily_20261014_ui": 39,
+        "daily_20261014_harness": 39
+      },
+      "lowest": [
+        "daily_20261014_ui",
+        "daily_20261014_harness"
+      ],
+      "tieBreakOrder": [
+        "daily_20261014_ui",
+        "daily_20261014_evidence",
+        "daily_20261014_harness"
+      ],
+      "retired": "daily_20261014_ui",
+      "replacement": "replacement_20261014_repro",
+      "status": "replacement_created",
+      "reason": "39점동률이며4항목합도동률. 사전고정UI→evidence→harness순서로UI선택. completed상태interrupt확인·active제외·신규실제spawn, 코드/평가이력보존. 전체독립감사의영속재현P3를보완하는문서인계."
+    },
+    "active": [
+      "daily_20261014_evidence",
+      "daily_20261014_harness",
+      "replacement_20261014_repro"
+    ]
+  },
+  "notification": {
+    "status": "sent",
+    "scope": "manager/release",
+    "evidence": [
+      {
+        "url": "https://github.com/jpop-today/jpoptoday/actions/runs/38487575652",
+        "sentAt": "2026-10-14T00:00:04.5134419Z"
+      },
+      {
+        "url": "https://github.com/jpop-today/jpoptoday/actions/runs/38489299392",
+        "sentAt": "2026-10-14T00:18:16.0986454Z"
+      }
+    ],
+    "completionDelivery": "Stored complete report workflow dispatch after trusted main merge; actual delivery recorded by its Actions run"
+  },
+  "links": {
+    "docs": "https://github.com/jpop-today/docs/blob/main/operations/daily/2026-10-14.md",
+    "issue": "https://github.com/jpop-today/jpoptoday/issues/9"
+  }
+}
