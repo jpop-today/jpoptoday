@@ -1,0 +1,224 @@
+{
+  "schemaVersion": 1,
+  "runId": "resume-20261014-2000",
+  "checkedAt": "2026-10-14T11:34:47.235720+00:00",
+  "workers": [
+    "/root/resume_2000_content",
+    "/root/resume_2000_ui",
+    "/root/resume_2000_harness"
+  ],
+  "reviews": [
+    {
+      "reviewer": "/root/resume_2000_ui",
+      "candidate": "/root/resume_2000_content",
+      "scores": {
+        "correctness": 5,
+        "evidence": 5,
+        "value": 5,
+        "maintainability": 4
+      },
+      "reason": "기존4guide/mapper 보존과 세정정사례·4official URL/실제checkedAt를ledger와직접대조. 단일guide JS-off/출처/footer 렌더와root19PASS/PNG읽기. 유지보수4: 자료의guide/ledger/doc 수동중복을정정때대조해야함",
+      "evidence": [
+        "src/content/guides.ts",
+        "content/number-checking-guide-20261014.md",
+        "e2e/guide.spec.ts",
+        "rootpreview19PASS+mobilePNG직접읽기"
+      ],
+      "acceptance": "Final assigned artifact accepted; newcleanCI/preview/production/rollback are root pending at peer review, not claimed by worker"
+    },
+    {
+      "reviewer": "/root/resume_2000_harness",
+      "candidate": "/root/resume_2000_content",
+      "scores": {
+        "correctness": 5,
+        "evidence": 5,
+        "value": 5,
+        "maintainability": 4
+      },
+      "reason": "기존4guide byte보존 assertion·4officialsources정확match와9번호/movie확인·original보류/Turing반증대조. rootpreview/production19로그와guidePNG직접읽기. 유지보수4: dated사례문구/sources/doc을ledger변경시함께검토해야함",
+      "evidence": [
+        "src/content/guides.ts",
+        "data/reviewed/provider-corrections.json",
+        "content/number-checking-guide-20261014.md",
+        "preview19/production19/rootguide360"
+      ],
+      "acceptance": "Final assigned artifact accepted; newcleanCI/preview/production/rollback are root pending at peer review, not claimed by worker"
+    },
+    {
+      "reviewer": "/root/resume_2000_content",
+      "candidate": "/root/resume_2000_ui",
+      "scores": {
+        "correctness": 5,
+        "evidence": 5,
+        "value": 5,
+        "maintainability": 4
+      },
+      "reason": "독립projection TJ12/3123/164 KY10/2481/808·분모3299/목록10ID18번호/suppress13/conflict4 assertion PASS. 실제19로그/PNG3/evidence dirtybase342읽기. 유지보수4: publication/safeNumber/E2E고정기준선갱신동기화필요",
+      "evidence": [
+        "src/pages/coverage.astro",
+        "e2e/coverage.spec.ts",
+        "engineering/coverage-ui-20261014.md",
+        "engineering/design/coverage-20261014-mobile.png"
+      ],
+      "acceptance": "Final assigned artifact accepted; newcleanCI/preview/production/rollback are root pending at peer review, not claimed by worker"
+    },
+    {
+      "reviewer": "/root/resume_2000_harness",
+      "candidate": "/root/resume_2000_ui",
+      "scores": {
+        "correctness": 5,
+        "evidence": 5,
+        "value": 5,
+        "maintainability": 4
+      },
+      "reason": "독립분모·사업자상태·10ID18번호대조, KY51714정정/KY57803억제·stablehref와근거조건확인. 두target19로그/desktop-mobile이미지직접읽기. 유지보수4: 공식ledger갱신때고정E2E합계와docs기준선을수동대조",
+      "evidence": [
+        "src/pages/coverage.astro",
+        "e2e/coverage.spec.ts",
+        "data/reviewed/provider-corrections.json",
+        "preview19+production19/PNG"
+      ],
+      "acceptance": "Final assigned artifact accepted; newcleanCI/preview/production/rollback are root pending at peer review, not claimed by worker"
+    },
+    {
+      "reviewer": "/root/resume_2000_content",
+      "candidate": "/root/resume_2000_harness",
+      "scores": {
+        "correctness": 5,
+        "evidence": 5,
+        "value": 5,
+        "maintainability": 4
+      },
+      "reason": "최종70case/fullrawhref·label·occurrence보완읽기. root274PASS/actualv03025checks1attempt35.682s와두실패receipt직접확인. 저장detail실제raw를독립정규화해expectedbyte일치. 유지보수4: 고정routes/홈assetregex/CFexactmarkup·decoder의보수적수동관리",
+      "evidence": [
+        "scripts/verify-deployment.mjs",
+        "tests/deployment-healthcheck.test.mjs",
+        "engineering/deployment-healthcheck-20261014.md",
+        "operations/runs/resume-20261014-2000-healthcheck-baseline-complete.json"
+      ],
+      "acceptance": "Final assigned artifact accepted; newcleanCI/preview/production/rollback are root pending at peer review, not claimed by worker"
+    },
+    {
+      "reviewer": "/root/resume_2000_ui",
+      "candidate": "/root/resume_2000_harness",
+      "scores": {
+        "correctness": 5,
+        "evidence": 5,
+        "value": 5,
+        "maintainability": 4
+      },
+      "reason": "70case/새13querynegative와전체274PASS/actualv03025PASS 직접읽기. fullmailto payload+label/UTF8XOR/공유발생횟수·decoder1·wholebytes,source/digests/deadline/exclusive보존확인. 유지보수4: 중요guide/asset표본확장은staticRoutes/fixture에별도반영필요",
+      "evidence": [
+        "scripts/verify-deployment.mjs",
+        "tests/deployment-healthcheck.test.mjs",
+        "operations/runs/resume-20261014-2000-healthcheck-failed-detail-transform.json",
+        "operations/runs/resume-20261014-2000-healthcheck-baseline-complete.json"
+      ],
+      "acceptance": "Final assigned artifact accepted; newcleanCI/preview/production/rollback are root pending at peer review, not claimed by worker"
+    }
+  ],
+  "preliminaryReviewHistory": [
+    {
+      "reviewer": "/root/resume_2000_ui",
+      "candidate": "/root/resume_2000_harness",
+      "scores": {
+        "correctness": 5,
+        "evidence": 5,
+        "value": 5,
+        "maintainability": 4
+      },
+      "stage": "57test-address-only-support",
+      "state": "superseded after real query-mailto mismatch; final reread70 supplied",
+      "countCorrection": "Final UI message initially said26checks; independently corrected actualarray25 before root decision"
+    }
+  ],
+  "manager": {
+    "actualUnitTests": 274,
+    "actualPreviewBrowser": 19,
+    "actualProductionLocalBrowser": 19,
+    "actualBaselineProductionHttpChecks": 25,
+    "baselineSourceSha": "b0f4a48fadf3c28af5ccb161b6d49ae95c0716e8",
+    "allSixReviewsRead": true,
+    "criteria": [
+      "correctness",
+      "evidence",
+      "value",
+      "maintainability"
+    ],
+    "totals": {
+      "/root/resume_2000_content": 38,
+      "/root/resume_2000_ui": 38,
+      "/root/resume_2000_harness": 38
+    },
+    "criterionSums": {
+      "/root/resume_2000_content": {
+        "correctness": 10,
+        "evidence": 10,
+        "value": 10,
+        "maintainability": 8
+      },
+      "/root/resume_2000_ui": {
+        "correctness": 10,
+        "evidence": 10,
+        "value": 10,
+        "maintainability": 8
+      },
+      "/root/resume_2000_harness": {
+        "correctness": 10,
+        "evidence": 10,
+        "value": 10,
+        "maintainability": 8
+      }
+    },
+    "tieBreakOrder": [
+      "/root/resume_2000_ui",
+      "/root/resume_2000_content",
+      "/root/resume_2000_harness"
+    ],
+    "selectedForRotation": "/root/resume_2000_ui",
+    "reason": "All three38andallfourcriterion-sums tie. Apply previouslydeclared UI/content/harness fallback; not an evidence claim that UI artifact is worse.",
+    "physicalDeletion": false,
+    "rotationState": "replacement_created",
+    "retired": "/root/resume_2000_ui",
+    "interruptedPreviousState": "completed",
+    "replacement": "/root/replacement_2000_release_gate",
+    "rotatedAt": "2026-10-14T11:36:39.565846+00:00",
+    "activeRoster": [
+      "/root/resume_2000_content",
+      "/root/resume_2000_harness",
+      "/root/replacement_2000_release_gate"
+    ]
+  },
+  "supplementalReplacementAcceptance": {
+    "recordedAt": "2026-10-14T17:17:33+00:00",
+    "artifact": "operations/production-content-gate-v031-20261014.md",
+    "rankingChanged": false,
+    "fileMutationsByReviewers": false,
+    "reviews": [
+      {
+        "reviewer": "/root/resume_2000_content",
+        "result": "passed",
+        "evidence": [
+          "28 relative links exist",
+          "clean M preview/production verifyDist independently run; 3343files/3334HTML/3317ID and0/25index",
+          "connected GitHub PR17/three verification runs/Release/annotatedtag independently read",
+          "eight historical HTTP receipts correctly separate old/new and failed/passed"
+        ],
+        "correction": "43 ledger entries, not43 distinct verified numbers; root wording corrected",
+        "scope": "read-only final acceptance; no new score; current GET and exact remote browser counts attributed to root"
+      },
+      {
+        "reviewer": "/root/resume_2000_harness",
+        "result": "passed",
+        "evidence": [
+          "28 relative links exist",
+          "actual6 reviews and38/38/38 tie with predeclared fallback/realrotation",
+          "preview/production/rollback/restore HTTP25 and retained restore failure",
+          "connected GitHub release/tag and actual remote browser19 logs independently read"
+        ],
+        "correction": "43 ledger entries(28 numeric URLs); add attempt3 mixed body rejection to failed restore table",
+        "scope": "read-only final acceptance; no new score; Release Discord exact timestamp is root handoff"
+      }
+    ]
+  }
+}
