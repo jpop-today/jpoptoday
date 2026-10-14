@@ -1,51 +1,49 @@
 name: deployed-preview
 on:
-  push:
-    branches: ['codex/**']
-    paths: ['.github/workflows/deployed-preview.yml']
   workflow_dispatch:
     inputs:
       deployment_url:
         description: Dedicated jpoptoday-preview deployment HTTPS URL
         required: true
-        default: 'https://363bb785.jpoptoday-preview.pages.dev'
       source_sha:
         description: Full source SHA recorded in the deployed build-info.json
         required: true
-        default: '279cc3e4ca823157c733f2ccdc726bfd01cd2f70'
 permissions:
   contents: read
+concurrency:
+  group: preview-verification-${{ inputs.source_sha }}
+  cancel-in-progress: false
 jobs:
   deployed-preview:
     runs-on: ubuntu-latest
     timeout-minutes: 15
     env:
-      JPOP_TEST_BASE_URL: ${{ inputs.deployment_url || 'https://363bb785.jpoptoday-preview.pages.dev' }}
-      EXPECTED_SOURCE_SHA: ${{ inputs.source_sha || '279cc3e4ca823157c733f2ccdc726bfd01cd2f70' }}
+      JPOP_TEST_BASE_URL: ${{ inputs.deployment_url }}
+      EXPECTED_SOURCE_SHA: ${{ inputs.source_sha }}
     steps:
       - uses: actions/checkout@v4
         with:
-          ref: ${{ inputs.source_sha || '279cc3e4ca823157c733f2ccdc726bfd01cd2f70' }}
+          ref: ${{ inputs.source_sha }}
       - uses: actions/setup-node@v4
         with:
           node-version: '24'
           cache: npm
       - run: npm ci
-      - name: Check deployment identity
+      - run: npm run build
+      - run: npm run verify:dist
+      - name: Verify deployed preview metadata and actual frozen bytes
+        env:
+          EXPECTED_TARGET: preview
         run: |
-          node --input-type=module <<'JS'
-          import assert from 'node:assert/strict';
-          const url = new URL(process.env.JPOP_TEST_BASE_URL);
-          assert.equal(url.protocol, 'https:');
-          assert.match(url.hostname, /^(?:[a-z0-9-]+\.)?jpoptoday-preview\.pages\.dev$/);
-          assert.match(process.env.EXPECTED_SOURCE_SHA, /^[a-f0-9]{40}$/);
-          const response = await fetch(new URL('/build-info.json', url));
-          assert.equal(response.status, 200);
-          const info = await response.json();
-          assert.equal(info.sourceSha, process.env.EXPECTED_SOURCE_SHA);
-          assert.equal(info.dirty, false);
-          console.log('Verified deployed source', info.sourceSha);
-          JS
+          npm run verify:deployment -- "$JPOP_TEST_BASE_URL" dist "$RUNNER_TEMP/jpop-preview-healthcheck.json"
+      - name: Preserve healthcheck attempts including failures
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: preview-healthcheck-${{ inputs.source_sha }}
+          path: ${{ runner.temp }}/jpop-preview-healthcheck.json
+          if-no-files-found: warn
+          retention-days: 30
       - run: npx playwright install --with-deps chromium
       - name: Verify actual Pages behavior
         run: npm run test:e2e

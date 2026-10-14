@@ -1,6 +1,6 @@
 {
   "name": "jpoptoday",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "private": true,
   "type": "module",
   "engines": {
@@ -24,7 +24,8 @@
     "report:completed": "node scripts/build-report.mjs completed",
     "notify:discord": "node scripts/discord-notify.mjs",
     "deploy:production": "node scripts/deploy-production.mjs",
-    "manage:production": "python3 scripts/manage-production.py"
+    "manage:production": "python3 scripts/manage-production.py",
+    "verify:deployment": "node scripts/verify-deployment.mjs"
   },
   "dependencies": {
     "astro": "^7.3.8"
