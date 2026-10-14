@@ -1,15 +1,23 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { koreanDate, previousDate, validateDate, morningReport, eventReport, validateCompleteReport, evaluateTeam } from '../scripts/build-report.mjs';
+const previous = { schemaVersion: 1, date: '2026-10-13', timezone: 'Asia/Seoul', phase: 'complete', title: '실제 완료 보고', summary: '근거가 있는 결과', fields: [], completed: ['실제 변경'], nextPlan: ['번호 대조'] };
 test('09시 보고는 KST 날짜와 전날의 완료 기록만 사용한다', () => {
   assert.equal(koreanDate(new Date('2026-10-13T15:01:00Z')), '2026-10-14');
   assert.equal(previousDate('2026-01-01'), '2025-12-31');
   assert.throws(() => validateDate('2026-02-30'));
-  const report = morningReport({ date: '2026-10-14', previous: { date: '2026-10-13', phase: 'complete', completed: ['실제 변경'], nextPlan: ['번호 대조'] } });
+  const report = morningReport({ date: '2026-10-14', previous });
   assert.equal(report.fields[0].value, '실제 변경');
   assert.equal(report.fields[1].value, '번호 대조');
   assert.throws(() => morningReport({ date: '2026-10-14', previous: { date: '2026-10-12', phase: 'complete' } }));
   assert.match(morningReport({ date: '2026-10-14' }).fields[0].value, /보고 없음/);
+});
+test('전날 파일은 정상 완료 스키마·시간대·본문을 통과한 뒤에만 결과로 읽는다', () => {
+  for (const change of [
+    { schemaVersion: 99 }, { timezone: 'UTC' }, { title: '' }, { summary: ' ' },
+    { completed: 'unvalidated' }, { nextPlan: [null] }, { fields: [{ name: '검증', value: null }] },
+  ]) assert.throws(() => morningReport({ date: '2026-10-14', previous: { ...previous, ...change } }));
+  assert.throws(() => morningReport({ date: '2026-10-14', previous: { date: '2026-10-13', phase: 'complete', timezone: 'UTC', schemaVersion: 99, completed: ['unvalidated synthetic result'], nextPlan: ['synthetic plan'] } }));
 });
 test('완료 보고 없는 날짜와 잘못된 CI 식별자를 승인하지 않는다', () => {
   assert.throws(() => validateCompleteReport({ phase: 'plan' }, '2026-10-13'));
