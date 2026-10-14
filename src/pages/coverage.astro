@@ -1,10 +1,133 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import { songs } from '../lib/catalog';
+import { songs, songHref, type Provider } from '../lib/catalog';
+import { indexableSong } from '../../contracts/publication.mjs';
+
+const providers = ['tj', 'ky'] as const;
+const providerLabel = { tj: 'TJ', ky: '금영' };
 const playlist = songs.filter(song => song.origin === 'playlist');
-const tj = playlist.filter(song => song.karaoke.tj.observedNumber).length;
-const ky = playlist.filter(song => song.karaoke.ky.observedNumber).length;
-const confirmed = playlist.filter(song => ['tj', 'ky'].some(provider => song.karaoke[provider as 'tj' | 'ky'].status === 'provider-confirmed')).length;
-const both = playlist.filter(song => song.karaoke.tj.observedNumber && song.karaoke.ky.observedNumber).length;
+const chartOnlyCount = songs.filter(song => song.origin !== 'playlist').length;
+const statuses = [
+  { key: 'provider-confirmed', label: '공식 대조 완료', detail: '공식 검색 결과의 제목·가수와 대조한 번호' },
+  { key: 'observed-unverified', label: '관측 번호', detail: '기존 관리 자료의 번호 · 공식 재확인 필요' },
+  { key: 'unknown', label: '확인 필요', detail: '번호가 없거나 근거에 따라 표시를 보류한 항목' },
+];
+const countStatus = (provider: 'tj' | 'ky', status: string) => playlist.filter(song => song.karaoke[provider].status === status).length;
+const confirmedSongCount = playlist.filter(song => providers.some(provider => song.karaoke[provider].status === 'provider-confirmed')).length;
+const confirmedNumberCount = providers.reduce((count, provider) => count + countStatus(provider, 'provider-confirmed'), 0);
+const suppressedNumberCount = playlist.reduce((count, song) => count + providers.filter(provider => song.karaoke[provider].status === 'unknown' && song.karaoke[provider].correction).length, 0);
+const conflictNumberCount = playlist.reduce((count, song) => count + providers.filter(provider => song.karaoke[provider].status === 'provider-confirmed' && song.karaoke[provider].conflict).length, 0);
+const reviewedSongs = playlist.filter(indexableSong);
+const safeNumber = (value: Provider) => value.status === 'provider-confirmed' && value.evidence && !value.conflict;
+const formatCount = (count: number) => count.toLocaleString('ko-KR');
+const checkedTime = new Intl.DateTimeFormat('ko-KR', { dateStyle: 'medium', timeStyle: 'short', timeZone: 'Asia/Seoul' });
 ---
-<Layout title="관리 목록의 번호 범위"><article class="reading"><h1>관리 목록의 번호 범위</h1><p>분모는 등록 목록의 {playlist.length.toLocaleString('ko-KR')}개 곡 식별자입니다. 차트 전용 항목은 제외합니다. 이는 업체 전체 수록률이 아닌 이 사이트가 보유한 관측 번호의 현황입니다.</p><table class="coverage-table"><thead><tr><th>구분</th><th>항목 수</th></tr></thead><tbody><tr><td>TJ 표시 번호</td><td>{tj.toLocaleString('ko-KR')}</td></tr><tr><td>금영 표시 번호</td><td>{ky.toLocaleString('ko-KR')}</td></tr><tr><td>양쪽 표시 번호</td><td>{both.toLocaleString('ko-KR')}</td></tr><tr><td>공식 대조 번호가 있는 곡</td><td>{confirmed.toLocaleString('ko-KR')}</td></tr></tbody></table><p>같은 번호의 별도 ID·버전 후보가 포함되어 있어 중복을 제거한 공식 곡 수와 다를 수 있습니다. 빈 번호는 확인 필요이며 미수록으로 집계하지 않습니다. 공식 대조는 확인된 일부 곡에만 적용되며 전체 목록의 검증을 뜻하지 않습니다. 오류 근거가 확인된 번호는 표시·복사에서 제외합니다.</p><p><a href="/guides/tj-ky-numbers/">TJ와 금영 번호 이용 가이드</a> · <a href="/search/">노래 찾기</a></p></article></Layout>
+<Layout title="관리 목록의 번호 범위" description="관리 목록의 TJ·금영 공식 대조 번호와 관측 번호를 구분하고, 공식 근거가 있는 곡을 찾아보세요.">
+  <article class="reading coverage">
+    <header class="coverage-intro">
+      <p class="eyebrow">번호를 찾기 전에, 확인 범위부터</p>
+      <h1>관리 목록의 번호 범위</h1>
+      <p>공식 검색에서 대조한 번호와 재확인이 필요한 관측 번호를 구분합니다. 원하는 곡의 제목·가수와 방문할 기기의 업체를 함께 확인하세요.</p>
+      <a class="jump-link" href="#reviewed-songs">공식 확인곡 보기 <span aria-hidden="true">↓</span></a>
+    </header>
+
+    <section aria-labelledby="coverage-summary-heading">
+      <h2 id="coverage-summary-heading">이 목록에서 확인한 범위</h2>
+      <p id="coverage-denominator">분모는 등록 목록의 <strong>{formatCount(playlist.length)}개 곡 식별자</strong>입니다. 차트 전용 {formatCount(chartOnlyCount)}개 항목은 이 분모와 집계에서 제외합니다. 업체 전체 수록률을 뜻하지 않습니다.</p>
+      <dl class="coverage-summary">
+        <div><dt>공식 대조 번호</dt><dd data-coverage="confirmed-numbers">{formatCount(confirmedNumberCount)}<span>건</span></dd></div>
+        <div><dt>공식 번호가 있는 곡 ID</dt><dd data-coverage="confirmed-songs">{formatCount(confirmedSongCount)}<span>개</span></dd></div>
+        <div><dt>아래에서 볼 충돌 없는 곡 ID</dt><dd data-coverage="listed-songs">{formatCount(reviewedSongs.length)}<span>개</span></dd></div>
+      </dl>
+      <table class="coverage-table" aria-describedby="coverage-denominator coverage-count-note">
+        <caption>등록 목록의 업체별 번호 상태 · 각 업체의 합계는 {formatCount(playlist.length)}개</caption>
+        <thead><tr><th scope="col">번호 상태</th><th scope="col">TJ</th><th scope="col">금영</th></tr></thead>
+        <tbody>{statuses.map(status => <tr data-status={status.key}>
+          <th scope="row">{status.label}<span class="status-detail">{status.detail}</span></th>
+          {providers.map(provider => <td data-provider={provider}>{formatCount(countStatus(provider, status.key))}</td>)}
+        </tr>)}</tbody>
+      </table>
+      <p id="coverage-count-note" class="count-note">한 곡의 TJ·금영 번호는 각각 1건으로 집계합니다. 같은 번호를 가진 별도 ID·버전 후보가 있어, 곡 ID 수는 중복을 제거한 공식 곡 수와 다를 수 있습니다. 공식 대조 번호 중 {formatCount(conflictNumberCount)}건은 같은 번호의 다른 항목과 충돌하여 아래 목록에서 제외했습니다.</p>
+      <aside class="coverage-note" aria-labelledby="unknown-heading">
+        <h3 id="unknown-heading">확인 필요는 미수록이 아닙니다</h3>
+        <p>번호가 없다는 이유로 업체에 미수록이라고 판단하지 않습니다. 오류 근거나 곡·버전 차이 때문에 표시와 복사를 보류한 {formatCount(suppressedNumberCount)}건도 ‘확인 필요’에 포함됩니다. 자세한 정정 이유와 근거는 각 곡 상세에서 확인할 수 있습니다.</p>
+      </aside>
+    </section>
+
+    <section id="reviewed-songs" aria-labelledby="reviewed-heading">
+      <h2 id="reviewed-heading">공식 근거가 있는 곡부터 찾아보세요</h2>
+      <p>현재 등록 목록에서 공식 제목·가수를 대조했고 번호 충돌이 없는 곡입니다. 아래 번호마다 실제 대조 시각과 공식 검색 링크를 제공합니다. 확인한 일부 곡의 목록이며 전체 자료의 검증 완료를 뜻하지 않습니다.</p>
+      <ul class="reviewed-list">
+        {reviewedSongs.map(song => <li class="reviewed-song" data-song-id={song.id}>
+          <h3><a class="song-detail-link" href={songHref(song.id)}>{song.titleOriginal}</a></h3>
+          {song.titleKo && <p class="reviewed-korean">{song.titleKo}</p>}
+          <p class="reviewed-artist">{song.artistOriginal}{song.artistKo && ` · ${song.artistKo}`}</p>
+          <div class="reviewed-providers">{providers.map(provider => {
+            const value = song.karaoke[provider];
+            return <section class="reviewed-provider" data-provider={provider} aria-label={`${providerLabel[provider]} 번호`}>
+              {safeNumber(value) && value.evidence ? <>
+                <p class="reviewed-number"><span>{providerLabel[provider]}</span> <strong>{value.observedNumber}</strong></p>
+                <p class="evidence-identity">공식 표기: {value.evidence.title} · {value.evidence.artist}</p>
+                <p class="evidence-time">대조: <time datetime={value.evidence.checkedAt}>{checkedTime.format(new Date(value.evidence.checkedAt))}</time> (한국 시간)</p>
+                <a class="evidence-link" href={value.evidence.url} target="_blank" rel="noopener noreferrer">{providerLabel[provider]} 공식 근거 <span class="sr-only">(새 탭)</span><span aria-hidden="true">↗</span></a>
+              </> : <p class="provider-pending">{providerLabel[provider]} · {value.status === 'unknown' ? '확인 필요 · 미수록을 뜻하지 않습니다' : value.conflict ? '번호 충돌 · 상세에서 확인하세요' : '관측 번호 · 상세에서 재확인하세요'}</p>}
+            </section>;
+          })}</div>
+        </li>)}
+      </ul>
+      <p class="coverage-actions"><a href="/search/">다른 노래 찾기</a><a href="/guides/tj-ky-numbers/">TJ와 금영 번호 이용 가이드</a></p>
+    </section>
+  </article>
+</Layout>
+
+<style>
+  .coverage { max-width: 880px; }
+  .coverage-intro { padding-bottom: 12px; }
+  .coverage .eyebrow { margin: 0 0 10px; color: #284fc7; font-size: 14px; font-weight: 650; }
+  .coverage .jump-link { display: inline-flex; align-items: center; gap: 16px; min-height: 44px; font-weight: 650; }
+  .coverage-summary { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin: 24px 0; }
+  .coverage-summary div { padding: 18px; background: #ffffffc9; border: 1px solid #d8dce4; border-radius: 10px; }
+  .coverage-summary dt { color: #535d6d; font-size: 14px; line-height: 1.6; }
+  .coverage-summary dd { margin: 8px 0 0; color: #20242c; font-size: 32px; font-weight: 750; font-variant-numeric: tabular-nums; }
+  .coverage-summary dd span { margin-left: 6px; color: #535d6d; font-size: 14px; font-weight: 400; }
+  .coverage-table { table-layout: fixed; background: #ffffffb3; }
+  .coverage-table caption { padding: 0 0 14px; text-align: left; color: #535d6d; font-size: 14px; line-height: 1.7; }
+  .coverage-table thead th { background: #edf2ff; }
+  .coverage-table th:first-child { width: 64%; }
+  .coverage-table th:not(:first-child), .coverage-table td { text-align: right; font-variant-numeric: tabular-nums; }
+  .coverage-table tbody th { font-weight: 650; }
+  .status-detail { display: block; margin-top: 4px; color: #535d6d; font-size: 13px; line-height: 1.7; font-weight: 400; overflow-wrap: anywhere; }
+  .coverage .count-note { font-size: 14px; }
+  .coverage-note { margin: 24px 0; padding: 18px 22px; border-left: 4px solid #4f7cff; border-radius: 0 8px 8px 0; background: #edf2ff; }
+  .coverage-note h3 { margin: 0; font-size: 17px; line-height: 1.6; }
+  .coverage-note p { margin: 8px 0 0; font-size: 15px; }
+  #reviewed-songs { scroll-margin-top: 24px; }
+  .reviewed-list { padding: 0; margin: 24px 0 0; list-style: none; }
+  .reviewed-song { padding: 24px 0; border-top: 1px solid #d8dce4; }
+  .reviewed-song h3 { margin: 0; font-size: 23px; line-height: 1.5; overflow-wrap: anywhere; }
+  .coverage .song-detail-link { display: inline-block; min-height: 44px; }
+  .coverage .reviewed-korean { margin: 0; font-size: 15px; }
+  .coverage .reviewed-artist { margin: 4px 0 14px; font-size: 15px; }
+  .reviewed-providers { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+  .reviewed-provider { min-width: 0; padding: 14px 16px; background: #ffffffc9; border: 1px solid #e6e7eb; border-radius: 8px; }
+  .coverage .reviewed-number { margin: 0; color: #20242c; }
+  .reviewed-number span { margin-right: 8px; font-size: 14px; font-weight: 650; }
+  .reviewed-number strong { font-size: 24px; font-variant-numeric: tabular-nums; }
+  .coverage .evidence-identity, .coverage .evidence-time { margin: 8px 0 0; font-size: 13px; line-height: 1.8; }
+  .coverage .evidence-link { display: inline-flex; align-items: center; gap: 6px; min-height: 44px; margin-top: 4px; font-size: 14px; }
+  .coverage .provider-pending { margin: 0; font-size: 14px; }
+  .coverage-actions { display: flex; flex-wrap: wrap; gap: 8px 24px; }
+  .coverage-actions a { display: inline-flex; align-items: center; min-height: 44px; }
+  @media (max-width: 600px) {
+    .coverage-summary { grid-template-columns: 1fr; gap: 8px; }
+    .coverage-summary div { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 12px 16px; }
+    .coverage-summary dd { margin: 0; flex-shrink: 0; font-size: 28px; }
+    .coverage-summary dt { font-size: 13px; }
+    .coverage-table th, .coverage-table td { padding: 12px 8px; font-size: 14px; }
+    .coverage-table th:first-child { width: 56%; }
+    .status-detail { font-size: 12px; }
+    .coverage-note { padding: 14px 16px; }
+    .reviewed-providers { grid-template-columns: 1fr; gap: 10px; }
+    .reviewed-song h3 { font-size: 21px; }
+  }
+</style>

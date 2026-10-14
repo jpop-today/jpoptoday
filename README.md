@@ -31,6 +31,8 @@ npm run dev
 
 `npm run build`는 고정 staging·검토 ledger·보관 차트로 dist만 생성하며 외부 수집을 하지 않습니다. 기본 target은 preview, `JPOP_BUILD_TARGET=production npm run build`는 운영 artifact를 생성합니다. build-info는 target·소스 SHA·catalog/ledger/chart hash·원본 revision·개수·dirty를 연결합니다. `verify:dist`는 상세·canonical·mode별 robots/sitemap·허용 공개 필드·비공개 원본/도구/이미지/광고 제외를 검사합니다.
 
+`npm run verify:deployment -- <HTTPS URL> <동일 target dist 경로> <새 receipt.json>`은 실제 응답을 고정 artifact와 비교합니다. 전후 진단 metadata의 같은 SHA/입력 hash뿐 아니라 query 없는 본문·카탈로그·crawler 파일·대표 상세도 확인하며, 제한된 재시도의 실패와 최종 결과를 보존합니다. `EXPECTED_SOURCE_SHA`와 `EXPECTED_TARGET`으로 대상도 고정할 수 있습니다. [배포 응답 계약](https://github.com/jpop-today/docs/blob/main/adr/007-deployment-response-verification.md)을 따르며 API canonical 변경만을 실제 사이트 검증으로 쓰지 않습니다.
+
 ```sh
 npm run deploy:preview
 ```

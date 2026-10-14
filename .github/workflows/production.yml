@@ -51,27 +51,32 @@ jobs:
       - run: npm ci
       - run: npm test
       - run: npm run check
+      - name: Build and verify matching frozen preview artifact
+        env:
+          JPOP_BUILD_TARGET: preview
+        run: |
+          npm run build
+          npm run verify:dist
+          cp -R dist "$RUNNER_TEMP/jpop-preview-dist"
       - run: npm run build
       - run: npm run verify:dist
-      - name: Require same-source noindex preview with identical reviewed inputs
-        env:
-          PREVIEW_URL: ${{ inputs.preview_url }}
+      - name: Compare frozen preview and production input identity
         run: |
           node --input-type=module <<'JS'
           import assert from 'node:assert/strict';
           import { readFile } from 'node:fs/promises';
-          const url = new URL(process.env.PREVIEW_URL);
-          assert.equal(url.protocol, 'https:');
-          assert.match(url.hostname, /^[a-z0-9-]+\.jpoptoday-preview\.pages\.dev$/);
-          assert.ok(!url.username && !url.password && !url.search && !url.hash && url.pathname === '/');
-          const response = await fetch(new URL('/build-info.json', url));
-          assert.equal(response.status, 200);
-          const preview = await response.json();
+          const preview = JSON.parse(await readFile(`${process.env.RUNNER_TEMP}/jpop-preview-dist/build-info.json`, 'utf8'));
           const production = JSON.parse(await readFile('dist/build-info.json', 'utf8'));
-          assert.equal(preview.target, 'preview'); assert.equal(preview.dirty, false);
-          for (const field of ['sourceSha', 'catalogSha256', 'ledgerSha256', 'chartSha256']) assert.equal(preview[field], production[field]);
-          const root = await fetch(url); assert.match(root.headers.get('x-robots-tag') ?? '', /noindex/);
+          assert.equal(preview.target, 'preview'); assert.equal(production.target, 'production');
+          assert.equal(preview.dirty, false); assert.equal(production.dirty, false);
+          for (const field of ['sourceSha', 'legacyRevision', 'catalogSha256', 'ledgerSha256', 'chartSha256', 'songCount', 'currentSongCount']) assert.equal(preview[field], production[field]);
           JS
+      - name: Verify actual same-source preview against frozen bytes
+        env:
+          PREVIEW_URL: ${{ inputs.preview_url }}
+          EXPECTED_TARGET: preview
+        run: |
+          npm run verify:deployment -- "$PREVIEW_URL" "$RUNNER_TEMP/jpop-preview-dist" "$RUNNER_TEMP/jpop-preview-healthcheck.json"
       - run: npx playwright install --with-deps chromium
       - run: npm run test:e2e
       - name: Check Actions deployment bindings without exposing values
@@ -96,16 +101,18 @@ jobs:
         if: inputs.verify_only || steps.credentials.outputs.ready == 'true'
         env:
           JPOP_TEST_BASE_URL: https://jpop.today
+          EXPECTED_TARGET: production
         run: |
-          node --input-type=module <<'JS'
-          import assert from 'node:assert/strict';
-          const response = await fetch('https://jpop.today/build-info.json');
-          assert.equal(response.status, 200);
-          const info = await response.json();
-          assert.equal(info.sourceSha, process.env.EXPECTED_SOURCE_SHA);
-          assert.equal(info.target, 'production'); assert.equal(info.dirty, false);
-          JS
+          npm run verify:deployment -- https://jpop.today dist "$RUNNER_TEMP/jpop-production-healthcheck.json"
           npm run test:e2e
+      - name: Preserve healthcheck attempts including failures
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: production-healthchecks-${{ inputs.source_sha }}
+          path: ${{ runner.temp }}/jpop-*-healthcheck.json
+          if-no-files-found: warn
+          retention-days: 30
       - uses: actions/upload-artifact@v4
         with:
           name: production-dist-${{ inputs.source_sha }}
