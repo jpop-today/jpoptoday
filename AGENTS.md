@@ -2,7 +2,7 @@
 
 사용자는 스펙·재설계·수정·검증·통합·배포를 위임했다. 일상 작업에 같은 승인을 반복 요청하지 않는다. 기준은 https://github.com/jpop-today/docs 의 product/spec.md와 관련 ADR, 조직 규칙은 https://github.com/jpop-today/.github 의 AGENTS.md·CONTRIBUTING.md다. 공유 워크스페이스에서는 파일 범위·base SHA·담당을 공유하고 git 작업은 통합 담당자 한 명이 수행한다. 클라우드 기존 체크아웃을 사용하며 명시 요청 없이 worktree를 만들지 않는다.
 
-현재 저장소는 Astro/TypeScript 정적 앱·독립 계약 하네스·원본 staging·호환 어댑터를 포함한다. 공개 read model은 ADR-004의 관측 번호이며 검증 카탈로그 v1과 다르다. Cloudflare todayjpop 운영은 개인 원본 dev SHA6dbe5a65d1bd729c09393f746f715f4363089a43, npm run build→dist임을 API로 확인했다. 조직 앱의 미리보기와 기존 운영 전환을 구분한다. 기존 source 연결·도메인, 이력·ID·URL·저장 키를 보존한다. 기존 이력을 지우는 force push는 하지 않는다. 실제 preview/production 상태는 docs의 실행·릴리스 기록으로 확인한다.
+현재 저장소는 Astro/TypeScript 정적 앱·독립 계약 하네스·원본 staging·호환 어댑터를 포함한다. 공개 read model은 ADR-004의 관측 번호이며 검증 카탈로그 v1과 다르다. Cloudflare todayjpop은 개인 원본 dev의 npm run build→dist 연결이다. 초기관측6dbe5a65d1bd729c09393f746f715f4363089a43 이후자동데이터갱신되며 2026-10-14 actualcanonical94d615f5e355f4b00ebbb824547ac6dfa034ad18을확인했다. 최신source/차트-only ID를 전환 전에 다시 대조한다. 조직 앱의 미리보기와 기존 운영 전환을 구분한다. 기존 source 연결·도메인, 이력·ID·URL·저장 키를 보존한다. 기존 이력을 지우는 force push는 하지 않는다. 실제 preview/production 상태는 docs의 실행·릴리스 기록으로 확인한다.
 
 ## 실행과 범위
 

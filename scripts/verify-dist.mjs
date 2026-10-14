@@ -10,7 +10,7 @@ const origin = 'https://jpop.today';
 const songFields = ['id', 'titleOriginal', 'titleKo', 'artistOriginal', 'artistKo', 'tags', 'availability', 'origin', 'karaoke'];
 const numberFields = ['status', 'observedNumber', 'conflict'];
 const metadataFields = ['schemaVersion', 'sourceSha', 'legacyRevision', 'catalogSha256', 'songCount', 'currentSongCount', 'dirty'];
-const privateSegments = new Set(['.git', '.github', '.agents', '.codex', 'node_modules', 'data', 'raw', 'staging', 'contracts', 'scripts', 'tests', 'docs', 'src']);
+const privateSegments = new Set(['.git', '.github', '.agents', '.codex', 'node_modules', 'data', 'raw', 'staging', 'contracts', 'scripts', 'tests', 'docs', 'src', 'reports', 'releases']);
 const decodeUtf8 = bytes => new TextDecoder('utf-8', { fatal: true }).decode(bytes);
 const digest = bytes => createHash('sha256').update(bytes).digest('hex');
 const fullSha = value => typeof value === 'string' && /^[a-f0-9]{40}$/.test(value);
