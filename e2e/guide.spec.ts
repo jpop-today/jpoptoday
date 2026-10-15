@@ -36,13 +36,13 @@ test('number-checking guide renders correction cases and dated official sources 
   await context.close();
 });
 
-test('home provides a direct entry to reviewed numbers while all five guides remain available', async ({ page }) => {
+test('home provides a direct entry to reviewed numbers while all six guides remain available', async ({ page }) => {
   await page.goto('/');
   await page.getByRole('link', { name: '공식 확인 번호', exact: true }).click();
   await expect(page).toHaveURL(/\/coverage\/$/);
   await expect(page.locator('#reviewed-heading')).toBeVisible();
   await page.goto('/guides/');
-  await expect(page.locator('.guide-list > li')).toHaveCount(5);
+  await expect(page.locator('.guide-list > li')).toHaveCount(6);
   for (const slug of ['find-japanese-songs', 'tj-ky-numbers', 'build-your-setlist', 'read-tj-chart', 'checking-song-numbers']) {
     await expect(page.locator(`.guide-list a[href="/guides/${slug}/"]`)).toBeVisible();
   }

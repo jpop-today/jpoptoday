@@ -185,7 +185,7 @@ export async function verifyDist({ distPath = path.join(projectRoot, 'dist'), st
   const directory = path.resolve(distPath);
   const files = await walk(directory);
   const fileSet = new Set(files);
-  for (const required of ['index.html', '404.html', 'catalog.json', 'build-info.json', '_headers', 'robots.txt', 'artists/index.html']) requireCondition(fileSet.has(required), `dist: missing ${required}; run the complete build first`);
+  for (const required of ['index.html', '404.html', 'catalog.json', 'build-info.json', '_headers', 'robots.txt', 'artists/index.html', 'guides/title-artist-variants/index.html']) requireCondition(fileSet.has(required), `dist: missing ${required}; run the complete build first`);
   const staging = parseJson(await readText(stagingPath, 'staging'), 'staging');
   const catalogText = await readText(path.join(directory, 'catalog.json'), 'catalog.json');
   const catalog = parseJson(catalogText, 'catalog.json');
