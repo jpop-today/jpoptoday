@@ -3,11 +3,125 @@ import Layout from '../layouts/Layout.astro';
 import SongRow from '../components/SongRow.astro';
 import chart from '../../data/chart-snapshot.json';
 import { songs } from '../lib/catalog';
+import { confirmedNumbers } from '../../contracts/confirmed-discovery.mjs';
+
 const chartSongs = chart.songs.map((row, index) => {
   const song = songs.find(song => song.id === row.canonicalId);
   if (!song || row.rank !== index + 1) throw new Error('Chart identity mismatch');
   return song;
 });
 if (chartSongs.length !== 100 || new Set(chartSongs.map(song => song.id)).size !== 100) throw new Error('Incomplete chart');
+
+const providers = ['tj', 'ky'] as const;
+const providerLabel = { tj: 'TJ', ky: '금영' };
+const chartEntries = chartSongs.map((song, index) => ({
+  song,
+  rank: index + 1,
+  anchor: `chart-${song.id}`,
+  numbers: confirmedNumbers(song),
+}));
+const providerEntries = {
+  tj: chartEntries.filter(entry => entry.numbers.some(number => number.provider === 'tj')),
+  ky: chartEntries.filter(entry => entry.numbers.some(number => number.provider === 'ky')),
+};
+const providerCounts = {
+  tj: new Set(providerEntries.tj.map(entry => entry.song.id)).size,
+  ky: new Set(providerEntries.ky.map(entry => entry.song.id)).size,
+};
+const confirmedSongCount = new Set(chartEntries.filter(entry => entry.numbers.length).map(entry => entry.song.id)).size;
 ---
-<Layout title="TJ JPOP 차트 기록"><section class="intro"><h1>TJ JPOP 차트 기록</h1><p>집계 요청 기간 {chart.startDate} ~ {chart.endDate}</p></section><p class="notice">가져온 시각: {chart.fetchedAt} (UTC). 보관된 스냅샷이며 오늘의 최신 순위를 뜻하지 않습니다. 순서는 TJ 원본 순위입니다. 번호별 공식 확인 여부는 곡 상세에서 확인하세요. 요청 기간이 응답에서 별도로 확인된 집계 기간을 뜻하지는 않습니다.</p><p><a href={chart.sourceUrl}>TJ 원본 차트</a> · <a href="/guides/read-tj-chart/">차트 읽는 법</a></p><ol class="song-list chart-list">{chartSongs.map((song, index) => <li class="chart-entry"><span class="chart-rank">{index + 1}</span><ul class="song-list"><SongRow song={song} /></ul></li>)}</ol></Layout>
+<Layout title="TJ JPOP 차트 기록">
+  <section class="intro"><h1>TJ JPOP 차트 기록</h1><p>집계 요청 기간 {chart.startDate} ~ {chart.endDate}</p></section>
+  <p class="notice">가져온 시각: {chart.fetchedAt} (UTC). 보관된 스냅샷이며 오늘의 최신 순위를 뜻하지 않습니다. 순서는 TJ 원본 순위입니다. 번호별 공식 확인 여부는 곡 상세에서 확인하세요. 요청 기간이 응답에서 별도로 확인된 집계 기간을 뜻하지는 않습니다.</p>
+  <p><a href={chart.sourceUrl}>TJ 원본 차트</a> · <a href="/guides/read-tj-chart/">차트 읽는 법</a></p>
+
+  <section class="chart-discovery" aria-labelledby="chart-confirmed-heading">
+    <header>
+      <p class="chart-eyebrow">보관한 차트에서 번호 찾기</p>
+      <h2 id="chart-confirmed-heading">업체별 공식 확인곡 먼저 찾기</h2>
+      <p class="chart-discovery-lead">이 차트 100곡 중 관리 목록의 공식 검색 근거가 있고 번호 충돌이 없는 곡을 모았습니다. 방문할 기기의 업체를 골라 원래 차트 행으로 이동한 뒤, 곡 상세에서 근거와 대조 시각을 확인하세요.</p>
+    </header>
+    <dl class="chart-confirmed-summary" aria-label="차트 100곡 중 공식 확인곡 수" aria-describedby="chart-confirmed-scope" data-chart-denominator={chartEntries.length}>
+      {providers.map(provider => <div><dt>{providerLabel[provider]} 공식 확인곡</dt><dd data-chart-count={provider} data-count={providerCounts[provider]}>{providerCounts[provider]}<span>곡 / {chartEntries.length}곡</span></dd></div>)}
+      <div><dt>전체 공식 확인곡</dt><dd data-chart-count="union" data-count={confirmedSongCount}>{confirmedSongCount}<span>곡 / {chartEntries.length}곡</span></dd></div>
+    </dl>
+    <p class="chart-confirmed-scope" id="chart-confirmed-scope">같은 곡 ID는 업체별로 한 번씩, 전체에서는 중복 없이 셉니다. 전체 수는 TJ와 금영 수의 단순 합이 아닙니다. 0곡이거나 아래에 보이지 않아도 공식 미수록을 뜻하지 않습니다. 관측 번호만 있는 곡은 공식 확인곡에 포함하지 않습니다.</p>
+
+    <nav class="chart-provider-navigation" aria-label="업체별 공식 확인곡 순위순 바로가기" aria-describedby="chart-confirmed-scope">
+      {providers.map(provider => <section class="chart-provider" data-chart-provider={provider} aria-labelledby={`chart-${provider}-heading`}>
+        <h3 id={`chart-${provider}-heading`}>{providerLabel[provider]} 공식 확인곡 <span>{providerCounts[provider]}곡</span></h3>
+        <p class="chart-provider-note">보관된 TJ 차트의 원래 순위 순서입니다.</p>
+        {providerEntries[provider].length > 0 ? <ul class="chart-shortcuts">{providerEntries[provider].map(entry => <li>
+          <a href={`#${entry.anchor}`} data-chart-shortcut={provider} data-song-id={entry.song.id} data-chart-rank={entry.rank} aria-describedby="chart-confirmed-scope">
+            <span class="shortcut-rank">{entry.rank}<span>위</span></span>
+            <span class="shortcut-identity"><strong>{entry.song.titleOriginal}</strong><span>{entry.song.artistOriginal}</span><span class="shortcut-number" data-chart-confirmed-number={entry.numbers.find(number => number.provider === provider)?.number}>{providerLabel[provider]} {entry.numbers.find(number => number.provider === provider)?.number} · 공식 확인</span></span>
+            <span class="shortcut-arrow" aria-hidden="true">↓</span>
+          </a>
+        </li>)}</ul> : <p class="chart-confirmed-empty">이 차트에서 현재 표시할 수 있는 {providerLabel[provider]} 공식 확인곡이 없습니다. 전체 차트와 곡 상세에서 관측 번호·확인 필요 상태를 구분해 보세요.</p>}
+      </section>)}
+    </nav>
+    <p class="chart-full-link"><a href="#chart-full-heading">보관한 차트 전체 {chartEntries.length}곡 보기 <span aria-hidden="true">↓</span></a></p>
+  </section>
+
+  <h2 class="chart-full-heading" id="chart-full-heading" tabindex="-1">보관한 차트 전체 {chartEntries.length}곡</h2>
+  <ol class="song-list chart-list" aria-labelledby="chart-full-heading">{chartEntries.map(({ song, rank, anchor }) => <li class="chart-entry" id={anchor} tabindex="-1" data-chart-rank={rank}><span class="chart-rank">{rank}</span><ul class="song-list"><SongRow song={song} /></ul></li>)}</ol>
+</Layout>
+
+<style>
+  .chart-discovery { position: relative; margin: 28px 0 40px; padding: 28px 32px 20px; border: 1px solid #d8dce4; border-radius: 16px; background: #ffffffbd; }
+  .chart-discovery::before { content: ''; position: absolute; top: -1px; left: 24px; right: 24px; height: 4px; border-radius: 0 0 6px 6px; background: linear-gradient(135deg, #4f7cff, #ff7aa8); }
+  .chart-eyebrow { margin: 0 0 10px; color: #284fc7; font-size: 14px; font-weight: 650; }
+  .chart-discovery h2 { font-size: 27px; line-height: 1.45; word-break: keep-all; overflow-wrap: anywhere; }
+  .chart-discovery-lead { max-width: 800px; margin: 14px 0 22px; color: #535d6d; font-size: 15px; }
+  .chart-confirmed-summary { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; margin: 0; padding: 20px 0; border-block: 1px solid #e6e7eb; }
+  .chart-confirmed-summary div { min-width: 0; }
+  .chart-confirmed-summary dt { color: #535d6d; font-size: 14px; }
+  .chart-confirmed-summary dd { margin: 8px 0 0; color: #284fc7; font-size: 30px; font-weight: 750; font-variant-numeric: tabular-nums; }
+  .chart-confirmed-summary dd span { margin-left: 6px; color: #535d6d; font-size: 13px; font-weight: 400; }
+  .chart-confirmed-scope { margin: 16px 0 24px; color: #535d6d; font-size: 13px; }
+  .chart-provider-navigation { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px; align-items: start; }
+  .chart-provider { min-width: 0; }
+  .chart-provider h3 { display: flex; flex-wrap: wrap; align-items: baseline; gap: 8px 12px; margin: 0; font-size: 20px; line-height: 1.5; }
+  .chart-provider h3 span { color: #535d6d; font-size: 14px; font-weight: 400; }
+  .chart-provider-note { margin: 6px 0 12px; color: #535d6d; font-size: 12px; }
+  .chart-shortcuts { padding: 0; margin: 0; list-style: none; }
+  .chart-shortcuts li { border-top: 1px solid #e6e7eb; }
+  .chart-shortcuts a { display: grid; grid-template-columns: 48px minmax(0, 1fr) 16px; gap: 12px; align-items: center; min-height: 66px; padding: 12px 0; }
+  .chart-shortcuts a:hover .shortcut-identity strong { text-decoration: underline; text-underline-offset: 4px; }
+  .shortcut-rank { color: #284fc7; font-size: 18px; font-weight: 700; font-variant-numeric: tabular-nums; white-space: nowrap; }
+  .shortcut-rank span { margin-left: 2px; font-size: 12px; font-weight: 400; }
+  .shortcut-identity { display: flex; flex-direction: column; gap: 4px; min-width: 0; overflow-wrap: anywhere; }
+  .shortcut-identity strong { font-size: 16px; line-height: 1.5; }
+  .shortcut-identity > span { color: #535d6d; font-size: 12px; line-height: 1.6; }
+  .shortcut-identity .shortcut-number { color: #284fc7; font-variant-numeric: tabular-nums; }
+  .shortcut-arrow { color: #535d6d; font-size: 16px; }
+  .chart-confirmed-empty { color: #535d6d; font-size: 14px; }
+  .chart-full-link { margin: 20px 0 0; padding-top: 12px; border-top: 1px solid #e6e7eb; }
+  .chart-full-link a { display: inline-flex; align-items: center; gap: 12px; min-height: 44px; color: #284fc7; font-size: 14px; font-weight: 650; }
+  .chart-full-heading { margin: 0 0 16px; font-size: 24px; line-height: 1.5; }
+  .chart-entry, .chart-full-heading { scroll-margin-top: 24px; }
+  .chart-entry:target { outline: 2px solid #4f7cff; outline-offset: 6px; border-radius: 4px; background: #edf2ff; }
+  @media (max-width: 700px) {
+    .chart-discovery { margin-top: 24px; padding: 24px 18px 16px; }
+    .chart-discovery h2 { font-size: 23px; }
+    .chart-discovery-lead { font-size: 14px; }
+    .chart-confirmed-summary { gap: 8px; padding: 16px 0; }
+    .chart-confirmed-summary dt { font-size: 11px; }
+    .chart-confirmed-summary dd { font-size: 25px; }
+    .chart-confirmed-summary dd span { display: block; margin: 4px 0 0; font-size: 11px; }
+    .chart-confirmed-scope { margin: 14px 0 22px; font-size: 12px; }
+    .chart-provider-navigation { grid-template-columns: 1fr; gap: 28px; }
+    .chart-provider h3 { font-size: 19px; }
+    .chart-shortcuts a { gap: 10px; }
+    .chart-full-heading { font-size: 22px; }
+  }
+  @media (max-width: 600px) {
+    .chart-list :global(.number-cell) { display: grid; grid-template-columns: 24px minmax(0, 1fr); column-gap: 6px; row-gap: 4px; width: calc(50% - 4px); min-width: 0; align-self: start; }
+    .chart-list :global(.number-cell:nth-of-type(3)) { margin-left: calc(50% + 4px); }
+    .chart-list :global(.mobile-label) { width: auto; font-size: 11px; white-space: nowrap; }
+    .chart-list :global(.number-button) { width: 100%; max-width: 100%; min-height: 44px; gap: 6px; padding: 7px 6px; font-size: 13px; }
+    .chart-list :global(.verification-badge) { grid-column: 2; margin-top: 0; font-size: 11px; white-space: nowrap; }
+    .chart-list :global(.unknown) { display: flex; align-items: center; min-height: 44px; }
+    .chart-list :global(.save-button) { width: 44px; height: 44px; }
+  }
+</style>

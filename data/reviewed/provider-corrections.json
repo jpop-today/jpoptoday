@@ -1067,6 +1067,96 @@
         "responseSha256": "92d855f18468d8cb77b562eaeba36c9ad5ee9972acc461136f6a1d7fa58f515d"
       },
       "reason": "공식 번호 검색의 전체 제목 踊り子와 가수 Vaundy가 원본 제목·가수와 정확히 일치합니다. 결과셀에 별도 버전·부제·공동명의 표기가 없음을 대조했고 공식 표기를 그대로 보존합니다. 음원 동일성이나 반주기별 지원을 추정하지 않습니다."
+    },
+    {
+      "songId": "jpop-playlist-samfree-ルカルカ-ナイトフィ-ハ-f6722acd10",
+      "provider": "tj",
+      "action": "confirm",
+      "expectedObservedNumber": "27031",
+      "number": "27031",
+      "evidence": {
+        "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=27031&strWord=Y",
+        "checkedAt": "2026-10-15T19:06:49.340877Z",
+        "title": "ルカルカ★ ナイトフィーバー",
+        "artist": "samfree(Feat.巡音ルカ)",
+        "responseSha256": "024ead7135ab7abe272b98720e90b8e17e8d6779e662c85dc4c0536596043c20"
+      },
+      "reason": "공식 제목의 ★ 뒤 공백과 samfree(Feat.巡音ルカ) 전체 명의가 동결차트15위 원문과 정확히 일치합니다. staging의 기본 제목·samfree와 차트 canonicalId가 연결된 범위에서 Feat.巡音ルカ 표기를 근거에 그대로 보존합니다. 가수 별칭을 합치거나 다른 버전·음원 동일성을 추정하지 않습니다."
+    },
+    {
+      "songId": "jpop-playlist-ado-逆光-c8c1ba8b20",
+      "provider": "tj",
+      "action": "confirm",
+      "expectedObservedNumber": "68868",
+      "number": "68868",
+      "evidence": {
+        "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=68868&strWord=Y",
+        "checkedAt": "2026-10-15T19:06:53.828995Z",
+        "title": "逆光(映画 'ONE PIECE FILM RED' OST)",
+        "artist": "Ado",
+        "responseSha256": "9c1759af47529a06fa63fc1d3512fbfdf9e840a728edbd16f9b9f9b3acf5572a"
+      },
+      "reason": "공식 전체 제목 逆光(映画 'ONE PIECE FILM RED' OST)와 가수 Ado는 동결차트16위 전체 원문과 정확히 일치합니다. staging의 기본 제목 逆光 및 동일 canonicalId에 대응하는 영화 OST 부제를 근거에 그대로 보존합니다. 다른 편곡·수록 버전·음원 동일성을 추정하지 않습니다."
+    },
+    {
+      "songId": "jpop-playlist-米津玄師-kick-back-5f2ec0135c",
+      "provider": "tj",
+      "action": "confirm",
+      "expectedObservedNumber": "68677",
+      "number": "68677",
+      "evidence": {
+        "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=68677&strWord=Y",
+        "checkedAt": "2026-10-15T19:06:57.259478Z",
+        "title": "KICK BACK( 'チェンソーマン' OP)",
+        "artist": "米津玄師",
+        "responseSha256": "ab92bf8a7123f609799f8b67d5c522208b26d9451a40aef8ab7f251d91360ce9"
+      },
+      "reason": "공식 전체 제목 KICK BACK( 'チェンソーマン' OP)와 가수 米津玄師가 동결차트17위 전체 원문과 정확히 일치합니다. staging의 기본 제목 KICK BACK에 동결차트가 명시한 チェンソーマン OP 부제를 대응시켜 원문 그대로 보존합니다. 오디오 동일성·추가 버전 지원을 추정하지 않습니다."
+    },
+    {
+      "songId": "jpop-playlist-米津玄師-kick-back-5f2ec0135c",
+      "provider": "ky",
+      "action": "confirm",
+      "expectedObservedNumber": "44855",
+      "number": "44855",
+      "evidence": {
+        "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=44855",
+        "checkedAt": "2026-10-15T19:06:59.892091Z",
+        "title": "KICK BACK (\"チェンソーマン\"OP)",
+        "artist": "米津玄師",
+        "responseSha256": "b8f0d678f5c516ac62caeb9f61024861f8b1ddbb0175f5a6de2465b44e5b2219"
+      },
+      "reason": "공식 전체 제목 KICK BACK (\"チェンソーマン\"OP)와 가수 米津玄師를 직접 대조했습니다. staging 기본 제목 KICK BACK 및 동결차트17위 KICK BACK( 'チェンソーマン' OP)와 본제·チェンソーマン·OP 표기가 대응하며 차이는 괄호 전후 공백과 인용부호뿐입니다. 금영의 전체 표기를 그대로 근거에 보존하고 오디오 동일성·새 버전 지원을 추정하지 않습니다."
+    },
+    {
+      "songId": "jpop-playlist-優里-レオ-4439d77563",
+      "provider": "tj",
+      "action": "confirm",
+      "expectedObservedNumber": "52773",
+      "number": "52773",
+      "evidence": {
+        "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=52773&strWord=Y",
+        "checkedAt": "2026-10-15T19:07:00.559714Z",
+        "title": "レオ",
+        "artist": "優里",
+        "responseSha256": "3b73929e8e281996d6cb66f4f53c1b0af91da4d6a734fc169831d9a840693362"
+      },
+      "reason": "공식 전체 제목 レオ와 가수 優里가 staging 및 동결차트18위 원문과 정확히 일치합니다. 별도 버전·부제·공동명의 표기는 이 결과 셀에 없으며 원문을 그대로 보존합니다. 음원 동일성·반주기 모델 지원을 추정하지 않습니다."
+    },
+    {
+      "songId": "jpop-playlist-優里-レオ-4439d77563",
+      "provider": "ky",
+      "action": "confirm",
+      "expectedObservedNumber": "57826",
+      "number": "57826",
+      "evidence": {
+        "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=57826",
+        "checkedAt": "2026-10-15T19:07:03.279190Z",
+        "title": "レオ",
+        "artist": "優里",
+        "responseSha256": "528f6bf0d28542ee0307797860655b4d45735021b0f8c37e8030ba7b9edf725a"
+      },
+      "reason": "공식 전체 제목 レオ와 가수 優里가 staging 및 동결차트18위 원문과 정확히 일치합니다. 별도 버전·부제·공동명의 표기는 이 결과 셀에 없으며 원문을 그대로 보존합니다. 음원 동일성·반주기 모델 지원을 추정하지 않습니다."
     }
   ]
 }
