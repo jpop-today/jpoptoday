@@ -947,6 +947,126 @@
         "responseSha256": "53d9a05ca4f2c04e7c8383ba1415ddcb8f308c2ac674009d3265d7e22cf5a23a"
       },
       "reason": "공식 번호 검색의 JANE DOE와 두 가수 米津玄師·宇多田ヒカル이 원본 제목·공동명의와 대응합니다. 원본의 전각 쉼표와 제공사별 &/、 연결기호 차이를 검토하고 OST 부제·공식 가수 표기를 그대로 보존합니다. 가수 정체성이나 ID를 자동 병합하지 않습니다."
+    },
+    {
+      "songId": "jpop-playlist-novelbright-walking-with-you-6d7d7f64d1",
+      "provider": "tj",
+      "action": "confirm",
+      "expectedObservedNumber": "68419",
+      "number": "68419",
+      "evidence": {
+        "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=68419&strWord=Y",
+        "checkedAt": "2026-10-15T14:03:23.439453Z",
+        "title": "Walking with you",
+        "artist": "Novelbright",
+        "responseSha256": "4b6cd434251f7488a9886e72d94052ec066b20b88b84859a3bcd311df1414746"
+      },
+      "reason": "공식 번호 검색의 전체 제목 Walking with you와 가수 Novelbright가 원본 제목·가수와 정확히 일치합니다. 결과셀에 별도 버전·부제·공동명의 표기가 없음을 대조했고 공식 표기를 그대로 보존합니다. 음원 동일성이나 반주기별 지원을 추정하지 않습니다."
+    },
+    {
+      "songId": "jpop-playlist-novelbright-walking-with-you-6d7d7f64d1",
+      "provider": "ky",
+      "action": "confirm",
+      "expectedObservedNumber": "44686",
+      "number": "44686",
+      "evidence": {
+        "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=44686",
+        "checkedAt": "2026-10-15T14:03:27.519224Z",
+        "title": "Walking with you",
+        "artist": "Novelbright",
+        "responseSha256": "b2ca7709794e0e3c34be6f4a4e7143fd973920aa13d829bd792f3dc60c17d5f8"
+      },
+      "reason": "공식 번호 검색의 전체 제목 Walking with you와 가수 Novelbright가 원본 제목·가수와 정확히 일치합니다. 결과셀에 별도 버전·부제·공동명의 표기가 없음을 대조했고 공식 표기를 그대로 보존합니다. 음원 동일성이나 반주기별 지원을 추정하지 않습니다."
+    },
+    {
+      "songId": "jpop-playlist-優里-ト-ライフラワ-1125dddd02",
+      "provider": "tj",
+      "action": "confirm",
+      "expectedObservedNumber": "68333",
+      "number": "68333",
+      "evidence": {
+        "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=68333&strWord=Y",
+        "checkedAt": "2026-10-15T14:03:28.525583Z",
+        "title": "ドライフラワー",
+        "artist": "優里",
+        "responseSha256": "4a12616965b426eb669af86fef538491768ae061780d6fcc867a726649cbdc10"
+      },
+      "reason": "공식 번호 검색의 전체 제목 ドライフラワー와 가수 優里가 원본 제목·가수와 정확히 일치합니다. 결과셀에 별도 버전·부제·공동명의 표기가 없음을 대조했고 공식 표기를 그대로 보존합니다. 음원 동일성이나 반주기별 지원을 추정하지 않습니다."
+    },
+    {
+      "songId": "jpop-playlist-優里-ト-ライフラワ-1125dddd02",
+      "provider": "ky",
+      "action": "confirm",
+      "expectedObservedNumber": "44652",
+      "number": "44652",
+      "evidence": {
+        "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=44652",
+        "checkedAt": "2026-10-15T14:03:31.661086Z",
+        "title": "ドライフラワー",
+        "artist": "優里",
+        "responseSha256": "0c65cb223d178a9e580f2a9a83f29d462588f22132e04f8606ee946226b97736"
+      },
+      "reason": "공식 번호 검색의 전체 제목 ドライフラワー와 가수 優里가 원본 제목·가수와 정확히 일치합니다. 결과셀에 별도 버전·부제·공동명의 표기가 없음을 대조했고 공식 표기를 그대로 보존합니다. 음원 동일성이나 반주기별 지원을 추정하지 않습니다."
+    },
+    {
+      "songId": "jpop-playlist-back-number-水平線-187ab55662",
+      "provider": "tj",
+      "action": "confirm",
+      "expectedObservedNumber": "68446",
+      "number": "68446",
+      "evidence": {
+        "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=68446&strWord=Y",
+        "checkedAt": "2026-10-15T14:03:32.326257Z",
+        "title": "水平線",
+        "artist": "back number",
+        "responseSha256": "3bd510368d5ddb8bca9f6dac149977ba87a518ce5af047fdf02d35721f60a404"
+      },
+      "reason": "공식 번호 검색의 전체 제목 水平線와 가수 back number가 원본 제목·가수와 정확히 일치합니다. 결과셀에 별도 버전·부제·공동명의 표기가 없음을 대조했고 공식 표기를 그대로 보존합니다. 음원 동일성이나 반주기별 지원을 추정하지 않습니다."
+    },
+    {
+      "songId": "jpop-playlist-back-number-水平線-187ab55662",
+      "provider": "ky",
+      "action": "confirm",
+      "expectedObservedNumber": "44701",
+      "number": "44701",
+      "evidence": {
+        "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=44701",
+        "checkedAt": "2026-10-15T14:03:35.981521Z",
+        "title": "水平線",
+        "artist": "back number",
+        "responseSha256": "7e51835302e3dad5315006e940b38833f479bf4fca321c59a162041a0e47ea6d"
+      },
+      "reason": "공식 번호 검색의 전체 제목 水平線와 가수 back number가 원본 제목·가수와 정확히 일치합니다. 결과셀에 별도 버전·부제·공동명의 표기가 없음을 대조했고 공식 표기를 그대로 보존합니다. 음원 동일성이나 반주기별 지원을 추정하지 않습니다."
+    },
+    {
+      "songId": "jpop-playlist-vaundy-踊り子-fe694e97f6",
+      "provider": "tj",
+      "action": "confirm",
+      "expectedObservedNumber": "68807",
+      "number": "68807",
+      "evidence": {
+        "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=68807&strWord=Y",
+        "checkedAt": "2026-10-15T14:03:36.625532Z",
+        "title": "踊り子",
+        "artist": "Vaundy",
+        "responseSha256": "5534f29b576c5e4178cfe0e783ffc21ff6c54adef85fdcb754ec63fe2341ee6c"
+      },
+      "reason": "공식 번호 검색의 전체 제목 踊り子와 가수 Vaundy가 원본 제목·가수와 정확히 일치합니다. 결과셀에 별도 버전·부제·공동명의 표기가 없음을 대조했고 공식 표기를 그대로 보존합니다. 음원 동일성이나 반주기별 지원을 추정하지 않습니다."
+    },
+    {
+      "songId": "jpop-playlist-vaundy-踊り子-fe694e97f6",
+      "provider": "ky",
+      "action": "confirm",
+      "expectedObservedNumber": "76508",
+      "number": "76508",
+      "evidence": {
+        "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=76508",
+        "checkedAt": "2026-10-15T14:03:39.142231Z",
+        "title": "踊り子",
+        "artist": "Vaundy",
+        "responseSha256": "92d855f18468d8cb77b562eaeba36c9ad5ee9972acc461136f6a1d7fa58f515d"
+      },
+      "reason": "공식 번호 검색의 전체 제목 踊り子와 가수 Vaundy가 원본 제목·가수와 정확히 일치합니다. 결과셀에 별도 버전·부제·공동명의 표기가 없음을 대조했고 공식 표기를 그대로 보존합니다. 음원 동일성이나 반주기별 지원을 추정하지 않습니다."
     }
   ]
 }
