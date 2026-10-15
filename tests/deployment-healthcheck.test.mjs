@@ -77,6 +77,25 @@ test('new artist directory is pinned while a previous artifact without it remain
   assert.equal(stale.code, 'BODY_MISMATCH');
 });
 
+test('reviewed title/artist guide uses its pinned body while previous releases without it remain recoverable', async t => {
+  const previous = await fixture(t);
+  assert.equal((await verifyDeployment(previous.options)).passed, true);
+  assert.equal(previous.calls.some(call => call.url.pathname === '/guides/title-artist-variants/'), false);
+  const current = await fixture(t);
+  const file = path.join(current.dist, 'guides/title-artist-variants/index.html');
+  const bytes = Buffer.from('<h1>Reviewed title and artist comparison</h1>');
+  await mkdir(path.dirname(file), { recursive: true });
+  await writeFile(file, bytes);
+  current.resources.set('/guides/title-artist-variants/', bytes);
+  const verified = await verifyDeployment(current.options);
+  assert.equal(verified.passed, true);
+  assert.ok(verified.attempts[0].checks.some(check => check.path === '/guides/title-artist-variants/' && check.passed));
+  current.resources.set('/guides/title-artist-variants/', Buffer.from('<h1>Different guide revision</h1>'));
+  const stale = await verifyDeployment(current.options);
+  assert.equal(stale.passed, false);
+  assert.equal(stale.code, 'BODY_MISMATCH');
+});
+
 test('strict target-specific origin allowlist rejects credentials, normalization, paths, query and fragment', () => {
   assert.equal(validateDeploymentUrl('https://jpop.today/', 'production'), 'https://jpop.today');
   assert.equal(validateDeploymentUrl('https://2be02785.todayjpop.pages.dev', 'production'), 'https://2be02785.todayjpop.pages.dev');

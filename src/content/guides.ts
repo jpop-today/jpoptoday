@@ -1,4 +1,4 @@
-/** Original product instructions; body reviewed against the implemented behavior on 2026-10-14. */
+/** Original product instructions; each guide keeps its own body review date. */
 export const guides = [
   { slug: 'find-japanese-songs', title: '일본어 제목을 몰라도 노래를 찾는 순서', description: '한글 제목, 가수, 원제, 번호로 후보를 좁히고 같은 곡인지 확인하세요.',
     sections: [
@@ -38,4 +38,19 @@ export const guides = [
       { label: 'TJ 27944 · 前前前世(Movie ver.) / RADWIMPS', url: 'https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=27944&strWord=Y', checkedAt: '2026-10-14T14:17:53.032754+09:00' },
       { label: '금영 57803 · フォニイ / ツミキ feat.可不', url: 'https://kygabang.com/chart/search_list.php?mode=SongSearch&val=57803', checkedAt: '2026-10-14T14:18:08.551976+09:00' },
     ] },
-].map(guide => ({ ...guide, editor: 'jpop.today 편집', reviewedAt: '2026-10-14' }));
+  { slug: 'title-artist-variants', title: '제목·가수 표기가 다를 때 같은 곡인지 확인하는 법', description: 'SPYAIR와 JANE DOE의 실제 공식 표기를 비교하며 구두점, 부제, 공동명의와 버전을 확인하세요.', reviewedAt: '2026-10-15',
+    sections: [
+      { title: '1. 표기가 다르면 업체와 번호부터 짝지어 읽기', paragraphs: ['제목의 괄호나 느낌표가 다르면 다른 곡처럼 보일 수 있습니다. 반대로 제목이 같아도 가수나 버전이 다를 수 있습니다. 구두점만 지우고 같은 곡으로 판단하거나, 한 글자가 다르다는 이유만으로 다른 곡이라고 단정하지 마세요.', '먼저 사용할 기기가 TJ인지 금영인지 확인한 뒤, 그 업체의 번호로 공식 검색을 여세요. 같은 결과 행에 나온 번호·제목·가수를 함께 읽고, 부제와 버전까지 대조하세요. TJ 번호와 금영 번호를 서로 바꿔 입력하면 이 비교가 성립하지 않습니다.'] },
+      { title: '2. 부제와 대소문자 살펴보기: SPYAIR', paragraphs: ['관리 목록에는 SPYAIR의 サムライハート(Some Like It Hot!!)가 있습니다. 2026년 10월 15일 한국 시간 03시 03분에 대조한 TJ 27527의 제목은 サムライハート (Some Like it Hot)(銀魂 ED), 금영 43372의 제목은 サムライハート (Some Like It Hot!!) ("銀魂"ED)였습니다. 두 결과의 가수는 모두 SPYAIR였습니다.', '이 사례에서는 영어 부제의 it·It, 느낌표와 괄호·공백, 작품명이 붙는 방식이 달랐습니다. 확인할 때는 짧은 제목만 읽지 말고 각 업체의 번호와 가수, 부제 전체를 함께 보세요. 이 두 결과를 대조한 기록을 모든 비슷한 제목이나 다른 버전에 그대로 적용할 수는 없습니다.'] },
+      { title: '3. 공동명의는 이름 전체로 비교하기: JANE DOE', paragraphs: ['JANE DOE의 관리 목록 가수 원문은 米津玄師，宇多田ヒカル입니다. 같은 날 한국 시간 03시 03분의 공식 대조에서 TJ 52972는 米津玄師 & 宇多田ヒカル, 금영 57784는 米津玄師、宇多田ヒカル로 표시됐습니다. 연결 기호는 다르지만 대조할 이름은 두 사람 모두입니다. 한 사람의 이름만 보고 확인을 끝내지 마세요.', '제목의 부제도 함께 읽어야 합니다. TJ 결과는 JANE DOE(\'劇場版 チェンソーマン レゼ篇\' OST), 금영 결과는 JANE DOE ("チェンソーマン レゼ篇"OST)였습니다. 이 기록은 해당 번호의 표시를 대조한 사례이며, 다른 가수·버전의 항목까지 합쳐도 된다는 뜻은 아닙니다.'] },
+      { title: '4. 가수 목록과 한글 표기를 단서로 사용하기', paragraphs: ['가수별 공식 확인곡은 관리 목록에 저장된 가수 원문 표기가 같은 곡끼리 모아 보여 줍니다. 공동명의와 단독 명의, 별칭이나 다른 표기를 자동으로 합치지 않습니다. 찾는 곡이 한 가수 묶음에 없으면 전체 검색에서 제목과 원문 가수 이름으로도 찾아보세요.', '기존 한글 표기가 공동명의의 모든 이름을 담고 있지 않을 수 있습니다. 한글 표기만으로 참여 가수를 확정하거나 빠진 이름을 추측해 채우지 말고, 원문 전체와 업체의 가수 표시를 비교하세요. 비슷한 표기를 찾는 데 도움이 되는 단서와 곡을 확정하는 근거는 구분해야 합니다.'] },
+      { title: '5. 날짜를 읽고 현장 기기의 버전까지 확인하기', paragraphs: ['아래 공식 링크의 확인 시각은 2026년 10월 15일 한국 시간 03시 03분에 수행한 번호 조회 기록입니다. 이 글의 본문 확인일이나 지금 페이지를 연 시각은 번호를 새로 조회한 시각이 아닙니다. 공식 검색을 다시 열었다면 그 화면의 제목·가수·번호를 재확인하세요.', '예약 전에는 현장 기기에 나타나는 제목과 가수, 언어·라이브·영화판 등 원하는 버전 표시를 마지막으로 비교하세요. 과거 공식 검색의 일치만으로 모든 기기의 업데이트 상태나 현재 수록을 보장할 수 없습니다. 업체·가수·버전 중 하나라도 다르거나 불분명하면 추측해 예약하지 말고 확인을 보류하세요.'] },
+      { title: '6. 확인이 멈춘 지점을 남기고 제보하기', paragraphs: ['번호가 없거나 확인 필요로 표시되는 것은 공식 미수록을 확인했다는 뜻이 아닙니다. 공식 검색이 열리지 않거나 결과를 찾지 못했을 때에도 빈 번호를 다른 업체의 값으로 채우지 마세요. 관측 번호와 공식 확인 번호를 구분하고, 확인할 수 없는 항목은 그대로 남겨 두세요.', '표시가 다르면 곡 상세의 이 곡 정보 제보 또는 문의와 정정에서 곡 주소, 업체, 번호, 서로 다른 제목·가수·버전과 확인 날짜를 알려주세요. 공식 결과 링크가 있으면 함께 적고, 어디까지 확인했으며 무엇이 불분명한지 남겨 주세요. 가사 전문, 음원이나 다른 사람의 개인정보를 보내지 않아도 번호 연결을 검토하는 데 필요한 차이를 설명할 수 있습니다.'] },
+    ],
+    sources: [
+      { label: 'TJ 27527 · サムライハート (Some Like it Hot) / SPYAIR', url: 'https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=27527&strWord=Y', checkedAt: '2026-10-15T03:03:41.493546+09:00' },
+      { label: '금영 43372 · サムライハート (Some Like It Hot!!) / SPYAIR', url: 'https://kygabang.com/chart/search_list.php?mode=SongSearch&val=43372', checkedAt: '2026-10-15T03:03:44.173265+09:00' },
+      { label: 'TJ 52972 · JANE DOE / 米津玄師 & 宇多田ヒカル', url: 'https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=52972&strWord=Y', checkedAt: '2026-10-15T03:03:47.678068+09:00' },
+      { label: '금영 57784 · JANE DOE / 米津玄師、宇多田ヒカル', url: 'https://kygabang.com/chart/search_list.php?mode=SongSearch&val=57784', checkedAt: '2026-10-15T03:03:50.023395+09:00' },
+    ] },
+].map(guide => ({ editor: 'jpop.today 편집', reviewedAt: '2026-10-14', ...guide }));
