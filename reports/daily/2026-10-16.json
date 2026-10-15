@@ -3,50 +3,50 @@
   "date": "2026-10-16",
   "timezone": "Asia/Seoul",
   "phase": "complete",
-  "runId": "resume-20261015-2300",
-  "recordedAt": "2026-10-15T18:23:12.679507+00:00",
-  "productCompletedAt": "2026-10-15T18:18:49Z",
-  "title": "10월16일 · v0.4.2 공식 8번호·가수별 TJ/금영 확인곡 수 운영 반영",
-  "summary": "jpop.today에 공식 근거를 대조한 4곡 8번호와 가수별 TJ·금영 확인곡 수를 반영했습니다. 단위310개·동일 SHA 실제 미리보기/운영 브라우저 각각26개·이전 버전 복구와 새 버전 재적용 각각27개 검사를 통과하고 v0.4.2를 게시했습니다. AdSense는 기술 준비 중이며 실제 계정·신청·심사 상태는 미확인입니다.",
+  "runId": "resume-20261016-0400",
+  "recordedAt": "2026-10-15T23:37:58.944954+00:00",
+  "productCompletedAt": "2026-10-15T23:36:29Z",
+  "title": "10월16일 · v0.4.3 차트 공식 확인곡 바로가기·6번호 운영 반영",
+  "summary": "jpop.today에 차트 업체별 공식 확인곡 바로가기와 공식 근거 6번호, 모바일 번호·배지 겹침 수정을 반영하고 v0.4.3을 게시했습니다. 단위314개·타입 오류0·동일 SHA 실제 미리보기/운영 브라우저 각각28개와 실제 이전 버전 복구·새 버전 재적용 검사를 통과했습니다. AdSense는 기술 준비 중이며 실제 신청·심사는 미확인입니다.",
   "fields": [
     {
-      "name": "전일·직전 대비 개선",
-      "value": "10월15일 v0.4.0 확인번호/가수 탐색과 v0.4.1 표기 비교 가이드·안전 조회를 완료했습니다. 이번에는 Walking with you·ドライフラワー(優里)·水平線·踊り子의 실제 공식 8번호를 검토했습니다. 안전하게 탐색할 수 있는 곡은20→24개 ID, 번호는38→46개, 가수 원문 표기는19→20개입니다. TJ24/KY22와 합집합24를 구분합니다."
+      "name": "전일·직전 대비 실제 개선",
+      "value": "전일15일 v0.4.0/v0.4.1, 오늘 앞선 v0.4.2를 보존합니다. 이번 v0.4.3은 차트100곡에서 TJ19/금영17/합집합19곡의 공식 확인곡을 원래 순위로 바로 찾습니다. 실제 공식8조회 중6번호만 확정하고 SAM/samfree·생략된 Ado 제목2건은 보류했습니다. 안전한 전체곡ID24→28, 확인번호46→52로 늘었습니다."
     },
     {
       "name": "실제 운영·검증",
-      "value": "운영 source3db781b/todayjpop630c12d8 · 별도 preview a73d8e0a는 전체noindex·광고없음. 310unit/타입0·로컬26/26·동일M 실제원격26/26 PASS. 두target3346files/3336HTML·preview0/production41index·전체파일 반복빌드 일치. 실제 old27/1attempt→new27/2attempt 복구·재적용 PASS."
+      "value": "제품M48c58d5/운영eb9161b3, 별도 previewc606c798는 전체noindex·광고없음. 단위314/타입0·동일M 실제원격preview28/production28 PASS. 각target3347files/3336HTML·0/45index·전체파일 반복빌드 일치. 실제 이전v0.4.2 엄격27/1attempt→새v0.4.3 엄격27/7attempt 복구·재적용 PASS."
     },
     {
-      "name": "실패·팀 기록",
-      "value": "운영 첫sitemap TIMEOUT과 재적용 첫oldcatalog CATALOG_MISMATCH를 보존했고 마지막 엄격검사는 모두PASS했습니다. gh원격로그 exit0/0bytes 뒤 연결GitHub job로그로 실제26결과를 확보했습니다. 실제6평가 자료40/앱40/품질39로 품질 roster제외·교체감사를 수행했습니다. 물리삭제 없이 증거를 보존했고 한도 중단 뒤 같은run/worker를 재개했습니다."
+      "name": "실패·협업 증거",
+      "value": "실제 모바일 번호/배지 겹침과 E2E JSON수집오류를 수정했습니다. 첫복구 mixed/stale 응답 실패와 두번째 임시helper의 허용범위초과 재시도설정 오류를 보존했고, 설정정정 후 세번째복구 최종PASS했습니다. 실제6평가 모두40점·항목별동률로 사전동률순서에 따라 앱담당을교체하고 독립감사·두동료 보충수용을 기록했습니다. 물리삭제나 품질차이를 만들어내지 않았습니다."
     },
     {
       "name": "운영 경계·남은 일",
-      "value": "이번 production workflow에서도 Actions CFbindings missing·deployskip을 실제 확인했습니다. 관리자cloud 배포와 verify_only 검증을 실제 자동배포와 구분합니다. 전체CIarchive 바이트비교는 이번run 미실행이며 완전로컬재현·실제HTTP 검증 범위만 수용합니다. 기존09시/hourly 일정은 유지하며 run완료를 전체개발 종료로 쓰지 않습니다."
+      "value": "이번 Actions 실제CFbindings는 missing·deployskip으로 확인했습니다. 관리자cloud 실제배포와 verify_only 원격검증은 성공했습니다. 전체CIarchive 바이트비교는 이번run 미실행, 로컬전체재현·실제HTTP/브라우저 범위만 수용합니다. 기존09시/hourly 예약은 enabled·변경없음이며 run완료를 전체개발 종료로 쓰지 않습니다."
     },
     {
       "name": "AdSense·필요 입력",
-      "value": "기술 준비 preparing, 실제 Google 계정·소유권·신청·심사 unknown, 승인 확인 없음. 전체 metadata 권리와 문의 수신/처리를 계속 확인합니다. 본인정보·결제/세금·약관/법적동의는 운영자 단계입니다. 광고 자동클릭·실제광고 노출시험은 수행하지 않았습니다."
+      "value": "기술준비 preparing, 실제Google 계정·소유권·신청·심사 unknown·승인증거없음. metadata 재배포권리·문의 실제수신/처리를 계속 확인합니다. 본인정보·결제/세금·약관/법적동의는 운영자 단계입니다. 광고 자동클릭·실제광고 노출시험은 수행하지 않았습니다."
     }
   ],
-  "url": "https://github.com/jpop-today/jpoptoday/releases/tag/v0.4.2",
+  "url": "https://github.com/jpop-today/jpoptoday/releases/tag/v0.4.3",
   "completed": [
-    "Issue24 PR25 H4e1ec00→M3db781b 통합, PR/main app/contracts 실제success",
-    "실제 공식metadata 8조회 HTTP200·단일번호/전체제목/가수와 동결chart11–14위 identity 대조 후 별도8confirm; 이전63ledger 전체/순서 보존, ledger71",
-    "가수별 TJ/KY 고유ID 수와 전체합집합을 SSR로 표시, 0을미수록으로추정하지않음; 짧은화면 마지막목차/360JSoff/키보드/원래브랜드 보존",
-    "3317안정ID/번호문자열/URL/localStorage·staging/chart·unknown·실패lastgood보존을 단위310/타입0·브라우저26/26 및 artifact로 검증",
-    "동일M actual preview/production 원격각26과 실제27HTTP·두target전체파일로컬재현 PASS",
-    "실제oldv0.4.1 27→newv0.4.2 27 복구·재적용, 최초timeout/혼합응답까지 원본영수증 보존",
-    "실제6동료평가40/40/39와 품질교체·독립감사·원래두담당 보충평가를 실행증거로 기록",
-    "v0.4.2 실제GitHub Release 게시·별도Release Discord 결과 확인"
+    "Issue27 PR28 H eb4a707→M48c58d5 통합; PR/main app/contracts 실제success",
+    "동결차트15~18위4ID의 실제 공식8응답 HTTP200/단일번호/전체제목·가수 대조→별도6confirm/2defer; 기존71전체·순서 보존, ledger77",
+    "차트 업체별TJ19/KY17·합집합19/100 SSR 바로가기와 stable ID anchor; 원래100행/순위/기간/URL 보존",
+    "360JSoff·키보드/마지막바로가기·3viewport·100행 실제겹침/44px버튼 검증과 수정전후12화면 보존",
+    "3317ID/번호문자열/URL/localStorage·unknown/미수록·동결snapshot·실패lastgood·기존gradient 보존",
+    "314unit/type0·local28/28·같은M actual remote28/28·엄격27HTTP·두target전체3347files 반복빌드 PASS",
+    "실제old27/1→new27/7 복구·재적용 최종PASS와 이전실패/임시roothelper오류 증거보존",
+    "실제6평가40/40/40·항목동률/사전순서교체·독립감사·원래두담당 보충수용·실제v0.4.3 Release/ReleaseDiscord 확인"
   ],
   "nextPlan": [
-    "Issue6: 아직 미검토인 관측 번호를 metadata-only 공식 조회·제목/가수/버전 대조로 검토하고 근거가 없으면 unknown을 유지",
-    "검토한 번호와 실제 표기 차이에 근거한 자체 가이드·가수 비교 콘텐츠를 보강하고 모바일/키보드 흐름을 검증",
-    "Issue15: 안전한 Actions Cloudflare bindings 설정과 실제 자동배포 확인; 관리자 managed cloud 배포는 계속 가능",
-    "독립 E2E URL 기대값과 계약의 www KY/port/query 경계 차이를 후속 정리하고 긴 JS 내 Python 검사 helper의 가독성을 개선",
-    "실제 문의 수신·처리와 전체 metadata 재배포 권리 확인; Google 계정·소유권·신청·심사는 운영자 실제 증거로만 기록"
+    "Issue6: metadata-only 공식 조회와 전체 제목/가수/버전 대조로 다음 미검토곡의 번호 근거 보강; SAM/samfree·생략 부제는 근거 확보 전 보류 유지",
+    "실제 정정·보류 사례를 설명하는 자체 가이드와 탐색 흐름 보강; 최신 차트 수집/마지막 정상 보존을 별도 검증",
+    "Issue15: Actions Cloudflare bindings 안전 설정과 실제 자동배포 확인; 관리자 managed cloud 배포와 verify_only를 구분",
+    "긴 JS 내 Python 검사 helper의 가독성 개선 등 검증 가능한 유지보수 후속",
+    "전체 metadata 권리와 실제 문의 수신/처리, Google 실제 계정·소유권·신청·심사 증거는 운영자 단계로 확인"
   ],
   "previousDay": {
     "date": "2026-10-15",
@@ -57,100 +57,188 @@
     "savedReport": "https://github.com/jpop-today/jpoptoday/blob/main/reports/daily/2026-10-15.json",
     "boundary": "이번run은15일23시시작·16일완료. 전일보고와실제checkedAt를 덮거나 날짜를 옮기지 않음"
   },
+  "sameDayPriorRuns": [
+    {
+      "runId": "resume-20261015-2300",
+      "release": {
+        "version": "0.4.2",
+        "tag": "v0.4.2",
+        "sourceSha": "3db781ba1fab978995e8edddc0626c0e703bbfbf",
+        "annotatedTagSha": "d271f6ae0c48bf05162ecdcec3e40e2ad110e183",
+        "tagTargetType": "commit",
+        "tagTargetSha": "3db781ba1fab978995e8edddc0626c0e703bbfbf",
+        "releaseId": 414128773,
+        "publishedAt": "2026-10-15T18:18:49Z",
+        "draft": false,
+        "prerelease": false,
+        "url": "https://github.com/jpop-today/jpoptoday/releases/tag/v0.4.2",
+        "workflowRun": 38784313891,
+        "state": "published",
+        "verifiedAt": "2026-10-15T18:19:38.315547+00:00",
+        "scope": "Actual GitHub Release/ref/annotatedtag API reads; not Google approval",
+        "notification": {
+          "state": "sent",
+          "sentAt": "2026-10-15T18:18:50.5837730Z",
+          "attempts": 1,
+          "workflowRun": 38784313891,
+          "scope": "Actual explicit Release senderline; not completed report"
+        },
+        "safeResults": [
+          {
+            "jobId": 116592248938,
+            "at": "2026-10-15T18:17:03.3751433Z",
+            "result": "Reviewed release identity verified v0.4.2"
+          },
+          {
+            "jobId": 116592248938,
+            "at": "2026-10-15T18:18:35.4197021Z",
+            "result": "26 passed (29.9s)"
+          },
+          {
+            "jobId": 116593096653,
+            "at": "2026-10-15T18:18:50.2005202Z",
+            "result": "https://github.com/jpop-today/jpoptoday/releases/tag/v0.4.2"
+          },
+          {
+            "jobId": 116593096653,
+            "at": "2026-10-15T18:18:50.5837730Z",
+            "result": "Discord notification sent (1 attempt)."
+          }
+        ]
+      },
+      "completed": [
+        "Issue24 PR25 H4e1ec00→M3db781b 통합, PR/main app/contracts 실제success",
+        "실제 공식metadata 8조회 HTTP200·단일번호/전체제목/가수와 동결chart11–14위 identity 대조 후 별도8confirm; 이전63ledger 전체/순서 보존, ledger71",
+        "가수별 TJ/KY 고유ID 수와 전체합집합을 SSR로 표시, 0을미수록으로추정하지않음; 짧은화면 마지막목차/360JSoff/키보드/원래브랜드 보존",
+        "3317안정ID/번호문자열/URL/localStorage·staging/chart·unknown·실패lastgood보존을 단위310/타입0·브라우저26/26 및 artifact로 검증",
+        "동일M actual preview/production 원격각26과 실제27HTTP·두target전체파일로컬재현 PASS",
+        "실제oldv0.4.1 27→newv0.4.2 27 복구·재적용, 최초timeout/혼합응답까지 원본영수증 보존",
+        "실제6동료평가40/40/39와 품질교체·독립감사·원래두담당 보충평가를 실행증거로 기록",
+        "v0.4.2 실제GitHub Release 게시·별도Release Discord 결과 확인"
+      ],
+      "delivery": {
+        "id": 38785870363,
+        "workflow": "discord.yml",
+        "mode": "completed",
+        "reportDate": "2026-10-16",
+        "sourceReportSha": "ce1b49f1ab6cedb64dca7cd2b215e72aafc76e50",
+        "sourcePR": "https://github.com/jpop-today/jpoptoday/pull/26",
+        "reportPath": "reports/daily/2026-10-16.json",
+        "productSha": "3db781ba1fab978995e8edddc0626c0e703bbfbf",
+        "url": "https://github.com/jpop-today/jpoptoday/actions/runs/38785870363",
+        "jobId": 116597600040,
+        "conclusion": "success",
+        "state": "sent",
+        "preparedAt": "2026-10-15T18:28:47.8278575Z",
+        "sentAt": "2026-10-15T18:28:48.5038882Z",
+        "attempts": 1,
+        "checkedAt": "2026-10-15T19:00:33.644816+00:00",
+        "safeResult": "Discord notification sent (1 attempt).",
+        "scope": "Actual selected connected GitHub job log. Existing completed delivery verified; not resent. Release notification is separate. No secrets/rawlogs retained."
+      },
+      "fullPostDeliveryRecord": "https://github.com/jpop-today/docs/blob/main/operations/runs/resume-20261015-2300-completed-daily.json",
+      "sourcePreDeliveryRecord": "https://github.com/jpop-today/jpoptoday/blob/main/reports/runs/resume-20261015-2300.json",
+      "boundary": "Exact original JSON bytes archived before replacing daily aggregate; sourcepre-delivery/docsfinaldelivery differences preserved"
+    }
+  ],
   "release": {
-    "version": "0.4.2",
-    "tag": "v0.4.2",
-    "sourceSha": "3db781ba1fab978995e8edddc0626c0e703bbfbf",
-    "annotatedTagSha": "d271f6ae0c48bf05162ecdcec3e40e2ad110e183",
+    "version": "0.4.3",
+    "tag": "v0.4.3",
+    "sourceSha": "48c58d57b15aa775676229465fd13c390ccac620",
+    "annotatedTagSha": "b13266ff60ffe4274c65890d25bdddf157cb043e",
     "tagTargetType": "commit",
-    "tagTargetSha": "3db781ba1fab978995e8edddc0626c0e703bbfbf",
-    "releaseId": 414128773,
-    "publishedAt": "2026-10-15T18:18:49Z",
+    "tagTargetSha": "48c58d57b15aa775676229465fd13c390ccac620",
+    "releaseId": 414374401,
+    "publishedAt": "2026-10-15T23:36:29Z",
     "draft": false,
     "prerelease": false,
-    "url": "https://github.com/jpop-today/jpoptoday/releases/tag/v0.4.2",
-    "workflowRun": 38784313891,
+    "url": "https://github.com/jpop-today/jpoptoday/releases/tag/v0.4.3",
+    "workflowRun": 38824414759,
     "state": "published",
-    "verifiedAt": "2026-10-15T18:19:38.315547+00:00",
-    "scope": "Actual GitHub Release/ref/annotatedtag API reads; not Google approval",
+    "verifiedAt": "2026-10-15T23:37:09.898493+00:00",
+    "scope": "Actual GitHub Release/ref/annotatedtag API reads; not Googleapproval",
     "notification": {
       "state": "sent",
-      "sentAt": "2026-10-15T18:18:50.5837730Z",
+      "sentAt": "2026-10-15T23:36:30.4633974Z",
       "attempts": 1,
-      "workflowRun": 38784313891,
-      "scope": "Actual explicit Release senderline; not completed report"
+      "workflowRun": 38824414759,
+      "scope": "Actual explicit Release senderline; separate from completedreport"
     },
     "safeResults": [
       {
-        "jobId": 116592248938,
-        "at": "2026-10-15T18:17:03.3751433Z",
-        "result": "Reviewed release identity verified v0.4.2"
+        "jobId": 116728382367,
+        "at": "2026-10-15T23:34:54.1039612Z",
+        "result": "Reviewed release identity verified v0.4.3"
       },
       {
-        "jobId": 116592248938,
-        "at": "2026-10-15T18:18:35.4197021Z",
-        "result": "26 passed (29.9s)"
+        "jobId": 116728382367,
+        "at": "2026-10-15T23:36:17.8368064Z",
+        "result": "28 passed (30.4s)"
       },
       {
-        "jobId": 116593096653,
-        "at": "2026-10-15T18:18:50.2005202Z",
-        "result": "https://github.com/jpop-today/jpoptoday/releases/tag/v0.4.2"
+        "jobId": 116728925543,
+        "at": "2026-10-15T23:36:30.0521223Z",
+        "result": "https://github.com/jpop-today/jpoptoday/releases/tag/v0.4.3"
       },
       {
-        "jobId": 116593096653,
-        "at": "2026-10-15T18:18:50.5837730Z",
+        "jobId": 116728925543,
+        "at": "2026-10-15T23:36:30.4633974Z",
         "result": "Discord notification sent (1 attempt)."
       }
     ]
   },
   "verification": {
-    "unit": 310,
+    "unit": 314,
     "typeErrors": 0,
     "typeWarnings": 0,
     "typeHints": 0,
-    "localPreviewBrowser": 26,
-    "localProductionBrowser": 26,
-    "remotePreviewBrowser": 26,
-    "remoteProductionBrowser": 26,
+    "localPreviewBrowser": 28,
+    "localProductionBrowser": 28,
+    "remotePreviewBrowser": 28,
+    "remoteProductionBrowser": 28,
     "actualPreviewHTTP": 27,
     "actualProductionHTTP": 27,
     "actualRecovery": {
-      "oldChecks": 27,
-      "oldAttempts": 1,
-      "newChecks": 27,
-      "newAttempts": 2,
-      "oldStateObservations": 8,
-      "newStateObservations": 8,
-      "newFirstFailure": "CATALOG_MISMATCH oldcatalogbytes after APIrestore; final exacthashPASS",
       "passed": true,
-      "evidence": "resume-20261015-2300-recovery-node-summary.json"
+      "evidence": "resume-20261016-0400-recovery3-recovery-node-summary.json",
+      "oldSHA": "3db781ba1fab978995e8edddc0626c0e703bbfbf",
+      "oldDeployment": "630c12d8-341a-4ad0-b406-43e36eefd4b2",
+      "oldHTTPChecks": 27,
+      "oldAttempts": 1,
+      "newHTTPChecks": 27,
+      "newAttempts": 7,
+      "preservedPriorAttempts": [
+        "resume-20261016-0400-recovery-node-summary.json",
+        "resume-20261016-0400-recovery2-recovery-node-summary.json",
+        "resume-20261016-0400-recovery2-helper-failure.json"
+      ],
+      "strictCheckWeakening": false
     },
     "localFullReproducibility": {
       "passed": true,
-      "filesPerTarget": 3346,
+      "filesPerTarget": 3347,
       "buildsPerTarget": 2
     },
     "ciArchiveFullComparison": "not_performed_this_run",
     "artifacts": {
-      "files": 3346,
+      "files": 3347,
       "html": 3336,
       "previewIndex": 0,
-      "productionIndex": 41
+      "productionIndex": 45
     }
   },
   "team": {
     "schemaVersion": 1,
-    "runId": "resume-20261015-2300",
-    "recordedAt": "2026-10-15T14:18:51.015345+00:00",
+    "runId": "resume-20261016-0400",
     "workers": [
-      "/root/resume23_evidence",
-      "/root/resume23_app",
-      "/root/resume23_quality"
+      "/root/resume04_evidence",
+      "/root/resume04_app",
+      "/root/resume04_quality"
     ],
     "reviews": [
       {
-        "reviewer": "/root/resume23_evidence",
-        "candidate": "/root/resume23_app",
+        "reviewer": "/root/resume04_evidence",
+        "candidate": "/root/resume04_app",
         "scores": {
           "correctness": 5,
           "evidence": 5,
@@ -158,32 +246,34 @@
           "maintainability": 5
         },
         "criterionReasons": {
-          "correctness": "artists.astro를 직접 읽었다. 기존 confirmedNumbers/buildConfirmedArtistGroups 판정을 그대로 사용하고 업체별 song.id Set과 전체 ID Set을 따로 계산해 TJ24·금영22·합집합24를 표시한다. 전역·모든 가수 바로가기·그룹 수와 0곡의 미수록 아님 의미를 SSR 본문 및 실제 aria-describedby/role=group으로 제공하고, 기존 anchor·곡URL·원문명의·근거/시각을 보존한다.",
-          "evidence": "최종 14:12:35–39Z dirty preview의 영속 QA JSON과 PNG6장을 모두 실제 열어 읽었다. 3viewport에서82개 수치·20그룹·24/22/24 독립집계, JS-off 키보드·0곡·마지막그룹, 넘침/clip/console/광고0 및 정확한 브랜드/palette가 코드/화면과 맞는다. 잘못된 초기 URL/브랜드 selector 진단3회와 이전 p artifact는 최종divrole 결과와 구분해 기록했다.",
-          "value": "방문할 노래방 업체에 맞는 확인곡 수를 가수 선택 전후에 바로 비교하게 하며 전체46곡으로 오해하는 중복합산과 0=미수록 오해를 실제 문구로 줄인다. 360px 화면의 상단요약·두열목록·0곡번호카드와 마지막 가수도 읽을 수 있고 기존 상세/공식근거 흐름이 이어진다.",
-          "maintainability": "소유 페이지와 문서만 수정하며 기존 Layout/helper·static SSR·원문그룹·native anchor·scoped CSS를 재사용한다. 간단한 countProviders 함수가 global/group 계산을 공유하고 수치를 하드코딩하지 않는다. 명시적 data속성/aria 계약과 최종82수치 독립회귀가 후속자료 append를 지원한다. 검토 범위에서 별도 유지보수 차단을 발견하지 않았다."
+          "correctness": "chart.astro 전체를 읽었다. 기존100행 canonicalId/순위를 검증한 뒤 기존 confirmedNumbers 계약으로 current/playlist·공식근거·충돌없음 업체를 선별하고 업체별 Set/합집합 Set을 따로 계산한다. 100곡 분모·0≠미수록·관측 제외·금영도 TJ 원순위임을 SSR로 설명한다. 원100행/기존상세/SongRow/저장은 유지하고 chart-안정ID anchor로 연결하며 날짜/보관차트 경계를 보존한다. 실제 TJ19/KY17/전체19와 보류KY2 제외가 자료 판단에 맞는다.",
+          "evidence": "최종 19:15:18–24Z dirty preview QA/대비 JSON과 영속12PNG 파일을 읽고 desktop-first/mobile-summary/mobile-anchor/short-last 4장을 직접 열었다. 3viewport의 counts/100행·JSoff키보드·브랜드/색인/오류0 기록과 화면이 일치한다. 수정 전 mobile-anchor도 열어 실제 badge/업체라벨 충돌을 확인했고 최종 이미지의 분리/한줄 표시·100행 bbox 기록에서 해소를 확인했다. root 실제314unit/type0/preview28/prod28 로그를 읽었고 초기 QA대기누락·collection오류 및 dirty 결과를 remote/clean 배포 증거와 구분한다.",
+          "value": "방문 업체에서 확인된 번호가 있는 차트곡을 원래 순위 순서로 찾아 기존행/상세/공식근거로 이동하게 한다. 100곡과 업체별 수/합집합을 함께 보여 중복합산·미수록·최신차트 오해를 줄인다. 360px JSoff에서 제목/가수/번호가 읽히고 원행의 양업체 버튼/확인badge를 분리했다. 짧은 desktop 마지막81위 바로가기와 전체100곡 복귀가 접근 가능하다.",
+          "maintainability": "기존 helper/Layout/SongRow·static SSR/native anchor를 재사용하며 새 클라이언트코드·의존성·공용CSS 변경이 없다. 수치는 자료에서 계산되고 stableID anchor는 재정렬에 종속되지 않는다. 모바일 보완을 해당차트 scoped CSS에 한정하고 명시적 data/aria 속성과 모든100행 bbox 회귀로 보완했다. 현재 수용 범위에 필수적인 유지보수 결함을 발견하지 않았다."
         },
-        "reason": "할당된 업체별 확인곡 수와 모바일/키보드·브랜드 계약을 실제 파일/최종PNG/QA 및 root310unit·type0·preview26 로그로 수용한다. 새 브라우저나 공식조회를 이 리뷰에서 실행하지 않았고, root coverage 기존고정값 수정은 앱 담당 소유 성과로 가산하지 않는다. 현재 cleanCI/원격preview/운영/복구/Release는 pending이다.",
+        "reason": "소유 페이지/문서·실제 최종 로컬 근거를 읽어 수용한다. root의314/type0/두 target28 통과를 확인했으며 초기 결함 발견/수정/재검증을 숨기지 않았다. 수정된 과거 결함만을 이유로 감점하거나 미확인 결함을 생성하지 않는다. 본 리뷰는 새 브라우저·공식조회·Git·빌드·배포 실행이 아니다.",
         "evidence": [
-          "jpoptoday/src/pages/artists.astro",
-          "docs/engineering/artist-provider-counts-20261015-2300.md",
-          "docs/operations/runs/resume-20261015-2300-ui-qa.json",
-          "docs/engineering/design/artist-provider-counts-20261015-2300-desktop-summary.png",
-          "docs/engineering/design/artist-provider-counts-20261015-2300-desktop-index.png",
-          "docs/engineering/design/artist-provider-counts-20261015-2300-mobile-summary.png",
-          "docs/engineering/design/artist-provider-counts-20261015-2300-mobile-index.png",
-          "docs/engineering/design/artist-provider-counts-20261015-2300-mobile-zero-group.png",
-          "docs/engineering/design/artist-provider-counts-20261015-2300-short-last-group.png",
-          "/tmp/jpop-2300-unit.txt",
-          "/tmp/jpop-2300-check-final.txt",
-          "/tmp/jpop-2300-preview-e2e-final.txt"
+          "jpoptoday/src/pages/chart.astro",
+          "docs/engineering/chart-confirmed-navigation-20261016-0400.md",
+          "docs/operations/runs/resume-20261016-0400-ui-qa.json",
+          "docs/operations/runs/resume-20261016-0400-ui-contrast.json",
+          "docs/engineering/design/chart-confirmed-20261016-0400-desktop-first.png",
+          "docs/engineering/design/chart-confirmed-20261016-0400-mobile-summary.png",
+          "docs/engineering/design/chart-confirmed-20261016-0400-mobile-anchor.png",
+          "docs/engineering/design/chart-confirmed-20261016-0400-short-last-shortcut.png",
+          "docs/operations/runs/resume-20261016-0400-ui-before-fix-mobile-anchor.png",
+          "/tmp/jpop-0400-unit.txt",
+          "/tmp/jpop-0400-check-final.txt",
+          "/tmp/jpop-0400-preview-e2e-final.txt",
+          "/tmp/jpop-0400-preview-e2e-after-jsonfix.txt",
+          "/tmp/jpop-0400-production-e2e.txt"
         ],
-        "acceptance": "accepted_for_integration; 담당 구현/최종 로컬 QA 계약 충족, 필수 보완 없음. clean sameSHA CI·원격preview·운영·실제복구·Release는 root의 후속 검증 필요.",
-        "originalDocument": "data/provider-review-20261015-2300.md"
+        "acceptance": "accepted_for_integration; 할당된 앱/디자인·로컬 QA 수용 기준 충족, 필수 보완 없음. clean sameSHA CI·실제 preview/운영·복구·Release는 root 후속 게이트로 pending.",
+        "originalDocument": "docs/data/provider-review-20261016-0400.md"
       },
       {
-        "reviewer": "/root/resume23_evidence",
-        "candidate": "/root/resume23_quality",
+        "reviewer": "/root/resume04_evidence",
+        "candidate": "/root/resume04_quality",
         "scores": {
           "correctness": 5,
           "evidence": 5,
@@ -191,28 +281,36 @@
           "maintainability": 5
         },
         "criterionReasons": {
-          "correctness": "3개 cohort unit과2개 E2E를 직접 읽었다. 기존63전체객체·순서의 canonicalhash, raw/chart bytes, 실제8행 전체 제목/가수/번호/URL/시각/hash를 고정하며3,317ID·기존URL·비대상전체객체·같은제목Ado의 관측/unknown을 보존한다. E2E는 production helper를 import하지 않고 served catalog에서 distinct ID Set을 계산하여 global/index/group·실제번호포함·합집합·0곡·JS-off/360px/키보드·target별meta를 검사한다.",
-          "evidence": "품질 문서의3unit PASS214.918209ms/최초 단위 가정오류2FAIL/정정2PASS11.5s와 최종role추가 경계를 읽었다. root 실제310/310 PASS11.481s 로그에서3새unit을, 최종preview26/26 PASS44.6s 로그에서2새E2E를 확인했다. 실제8metadata와 test의 frozen tuple도 일치한다. 초기24PASS2FAIL은 root의coverage기존고정값 문제이며 품질2검사의 실패나 최종통과로 뒤섞지 않는다.",
-          "value": "잘못된 근거가 같은 제목의 다른 가수에 전파되는 문제와 기존63정정/ID/URL 손상, 업체번호 수를 곡수로 합산하는 문제를 구체적으로 막는다. 실제0곡·공동명의 원문그룹·키보드상세·광고/오버레이 경계가 사용자에게 보이는 결과를 독립검증한다. 검증이 공식사람대조나 AdSense승인을 대체한다고 하지 않는다.",
-          "maintainability": "검사 범위가 별도 두 소스파일에 분리되고 frozen cohort63~71만 고정하여 나중 append가 회귀 의미를 바꾸지 않도록 했다. 최소 tuple/URL builder·independentCounts·verifyCounts를 재사용하고 서버/공용package/CI를 변경하지 않는다. 합성/실제자료/dirty실행/원격미실행과 실패원인을 문서로 구분해 재개할 수 있다. 현재 계약에 필수적인 유지보수 결함을 발견하지 않았다."
+          "correctness": "4unit/2E2E 전체를 읽었다. 원71 canonical/동결 rawbytes/3317ID/100rank와 실제6항목의 전체 feature/OST/OP 제목·가수·URL·실제시각/hash를 고정한다. slice0..77 projection에서 비대상전체객체·ID/URL·동일제목다른가수·unknown을 보존하고 불명KY2는 observed/evidence null로 확인한다. E2E는 UI helper를 import하지 않고 servedcatalog+동결chart로 100행/순위/기존URL·업체별/합집합·보류제외를 독립 대조하며 officialLookupMatches의 근거URL 계약을 재사용한다.",
+          "evidence": "문서의 실제4unit PASS197.164329ms·metadata 독립대조8/8과 root314전체에 포함된4검사 결과를 읽었다. root 최종preview28/50.3s·production28/50.5s에서 새 SSR/360JSoff 검사 각각 PASS를 확인했다. 초기 ERR_IMPORT_ATTRIBUTE_MISSING collection오류를 실제 로그에서 확인했고 readFileSync/JSON.parse 수정과 list2수집을 브라우저 통과와 구분한 기록을 읽었다. 최종 QA/대표4PNG와 수정 전 실제겹침을 읽고 새100행 bbox assertion이 그 결함을 직접 겨냥함을 확인했다.",
+          "value": "기존근거의 손상·버전/명의불명의 자동확정·같은제목 다른가수로의 근거전파·관측을 확인으로 계산하는 회귀를 막는다. 사용자에게 보이는 100분모/중복합/원순위·0의미와 안정anchor/상세·실제 모바일 업체라벨/번호/badge 겹침을 검증한다. 단순 overflow PASS로 실제겹침을 숨기지 않는 회귀이며 광고/색인/브랜드도 실제검사 경계 안에서 확인한다.",
+          "maintainability": "별도4unit/2E2E 파일과 문서로 범위를 한정하고 공용 package/config/서버를 변경하지 않는다. old71/cohort77을 고정해 후속 append를 허용하며 E2E counts/order는 동결자료/servedcatalog 기반이다. URL자격을 별도 축소 heuristic으로 복제하지 않고 기존계약을 재사용해 이전 wwwKY/port/query정합성 한계를 피했다. JSON import문제를 의존성 추가 없이 표준fs/parse로 정정했고 실패/미실행/담당실행과 root실행 경계를 보존한다. 필수 유지보수 보완을 발견하지 않았다."
         },
-        "reason": "실제 파일·메타데이터·로그를 읽어 할당된 회귀와 독립집계 검사를 수용한다. 새 테스트/브라우저를 리뷰에서 재실행하지 않았고 기존8계약 회귀 실행과 root전체310을 중복 합산하지 않는다. 아직 실행중인 production26과 cleanCI/preview/운영/복구/Release를 통과로 가정하지 않는다.",
+        "reason": "실제 소스/자료 metadata/문서/최종 로컬 로그와 화면을 읽어 현재4unit/2E2E 계약을 수용한다. 이미 정정하고 실제 재실행한 collection오류를 숨기거나 새28실패로 세지 않았으며 테스트 수/말수로 평가하지 않았다. 새 테스트·브라우저·조회·Git·빌드·배포는 실행하지 않았다. 원응답 미보존의 독립재파싱 불가와 실제AdSense unknown도 유지한다.",
         "evidence": [
-          "jpoptoday/tests/reviewed-cohort-2300.test.mjs",
-          "jpoptoday/e2e/artist-provider-counts.spec.ts",
-          "docs/engineering/artist-provider-counts-quality-20261015-2300.md",
-          "docs/data/provider-review-requests-20261015-2300.json",
-          "docs/operations/runs/resume-20261015-2300-ui-qa.json",
-          "/tmp/jpop-2300-unit.txt",
-          "/tmp/jpop-2300-check-final.txt",
-          "/tmp/jpop-2300-preview-e2e-final.txt"
+          "jpoptoday/tests/reviewed-chart-cohort0400.test.mjs",
+          "jpoptoday/e2e/chart-confirmed-navigation.spec.ts",
+          "docs/engineering/chart-confirmed-quality-20261016-0400.md",
+          "docs/data/provider-review-requests-20261016-0400.json",
+          "docs/operations/runs/resume-20261016-0400-ui-qa.json",
+          "docs/operations/runs/resume-20261016-0400-ui-contrast.json",
+          "docs/engineering/design/chart-confirmed-20261016-0400-desktop-first.png",
+          "docs/engineering/design/chart-confirmed-20261016-0400-mobile-summary.png",
+          "docs/engineering/design/chart-confirmed-20261016-0400-mobile-anchor.png",
+          "docs/engineering/design/chart-confirmed-20261016-0400-short-last-shortcut.png",
+          "docs/operations/runs/resume-20261016-0400-ui-before-fix-mobile-anchor.png",
+          "/tmp/jpop-0400-unit.txt",
+          "/tmp/jpop-0400-check-final.txt",
+          "/tmp/jpop-0400-preview-e2e-final.txt",
+          "/tmp/jpop-0400-preview-e2e-after-jsonfix.txt",
+          "/tmp/jpop-0400-production-e2e.txt"
         ],
-        "acceptance": "accepted_for_integration; 담당3unit/2E2E 및 최종로컬preview 통과 수용, 필수 보완 없음. production로컬/cleanCI·원격preview·운영·실제복구·Release는 후속 실제 증거 필요.",
-        "originalDocument": "data/provider-review-20261015-2300.md"
+        "acceptance": "accepted_for_integration; 할당된 회귀·독립집계/모바일 검사와 최종로컬통과 수용, 필수 보완 없음. clean sameSHA CI·실제 preview/운영·복구·Release는 root 후속 게이트로 pending.",
+        "originalDocument": "docs/data/provider-review-20261016-0400.md"
       },
       {
-        "reviewer": "/root/resume23_app",
-        "candidate": "/root/resume23_evidence",
+        "reviewer": "/root/resume04_app",
+        "candidate": "/root/resume04_evidence",
         "scores": {
           "correctness": 5,
           "evidence": 5,
@@ -220,83 +318,88 @@
           "maintainability": 5
         },
         "criterionReasons": {
-          "correctness": "동결차트11~14위의 실제current/playlist4ID·8번호를 전체제목/가수/버전으로 대조하고 confirm8만 append했다. base63전체객체/순서·상위metadata 불변, 저장candidate8↔decision8↔ledger8의 번호/제목/가수/checkedAt/hash 일치를 독립 읽기로 확인했다.",
-          "evidence": "공식요청8개에 실제시각/HTTP200/요청=최종URL/응답bytes와hash·원unreviewed candidate 및 별도reviewer/reviewedAt/개별판단을 보존한다. 이 reviewer도 새cohort3+기존8계약을11/11실행했고 원문없음·hash재계산불가를 실제 한계로 구분했다.",
-          "value": "Walking with you·ドライフラワー·水平線·踊り子의 실제8업체번호를 관측에서 근거있는확인으로 개선해 기존안정ID상세/가수목록에서 근거와대조시각을 볼 수 있게 한다. 미수록/음원동일성/권리/Google승인을 과장하지 않는다.",
-          "maintainability": "안전helper를변경하지않고 지정ledger에append만 수행했다. metadata전용요청과별도decision·변경전후hash/원본보존·실행경계/다음root게이트를 문서와JSON으로 연결해 다음실행이 안전하게 추적할 수 있다."
+          "correctness": "실제 metadata의 전체 제목·명의·부제를 frozen chart canonicalId와 대조해 TJ samfree/Ado 및 TJ·KY KICK BACK/レオ 6개만 confirm했다. SAM과 samfree 별칭 동일성을 추정하지 않았고 생략된 KY 역광 제목도 재구성하지 않아 2개 observed를 유지한다. 원71개 전체·순서·최상위 metadata, 동결100행·3317ID/번호/URL/unknown을 직접 대조한 범위에서 보존한다.",
+          "evidence": "request8의 HTTP200/정확한 final URL·실제 checkedAt/bytes/hash·unreviewed candidate와 별도 reviewer/reviewedAt/decision8을 실제 읽었다. 각 confirm6의 ledger evidence/이유와 보류2의 ledger 부재를 직접 비교했고 root evidence-audit 및 314unit 결과와 일치했다. 저장하지 않은 rawbody의 재파싱·hash 재계산이나 추가 공식 조회를 했다고 주장하지 않는다.",
+          "value": "공식 확인 근거 6번호를 실제 4곡 ID에 보강해 차트 TJ19/금영17/합집합19의 안전한 업체 탐색을 제공할 수 있다. 불명2번호는 관측으로 남겨 잘못된 업체 확인을 피하며 같은 제목·명의/버전을 구분할 수 있는 실제 근거를 보존한다.",
+          "maintainability": "기존 검증된 metadata-only helper를 변경하지 않고 ledger 끝에만 6개를 append했다. 요청·후보·편집 결정·public projection 경계를 분리하고 원본 hash·제한·다음 검토 대상·자료권리/Google unknown을 문서화하여 이후 검토가 이전 근거를 덮어쓰지 않고 이어갈 수 있다."
         },
-        "reason": "할당자료범위 수용. 기존63항목과 frozen입력을 보존하고 실제8개 근거의편집판단만 추가했으며 공식조회/후속CI·배포·AdSense 상태를 구분했다.",
+        "reason": "정체성·버전 근거가 확보된 경우와 부족한 경우를 명시적으로 나눴고, 저장된 실제 metadata/별도 결정/ledger와 원본 보존을 직접 확인했다. 로컬 통합 수용이며 공식 raw 응답 재검증·배포·Google 승인 수용으로 확대하지 않는다.",
+        "evidence": [
+          "/workspace/jpoptoday/data/reviewed/provider-corrections.json",
+          "/workspace/docs/data/provider-review-20261016-0400.md",
+          "/workspace/docs/data/provider-review-requests-20261016-0400.json",
+          "/workspace/docs/operations/runs/resume-20261016-0400-evidence-audit.json",
+          "/tmp/jpop-0400-base-ledger.json",
+          "/tmp/jpop-0400-unit.txt"
+        ],
+        "acceptance": "accepted_for_local_integration; same-SHA remote CI/preview/recovery/production/Release pending",
+        "originalDocument": "docs/engineering/chart-confirmed-navigation-20261016-0400.md"
+      },
+      {
+        "reviewer": "/root/resume04_app",
+        "candidate": "/root/resume04_quality",
+        "scores": {
+          "correctness": 5,
+          "evidence": 5,
+          "value": 5,
+          "maintainability": 5
+        },
+        "criterionReasons": {
+          "correctness": "4개의 cohort unit이 원71 전체/동결 bytes/3317ID·URL/비대상 provider와 정확한6 evidence·보류2 observed 상태를 검증한다. 새2 E2E는 UI 집계 helper를 import하지 않고 served catalog·동결 chart로 100행/순위/ID/기존URL·TJ/KY/합집합/분모100을 계산하며, 관측·충돌·chart-only를 확인곡으로 섞지 않는다.",
+          "evidence": "실제 소스와 root 로그에서 314unit/type0·preview28/production28 PASS를 읽었고 두 target에서 새 SSR/mobile 검사가 각각 실제 실행된 것을 확인했다. 초기 Node24 JSON import 수집 실패와 readFileSync 정정/--list/최종 통과를 분리한다. 본인 browser 실행이 아닌 앱 QA12PNG/JSON 읽기 범위 및 실제 운영/CI 미실행을 정확히 기록한다.",
+          "value": "JS off 360px의 focus/Enter→마지막 TJ·첫 금영 anchor→기존 상세·공식 URL과 100행 provider label/button/badge bbox를 검사한다. 실제 screenshot에서 발견한 내부 겹침·세로 badge를 가로 overflow PASS만으로 놓치지 않게 영속 회귀에 추가하여 사용자가 업체 번호를 혼동하는 결함을 잡는다.",
+          "maintainability": "UI 집계와 독립된 기대 계산을 유지하면서 공식 numeric URL 자격만 기존 ledger 계약을 재사용해 www금영/port/중복·추가query 규칙의 oracle 차이를 만들지 않는다. 이후 독립검토 cohort append를 허용하고 보류 번호의 미래 정상 승격을 영구 금지하지 않으며, JSON 읽기 정정은 package/config 변경 없이 소유 테스트에 한정했다."
+        },
+        "reason": "근거 보존과 실제 렌더 결함에 연결된 의미 있는 unit/E2E이며 로컬 실제 전체 결과를 확인했다. 해결된 초기 수집 실패는 보존했고 점수를 억지로 낮출 미해결 결함은 이 범위에서 찾지 못했다. 원격 게이트는 별도 수용이다.",
+        "evidence": [
+          "/workspace/jpoptoday/tests/reviewed-chart-cohort0400.test.mjs",
+          "/workspace/jpoptoday/e2e/chart-confirmed-navigation.spec.ts",
+          "/workspace/docs/engineering/chart-confirmed-quality-20261016-0400.md",
+          "/workspace/docs/operations/runs/resume-20261016-0400-ui-qa.json",
+          "/tmp/jpop-0400-unit.txt",
+          "/tmp/jpop-0400-check-final.txt",
+          "/tmp/jpop-0400-preview-e2e-final.txt",
+          "/tmp/jpop-0400-preview-e2e-after-jsonfix.txt",
+          "/tmp/jpop-0400-production-e2e.txt"
+        ],
+        "acceptance": "accepted_for_local_integration; same-SHA remote CI/preview/recovery/production/Release pending",
+        "originalDocument": "docs/engineering/chart-confirmed-navigation-20261016-0400.md"
+      },
+      {
+        "reviewer": "/root/resume04_quality",
+        "candidate": "/root/resume04_evidence",
+        "scores": {
+          "correctness": 5,
+          "evidence": 5,
+          "value": 5,
+          "maintainability": 5
+        },
+        "criterionReasons": {
+          "correctness": "frozen15~18위의 정확한4canonicalID·staging번호와 실제8candidate/8decision을 별도 읽기 스크립트로 전수 대조해6confirm/2defer와 ledger append6개가 모두 일치했다. TJ의 samfree feature·역광OST 및 TJ/KY KICK BACK OP 전체 원문을 보존하고 SAM별칭/생략KY역광을 추정하지 않는다. 새4unit과 root314unit·양target28에서 원71/3317ID/URL·무관provider/unknown 및 보류KY2의 observed/null-evidence 보존을 확인했다.",
+          "evidence": "원8candidate의 verification=unreviewed/HTTP200/정확request·finalURL/actualcheckedAt/bytes/hash와 별도 reviewer/reviewedAt/reason8개를 저장하고 confirm6의 전체 evidence를 ledger와 대조했다. root evidence-audit의 원71 deepEqual/order/bytesprefix·topmetadata·동결입력/helper/globalCSS 보존 결과와 자료 본문을 읽었다. 실제 raw미보존에 따른 재파싱/responsehash 독립재계산 불가와 권리·오디오·Google 미확인을 명시한다.",
+          "value": "관측8번호 중 근거가 충분한6개만 정확한 업체의 확인값으로 보강해 안전 탐색을 전체28ID/52번호, 동결차트19ID/TJ19·KY17로 넓힌다. KY2를 성공 수치에 맞추어 확인하지 않고 관측으로 남겨 사용자가 별칭·부제 불확실성과 미수록을 혼동하지 않게 한다. 기존 번호·stableID·기존 상세/저장 흐름을 유지한다.",
+          "maintainability": "변경하지 않은 safe metadata-only CLI/기존 ADR006 ledger를 재사용하고 소유 ledger끝6개만 append했다. 원71객체/순서/metadata/근거시각과 raw/staging/chart/identity/helper/globalCSS를 보존하며 후보/결정/검증/한계/인계가 JSON과 본문에 연결된다. 원문HTML·가사·시크릿을 남기지 않고 Git/package/공용파일/서버/CI/배포 소유권을 지켰다. 후속 판단 근거가 생기면 별도로 재검토할 수 있게 defer이유를 보존한다."
+        },
+        "reason": "할당된 실제공식조회·개별정체성/버전검토·근거있는append·불확실성/원본보존·안전영속기록을 수용한다. 현재 성분의 필수 수정 없음. 변경량·확인 성공 개수로 평가하지 않았다.",
         "evidence": [
           "jpoptoday/data/reviewed/provider-corrections.json",
-          "docs/data/provider-review-20261015-2300.md",
-          "docs/data/provider-review-requests-20261015-2300.json",
-          "jpoptoday/data/staging/legacy-catalog.json",
-          "jpoptoday/tests/reviewed-cohort-2300.test.mjs",
-          "docs/engineering/artist-provider-counts-20261015-2300.md"
-        ],
-        "acceptance": "현재자료/검토/보존 범위 PASS·필수보완없음. 원문재파싱/새조회/배포/실제Google심사 수용을 뜻하지 않으며 cleanSHA CI·운영/복구/Release는 root의후속실제증거가 필요하다.",
-        "originalDocument": "engineering/artist-provider-counts-20261015-2300.md"
-      },
-      {
-        "reviewer": "/root/resume23_app",
-        "candidate": "/root/resume23_quality",
-        "scores": {
-          "correctness": 5,
-          "evidence": 5,
-          "value": 5,
-          "maintainability": 4
-        },
-        "criterionReasons": {
-          "correctness": "고정63근거·8cohort의전체공식evidence·모든ID/URL/비대상객체·같은제목Ado분리를검증한다. E2E는앱집계helper없이servedcatalog에서global/index/group전체ID Set을산출해 TJ24/KY22/합집합24·0의미·role/aria·JSoff기존링크를 대조했다.",
-          "evidence": "본인이직접새cohort3+기존8unit11/11을실행했고 root최종unit310/preview26/type0로그와두테스트소스/품질문서를읽었다. 초기단위표기가정2실패·초기p artifact·최종div role조건통과를 분리했으며 screenshot미실행을타담당실제6PNG로보완함을구분했다.",
-          "value": "업체합46을24개ID와혼동하거나한가수의수를다른그룹에보이는회귀, 미확인0의미누락, 동일제목의다른가수근거전파 및JSoff키보드경로를 실제사용흐름에서검출한다. 기존원본/저장호환전체회귀를대체한다고쓰지않는다.",
-          "maintainability": "고정cohort·독립집계를작은테스트로분리하고나중append도허용한다. 다만E2E의독립URL oracle은현재contract가허용하는www KY표기와port/query중복조건까지일치하지않아 향후공식URL표기변경때별도추적보완이필요하다. 현재실제8행은canonical URL이어서비차단후속이다."
-        },
-        "reason": "현재할당cohort/렌더검증 범위 수용. 실제통과/수정이력과root공용coverage실패책임을분리했고 숫자만맞추는구현동일테스트에그치지않았다. 독립URL oracle 유지보수후속을명시한다.",
-        "evidence": [
-          "jpoptoday/tests/reviewed-cohort-2300.test.mjs",
-          "jpoptoday/e2e/artist-provider-counts.spec.ts",
-          "docs/engineering/artist-provider-counts-quality-20261015-2300.md",
-          "jpoptoday/contracts/provider-corrections.mjs",
-          "/tmp/jpop-2300-unit.txt",
-          "/tmp/jpop-2300-preview-e2e-final.txt",
-          "/tmp/jpop-2300-check-final.txt",
-          "docs/operations/runs/resume-20261015-2300-ui-qa.json"
-        ],
-        "acceptance": "현재cohort/preview수용 PASS·필수보완없음. 비차단URL oracle정합성후속을남기며 production/cleanSHA CI·원격배포/복구/Release는 pending으로구분한다.",
-        "originalDocument": "engineering/artist-provider-counts-20261015-2300.md"
-      },
-      {
-        "reviewer": "/root/resume23_quality",
-        "candidate": "/root/resume23_evidence",
-        "scores": {
-          "correctness": 5,
-          "evidence": 5,
-          "value": 5,
-          "maintainability": 5
-        },
-        "criterionReasons": {
-          "correctness": "frozen chart의 정확 canonical 4ID와 staging의 provider 번호를 actual candidate/decision/ledger8개에 독립 대조해 전부 일치했다. 優里 근거가 같은 제목 Ado에 전파되지 않고, 원63 wholeobjects/order·3317ID와 비대상 public song은 unit3/3 및 전체310에서 보존된다.",
-          "evidence": "requests JSON의 실제 HTTP200/finalUrl/checkedAt/responseBytes/hash와 원 unreviewed 후보를 보존하고 별도 reviewer/reviewedAt/이유8개로 편집 판정을 구분했다. 본인이 candidate↔decision↔ledger evidence8/8 및 보존 inputhash4개와 결과ledgerhash를 직접 대조했다. 원 응답 비저장에 따른 재파싱 불가와 새조회/심사/권리 미확인을 명시했다.",
-          "value": "실제 사용자가 찾는 동결차트4곡8번호를 관측 상태에서 정확한 제공사 제목·가수·버전 근거가 있는 확인 상태로 보강한다. 원래 번호/ID를 보존하고 실제 가수 탐색의 안전 확인곡 합집합을24곡으로 넓히며, 가수전체목록·미수록·권리승인으로 과장하지 않는다.",
-          "maintainability": "기존 metadata-only helper와 ADR006 ledger 형식을 재사용하고 8개 끝 append만 수행했다. 기존63 metadata/객체/순서/prefix를 보존하며 원문·가사·시크릿을 남기지 않고 요청/편집/검증/한계/다음담당을 영속 JSON과 문서로 연결했다. Git/공용파일/서버/CI/배포 소유권을 지켰다."
-        },
-        "reason": "할당된 실조회·정체성 대조·append/보존·안전 영속 기록 수용 기준을 실제 읽기/회귀 범위에서 만족한다. 필수 수정 없음.",
-        "evidence": [
-          "jpoptoday/data/reviewed/provider-corrections.json",
-          "docs/data/provider-review-20261015-2300.md",
-          "docs/data/provider-review-requests-20261015-2300.json",
           "jpoptoday/data/staging/legacy-catalog.json",
           "jpoptoday/data/chart-snapshot.json",
-          "jpoptoday/tests/reviewed-cohort-2300.test.mjs",
-          "/tmp/jpop-2300-unit.txt"
+          "jpoptoday/contracts/provider-corrections.mjs",
+          "jpoptoday/tests/reviewed-chart-cohort0400.test.mjs",
+          "docs/data/provider-review-20261016-0400.md",
+          "docs/data/provider-review-requests-20261016-0400.json",
+          "docs/operations/runs/resume-20261016-0400-evidence-audit.json",
+          "/tmp/jpop-0400-unit.txt",
+          "/tmp/jpop-0400-preview-e2e-after-jsonfix.txt",
+          "/tmp/jpop-0400-production-e2e.txt"
         ],
-        "acceptance": "accepted_data_component; actual fetch receipt와 편집 근거/불변입력을 수용. raw response 독립재파싱·오디오·권리·Google심사는 미실행/미확인. 배포·복구·Release는 root 별도 게이트.",
-        "originalDocument": "engineering/artist-provider-counts-quality-20261015-2300.md"
+        "acceptance": "accepted_data_component; actualmetadata/별도편집/6confirm2defer·원71/3317/unknown/URL보존 수용. raw독립재파싱·오디오/권리/Google은 미확인. cleanCI·실제preview/운영·복구·Release는 root별도게이트/pending.",
+        "originalDocument": "docs/engineering/chart-confirmed-quality-20261016-0400.md"
       },
       {
-        "reviewer": "/root/resume23_quality",
-        "candidate": "/root/resume23_app",
+        "reviewer": "/root/resume04_quality",
+        "candidate": "/root/resume04_app",
         "scores": {
           "correctness": 5,
           "evidence": 5,
@@ -304,154 +407,255 @@
           "maintainability": 5
         },
         "criterionReasons": {
-          "correctness": "기존 confirmedNumbers 자격을 유지하며 provider별 ID Set으로 global/index/group을 계산한다. production helper를 가져오지 않는 본인 E2E가 실제 served catalog에서 TJ24/KY22/union24와 모든 가수 수치·포함 ID를 대조했다. 0의 미수록 아님과 aria 설명 연결, 최종 div role=group, 기존 anchor/공동명의 분리/URL 보존을 확인했다.",
-          "evidence": "최종 dirty preview 3viewport QA JSON과 영속 PNG6개를 실제 읽고 열었고 원 임시 증거와 바이트 동일도 확인했다. 82수치/20그룹·실제0군·정확gradient/palette·콘솔/광고/넘침0 및 키보드 이동과 화면이 일치했다. root의 finalpreview26PASS/type0/unit310 로그를 읽었고 초기 p artifact·진단 URL2/brand선택자1 오류와 최종 source 증거를 분리했다.",
-          "value": "사용자가 방문할 업체를 기준으로 확인곡 범위를 가수 바로가기와 그룹에서 바로 판단하고 실제 번호/근거/기존 상세로 이동할 수 있게 한다. 두업체중복을 전체46곡으로 오해하지 않도록 union24를 설명하며 금영0을 미수록으로 단정하지 않는다. 360px JSoff에서도 본문과 키보드 이동을 제공한다.",
-          "maintainability": "artists.astro 한 소유파일에서 기존 trusted projection을 재사용하며 데이터·공용CSS·저장키·공용계약을 변경하지 않는다. shared DOM count 규약과 소유doc이 다음 회귀에 연결되고, 새 clientscript/dependency 없이 SSR로 구현했다. 길어진 index의 sticky를 해제해 낮은 viewport 마지막링크 접근을 유지하고 브랜드computed값을 검증했다."
+          "correctness": "chart100의 canonicalID/rank join과 동결기간/fetchedAt/원래상세/SongRow를 보존하고 기존 confirmedNumbers 자격의 provider별Set·전체union으로 정적표시한다. 본인E2E는 UIhelper없이 servedcatalog/frozenchart에서 TJ19/KY17/union19·100분모와 모든100행·36바로가기의 순위/ID/제목/번호/anchor/기존URL·설명aria를 대조했다. 0미수록아님·관측배제/부제명의추정없음, 360JSoff/키보드·양targetrobots/noads와 최종100행bbox가 실제 preview/prod각28에서 통과했다.",
+          "evidence": "앱final2 QA의 실제3viewport/checkedAt·dirty metadata/동일 입력hash를 읽고 영속JSON 및12PNG와 원본 bytes일치를 확인했다. 대표desktop2/mobile3/short1 PNG6개를 직접 열어 수치/분모/브랜드·마지막순위/행탐색·수정후badge분리를 확인했다. 모바일100행181버튼min94x44/저장100개44x44/badge44개높이16·console/ad/overflow0, 지정pixel 대비3표본6.52/6.23/6.18을 독립재계산했다. 초기navigation대기오류·자동PASS가 놓친실제겹침/원스크린샷과 수정후QA를 분리보존한다.",
+          "value": "노래방업체를 정한 사용자가 보관차트에서 실제확인번호가 있는 곡만 원순위순으로 찾고 원행·기존상세근거로 이동할 수 있다. 전체100곡을 제거하거나 금영자체순위를 만들어내지 않으며 19+17을36곡으로 오해하지 않게 안내한다. 모바일JSoff·키보드에서도 마지막바로가기/기존상세를 사용할 수 있고 실제발견한badge겹침과 작은hit target을 고쳐번호와공식상태를 읽기쉽게 했다.",
+          "maintainability": "chart.astro 한 소유소스에서 기존 trustedprojection·nativeanchor·SongRow를 재사용하고 새clientJS/의존성·공용CSS/계약/storage를 변경하지 않았다. fragment는순위대신stableID이며DOM계약/소유문서가 독립E2E와연결된다. 발견한모바일결함은chart-list에한정한scopedCSS로고쳐다른화면의공용레이아웃을건드리지않았고 root와freeze/서버종료/재빌드후증거를조율해artifact race를피했다. 실패/미실행과실제결과를인계했다."
         },
-        "reason": "할당된 업체별 수·의미·정적 탐색·접근성·브랜드/호환성 수용 기준을 실제 파일·독립 집계/회귀·최종 화면에서 만족한다. 필수 수정 없음.",
+        "reason": "업체별수·union/분모·원100순위/날짜·정적탐색·브랜드/호환성·모바일실결함해소 수용 기준을 실제최종소스/독립회귀/화면에서 충족했다. 필수 수정 없음. 발견/보완된 이전결함을 숨기지 않으며 현재 결함으로 남았다고 만들지 않는다.",
         "evidence": [
-          "jpoptoday/src/pages/artists.astro",
-          "docs/engineering/artist-provider-counts-20261015-2300.md",
-          "docs/operations/runs/resume-20261015-2300-ui-qa.json",
-          "docs/engineering/design/artist-provider-counts-20261015-2300-desktop-summary.png",
-          "docs/engineering/design/artist-provider-counts-20261015-2300-desktop-index.png",
-          "docs/engineering/design/artist-provider-counts-20261015-2300-mobile-summary.png",
-          "docs/engineering/design/artist-provider-counts-20261015-2300-mobile-index.png",
-          "docs/engineering/design/artist-provider-counts-20261015-2300-mobile-zero-group.png",
-          "docs/engineering/design/artist-provider-counts-20261015-2300-short-last-group.png",
-          "/tmp/jpop-2300-preview-e2e-final.txt",
-          "/tmp/jpop-2300-check-final.txt"
+          "jpoptoday/src/pages/chart.astro",
+          "jpoptoday/src/components/SongRow.astro",
+          "jpoptoday/contracts/confirmed-discovery.mjs",
+          "jpoptoday/e2e/chart-confirmed-navigation.spec.ts",
+          "docs/engineering/chart-confirmed-navigation-20261016-0400.md",
+          "docs/operations/runs/resume-20261016-0400-ui-qa.json",
+          "docs/operations/runs/resume-20261016-0400-ui-contrast.json",
+          "docs/engineering/design/chart-confirmed-20261016-0400-desktop-first.png",
+          "docs/engineering/design/chart-confirmed-20261016-0400-desktop-summary.png",
+          "docs/engineering/design/chart-confirmed-20261016-0400-mobile-first.png",
+          "docs/engineering/design/chart-confirmed-20261016-0400-mobile-summary.png",
+          "docs/engineering/design/chart-confirmed-20261016-0400-mobile-anchor.png",
+          "docs/engineering/design/chart-confirmed-20261016-0400-short-last-shortcut.png",
+          "/tmp/jpop-0400-preview-e2e-after-jsonfix.txt",
+          "/tmp/jpop-0400-production-e2e.txt",
+          "/tmp/jpop-0400-check-final.txt"
         ],
-        "acceptance": "accepted_app_component; final dirtypreview SSR/독립count/360JSoff·키보드·시각QA 수용. WebKit/Firefox/실제스크린리더·필드성능은 미실행. cleanCI·실제운영·복구·Release는 root 별도 게이트.",
-        "originalDocument": "engineering/artist-provider-counts-quality-20261015-2300.md"
+        "acceptance": "accepted_app_component; finaldirtyartifact SSR/독립count/100행bbox/360JSoff·keyboard·visualQA 수용. WebKit/Firefox/실제기기/보조기술·필드성능·사이트전체대비는미실행. cleanCI/실제preview·운영·복구·Release는root별도pending게이트.",
+        "originalDocument": "docs/engineering/chart-confirmed-quality-20261016-0400.md"
       }
     ],
     "manager": {
       "allSixActualReviewsRead": true,
       "totals": {
-        "/root/resume23_evidence": 40,
-        "/root/resume23_app": 40,
-        "/root/resume23_quality": 39
+        "/root/resume04_evidence": 40,
+        "/root/resume04_app": 40,
+        "/root/resume04_quality": 40
       },
-      "unit": 310,
+      "criterionSums": {
+        "/root/resume04_evidence": {
+          "correctness": 10,
+          "evidence": 10,
+          "value": 10,
+          "maintainability": 10
+        },
+        "/root/resume04_app": {
+          "correctness": 10,
+          "evidence": 10,
+          "value": 10,
+          "maintainability": 10
+        },
+        "/root/resume04_quality": {
+          "correctness": 10,
+          "evidence": 10,
+          "value": 10,
+          "maintainability": 10
+        }
+      },
+      "unit": 314,
       "typeErrors": 0,
       "typeWarnings": 0,
-      "localPreviewBrowser": 26,
-      "localPreviewSeconds": 44.6,
-      "localProductionBrowser": 26,
-      "localProductionSeconds": 45.9,
-      "uiScreenshotsViewedByRoot": [
+      "previewBrowser": 28,
+      "productionBrowser": 28,
+      "uiRootViewed": [
+        "corrected mobile-anchor",
         "desktop-summary",
-        "mobile-index"
+        "beforefix mobile-anchor"
       ],
-      "selectedForRotation": "/root/resume23_quality",
-      "reason": "Unique39 fromactual20+19. One reviewer maintainability4 cites independentURLoracle wwwKY/port/query differences; currentcanonical8/26browser pass andno blockingdefect. No quantity/verbosityranking.",
-      "tieBreakUsed": false,
-      "rotationState": "replacement_created",
-      "retired": "/root/resume23_quality",
-      "previousInterruptState": "completed",
+      "tieBreakUsed": true,
+      "tieBreakReason": "All40 and every criterion sum10 tied. Predetermined run.tieBreakOrder app/evidence/quality selects app. No lowerquality assertion, fabricated deduction, quantity/verbosity ranking.",
+      "selectedForRotation": "/root/resume04_app",
       "physicalDeletion": false,
-      "replacement": "/root/replacement23_gate",
-      "replacementScope": "docs/operations/production-content-gate-v042-20261015.md",
+      "rotationState": "replacement_audited_twoactualSupplementalAccepted",
+      "recordedAt": "2026-10-15T23:13:12.712Z",
+      "retired": "/root/resume04_app",
+      "previousInterruptState": "completed",
+      "replacement": "/root/replacement04_gate",
+      "replacementScope": "docs/operations/production-content-gate-v043-20261016.md",
       "activeRoster": [
-        "/root/resume23_evidence",
-        "/root/resume23_app",
-        "/root/replacement23_gate"
+        "/root/resume04_evidence",
+        "/root/resume04_quality",
+        "/root/replacement04_gate"
       ],
-      "rotatedAt": "2026-10-15T14:20:36.101327+00:00",
-      "replacementFinalAudit": "accepted productgates; docs/report delivery pending",
-      "replacementAuditPath": "operations/production-content-gate-v042-20261015.md",
-      "actualPreviewBrowser": 26,
-      "actualProductionBrowser": 26,
-      "actualRecovery": {
-        "old": 27,
-        "new": 27,
-        "oldAttempts": 1,
-        "newAttempts": 2,
-        "firstFailuresPreserved": true
-      },
-      "releaseId": 414128773,
-      "newRankingOrScores": false,
-      "finalProductGatesAcceptedAt": "2026-10-15T18:21:40.228394+00:00",
-      "bothSupplementalAcceptancesRead": true,
-      "supplementalAcceptanceCount": 2
-    },
-    "supplementalAcceptance": [
-      {
-        "reviewer": "/root/resume23_evidence",
-        "candidate": "/root/replacement23_gate",
-        "state": "accepted_product_gates",
-        "receivedByManagerAt": "2026-10-15T18:22:25.917700+00:00",
-        "criterionReasons": {
-          "correctness": "8candidate/decision/ledger·원63/3317ID·TJ24/KY22/union24/0의미/브랜드URLstorage와M3db/previewa73d/prod630c연결 일치",
-          "evidence": "실제310/type0·전3346files재현·0/41index·preview27/remote26·prod27/remote26·old27/new27와firstTIMEOUT/restoreoldcatalog실패를각JSON대조;tagd271→M/Release414128773/16일03:18:49·ReleaseDiscord1attempt구분",
-          "value": "4곡8번호·업체별수/합46대union24·0의미·JSoff/키보드/마지막그룹개선,전체수록/실기기/권리/승인과장없음",
-          "maintainability": "append/projection/SSR/nativeanchor/동결입력·6리뷰/교체원본보존·원문재파싱불가/CIarchive전체비교미실행·URLoracle비차단후속경계명확"
-        },
-        "scope": "Read finalaudit and linked saved receipts only; no file/Git/provider/browser/build/deploy/newworker",
-        "newScore": false,
-        "finalReportDeliveryAtReview": "pending"
-      },
-      {
-        "reviewer": "/root/resume23_app",
-        "candidate": "/root/replacement23_gate",
-        "state": "accepted_product_gates",
-        "receivedByManagerAt": "2026-10-15T18:23:12.651106+00:00",
-        "criterionReasons": {
-          "correctness": "8근거/원63보존·TJ24/KY22/union24·0의미를 실제기록과본인UI증거에대조",
-          "evidence": "M3db CI/두target전파일재현·previewa73d/prod630c원격26/26·old27/new27/firstsitemapTIMEOUT/restorecatalogMISMATCH·Release414128773/16일03:18:49·ReleaseDiscord1attempt구분",
-          "value": "가수선택전후업체확인범위/기존상세/공식근거·모바일JSoff/키보드/브랜드검증연결",
-          "maintainability": "projection/SSR/ID/URL/storage/동결입력유지·URLoracle후속·Actions자격미설정을실제운영과분리"
-        },
-        "scope": "Read saved finalaudit/linked proofs and own UI receipts only; no edits/external queries/retests/newscore",
-        "newScore": false,
-        "finalReportDeliveryAtReview": "pending"
+      "rotatedAt": "2026-10-15T23:13:49.641416+00:00",
+      "replacementSupplementalAcceptance": {
+        "bothAccepted": true,
+        "recordedAt": "2026-10-15T23:37:42.769217+00:00",
+        "reviews": [
+          {
+            "reviewer": "/root/resume04_evidence",
+            "candidate": "/root/replacement04_gate",
+            "reviewType": "read_only_supplemental",
+            "artifact": "docs/operations/production-content-gate-v043-20261016.md",
+            "criterionReasons": {
+              "correctness": "감사 전체와 실제 영수증을 읽었다. 공식8요청·unreviewed8후보·별도 confirm6/defer2와 원71 보존을 정확히 구분한다. SAM 동일성·생략된 금영 제목·권리·Google 심사를 추정하지 않는다. source M48c의 CI/preview/운영을 연결하며 runner 내부28과 실제 c606 preview28·jpop.today28을 구분한다. 복구3의 이전27/1attempt·새복원27/7attempt와 이전6실패를 정확히 기록한다.",
+              "evidence": "requests/evidence-audit/reviews/ci/reproducibility/preview·production API/HTTP 및 recovery1·2·3 영수증을 읽고 감사와 대조했다. 첫 복구의 혼합 metadata/body 실패와 두 번째 maxAttempts60 지원상한 초과로 HTTP 검사 전 return1인 사실을 보존한다. 세 번째 old/new API·observer·strict HTTP의 수용 경계가 맞는다. CI 선택 로그의 실제 시각·314/type0·remote28과 target별 전체 파일 재현 근거가 있다. 원응답 독립 재파싱·전체 CI archive 비교를 수행했다고 과장하지 않는다.",
+              "value": "제품 기능뿐 아니라 실제 운영 반영·복구 가능성과 실패 원인을 검토자가 구분할 수 있다. 관측 번호를 확인곡으로 표시하거나 두 업체 수를 합산하는 오류, 모바일 겹침과 미수록·최신차트 오해를 함께 검토한다. Actions binding 누락을 관리 binding 배포 성공과 구분하여 남은 운영 전환 작업을 드러낸다. Release와 알림을 앞당겨 완료 처리하지 않는다.",
+              "maintainability": "단일 감사 문서가 실제 증거 경로와 SHA·배포 ID·검사 실행 경계를 연결한다. 최초 pending과 후속 수용을 시간순으로 보존하고 실패 영수증을 덮지 않아 재개 및 사후 검토가 가능하다. 원 코드·평가를 보존하고 완전 동률의 사전 교체 순서를 품질 우열이나 물리 삭제로 표현하지 않는다. 담당 범위 밖 소스·Git·추가 실행 없이 필수 제품 보완 여부를 판단한다."
+            },
+            "acceptance": "accepted_pre_release_audit",
+            "requiredCorrections": [],
+            "releaseBlockingProductDefectsFound": [],
+            "pending": [
+              "실제 tag 및 GitHub Release 게시 영수증",
+              "Release Discord 실제 전송 영수증",
+              "완료 Discord 실제 전송 영수증"
+            ],
+            "remainingLimitations": [
+              "Cloudflare Actions bindings 미설정으로 자동배포 skipped; 실제 운영은 관리 cloud binding 배포",
+              "복구 중 혼합/stale 응답 실패 이력 보존; 모든 CDN 위치 동시 상태 보장 없음",
+              "전체 CI archive 비교·실제 기기·보조기술·사이트 전체 접근성 감사 미실행",
+              "권리·Google 계정 및 실제 AdSense 심사 상태 unknown"
+            ],
+            "evidence": [
+              "docs/operations/production-content-gate-v043-20261016.md",
+              "docs/data/provider-review-requests-20261016-0400.json",
+              "docs/operations/runs/resume-20261016-0400-evidence-audit.json",
+              "docs/operations/runs/resume-20261016-0400-reviews.json",
+              "docs/operations/runs/resume-20261016-0400-ci.json",
+              "docs/operations/runs/resume-20261016-0400-reproducibility.json",
+              "docs/operations/runs/resume-20261016-0400-preview-deployment.json",
+              "docs/operations/runs/resume-20261016-0400-preview-http.json",
+              "docs/operations/runs/resume-20261016-0400-production-deployment.json",
+              "docs/operations/runs/resume-20261016-0400-production-first-http.json",
+              "docs/operations/runs/resume-20261016-0400-recovery-node-summary.json",
+              "docs/operations/runs/resume-20261016-0400-old-state-node-observed.json",
+              "docs/operations/runs/resume-20261016-0400-restore-node-http.json",
+              "docs/operations/runs/resume-20261016-0400-recovery2-recovery-node-summary.json",
+              "docs/operations/runs/resume-20261016-0400-recovery2-helper-failure.json",
+              "docs/operations/runs/resume-20261016-0400-recovery2-rollback-node-http-execution.json",
+              "docs/operations/runs/resume-20261016-0400-recovery2-restore-node-http-execution.json",
+              "docs/operations/runs/resume-20261016-0400-recovery3-recovery-node-summary.json",
+              "docs/operations/runs/resume-20261016-0400-recovery3-rollback-node-api.json",
+              "docs/operations/runs/resume-20261016-0400-recovery3-old-state-node-observed.json",
+              "docs/operations/runs/resume-20261016-0400-recovery3-rollback-node-http.json",
+              "docs/operations/runs/resume-20261016-0400-recovery3-restore-node-api.json",
+              "docs/operations/runs/resume-20261016-0400-recovery3-new-state-node-observed.json",
+              "docs/operations/runs/resume-20261016-0400-recovery3-restore-node-http.json"
+            ],
+            "newScoresOrRanking": false,
+            "filesWritten": false,
+            "newTestsOrExternalRequests": false
+          },
+          {
+            "reviewer": "/root/resume04_quality",
+            "candidate": "/root/replacement04_gate",
+            "artifact": "docs/operations/production-content-gate-v043-20261016.md",
+            "reviewType": "read_only_supplemental_without_scores",
+            "criterionReasons": {
+              "correctness": "감사 전체와 실제 요청·독립대조·6평가·CI·재현·배포·복구 영수증이 일치한다. 실제 8후보와 별도 6confirm/2defer, 원71/3317ID·동결100순위·unknown 보존을 구분한다. 40/40/40 및 네 기준 완전 동률의 사전순서 교체를 품질 열등이나 물리 삭제로 표현하지 않는다. 같은 M48c의 c606 preview와 eb916 운영, 실제 복구·복원 및 운영 원격28을 수용하며 Google 승인·권리로 확대하지 않는다.",
+              "evidence": "CI 선택 로그에서 runner 내부28과 실제 preview28/45.7s, 실제 운영28/39.8s를 구분했다. 양 target3347files/3336HTML·0/45index의 전체 경로·파일별 로컬 재현과 CI archive 전체 비교 미실행을 구분한다. 첫 복구 old observer 실패와 new strict12attempt 실패, 둘째 maxAttempts60 지원상한 오류로 HTTP 시작 전 exit1을 보존한다. recovery3 실제 API·observer·HTTP를 읽어 old27/1attempt와 new27/7attempt를 확인했다. 새 복원 첫6회의 coverage/metadata/chart/sitemap/Ado상세/metadata 실패와 마지막27 PASS를 숨기지 않는다.",
+              "value": "공식 확인 탐색의 TJ19·금영17·합집합19/100, stable anchor·기존 상세/저장 호환, 모바일 badge 겹침 보완을 실제 제품 근거와 연결한다. 관측 성공·observer·CI·실제 운영·복구·릴리스 사건을 분리해 관리자가 검증되지 않은 발행을 완료로 보고하는 것을 막는다. Actions CFbinding 미설정과 운영자 Google 단계는 남은 차단으로 유지하면서 관리 binding 실제 배포 결과를 확인한다.",
+              "maintainability": "허용된 감사 한 파일에 최초 pending과 후속 수용 시점을 순서대로 연결하고 원 실패·별도 recovery3 영수증을 보존했다. strict27 본문/해시·전후 metadata 조건을 유지하며 실행 예산 변경을 조건 완화로 표현하지 않는다. 공식 raw 응답 재파싱 불가, 전체 CI archive·기기/보조기술 미실행과 CDN 관측 한계도 남겼다. 감사 담당의 읽기와 root의 실제 실행을 구분하며 새 점수·순위·소스 변경을 만들지 않는다."
+            },
+            "acceptance": "accepted_pre_release_audit",
+            "requiredCorrections": [],
+            "pendingAcceptance": [
+              "tag 발행의 후속 감사 수용",
+              "GitHub Release 실제 게시",
+              "Release Discord 실제 전송",
+              "완료 Discord 실제 전송"
+            ],
+            "remainingBlockers": [
+              "Actions Cloudflare bindings missing/deployment skipped",
+              "자료 권리·Google 계정/신청/실제 심사 unknown"
+            ],
+            "timingBoundary": "감사 최종 수용 근거는 23:33:38.836Z까지다. 읽는 동안 run.release의 tag_pushed_release_workflow_in_progress 갱신도 관측했으나 이를 Release 게시나 알림 성공으로 취급하지 않는다. 감사의 후속 발행·전송 수용 pending은 유지한다.",
+            "evidence": [
+              "docs/operations/production-content-gate-v043-20261016.md",
+              "docs/data/provider-review-requests-20261016-0400.json",
+              "docs/operations/runs/resume-20261016-0400-evidence-audit.json",
+              "docs/operations/runs/resume-20261016-0400-reviews.json",
+              "docs/operations/runs/resume-20261016-0400-ci.json",
+              "docs/operations/runs/resume-20261016-0400-reproducibility.json",
+              "docs/operations/runs/resume-20261016-0400-preview-http.json",
+              "docs/operations/runs/resume-20261016-0400-production-deployment.json",
+              "docs/operations/runs/resume-20261016-0400-production-first-http.json",
+              "docs/operations/runs/resume-20261016-0400-recovery-node-summary.json",
+              "docs/operations/runs/resume-20261016-0400-restore-node-http.json",
+              "docs/operations/runs/resume-20261016-0400-recovery2-helper-failure.json",
+              "docs/operations/runs/resume-20261016-0400-recovery2-rollback-node-http-execution.json",
+              "docs/operations/runs/resume-20261016-0400-recovery2-restore-node-http-execution.json",
+              "docs/operations/runs/resume-20261016-0400-recovery3-recovery-node-summary.json",
+              "docs/operations/runs/resume-20261016-0400-recovery3-rollback-node-api.json",
+              "docs/operations/runs/resume-20261016-0400-recovery3-restore-node-api.json",
+              "docs/operations/runs/resume-20261016-0400-recovery3-old-state-node-observed.json",
+              "docs/operations/runs/resume-20261016-0400-recovery3-new-state-node-observed.json",
+              "docs/operations/runs/resume-20261016-0400-recovery3-rollback-node-http.json",
+              "docs/operations/runs/resume-20261016-0400-recovery3-restore-node-http.json",
+              "docs/operations/runs/resume-20261016-0400.json"
+            ],
+            "scope": "로컬 감사·영수증 읽기 전용. 파일쓰기/Git/소스 변경/테스트·브라우저·배포/외부 요청 없음. 새 점수·순위 없음."
+          }
+        ],
+        "scope": "Actual twooriginalreviewers read-only messages; no new scores/ranking; their Release/notificationspending preserved as observed boundary. Root separately confirms actualrelease receipts."
       }
-    ]
+    }
   },
   "preview": {
-    "deploymentId": "a73d8e0a-93c3-4649-aa6d-298db8903d1b",
-    "url": "https://a73d8e0a.jpoptoday-preview.pages.dev",
-    "sourceSha": "3db781ba1fab978995e8edddc0626c0e703bbfbf",
+    "deploymentId": "c606c798-e003-44af-8fac-4a0a61fe441f",
+    "url": "https://c606c798.jpoptoday-preview.pages.dev",
+    "sourceSha": "48c58d57b15aa775676229465fd13c390ccac620",
+    "noindex": true,
+    "ads": false,
+    "http": "passed",
+    "remoteBrowser": 28,
     "httpChecks": 27,
     "httpAttempts": 1,
     "httpPassed": true,
-    "remoteWorkflow": 38751360483,
+    "remoteWorkflow": 38823033378,
     "remoteWorkflowState": "success",
-    "remoteBrowserCount": 26,
-    "noindex": true,
-    "ads": false,
-    "remoteBrowserSeconds": 34.8
+    "remoteBrowserCount": 28
   },
   "production": {
-    "deploymentId": "630c12d8-341a-4ad0-b406-43e36eefd4b2",
-    "sourceSha": "3db781ba1fab978995e8edddc0626c0e703bbfbf",
-    "createdAt": "2026-10-15T18:09:22.241747Z",
-    "method": "root managed cloud binding",
+    "sourceSha": "48c58d57b15aa775676229465fd13c390ccac620",
+    "deploymentId": "eb9161b3-d43b-45e4-beb8-9b068d456dbe",
+    "url": "https://jpop.today",
+    "deploymentEvidence": "resume-20261016-0400-production-deployment.json",
+    "state": "actual_deployed_recovered_restored_remote_verified",
     "firstHTTP": {
-      "checks": 27,
-      "attempts": 2,
       "passed": true,
-      "firstFailure": "REQUEST_TIMEOUT /sitemap.xml"
+      "checks": 27,
+      "attempts": 1
     },
     "actualRecovery": {
-      "oldChecks": 27,
-      "oldAttempts": 1,
-      "newChecks": 27,
-      "newAttempts": 2,
-      "oldStateObservations": 8,
-      "newStateObservations": 8,
-      "newFirstFailure": "CATALOG_MISMATCH oldcatalogbytes after APIrestore; final exacthashPASS",
       "passed": true,
-      "evidence": "resume-20261015-2300-recovery-node-summary.json"
+      "evidence": "resume-20261016-0400-recovery3-recovery-node-summary.json",
+      "oldSHA": "3db781ba1fab978995e8edddc0626c0e703bbfbf",
+      "oldDeployment": "630c12d8-341a-4ad0-b406-43e36eefd4b2",
+      "oldHTTPChecks": 27,
+      "oldAttempts": 1,
+      "newHTTPChecks": 27,
+      "newAttempts": 7,
+      "preservedPriorAttempts": [
+        "resume-20261016-0400-recovery-node-summary.json",
+        "resume-20261016-0400-recovery2-recovery-node-summary.json",
+        "resume-20261016-0400-recovery2-helper-failure.json"
+      ],
+      "strictCheckWeakening": false
     },
-    "remoteRun": 38783643157,
-    "actualRemoteBrowser": 26,
-    "remoteBrowserSeconds": 53.3,
-    "remoteHTTPAttempts": 1,
-    "actionsCloudflareBindings": "missing",
-    "actionsDeployment": "skipped verify_only; actualrootmanageddeploymentseparate"
+    "remoteBrowser": 28,
+    "sourceMetadata": "kim75503/todayjpop/dev",
+    "automaticProduction": false,
+    "automaticPreview": "none",
+    "remoteBrowserSeconds": 39.8,
+    "remoteWorkflow": 38824028665,
+    "remoteWorkflowState": "success",
+    "remoteProductionHTTP": {
+      "passed": true,
+      "attempts": 1,
+      "scope": "Actual selectedworkflowlog; fullartifactchecks performed in workflow"
+    }
   },
   "adsense": {
     "technicalStage": "preparing",
@@ -464,26 +668,34 @@
     "hourlyEnabled": true,
     "schedulesChanged": false,
     "tokenResetDetection": false,
-    "evidence": "operations/automation.json"
+    "evidence": "operations/runs/resume-20261016-0400-environment08-recheck.json"
   },
   "notifications": {
     "start": {
-      "id": 38748102127,
+      "id": 38791277084,
       "workflow": "discord.yml",
       "mode": "message",
       "state": "sent",
-      "sentAt": "2026-10-15T14:04:14.3438555Z",
+      "sentAt": "2026-10-15T19:07:25.9337429Z",
       "attempts": 1,
-      "url": "https://github.com/jpop-today/jpoptoday/actions/runs/38748102127",
-      "sourceSha": "dffa93bc6982c9f186a269da577e3dbc108ad189",
-      "scope": "Actual selected senderline; no secret/webhookURL/rawlog retained"
+      "sourceSha": "ce1b49f1ab6cedb64dca7cd2b215e72aafc76e50",
+      "url": "https://github.com/jpop-today/jpoptoday/actions/runs/38791277084",
+      "scope": "Actual selected sender line; new Issue27 start/handoff, not repeat Issue24 completed report"
+    },
+    "resumeProgress": {
+      "workflowRun": 38822117335,
+      "state": "sent",
+      "sentAt": "2026-10-15T23:12:11.3004866Z",
+      "attempts": 1,
+      "sourceSha": "ce1b49f1ab6cedb64dca7cd2b215e72aafc76e50",
+      "scope": "Actual selected senderline; local314/type0/28+28 and failures/08resume, not completion/Release"
     },
     "release": {
       "state": "sent",
-      "sentAt": "2026-10-15T18:18:50.5837730Z",
+      "sentAt": "2026-10-15T23:36:30.4633974Z",
       "attempts": 1,
-      "workflowRun": 38784313891,
-      "scope": "Actual explicit Release senderline; not completed report"
+      "workflowRun": 38824414759,
+      "scope": "Actual explicit Release senderline; separate from completedreport"
     },
     "completed": {
       "state": "pending_saved_report_publication",
@@ -491,14 +703,12 @@
     }
   },
   "documentation": {
-    "state": "merged",
-    "releaseRecord": "https://github.com/jpop-today/docs/blob/main/operations/releases/v0.4.2-20261016.md",
-    "pr": "https://github.com/jpop-today/docs/pull/14",
-    "mergeSha": "8d94233b1f2c05f4ae5fab9c12ca330505c8ca87"
+    "state": "prepared_for_reviewable_PR",
+    "releaseRecord": "https://github.com/jpop-today/docs/blob/main/operations/releases/v0.4.3-20261016.md"
   },
   "links": {
-    "sourcePR": "https://github.com/jpop-today/jpoptoday/pull/25",
-    "issue": "https://github.com/jpop-today/jpoptoday/issues/24",
-    "proof": "https://github.com/jpop-today/docs/blob/main/operations/runs/resume-20261015-2300.json"
+    "sourcePR": "https://github.com/jpop-today/jpoptoday/pull/28",
+    "issue": "https://github.com/jpop-today/jpoptoday/issues/27",
+    "proof": "https://github.com/jpop-today/docs/blob/main/operations/runs/resume-20261016-0400.json"
   }
 }
