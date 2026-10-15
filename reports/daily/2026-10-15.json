@@ -3,57 +3,58 @@
   "date": "2026-10-15",
   "timezone": "Asia/Seoul",
   "phase": "complete",
-  "runId": "resume-20261015-0300",
-  "recordedAt": "2026-10-14T23:22:41.725179+00:00",
-  "productCompletedAt": "2026-10-14T23:11:23Z",
-  "title": "10월15일 · v0.4.0 공식20번호·가수별확인곡 실제운영",
-  "summary": "공식TJ·금영20번호근거와가수별확인곡을실제jpop.today에반영했습니다. 같은SHA CI·원격preview/production각22·실제v0.3.1복구25→새M재복원26·v0.4.0Release를확인했습니다. 어제v0.3.0운영전환/v0.3.1개선에이어오늘19가수표기/20곡ID/38안전번호로확대했고, 남은자료·자체콘텐츠·AdSense준비를계속합니다.",
+  "runId": "daily-20261015-0900",
+  "recordedAt": "2026-10-15T13:01:28.355354+00:00",
+  "productCompletedAt": "2026-10-15T10:17:36Z",
+  "title": "10월15일 · v0.4.1 표기 비교 가이드·안전한 공식 번호 조회 운영 반영",
+  "summary": "jpop.today에 제목·가수 표기 비교 가이드와 안전한 공식 번호 조회 도구를 반영했습니다. 같은 소스 CI·실제 미리보기/운영 브라우저 각각24개, 이전 버전 복구26→새 버전 복원27개 검사를 통과하고 v0.4.1을 게시했습니다. 오늘 앞선 v0.4.0 공식20번호·가수별 확인곡 개선도 누적 기록에 보존합니다. AdSense 기술 준비를 계속하며 실제 계정·신청·심사는 미확인입니다.",
   "fields": [
     {
-      "name": "실제운영·릴리스",
-      "value": "jpop.today/artists/ · sourcefc54989 · production257762e0 · v0.4.0 published10/15 08:11:23KST. 원래09시/hourly예약유지·일정불변. 이번run완료가오늘전체개발종료나승인완료라는뜻은아닙니다."
+      "name": "실제 운영·릴리스",
+      "value": "jpop.today/guides/title-artist-variants/ · source d7cf8cb · todayjpop ebd045fa · v0.4.1 실제 게시. 미리보기 8a109ea3는 별도 noindex·광고없음. 09시/hourly 기존 예약은 사용자 일시정지 뒤 명시적 재개로 복원·일정 불변."
     },
     {
-      "name": "직전대비제품개선",
-      "value": "동결차트top10의TJ/KY공식numeric20조회·원문제목/가수/버전대조. 기존43ledger보존+20confirm=63. 안전탐색10→20곡ID/18→38번호,19원문가수표기로정적·JSoff/키보드탐색. 별칭/공동명의추정병합없음."
+      "name": "직전·전일 대비 개선",
+      "value": "오늘 앞선 v0.4.0 공식20번호·가수19표기/20곡ID/38안전번호에 이어, 공식 근거4개의 SPYAIR/JANE DOE 표기 비교 가이드와 metadata-only 조회·실패보존 도구를 추가. 기존5가이드/날짜·ledger63·3317ID·번호/URL/storage·blue→pink/pinkmintblue 보존. 어제 v0.3.0 운영 전환/v0.3.1 탐색·정정 가이드 완료."
     },
     {
-      "name": "검증·실제복구",
-      "value": "286unit/type0error0warning·local각22·sameM remotepreview22/production22 PASS. 두clean target3345files3335HTML/0·36index, 반복빌드전체파일바이트일치. 실제oldv0.3.1 25HTTP복구→newM26HTTP복원각1attempt PASS."
+      "name": "실제 검증·복구",
+      "value": "307unit·타입0error0warning·로컬preview24/production24·동일M 원격preview24/production24 PASS. 두clean target3346files/3336HTML, preview0/production37index·전체파일 로컬 반복빌드 일치. 실제 old26→new27 복구/재복원 각각1attempt PASS."
     },
     {
-      "name": "보존한계약·팀",
-      "value": "staging/동결chart/3317ID·번호문자열·기존URL/storage·blue→pink/pinkmintblue보존. 실제신규3명/6peer 자료38·UI38·품질39·사전완전동률UI교체/감사. 한도중단뒤같은worker/run재개·중복팀없음·물리삭제없음."
+      "name": "실패·팀 기록",
+      "value": "첫 복구 old6attempts metadata/sitemap 불일치·restore2attempts 최종27PASS, Python 상태관측 HTTPError와 optional immutable403 원인미확인을 보존. Node 기존proxy/CA 경로로 실제 복구 재검증 PASS. 실제6평가 자료39/앱39/품질38→품질 roster 제외·교체 감사, 물리삭제 없음. 사용량/사용자 일시정지 뒤 같은run/worker 재개."
     },
     {
-      "name": "실패·검증한계",
-      "value": "serverEPERM/connectionrefused·navigation검증race·잔류root서버preflight실패는보존/수정후최종PASS. KY응답문맥가사혼입도구출력사건은공개미복사·metadata셀만추출. CIarchive다운로드2회exit1원인unknown/전체CI바이트비교미실행을완전로컬재현/실제26HTTP와구분."
+      "name": "운영 경계·남은 작업",
+      "value": "Actions CFbindings 실제missing·deployskip과 관리자cloud 실제배포를 구분. CI archive 전체바이트 비교는 이번run 미실행, 완전로컬 재현/실제HTTP 범위만 수용. 미검토 번호 근거·자체 콘텐츠·문의 수신/권리 확인과 Actions 설정을 계속하며 이번run 완료를 오늘전체개발 종료로 쓰지 않음."
     },
     {
-      "name": "남은작업·필요입력",
-      "value": "다음은Issue20 안전한metadata추출하네스/미검토번호공식근거와곡·가수자체비교본문. ActionsCFbindings 실제missing·CIdeployskip/관리자cloud배포성공을구분. 전체자료권리·문의수신·Google계정/소유권/신청/심사unknown,본인정보/약관동의는운영자단계."
+      "name": "AdSense·필요 입력",
+      "value": "기술 준비 preparing. 실제 Google 계정·소유권·신청·심사 unknown, 승인 확인 없음. 본인정보·결제/세금·약관/법적동의는 운영자 단계. 광고 자동클릭·실제광고 노출시험 없음. 선택 계정상태 질문은 답을 추정하지 않음."
     }
   ],
-  "url": "https://github.com/jpop-today/jpoptoday/releases/tag/v0.4.0",
+  "url": "https://github.com/jpop-today/jpoptoday/releases/tag/v0.4.1",
   "completed": [
-    "Issue6 sourcePR19 H3711693→Mfc54989 merged and sameM app/contractsCI success",
-    "Official20numericrequests matched exact titles/artists/versions; old43entries/staging/chart/globalCSS preserved",
-    "Static artists directory19exactlabels/20IDs/38safeNumbers, nativekeyboard/JSoff/jointnames/evidence/stableURL/storage verified",
-    "286unit/type0errors0warnings/localpreview22/localproduction22 PASS; clean3335HTML3345files/preview0index/prod36index",
-    "Full two-build local file-set and every-file SHA equality for both targets; full CI archive comparison separately blockedunknown",
-    "Actualaf1270b9preview/M HTTP26 and remote22 PASS; currentjpop257/M HTTP26 and remote22 PASS",
-    "Actualold693/v031/source67c7 rollback25 thennew257/Mrestore26 PASS, no newrestorefailure",
-    "Actual6peer38/38/39 andpredeclaredUI tie fallback/interruptcompleted/replacement audit withusage-limit interruption preserved",
-    "Actualv0.4.0Release38652398351 published08:11:23KST andReleaseDiscordsent08:11:24KST1attempt",
-    "Replacement final audit and both supplemental read-only acceptances received; full6peer review evidence preserved without new scores",
-    "docs PR10 merged d2c713b with safe metadata evidence,6 peer scores,2 supplemental acceptances, release and real recovery receipts"
+    "같은날 앞선 v0.4.0 공식TJ/KY20번호·가수19표기/20곡ID/38안전번호 운영·실제복구·Release·완료Discord를 보존",
+    "Issue20 PR22 H b949f09 → M d7cf8cb 통합, PR/main app/contracts 실제success",
+    "metadata-only Python 표준라이브러리 CLI: 고정공식URL·단일행·번호문자열·UTF8/크기·redirect guard·안전오류·별도unreviewed candidate/lastgood 보존",
+    "실제기존20응답 independent metadata/hash20/20 대조와 새공식2조회HTTP200/unreviewed; rawHTML미보존·ledger/가이드03시근거불변",
+    "자체6번째 표기 비교 가이드·정확한4공식근거·기존5전체객체/날짜 보존·360JSoff/키보드/원래gradient 확인",
+    "307unit/type0·로컬24/24·동일M 실제preview24/운영24·frozenHTTP27/27 PASS",
+    "두target3346files/3336HTML·0/37index·cleanM·전체fileset/perfilehash두번일치",
+    "실제canonical oldv0.4.0복구26→newv0.4.1재복원27각1attempt PASS; 앞선실패들 보존",
+    "실제6peer39/39/38과유일최저품질교체·독립최종감사; 새중복팀/물리삭제없음",
+    "실제v0.4.1Release 게시와별도ReleaseDiscord 송신 영수증 확인",
+    "교체최종감사를원래자료/앱두담당이저장HTTP107checks·CI/Release/한계를읽기전용보충수용; 새점수/순위수정없음",
+    "docsPR12 merged: 실제제품·복구·릴리스·6평가/교체/두보충수용과원래실패/한도중단 보존"
   ],
   "nextPlan": [
-    "Issue20 metadata-only provider review harness; Issue6 further unreviewed evidence",
-    "Original reviewed song/artist comparison content with actual sources, no guessed audio/difficulty/rights",
-    "Issue15 Actions CF binding operator setup and actual automated deployment; managed cloud deployment available",
-    "Google actual account/ownership/application/review unknown; operator identity/legal consent",
-    "Full metadata redistribution rights and actual contact handling not yet established"
+    "Issue6: 미검토 번호의 공식 근거를 metadata-only로 조사하고 원문 제목·가수·버전을 사람이 대조; 미확보는 unknown 유지",
+    "검토된 곡·가수·번호의 실제 차이에 근거한 자체 비교 콘텐츠를 보강하고 모바일/키보드 사용을 확인",
+    "Issue15: Actions Cloudflare bindings 안전한 설정과 실제 자동배포 확인; 관리자 managed cloud 배포는 가능",
+    "Issue20 후속: 긴 JS 내 Python 검사 프로그램을 안전한 helper로 분리하는 가독성 개선; 현재 차단 결함 없음",
+    "실제 문의 수신·처리와 전체 metadata 재배포 권리 확인; Google 계정/소유권/신청/심사 상태는 실제 운영자 증거로만 기록"
   ],
   "previousDay": {
     "date": "2026-10-14",
@@ -64,94 +65,184 @@
     "savedReport": "https://github.com/jpop-today/jpoptoday/blob/main/reports/daily/2026-10-14.json",
     "boundary": "Oct14 product results; remaining docs/delivery published Oct15 before this new03run"
   },
-  "verification": {
-    "unit": 286,
-    "typeErrors": 0,
-    "typeWarnings": 0,
-    "localPreviewBrowser": 22,
-    "localProductionBrowser": 22,
-    "remotePreviewBrowser": 22,
-    "remoteProductionBrowser": 22,
-    "localFullReproducibility": {
-      "previewFiles": 3345,
-      "productionFiles": 3345,
-      "passed": true
-    },
-    "ciArchiveFullComparison": "blocked commandexit1, precise causeunknown",
-    "artifacts": {
-      "html": 3335,
-      "files": 3345,
-      "previewIndex": 0,
-      "productionIndex": 36
+  "priorRuns": [
+    {
+      "runId": "resume-20261015-0300",
+      "report": "https://github.com/jpop-today/docs/blob/main/operations/runs/resume-20261015-0300-completed-daily.json",
+      "sourceReport": "https://github.com/jpop-today/jpoptoday/blob/main/reports/runs/resume-20261015-0300.json",
+      "release": {
+        "version": "0.4.0",
+        "tag": "v0.4.0",
+        "sourceSha": "fc54989e0540cdb5863388abd46660359da226a6",
+        "annotatedTagSha": "83855a0c03344eb790b159f7a12ba39e905df342",
+        "tagTargetType": "commit",
+        "tagTargetSha": "fc54989e0540cdb5863388abd46660359da226a6",
+        "releaseId": 413261891,
+        "publishedAt": "2026-10-14T23:11:23Z",
+        "draft": false,
+        "prerelease": false,
+        "url": "https://github.com/jpop-today/jpoptoday/releases/tag/v0.4.0",
+        "workflowRun": 38652398351,
+        "state": "published",
+        "verifiedAt": "2026-10-14T23:12:42.276289+00:00",
+        "scope": "Connected GitHub Release API and annotated tag object read; publishing is distinct from Google approval",
+        "notification": {
+          "state": "sent",
+          "sentAt": "2026-10-14T23:11:24.2220174Z",
+          "attempts": 1,
+          "workflowRun": 38652398351
+        }
+      },
+      "milestones": "공식20번호·가수별 확인곡·실제운영/복구·remote22/22·완료Discord08:25:22KST; 당시별도6평가38/38/39"
     }
-  },
+  ],
   "release": {
-    "version": "0.4.0",
-    "tag": "v0.4.0",
-    "sourceSha": "fc54989e0540cdb5863388abd46660359da226a6",
-    "annotatedTagSha": "83855a0c03344eb790b159f7a12ba39e905df342",
+    "version": "0.4.1",
+    "tag": "v0.4.1",
+    "sourceSha": "d7cf8cb522da936450c9a08864abc99722f2f544",
+    "annotatedTagSha": "d3904e72a3dea585498e722196131b57aa8bc17d",
     "tagTargetType": "commit",
-    "tagTargetSha": "fc54989e0540cdb5863388abd46660359da226a6",
-    "releaseId": 413261891,
-    "publishedAt": "2026-10-14T23:11:23Z",
+    "tagTargetSha": "d7cf8cb522da936450c9a08864abc99722f2f544",
+    "releaseId": 413670248,
+    "publishedAt": "2026-10-15T10:17:36Z",
     "draft": false,
     "prerelease": false,
-    "url": "https://github.com/jpop-today/jpoptoday/releases/tag/v0.4.0",
-    "workflowRun": 38652398351,
+    "url": "https://github.com/jpop-today/jpoptoday/releases/tag/v0.4.1",
+    "workflowRun": 38719045259,
     "state": "published",
-    "verifiedAt": "2026-10-14T23:12:42.276289+00:00",
-    "scope": "Connected GitHub Release API and annotated tag object read; publishing is distinct from Google approval",
+    "verifiedAt": "2026-10-15T10:19:28.543372+00:00",
+    "safeResults": [
+      {
+        "at": "2026-10-15T10:16:15.5441414Z",
+        "result": "Reviewed release identity verified v0.4.1"
+      },
+      {
+        "at": "2026-10-15T10:17:20.3635129Z",
+        "result": "24 passed (16.5s)"
+      },
+      {
+        "at": "2026-10-15T10:17:37.4698931Z",
+        "result": "Discord notification sent (1 attempt).",
+        "attempts": 1
+      }
+    ],
     "notification": {
       "state": "sent",
-      "sentAt": "2026-10-14T23:11:24.2220174Z",
+      "sentAt": "2026-10-15T10:17:37.4698931Z",
       "attempts": 1,
-      "workflowRun": 38652398351
+      "workflowRun": 38719045259
+    },
+    "scope": "Actual GitHub Release/tag API and selected actual workflow log lines; no raw logs orsecretvalues retained",
+    "logSelectionCorrection": "Initial selector expected (attempt N), actual sender uses (N attempt). Initialunconfirmed corrected only after actual line read; no send retry."
+  },
+  "releases": [
+    {
+      "version": "0.4.0",
+      "tag": "v0.4.0",
+      "sourceSha": "fc54989e0540cdb5863388abd46660359da226a6",
+      "annotatedTagSha": "83855a0c03344eb790b159f7a12ba39e905df342",
+      "tagTargetType": "commit",
+      "tagTargetSha": "fc54989e0540cdb5863388abd46660359da226a6",
+      "releaseId": 413261891,
+      "publishedAt": "2026-10-14T23:11:23Z",
+      "draft": false,
+      "prerelease": false,
+      "url": "https://github.com/jpop-today/jpoptoday/releases/tag/v0.4.0",
+      "workflowRun": 38652398351,
+      "state": "published",
+      "verifiedAt": "2026-10-14T23:12:42.276289+00:00",
+      "scope": "Connected GitHub Release API and annotated tag object read; publishing is distinct from Google approval",
+      "notification": {
+        "state": "sent",
+        "sentAt": "2026-10-14T23:11:24.2220174Z",
+        "attempts": 1,
+        "workflowRun": 38652398351
+      }
+    },
+    {
+      "version": "0.4.1",
+      "tag": "v0.4.1",
+      "sourceSha": "d7cf8cb522da936450c9a08864abc99722f2f544",
+      "annotatedTagSha": "d3904e72a3dea585498e722196131b57aa8bc17d",
+      "tagTargetType": "commit",
+      "tagTargetSha": "d7cf8cb522da936450c9a08864abc99722f2f544",
+      "releaseId": 413670248,
+      "publishedAt": "2026-10-15T10:17:36Z",
+      "draft": false,
+      "prerelease": false,
+      "url": "https://github.com/jpop-today/jpoptoday/releases/tag/v0.4.1",
+      "workflowRun": 38719045259,
+      "state": "published",
+      "verifiedAt": "2026-10-15T10:19:28.543372+00:00",
+      "safeResults": [
+        {
+          "at": "2026-10-15T10:16:15.5441414Z",
+          "result": "Reviewed release identity verified v0.4.1"
+        },
+        {
+          "at": "2026-10-15T10:17:20.3635129Z",
+          "result": "24 passed (16.5s)"
+        },
+        {
+          "at": "2026-10-15T10:17:37.4698931Z",
+          "result": "Discord notification sent (1 attempt).",
+          "attempts": 1
+        }
+      ],
+      "notification": {
+        "state": "sent",
+        "sentAt": "2026-10-15T10:17:37.4698931Z",
+        "attempts": 1,
+        "workflowRun": 38719045259
+      },
+      "scope": "Actual GitHub Release/tag API and selected actual workflow log lines; no raw logs orsecretvalues retained",
+      "logSelectionCorrection": "Initial selector expected (attempt N), actual sender uses (N attempt). Initialunconfirmed corrected only after actual line read; no send retry."
     }
-  },
-  "preview": {
-    "url": "https://af1270b9.jpoptoday-preview.pages.dev",
-    "deploymentId": "af1270b9-de08-468d-bc11-a5bdfe0d631c",
-    "sourceSha": "fc54989e0540cdb5863388abd46660359da226a6",
-    "httpPassed": true,
-    "httpChecks": 26,
-    "httpCheckedAt": "2026-10-14T18:34:40.836Z",
-    "remoteBrowserRun": 38651373960,
-    "remoteState": "success",
-    "noindex": true,
-    "ads": false,
-    "remoteBrowserPassed": 22
-  },
-  "production": {
-    "deploymentId": "257762e0-8c20-456d-8c36-2e86f9dc3a89",
-    "sourceSha": "fc54989e0540cdb5863388abd46660359da226a6",
-    "createdOn": "2026-10-14T23:03:23.105795Z",
-    "actualHttpPassed": true,
-    "actualHttpChecks": 26,
-    "actualRollbackHttpPassed": true,
-    "actualRollbackSourceSha": "67c7ee094afa9b0734a67bb56052a9b9be30c7a2",
-    "actualRollbackChecks": 25,
-    "actualRestoreChecks": 26,
-    "actualRestoreHttpPassed": true,
-    "actualRestoreCheckedAt": "2026-10-14T23:05:21.859Z",
-    "actualRemoteBrowser": 22,
-    "verificationRun": 38651998879,
-    "verificationState": "success",
-    "deployMethod": "root managed cloud binding",
-    "actionsBindingsReady": false
+  ],
+  "verification": {
+    "unit": 307,
+    "typeErrors": 0,
+    "typeWarnings": 0,
+    "typeHints": 0,
+    "localPreviewBrowser": 24,
+    "localProductionBrowser": 24,
+    "remotePreviewBrowser": 24,
+    "remoteProductionBrowser": 24,
+    "actualPreviewHTTP": 27,
+    "actualProductionHTTP": 27,
+    "actualRecovery": {
+      "old": 26,
+      "new": 27,
+      "oldAttempts": 1,
+      "newAttempts": 1,
+      "evidence": "daily-20261015-0900-recovery-node-summary.json"
+    },
+    "localFullReproducibility": {
+      "passed": true,
+      "filesPerTarget": 3346,
+      "buildsPerTarget": 2
+    },
+    "ciArchiveFullComparison": "not_performed_this_run; full local reproduction and sampled frozen actual origin verification distinguished",
+    "artifacts": {
+      "files": 3346,
+      "html": 3336,
+      "previewIndex": 0,
+      "productionIndex": 37
+    }
   },
   "team": {
     "schemaVersion": 1,
-    "runId": "resume-20261015-0300",
-    "checkedAt": "2026-10-14T18:26:22.867577+00:00",
+    "runId": "daily-20261015-0900",
+    "recordedAt": "2026-10-15T01:01:18.723760+00:00",
     "workers": [
-      "/root/resume_0300_evidence",
-      "/root/resume_0300_ui",
-      "/root/resume_0300_quality"
+      "/root/daily15_evidence",
+      "/root/daily15_ui",
+      "/root/daily15_quality"
     ],
     "reviews": [
       {
-        "reviewer": "/root/resume_0300_evidence",
-        "candidate": "/root/resume_0300_ui",
+        "reviewer": "/root/daily15_evidence",
+        "candidate": "/root/daily15_ui",
         "scores": {
           "correctness": 5,
           "evidence": 5,
@@ -159,42 +250,40 @@
           "maintainability": 4
         },
         "criterionReasons": {
-          "correctness": "실제 artists.astro는 root의 confirmedNumbers/group helper 결과만 렌더하고 현재 playlist·공식근거·conflict없는 번호만 표시한다. 원문 공동명의를 별도 그룹으로 유지하고 공식제목/가수/번호/checkedAt/기존 songHref를 그대로 사용한다. unknown·관측·충돌의 다른 업체는 번호없이 상태만 설명하며 미수록으로 단정하지 않는다.",
-          "evidence": "실제 source/doc, QA receipt3viewport, desktop/mobile/mobilejoint/shortdesktop PNG4개를 직접 읽었다. receipt19그룹/20ID/38번호·360px JS-off/키보드→JANE DOE·52972/57784·실제시각·넘침/콘솔/광고없음이 렌더와 일치한다. root최종286unit/type0/full22browser34.3s 로그도 직접 읽었고 dirty local을 원격배포로 주장하지 않는다.",
-          "value": "기존 검색 외에 아는 가수에서 공식 확인곡과 업체별근거로 바로 이동하는 정적탐색을 제공한다. 첫jump·가수nativeanchor·상세URL은 JS-off에서도 사용가능하고 별칭/공동명의·버전과번호업체를 구분하는 안내가 실제 정정사례가이드로 이어진다. 원래 gradient/palette 유지, 모바일본문과번호카드가 실제로 잘리지 않는다.",
-          "maintainability": "순수정적페이지와 공용helper/기존Layout/songHref를 재사용하고 글로벌CSS·데이터·저장동작은 건드리지 않아 유지범위가 명확하다. 현재 날짜표시/업체라벨/카드별 scopedCSS는 페이지 내부에 모여 있으며 coverage와 유사한 표현이 반복돼 향후 여러 탐색페이지가 늘면 중복관리 여지는 남는다. 현재 수용을 막는 결함은 없다."
+          "correctness": "실제 guides.ts 여섯 섹션과 이전 공개 요청 4건을 독립 import로 대조했다. 전체 번호·원문 제목·가수/공동명의·exact URL·원래 03시 checkedAt가 일치하고, 글 편집일과 조회일·unknown/미수록·현장 버전을 구분한다. 기존 5개 날짜도 보존한다.",
+          "evidence": "UI static receipt와 3 viewport QA JSON의 실제 시각/정확한 URL/키보드/무광고/noindex/콘솔0을 읽었다. 실제 PNG 4개를 열어 화면을 확인했다. 두 잘못된 QA 기대값 실패도 기록하고 dirty 로컬과 미실행 원격을 구분한다.",
+          "value": "SPYAIR의 부제/구두점과 JANE DOE의 공동명의를 실제 공식 기록으로 설명하여 한글 표기나 제목만으로 잘못 예약할 가능성을 줄인다. 업체·버전·근거 확인·제보로 이어지는 유용한 한국어 자체 콘텐츠다.",
+          "maintainability": "기존 공용 템플릿/CSS를 사용하고 기존 5객체·source 날짜를 보존했다. 다만 전체 기존 객체 동등성과 4사례 전체 제목/가수의 엄격 대조는 임시 static assertion에 있고 영속 E2E는 주로 날짜·링크·대표 문구를 고정하므로 향후 편집의 전체 근거 일치를 같은 범위로 재현하는 검사가 추가되면 좋다."
         },
         "evidencepaths": [
-          "/workspace/jpoptoday/src/pages/artists.astro",
-          "/workspace/docs/engineering/artist-discovery-20261015.md",
-          "/workspace/docs/operations/runs/resume-20261015-0300-ui-qa-verified.json",
-          "/workspace/docs/engineering/design/artists-20261015-desktop.png",
-          "/workspace/docs/engineering/design/artists-20261015-mobile.png",
-          "/workspace/docs/engineering/design/artists-20261015-mobile-joint-anchor.png",
-          "/workspace/docs/engineering/design/artists-20261015-short-desktop.png",
-          "/tmp/jpop-0300-unit.txt",
-          "/tmp/jpop-0300-check.txt",
-          "/tmp/jpop-0300-preview-e2e-passed.txt"
+          "jpoptoday/src/content/guides.ts",
+          "docs/engineering/title-artist-guide-20261015.md",
+          "docs/data/provider-review-requests-20261015.json",
+          "/tmp/jpop-daily15-ui-static.json",
+          "/tmp/jpop-daily15-ui-qa.json",
+          "/tmp/jpop-daily15-guide-desktop.png",
+          "/tmp/jpop-daily15-guide-mobile.png",
+          "/tmp/jpop-daily15-guide-mobile-joint.png",
+          "/tmp/jpop-daily15-guide-mobile-sources.png",
+          "/tmp/jpop-daily15-preview-e2e.txt"
         ],
-        "reason": "실제파일·렌더·상호작용 근거가 데이터정확성/호환/브랜드 수용기준에 부합한다.",
-        "acceptance": "accepted-local; clean 동일SHA CI/preview/production/복구는 root의 후속 게이트이며 아직 이 평가로 완료 선언하지 않음",
-        "originalDocument": "data/provider-review-20261015.md",
+        "reason": "실제 과거 근거의 원문 전체/날짜를 독립 확인하고 렌더 증거를 읽어 수용한다. 새 공식 조회·원격 CI·운영 배포·Google 승인을 UI 담당의 성과로 가정하지 않는다. 유지보수 보완은 전체 근거 회귀의 영속성에 관한 비차단 의견이다.",
         "evidence": [
-          "/workspace/jpoptoday/src/pages/artists.astro",
-          "/workspace/docs/engineering/artist-discovery-20261015.md",
-          "/workspace/docs/operations/runs/resume-20261015-0300-ui-qa-verified.json",
-          "/workspace/docs/engineering/design/artists-20261015-desktop.png",
-          "/workspace/docs/engineering/design/artists-20261015-mobile.png",
-          "/workspace/docs/engineering/design/artists-20261015-mobile-joint-anchor.png",
-          "/workspace/docs/engineering/design/artists-20261015-short-desktop.png",
-          "/tmp/jpop-0300-unit.txt",
-          "/tmp/jpop-0300-check.txt",
-          "/tmp/jpop-0300-preview-e2e-passed.txt"
+          "jpoptoday/src/content/guides.ts",
+          "docs/engineering/title-artist-guide-20261015.md",
+          "docs/data/provider-review-requests-20261015.json",
+          "/tmp/jpop-daily15-ui-static.json",
+          "/tmp/jpop-daily15-ui-qa.json",
+          "/tmp/jpop-daily15-guide-desktop.png",
+          "/tmp/jpop-daily15-guide-mobile.png",
+          "/tmp/jpop-daily15-guide-mobile-joint.png",
+          "/tmp/jpop-daily15-guide-mobile-sources.png",
+          "/tmp/jpop-daily15-preview-e2e.txt"
         ]
       },
       {
-        "reviewer": "/root/resume_0300_evidence",
-        "candidate": "/root/resume_0300_quality",
+        "reviewer": "/root/daily15_evidence",
+        "candidate": "/root/daily15_quality",
         "scores": {
           "correctness": 5,
           "evidence": 5,
@@ -202,40 +291,32 @@
           "maintainability": 4
         },
         "criterionReasons": {
-          "correctness": "11unit negativefixture가 관측/unknown·conflict·불완전근거·URL업체/번호/credential·선행0/숫자강제변환·archived/chart-only·중복ID·공동명의/별칭/case·anchor불변·deepfreeze를 다룬다. 실제기대집합은 raw staging에 ledger를 독립적용한 중복수로 계산해 helper출력을 재사용하지 않는다. 3e2e는 실제catalog의전체ID/근거·JS-off360키보드·기존객체favorite/미해결ID/legacyURL을 확인한다.",
-          "evidence": "실제 test/e2e/helper/doc·root286/type0/최종22PASS34.3s와 첫21PASS/1FAIL33.4s 로그를 직접 읽었다. navigation 전 URL읽기 실패를 숨기지 않고 같은 exact경로조건을 유지한 toHaveURL/fragment expect.poll로 실제완료를 기다렸다. 품질doc의 table/최종문단이22PASS로 갱신된 것도 재독했고 localdirty와 원격CI/배포 미완료가 구분된다.",
-          "value": "공식확인으로 잘못 승격하거나 다른가수를 병합하는 핵심 데이터위험과 기존 저장·URL 호환을 실제 테스트로 막는다. 페이지표시를 실제 served catalog와 비교하고 모든근거·checkedAt·robots/sitemap·광고/콘솔경계를 확인해 release가 근거없는 콘텐츠를 배포하지 않도록 돕는다.",
-          "maintainability": "의존성추가없이 Node test/기존Playwright에 통합하고 합성fixture와 실동결자료 검증을 구분한다. literal경로/독립 safe판정이 일부 기존하네스와 반복되며 실제catalog test는현재노래셋 전체를순회해 향후 증가시 실행시간 관리가 필요하다. 이 독립판정은 지금 회귀검증 가치가 있고 현재11unit·22browser가 실제통과했다."
+          "correctness": "20 단위 테스트와 2 E2E를 실제 읽었다. 문자열 선행0/행수/공식 표/금지 텍스트/UTF8/크기/날짜/HTTPError/이동 전 차단/부분 쓰기/경합/기존 바이트/CLI 비출력을 검사하며 가이드의 원래 4시각·target별 index/sitemap·JS-off 문의 흐름을 고정한다.",
+          "evidence": "최종 20 PASS 0 FAIL 3.105초 로그와 root 307 PASS/preview 24 PASS 30.5초 로그를 읽었다. 잘못된 초기 KY fixture와 sandbox ETIMEDOUT/exit137을 기능 실패나 통과로 꾸미지 않고, 새 20 검사는 합성 opener이며 실제 조회가 아님을 명시한다.",
+          "value": "과거 원문 누출 사건의 재발과 잘못된 번호 확정·실패 시 정상 자료 손상을 실제 negative 경계로 막는다. 제품 가이드에서는 공동명의·업체·현장 버전·확인 필요/미수록 구분과 키보드 도착을 회귀로 남긴다.",
+          "maintainability": "합성 최소 fixture/재사용 row builder/제한된 subprocess/캡처 출력 비반사 방식은 안전하다. 다만 긴 Python 프로그램을 JS template string에 여러 줄 escape로 삽입한 테스트가 많아 fixture나 쓰기 경계 변경 시 읽기/부분 수정 난도가 높고, 후속에 안전한 공용 Python 회귀 helper로 구조를 명료화할 여지가 있다."
         },
         "evidencepaths": [
-          "/workspace/jpoptoday/tests/confirmed-discovery.test.mjs",
-          "/workspace/jpoptoday/e2e/artists.spec.ts",
-          "/workspace/jpoptoday/contracts/confirmed-discovery.mjs",
-          "/workspace/docs/engineering/confirmed-discovery-harness-20261015.md",
-          "/tmp/jpop-0300-unit.txt",
-          "/tmp/jpop-0300-check.txt",
-          "/tmp/jpop-0300-preview-e2e-final.txt",
-          "/tmp/jpop-0300-preview-e2e-passed.txt",
-          "/workspace/docs/operations/runs/resume-20261015-0300-ui-qa-verified.json"
+          "jpoptoday/tests/provider-metadata.test.mjs",
+          "jpoptoday/e2e/title-artist-guide.spec.ts",
+          "docs/engineering/provider-metadata-quality-20261015.md",
+          "/tmp/jpop-daily15-quality-unit-final.txt",
+          "/tmp/jpop-daily15-unit.txt",
+          "/tmp/jpop-daily15-preview-e2e.txt"
         ],
-        "reason": "독립fixture와 실제 ledger/catalog/browser의 서로 다른 경계를 실제검증했고 실패원인과보완이 추적가능하다.",
-        "acceptance": "accepted-local; Chromium외브라우저·필드성능·권리·실제Google심사와 cleanCI/배포/복구는 이 검사 범위밖",
-        "originalDocument": "data/provider-review-20261015.md",
+        "reason": "검사 대상과 실제 검증 범위를 코드/로그로 대조해 수용한다. 새 단위 20개는 실제 제공사의 사람 검토를 대체하지 않고 root의 로컬 24 E2E를 원격 CI/운영 통과로 해석하지 않는다. 유지보수 의견은 cross-language 검사 문자열 가독성에 관한 비차단 보완이다.",
         "evidence": [
-          "/workspace/jpoptoday/tests/confirmed-discovery.test.mjs",
-          "/workspace/jpoptoday/e2e/artists.spec.ts",
-          "/workspace/jpoptoday/contracts/confirmed-discovery.mjs",
-          "/workspace/docs/engineering/confirmed-discovery-harness-20261015.md",
-          "/tmp/jpop-0300-unit.txt",
-          "/tmp/jpop-0300-check.txt",
-          "/tmp/jpop-0300-preview-e2e-final.txt",
-          "/tmp/jpop-0300-preview-e2e-passed.txt",
-          "/workspace/docs/operations/runs/resume-20261015-0300-ui-qa-verified.json"
+          "jpoptoday/tests/provider-metadata.test.mjs",
+          "jpoptoday/e2e/title-artist-guide.spec.ts",
+          "docs/engineering/provider-metadata-quality-20261015.md",
+          "/tmp/jpop-daily15-quality-unit-final.txt",
+          "/tmp/jpop-daily15-unit.txt",
+          "/tmp/jpop-daily15-preview-e2e.txt"
         ]
       },
       {
-        "reviewer": "/root/resume_0300_quality",
-        "candidate": "/root/resume_0300_evidence",
+        "reviewer": "/root/daily15_ui",
+        "candidate": "/root/daily15_evidence",
         "scores": {
           "correctness": 5,
           "evidence": 5,
@@ -243,26 +324,28 @@
           "maintainability": 4
         },
         "criterionReasons": {
-          "correctness": "기존43entries와새20entries를 직접읽어 전자객체/순서불변, 후자current playlist stableID·string number·원래관측값 대응을 확인. numeric1행의 공식제목/가수/부제/공동명의가ledger와일치하고unknown/unlisted·버전합병추정없음.",
-          "evidence": "requests20 safe metadata·저장raw20 SHA256·UTF8strict·정확한resultcell재파싱을 독립실행하여URL/checkedAt/title/artist/hash 20/20일치. docs실제20조회시각·hash·검토판정과root286/type0/full22PASS로그를 실제읽음.",
-          "value": "동결차트top10곡의TJ/KY20개관측번호가실제공식근거를얻어 안전탐색10→20ID/18→38번호로증가. 제공사별범위/나머지미확인도보존하여현장번호확인에직접가치.",
-          "maintainability": "별도ledgerappend와공식URL/checkedAt/reason,기존43보존·lastgood경계는명확. 다만조사parser가/tmp ad hoc이고최초KY원문주변출력에modal가사혼입1회발생; 이후metadata-only추출/미공개/사고기록개선했으나 영구검토도구/정규화safe receipts관리후속이남음."
+          "correctness": "실제 Python 구현은 엄격 UTF-8/2MiB/1~10 ASCII 문자열 번호·단일 공식 행·정확한 title/artist/number를 검사한다. KY 공식 최상위 table 관계·TJ 직접 identity 셀, 숨김/가사/modal/script 제외, 사전 redirect guard와 사후 exact URL·HTTP200 검사, 실제 fetch만 unreviewed/UTC/hash를 만드는 경계가 코드와 일치한다. 별도 후보의 exclusive hardlink 게시·기존 경로/보호 경로 거부로 reviewed ledger나 마지막 정상 바이트를 덮어쓰지 않는다.",
+          "evidence": "실제 script/소유 문서를 전부 읽고 저장 원문 20개를 이 평가자가 stdout 비출력으로 pure parser 재해석해 기존 metadata20/20·원 SHA25620/20을 독립 확인했다. root live2 receipt의 현재 scriptHash·exact URL·HTTP200·원래 metadata·새 실제 checkedAt·unreviewed도 읽어 확인했다. 새 실제 fetch2와 과거 저장20의 재해석, 담당자 미실행/중단과 품질20unit/root307·preview24 정상 로그를 구분하며 Google/권리를 만들어내지 않는다.",
+          "value": "이전 인접 문맥 출력에 가사가 섞인 실제 사건에 대해 제목·가수·번호 셀만 취하는 재사용 도구와 안전한 오류 코드 경계를 제공한다. 자동 사람 판정이나 현재 기기 보장 없이 새 후보만 남기므로 근거 수집을 반복하면서도 기존 사용자 번호·정체성·확인 필요 상태를 보존할 수 있다.",
+          "maintainability": "Python 표준 라이브러리만 사용하고 pure parse/fetch/exclusive write/CLI를 나눠 주입 가능한 opener와 고정 오류 코드를 제공한다. 제공사별 클래스·KY의 단일 구분자와 수동 HTML 구조 검사는 외부 markup 변경 때 유지 작업이 필요하며 현재20저장응답에 대한 보수적 지원이라는 한계를 문서화했다. 변경 시 추측하지 않고 실패하는 설계와 독립 회귀가 있어 현재 수용을 막는 결함은 발견하지 못했다."
         },
         "evidence": [
-          "source:data/reviewed/provider-corrections.json",
-          "docs:data/provider-review-20261015.md",
+          "/workspace/jpoptoday/scripts/provider-metadata.py",
+          "/workspace/docs/data/provider-metadata-harness-20261015.md",
+          "/workspace/docs/data/provider-review-requests-20261015.json",
           "/tmp/jpop-provider-review-20261015/requests.json",
-          "/tmp/jpop-provider-review-20261015/validation.json",
-          "/tmp/jpop-provider-review-20261015.py",
-          "/tmp/jpop-0300-preview-e2e-passed.txt"
+          "/workspace/docs/operations/runs/daily-20261015-0900-live-provider-metadata.json",
+          "/workspace/jpoptoday/tests/provider-metadata.test.mjs",
+          "/tmp/jpop-daily15-quality-unit-final.txt",
+          "/tmp/jpop-daily15-unit.txt",
+          "/tmp/jpop-daily15-preview-e2e.txt"
         ],
-        "reason": "실제파일·20원문hash/metadata재파싱·root실행증거를읽은총19점. 조사처음오류/임시parser한계는유지보수성에반영하고자료량이나말수로평가하지않음. rights/Google심사/cleanCI/실제배포는미확인root운영단계로제외.",
-        "acceptance": "accept-local-implementation; clean CI/preview/production/recovery remain root gates",
-        "originalDocument": "engineering/confirmed-discovery-harness-20261015.md"
+        "reason": "실제 코드·원 응답의 비출력 재검증·실제 요청 receipt·독립 회귀 근거가 데이터/콘텐츠 안전 경계와 일치한다.",
+        "acceptance": "accepted-local; 사람 검토/권리/실제기기/Google심사와 이후 clean 동일SHA CI·원격preview·운영/복구는 별도 root 게이트"
       },
       {
-        "reviewer": "/root/resume_0300_quality",
-        "candidate": "/root/resume_0300_ui",
+        "reviewer": "/root/daily15_ui",
+        "candidate": "/root/daily15_quality",
         "scores": {
           "correctness": 5,
           "evidence": 5,
@@ -270,56 +353,30 @@
           "maintainability": 4
         },
         "criterionReasons": {
-          "correctness": "artists.astro/계약API/실제catalog를읽음. currentplaylist·안전confirmedNumbers만표시,원문가수exact그룹/공동명의별도·기존songHref·원래checkedAt/공식표기·unsafeprovider번호보류/unknown≠미수록이맞음. full22E2E에서servedcatalog와모든20ID/38번호가일치.",
-          "evidence": "rootfinal22PASS34.3s로그,UI3viewportverifiedreceipt와실제Desktop/Mobile/MobilejointPNG3개를직접읽음. 360pxJSoff·키보드anchor→stableURL→officialevidence·consoleerror/warning/광고/overflow없음·gradient실제관측. 최초navigation/fragmentrace실패증거와별도성공receipt보존.",
-          "value": "원하는가수부터검토된업체번호/버전/공식근거로이동하는정적경로가생김. 첫viewportjump로긴안내를건너뛰고,부분검토범위를19표기/20ID/38번호로분리하며 공동명의한글표기를완전정체성번역으로오해하지않게label붙임. 기존검색·정정가이드·상세·즐겨찾기연결을확인.",
-          "maintainability": "기존전역CSS/저장키변경없이scopedAstro/nativeanchor·공용helper재사용·별도pageJS없음. scopedstyle/상태설명은다른coverage컴포넌트와일부중복되어향후공통화여지가있고3viewportChromium관측범위의한계를문서에명시함."
+          "correctness": "20개 실제 테스트가 합성 fixture로 선행0·다중/누락/잘못된 결과 구조·UTF-8/크기/제어문자·숨김/가사 sentinel·HTTP/timeout/read/redirect·unreviewed/hash/시간·기존 파일/부분쓰기/fsync/link/경합/CLI 비반사 경계를 독립 기대값으로 검사한다. 두 E2E는 실제 새 가이드의 네 원래 source/checkedAt·공동명의·버전/미수록 설명과 target별 robots/sitemap, JS-off360 키보드 이동·기존 다섯 날짜를 검증하고 문의를 실제 h1로 확인한다.",
+          "evidence": "20unit/두E2E/소유 문서 전체와 actual20PASS 로그, root307PASS·preview24PASS 로그를 직접 읽었다. 문서가 sandbox child ETIMEDOUT/중단과 합성 KY fixture 보정을 숨기지 않고 최종 정상 실행과 구분한다. 새 E2E의 exact source/time 기대값이 제가 비교한 기존metadata4개 및 실제UI receipt와 일치하고 UI 담당의 독립 세 viewport 렌더에서도 같은 핵심 흐름이 통과했다. 원격 CI/운영을 완료했다고 주장하지 않는다.",
+          "value": "자료 추출이 자동 확정/불필요 원문 출력/기존 정상자료 손실로 이어지는 핵심 위험과 새 콘텐츠의 잘못된 확인일·공동명의·색인을 모두 회귀 검사한다. 새 guide만 추가한 수량 변경과 기존 URL/저장 호환을 기존 전체E2E와 함께 검증해 단순 본문 생성보다 실제 사용 경로를 보호한다.",
+          "maintainability": "새 의존성 없이 Node test/기존 Playwright에 통합하고 Python subprocess timeout8초·buffer1MiB·고정 실패문구로 비밀/원문 재출력을 막는다. JS 문자열 속 Python 프로그램이 길어 문법/fixture 수정 때 읽기 비용이 있고 E2E의 몇 본문 문구는 편집과 함께 관리해야 한다. 이 중복은 현재 독립 기대값과 안전 경계 검증의 의미가 있으며 현재20unit·전체24browser가 통과했다."
         },
         "evidence": [
-          "source:src/pages/artists.astro",
-          "docs:engineering/artist-discovery-20261015.md",
-          "docs:operations/runs/resume-20261015-0300-ui-qa-verified.json",
-          "docs:engineering/design/artists-20261015-desktop.png",
-          "docs:engineering/design/artists-20261015-mobile.png",
-          "docs:engineering/design/artists-20261015-mobile-joint-anchor.png",
-          "/tmp/jpop-0300-preview-e2e-passed.txt"
+          "/workspace/jpoptoday/tests/provider-metadata.test.mjs",
+          "/workspace/jpoptoday/e2e/title-artist-guide.spec.ts",
+          "/workspace/docs/engineering/provider-metadata-quality-20261015.md",
+          "/tmp/jpop-daily15-quality-unit-final.txt",
+          "/tmp/jpop-daily15-unit.txt",
+          "/tmp/jpop-daily15-preview-e2e.txt",
+          "/workspace/docs/data/provider-review-requests-20261015.json",
+          "/tmp/jpop-daily15-ui-qa.json",
+          "/tmp/jpop-daily15-guide-mobile.png",
+          "/tmp/jpop-daily15-guide-desktop-sources.png"
         ],
-        "reason": "실제source·문서·브라우저receipt·3이미지·최종22회귀를읽은총19점. 최초즉시URL조회race는UI코드오류가아니고대기수정후실제통과함을구분. cleanremoteCI/배포/Google은아직root미완료단계로점수에추가하지않음.",
-        "acceptance": "accept-local-implementation; clean CI/preview/production/recovery remain root gates",
-        "originalDocument": "engineering/confirmed-discovery-harness-20261015.md"
+        "reason": "독립 합성 경계·실제 렌더와 원래 공식 근거를 읽고 검증한 결과가 하네스 계약에 부합하며 중단과 통과 이력이 추적 가능하다.",
+        "acceptance": "accepted-local; clean 동일SHA CI·원격preview·실제운영/복구/Release는 root 후속이며 Chromium외·권리·Google실제심사는 검사 범위밖"
       },
       {
-        "reviewer": "/root/resume_0300_ui",
-        "candidate": "/root/resume_0300_evidence",
-        "scores": {
-          "correctness": 5,
-          "evidence": 5,
-          "value": 5,
-          "maintainability": 4
-        },
-        "criterionReasons": {
-          "correctness": "동결 차트 상위10곡의20 ID/provider 쌍만 confirm으로 추가했다. base43개 객체·순서가 그대로이고 staging/chart/global CSS 바이트도 동일하다. 공식 OST 부제·기호 차이와 공동명의 판단을 원문 관리 표기와 행별 비교했고 unknown·기존 suppress13개·stable ID를 보존했다.",
-          "evidence": "docs·ledger·requests20행을 실제 읽고 별도 streaming HTMLParser로 저장 원문을 strict UTF-8 파싱했다.20개 모두 raw SHA/bytes·HTTP200·최종 URL·번호·공식 제목/가수·checkedAt가 ledger와 정확히 일치했다. 독립 최종 receipt PASS, root286unit/type 및 preview22PASS 로그를 읽었다. 최초 본인 regex 검토기는 중첩 markup으로0행을 읽어 실패했고 원본 실패를 보존한 뒤 streaming parser로 검증했다.",
-          "value": "현재 관리 목록에서 인기곡10개·양사20번호의 공식 근거가 늘어 가수 탐색/곡 상세/번호범위에 실제 적용됐다. 기존 관측을 전체 검증이라고 포장하거나 새 버전/미수록을 추정하지 않았다.",
-          "maintainability": "기존 ADR-006 구조에 append해 schema/정정 이유/실제확인일을 추적한다. 다만 수집·원문 재파싱 스크립트와 원문은 임시 /tmp 경로에만 있어 다음 환경에서 동일 과거응답을 재현하려면 별도 안전한 증거 보존/재조사가 필요하므로4점이다. 원문을 공개 Git에 넣자는 의미는 아니다."
-        },
-        "reason": "실제20개 원문의 metadata와 hash를 독립 재파싱·대조하고 base43개/원본 바이트를 보존했음을 확인해 담당 데이터 산출물을 수용한다. 권리·가사 출력 사고·Google심사·배포 미완료를 명확히 분리한다.",
-        "evidence": [
-          "data/reviewed/provider-corrections.json",
-          "data/provider-review-20261015.md",
-          "/tmp/jpop-provider-review-20261015/requests.json",
-          "/tmp/jpop-provider-review-20261015/validation.json",
-          "/tmp/jpop-0300-ui-peer-evidence-verified.json",
-          "/tmp/jpop-0300-ui-peer-evidence-regex-failed.json",
-          "/tmp/jpop-0300-unit.txt",
-          "/tmp/jpop-0300-preview-e2e-passed.txt"
-        ],
-        "acceptance": "Final assigned data artifact accepted. 실제20개 재파싱 PASS·로컬 preview22PASS를 읽었으며 clean SHA CI/CF preview/production/실제복구/Release는 root의 별도 다음 게이트다. 새운영 배포·AdSense 승인으로 기록하지 않는다.",
-        "originalDocument": "engineering/artist-discovery-20261015.md"
-      },
-      {
-        "reviewer": "/root/resume_0300_ui",
-        "candidate": "/root/resume_0300_quality",
+        "reviewer": "/root/daily15_quality",
+        "candidate": "/root/daily15_evidence",
+        "reviewedAt": "2026-10-15T09:59:05+09:00",
         "scores": {
           "correctness": 5,
           "evidence": 5,
@@ -327,157 +384,260 @@
           "maintainability": 5
         },
         "criterionReasons": {
-          "correctness": "11개 단위 소스를 실제 읽었다. 비확인상태·모호한 conflict·숫자형/선행0·잘못된 공식 URL·근거 누락·archived/chart-only·중복 ID·별칭/공동명의·stable anchor·deep-frozen Unicode/% URL을 검사한다. 실자료 기대집합은 ledger/raw의 번호 중복을 독립 재계산하여 helper출력을 정답으로 쓰지 않는다.",
-          "evidence": "실제root 로그에서 개별11개 포함 전체286PASS/type0 및 새3개E2E 포함22PASS34.3s를 읽었다. 초기에 잘못된 negativefixture10PASS/1FAIL과 navigation race21PASS/1FAIL을 문서에 보존했다. 기대 경로를 유지한 URL/fragment 대기 수정과 재실행결과를 확인했고 UI독립 JSoff/3viewport PASS도 읽기/실행으로 교차 확인했다.",
-          "value": "관측 번호를 공식 확인값으로 잘못 표시하는 위험과 별칭 합치기·버전/ID/URL/기존 객체즐겨찾기·미해결 ID 손실을 방지한다. 실제prod/preview meta와 sitemap도 target기준으로 검사하여 운영 배포 게이트에 직접 필요한 회귀다.",
-          "maintainability": "새 dependency·서버·배포 조작 없이 단독11unit/3e2e로 독립 경계를 유지한다. 실제 served catalog와 frozen ledger에서 기대집합을 산출해 번호 검토가 늘어도 가짜 고정 count수정으로 테스트를 맞추지 않는다. 명확한 locator 계약과 완료를 기다리는 assertion, fixture불변성·초기화1회 저장검사로 진단이 가능하다."
+          "correctness": "scripts/provider-metadata.py 전체를 읽어 고정 공식 숫자 URL·선행0·최대10자리·정확한 단일행·엄격UTF8·공식KY표·차단subtree 경계와 unreviewed만 반환하는 계약을 확인했다. 사전redirect차단과 최종URL검사, exclusive hardlink 게시가 기존 ledger/staging/last-good을 덮어쓰지 않는다. 합성20개에서 partial write·fsync/link·경합·안전CLI 실패를 직접 검증했다.",
+          "evidence": "기존 저장20응답을 이 담당이 pure parser로 재해석해 metadata20/20·SHA25620/20을 독립 확인했다. root 실제TJ27527/KY43372 HTTP200·unreviewed 후보2건의 안전한 receipt와 현재script hash 일치를 읽었다. 전체307unit·type0/0/0·preview24 로그를 확인했고 원문이나 새조회시각을 과거근거로 바꾸지 않았다.",
+          "value": "이전 임시KY문맥 출력에 가사 일부가 섞였던 실제 문제를 영속 metadata-only 도구·안전오류·후보 분리로 개선한다. 공식 제목/가수의 사람 판정과 수집을 분리해 이후 검토를 반복할 수 있고, 실패·unknown을 미수록/자동확정으로 바꾸지 않는다.",
+          "maintainability": "추가 의존성 없이 표준라이브러리의 URL/parser/fetch/record검사/exclusive쓰기/CLI 경계를 분리했다. 보수적markup 지원·hardlink 미지원 실패·20저장응답 관측 범위와 원격게이트를 문서화했다. 임시parser에만 의존하던 이전 흐름과 달리 영속20negative 회귀와 실제호출 인터페이스가 있으며 할당범위 내 필수 보완은 발견하지 못했다."
         },
-        "reason": "실자료 독립 기대집합·부정 fixture·JSoff 키보드·기존저장 보존을 검증한 하네스를 수용한다. 실제 실패와 완료 후 통과를 구분했고 최초 즉시 URL읽기 문제를 관측 대기로 수정했다.",
-        "evidence": [
-          "tests/confirmed-discovery.test.mjs",
-          "e2e/artists.spec.ts",
-          "engineering/confirmed-discovery-harness-20261015.md",
-          "/tmp/jpop-0300-unit.txt",
-          "/tmp/jpop-0300-check.txt",
-          "/tmp/jpop-0300-preview-e2e-final.txt",
-          "/tmp/jpop-0300-preview-e2e-passed.txt",
-          "operations/runs/resume-20261015-0300-ui-qa-verified.json"
+        "evidencepaths": [
+          "source:scripts/provider-metadata.py",
+          "source:tests/provider-metadata.test.mjs",
+          "docs:data/provider-metadata-harness-20261015.md",
+          "docs:data/provider-review-requests-20261015.json",
+          "docs:operations/runs/daily-20261015-0900-live-provider-metadata.json",
+          "/tmp/jpop-provider-review-20261015/requests.json",
+          "/tmp/jpop-daily15-quality-unit-final.txt",
+          "/tmp/jpop-daily15-unit.txt"
         ],
-        "acceptance": "Final assigned harness artifact accepted. 로컬 preview22PASS/286unit/type0와 UI독립렌더를 실제 확인했다. production E2E는 root 포트정리 후 별도 검증 단계이며 미실행을 PASS로 추정하지 않는다. clean SHA CI/CF preview/production/복구/Release·Google심사도 아직 이 리뷰의 완료 근거가 아니다.",
-        "originalDocument": "engineering/artist-discovery-20261015.md"
+        "reason": "자료 담당의 구현·문서·저장20응답·실제2요청 receipt를 실제 읽고 평가한 20점이다. markup 변경 시 보수적 실패와 권리/의미 판정 미포함은 명시된 범위이며 가짜 수집/승격으로 숨기지 않았다. 로컬 인수 기준을 수용하며 원격CI·clean SHA·운영·복구는 root의 별도 필수 게이트다.",
+        "acceptance": "accept-local-implementation; clean CI/preview/production/recovery remain root gates",
+        "evidence": [
+          "source:scripts/provider-metadata.py",
+          "source:tests/provider-metadata.test.mjs",
+          "docs:data/provider-metadata-harness-20261015.md",
+          "docs:data/provider-review-requests-20261015.json",
+          "docs:operations/runs/daily-20261015-0900-live-provider-metadata.json",
+          "/tmp/jpop-provider-review-20261015/requests.json",
+          "/tmp/jpop-daily15-quality-unit-final.txt",
+          "/tmp/jpop-daily15-unit.txt"
+        ]
+      },
+      {
+        "reviewer": "/root/daily15_quality",
+        "candidate": "/root/daily15_ui",
+        "reviewedAt": "2026-10-15T09:59:05+09:00",
+        "scores": {
+          "correctness": 5,
+          "evidence": 5,
+          "value": 5,
+          "maintainability": 5
+        },
+        "criterionReasons": {
+          "correctness": "guides.ts의 새6섹션을 읽고 SPYAIR27527/43372·JANE DOE52972/57784의 전체공식표기·공동명의·버전·unknown과미수록 구분을 확인했다. 네URL/원래checkedAt가 과거단일HTTP200결과와4/4일치하고, 새본문확인일10/15와 기존5개확인일10/14가 분리된다. 가수별exact그룹의 실제동작 설명도 기존코드와 맞는다.",
+          "evidence": "UI문서·원본5개 deepEqual receipt·3viewport keyboard/JSoff QA receipt·PNG6개를 직접 읽고 열었다. rootpreview24PASS30.5초의 새2E2E에서 출처·canonical/noindex·기존5날짜·문의 도착을 확인했다. 초기robots/contact제목 기대오류와 최종통과를 구분해 보존했다.",
+          "value": "제목 부제·구두점만으로 같은 곡을 추정하거나 공동명의 한 사람만 읽는 실제 오류를 공식사례로 설명한다. 업체·번호·전체가수·버전·기기와 날짜를 대조하는 행동 및 불분명할 때 제보할 정보가 있어 이용자가 번호를 안전하게 고르는 데 직접 도움이 된다. 공개본문에 내부개발보고나 추정난이도/권리/승인을 넣지 않았다.",
+          "maintainability": "기존guide 배열·공용목록/상세템플릿·CSS를 재사용하고 map기본값을 먼저설정해 새날짜만 선택적으로 명시했다. 기존5개객체 전체보존을 정적으로 검증했고 새클라이언트코드·스타일·저장키·URL규칙을 추가하지 않았다. 정확한4source와 소유범위/한계를 문서화해 할당범위 내 필수 보완은 발견하지 못했다."
+        },
+        "evidencepaths": [
+          "source:src/content/guides.ts",
+          "source:e2e/title-artist-guide.spec.ts",
+          "docs:engineering/title-artist-guide-20261015.md",
+          "docs:data/provider-review-requests-20261015.json",
+          "/tmp/jpop-daily15-ui-static.json",
+          "/tmp/jpop-daily15-ui-qa.json",
+          "/tmp/jpop-daily15-guide-desktop.png",
+          "/tmp/jpop-daily15-guide-mobile.png",
+          "/tmp/jpop-daily15-guide-short-desktop.png",
+          "/tmp/jpop-daily15-guide-mobile-joint.png",
+          "/tmp/jpop-daily15-guide-desktop-sources.png",
+          "/tmp/jpop-daily15-guide-mobile-sources.png",
+          "/tmp/jpop-daily15-preview-e2e.txt"
+        ],
+        "reason": "앱 담당의 실제 본문·4개 과거출처·정적보존·3viewport receipt·6이미지·전체24회귀 로그를 읽은 20점이다. 두 QA기대값 실패는 제품계약을 바꿔 숨기지 않았고 실제 최종검증으로 정정했다. 순위용 감점을 만들지 않으며 새CI·운영/Google심사를 이 평가로 대신하지 않는다.",
+        "acceptance": "accept-local-implementation; clean CI/preview/production/recovery remain root gates",
+        "evidence": [
+          "source:src/content/guides.ts",
+          "source:e2e/title-artist-guide.spec.ts",
+          "docs:engineering/title-artist-guide-20261015.md",
+          "docs:data/provider-review-requests-20261015.json",
+          "/tmp/jpop-daily15-ui-static.json",
+          "/tmp/jpop-daily15-ui-qa.json",
+          "/tmp/jpop-daily15-guide-desktop.png",
+          "/tmp/jpop-daily15-guide-mobile.png",
+          "/tmp/jpop-daily15-guide-short-desktop.png",
+          "/tmp/jpop-daily15-guide-mobile-joint.png",
+          "/tmp/jpop-daily15-guide-desktop-sources.png",
+          "/tmp/jpop-daily15-guide-mobile-sources.png",
+          "/tmp/jpop-daily15-preview-e2e.txt"
+        ]
       }
     ],
-    "normalization": "evidencepaths field additionally copied to evidence for existing evaluateTeam contract; original fields and docs arrays preserved",
+    "normalization": "Originalscores/criterionReasons preserved; evidencepaths additionally copied to evidence ifneeded by evaluateTeam",
     "manager": {
-      "unit": 286,
+      "allSixRead": true,
+      "independentEvaluateTeam": {
+        "/root/daily15_evidence": 39,
+        "/root/daily15_ui": 39,
+        "/root/daily15_quality": 38
+      },
+      "unit": 307,
       "typeErrors": 0,
       "typeWarnings": 0,
-      "localPreviewBrowser": 22,
-      "localPreviewSeconds": 34.3,
-      "localProductionBrowser": 22,
-      "localProductionSeconds": 28.6,
-      "dirtyLocalArtifact": {
-        "baseSha": "d17b9c8ad555cd97214c67b864a9c263be402186",
-        "html": 3335,
-        "files": 3345,
-        "previewIndex": 0,
-        "productionIndex": 36
-      },
-      "allSixReviewsRead": true,
-      "actualEvidence20Crosschecked": true,
-      "rotationState": "replacement_created",
+      "previewBrowser": 24,
+      "uiDesktopAndMobileViewedByRoot": true,
+      "selectedForRotation": "/root/daily15_quality",
+      "reason": "Unique lowest38 from two actual19 peer reviews; maintainability4 addresses long embedded Python test strings. No functional defect or quantity-based rank asserted.",
+      "tieBreakUsed": false,
+      "retired": "/root/daily15_quality",
+      "previousInterruptState": "completed",
       "physicalDeletion": false,
-      "totals": {
-        "/root/resume_0300_evidence": 38,
-        "/root/resume_0300_ui": 38,
-        "/root/resume_0300_quality": 39
-      },
-      "criterionSums": {
-        "/root/resume_0300_evidence": {
-          "correctness": 10,
-          "evidence": 10,
-          "value": 10,
-          "maintainability": 8
-        },
-        "/root/resume_0300_ui": {
-          "correctness": 10,
-          "evidence": 10,
-          "value": 10,
-          "maintainability": 8
-        },
-        "/root/resume_0300_quality": {
-          "correctness": 10,
-          "evidence": 10,
-          "value": 10,
-          "maintainability": 9
-        }
-      },
-      "tieBreakOrder": [
-        "/root/resume_0300_ui",
-        "/root/resume_0300_evidence",
-        "/root/resume_0300_quality"
-      ],
-      "selectedForRotation": "/root/resume_0300_ui",
-      "reason": "UI38/evidence38 share allfourcriterion sums10/10/10/8, quality39. Apply predeclaredUI fallback; no claim UIisobjectivelyworse than tied evidence.",
-      "retired": "/root/resume_0300_ui",
-      "interruptedPreviousState": "completed",
-      "replacement": "/root/replacement_0300_release_gate",
-      "rotatedAt": "2026-10-14T18:28:48.037160+00:00",
+      "replacement": "/root/replacement_daily15_gate",
       "activeRoster": [
-        "/root/resume_0300_evidence",
-        "/root/resume_0300_quality",
-        "/root/replacement_0300_release_gate"
+        "/root/daily15_evidence",
+        "/root/daily15_ui",
+        "/root/replacement_daily15_gate"
       ],
+      "recordedAt": "2026-10-15T01:02:30.045846+00:00",
       "replacementFinalAudit": "accepted",
-      "bothSupplementalAcceptancesRead": true
+      "bothSupplementalAcceptancesRead": true,
+      "supplementalAcceptanceCount": 2,
+      "allSixOriginalReviewsRead": true,
+      "newRankingOrScores": false
     },
     "supplementalAcceptance": [
       {
-        "reviewer": "/root/resume_0300_quality",
-        "candidate": "/root/replacement_0300_release_gate",
+        "reviewer": "/root/daily15_evidence",
+        "candidate": "/root/replacement_daily15_gate",
         "state": "accepted",
-        "receivedByManagerAt": "2026-10-14T23:20:31.781609+00:00",
-        "scope": "Read full final gate, 32 linked files and saved CI/release/production/recovery/reproducibility/UI/review receipts; parsed all103 saved HTTP checks (26+26+25+26) and build metadata. No new HTTP/CI API/build/provider execution. No correction requested.",
+        "receivedByManagerAt": "2026-10-15T10:23:41.448431+00:00",
+        "criterionReasons": {
+          "correctness": "운영/preview/CI/tag M d7cf8cb 일치, 앞선복구실패와최종old26→new27구분",
+          "evidence": "연결JSON32개, 저장HTTP107checks passed/expected digest와SHA, remote24/24·Release413670248·19:17:36KST/Discord1attempt대조",
+          "value": "실제표기비교가이드·metadata누출/실패보존방어, 권리/현장기기/Googleunknown보존",
+          "maintainability": "실패·정정·후속수용보존, helper/Actions후속구체적·상대링크58누락0"
+        },
+        "scope": "Read saved local finalaudit/release and32JSON receipts; no new provider/HTTP/CI/build/browser/deployment/Git/file/worker execution",
         "newScore": false,
-        "mutations": false
+        "finalReportDeliveryAtReview": "pending"
       },
       {
-        "reviewer": "/root/resume_0300_evidence",
-        "candidate": "/root/replacement_0300_release_gate",
+        "reviewer": "/root/daily15_ui",
+        "candidate": "/root/replacement_daily15_gate",
         "state": "accepted",
-        "receivedByManagerAt": "2026-10-14T23:20:31.781609+00:00",
-        "scope": "Read full final gate and32 links; parsed all103 saved HTTP checks and API257→693→257/sourceM→67c7→M; current metadata/staging/chart hashes. Independently read actual GitHub PR19/Release/tag and selected safe CI result lines, including22 actual remote browser results and Release Discord sent. No new provider query or mutation. No correction requested.",
+        "receivedByManagerAt": "2026-10-15T10:23:41.448431+00:00",
+        "criterionReasons": {
+          "correctness": "기존5guide전체deepEqual·새6sections/4정확공식URL/원래checkedAt/제목·가수·번호일치,03시/09시구분",
+          "evidence": "107저장HTTPchecks passed/digest/각1attempt·첫복구6실패/restore2·Python/403unknown·remote24/24/실제Release송신대조",
+          "value": "표기/번호/가수/버전/날짜이해·URL/storage/brand보존,3viewport/6PNG연결·권리/승인과장없음",
+          "maintainability": "구현/로컬/cleanMCI/배포/복구/Release/보고구분·실패보존·안전helper후속·상대링크43+15누락0"
+        },
+        "scope": "Read saved evidence and current source only; no new browser/HTTP/CI/deploy/recovery/file/Git/server/worker execution",
         "newScore": false,
-        "mutations": false
+        "finalReportDeliveryAtReview": "pending"
       }
     ]
   },
-  "automation": {
-    "daily09Enabled": true,
-    "hourlyEnabled": true,
-    "schedulesChanged": false,
-    "hourlyLastRun": "2026-10-14T22:58:26.575683+00:00"
+  "preview": {
+    "deploymentId": "8a109ea3-35e7-4c4f-96af-b6235a2270cc",
+    "url": "https://8a109ea3.jpoptoday-preview.pages.dev",
+    "sourceSha": "d7cf8cb522da936450c9a08864abc99722f2f544",
+    "noindex": true,
+    "ads": false,
+    "remoteVerification": "passed",
+    "actualBrowserPassed": 24,
+    "actualHTTPChecks": 27,
+    "actualHTTPPassed": true,
+    "remoteRun": 38716729136
   },
-  "interruption": {
-    "replacementAgent": "/root/replacement_0300_release_gate",
-    "failure": "actual usage-limit; preserved provisional audit and resumed same agent",
-    "newTeamsCreatedForRepeatedPrompts": false
+  "production": {
+    "deploymentId": "ebd045fa-e409-4306-9621-0858f391dee5",
+    "sourceSha": "d7cf8cb522da936450c9a08864abc99722f2f544",
+    "createdAt": "2026-10-15T09:59:30.692501Z",
+    "method": "root managed cloud binding",
+    "sameSHAActualRecovery": "passed actual canonical old26 then new27; see recovery-node-summary",
+    "actualRemoteBrowser": 24,
+    "firstHTTP": {
+      "checks": 27,
+      "attempts": 1,
+      "state": "passed"
+    },
+    "firstRecovery": {
+      "oldHTTP": "failed6attempts METADATA_MISMATCH/BODY_MISMATCH sitemap",
+      "newRestoreHTTP": "passed final27checks in2attempts; initial sitemap mismatch preserved",
+      "evidence": "daily-20261015-0900-recovery-summary.json"
+    },
+    "optionalOldImmutableRead": {
+      "status": 403,
+      "cause": "not established beyond HTTPError; no retry/bypass",
+      "canonicalDomainBaselineAlreadyVerified": true
+    },
+    "finalRecoveryEvidence": "daily-20261015-0900-recovery-node-summary.json",
+    "secondObserverAttempt": {
+      "result": "Python urllib observer HTTPError, no accepted state; finally restore succeeded; finalNode27PASS",
+      "evidence": "daily-20261015-0900-recovery-final-summary.json"
+    },
+    "finalRecovery": {
+      "oldHttpChecks": 26,
+      "oldAttempts": 1,
+      "newHttpChecks": 27,
+      "newAttempts": 1,
+      "state": "passed",
+      "stateObservations": {
+        "old": 1,
+        "new": 3
+      },
+      "scope": "Existing Node24 proxy/CA path, strict body/metadata comparisons; explicit bounded60s verification budget, no bypass"
+    },
+    "remoteRun": 38718667044,
+    "actionsCloudflareBindings": "missing",
+    "actionsDeployment": "skipped_verify_only; rootmanagedactualdeploymentdone"
   },
   "adsense": {
     "technicalStage": "preparing",
     "accountState": "unknown",
     "ownershipApplicationReview": "unknown",
-    "operatorStateQuestion": "asked concise optional question; no answer assumed"
+    "approvalEvidence": null,
+    "operatorStateQuestion": "asked optional question; no submitted answer assumed"
+  },
+  "automation": {
+    "daily09Enabled": true,
+    "hourlyEnabled": true,
+    "schedulesChanged": false,
+    "evidence": "operations/automation.json",
+    "userPauseAndExplicitResume": true,
+    "tokenResetDetection": false
   },
   "notifications": {
-    "progress": {
+    "morning": {
+      "runId": 38658023982,
+      "workflow": "discord.yml",
+      "mode": "message",
       "state": "sent",
-      "runId": 38614321457,
-      "sentAt": "2026-10-14T18:20:38.2688923Z",
-      "attempts": 1
+      "sentAt": "2026-10-15T00:05:57.0270944Z",
+      "attempts": 1,
+      "sha": "7ed3f7eb3203ed4bb0de0c247f07a129bba8dba0",
+      "url": "https://github.com/jpop-today/jpoptoday/actions/runs/38658023982",
+      "checkedAt": "2026-10-15T00:07:45.384515+00:00"
+    },
+    "resumeProgress": {
+      "workflowRun": 38716896850,
+      "state": "sent",
+      "sentAt": "2026-10-15T09:58:42.5200902Z",
+      "attempts": 1,
+      "sourceSha": "d7cf8cb522da936450c9a08864abc99722f2f544",
+      "scope": "Actual selected sender line; no rawlog/secret retained"
     },
     "release": {
       "state": "sent",
-      "sentAt": "2026-10-14T23:11:24.2220174Z",
+      "sentAt": "2026-10-15T10:17:37.4698931Z",
       "attempts": 1,
-      "workflowRun": 38652398351
+      "workflowRun": 38719045259
     },
     "completed": {
-      "state": "pending_dispatch_after_saved_report_merge",
+      "state": "pending_saved_report_publication",
       "reportDate": "2026-10-15",
-      "boundary": "This committed snapshot precedes dispatch; actual delivery receipt follows in docs/Issue9, no self-delivery claim"
+      "scope": "Committed pre-dispatch snapshot; actual post-dispatch receipt will be in docs"
     }
   },
   "documentation": {
     "state": "merged",
-    "pr": "https://github.com/jpop-today/docs/pull/10",
-    "mergeSha": "d2c713ba7dd68662bf4bb4b0266db92dd32c0673",
-    "releaseRecord": "https://github.com/jpop-today/docs/blob/main/operations/releases/v0.4.0-20261015.md"
+    "releaseRecord": "https://github.com/jpop-today/docs/blob/main/operations/releases/v0.4.1-20261015.md",
+    "pr": "https://github.com/jpop-today/docs/pull/12",
+    "mergeSha": "4da1a6b563f6535c86bf3f827c14b120c97891af"
   },
   "links": {
-    "sourcePR": "https://github.com/jpop-today/jpoptoday/pull/19",
-    "issue": "https://github.com/jpop-today/jpoptoday/issues/6",
-    "proof": "https://github.com/jpop-today/docs/blob/main/operations/runs/resume-20261015-0300.json",
-    "nextIssue": "https://github.com/jpop-today/jpoptoday/issues/20"
+    "sourcePR": "https://github.com/jpop-today/jpoptoday/pull/22",
+    "issue": "https://github.com/jpop-today/jpoptoday/issues/20",
+    "proof": "https://github.com/jpop-today/docs/blob/main/operations/runs/daily-20261015-0900.json"
   }
 }
