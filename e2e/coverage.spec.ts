@@ -2,30 +2,50 @@ import { test, expect } from '@playwright/test';
 import type { Song } from '../src/lib/catalog';
 
 const pathFor = (id: string) => '/songs/' + encodeURIComponent(id) + '/';
-const counts = {
-  'provider-confirmed': { tj: '22', ky: '20' },
-  'observed-unverified': { tj: '3,113', ky: '2,471' },
-  unknown: { tj: '164', ky: '808' },
-};
+const providers = ['tj', 'ky'] as const;
+const statuses = ['provider-confirmed', 'observed-unverified', 'unknown'] as const;
+const formatCount = (count: number) => count.toLocaleString('ko-KR');
 
-test('coverage distinguishes provider numbers, song IDs and unknown within the playlist denominator', async ({ page }) => {
+test('coverage distinguishes provider numbers, song IDs and unknown within the playlist denominator', async ({ page, request }) => {
+  const catalog = await (await request.get('/catalog.json')).json() as { songs: Song[] };
+  const playlist = catalog.songs.filter(song => song.origin === 'playlist');
+  // Independently accumulate the served records, rather than freeze the previous review total.
+  const counts = Object.fromEntries(statuses.map(status => [status, { tj: 0, ky: 0 }]));
+  const confirmedIds = new Set<string>(), listedIds = new Set<string>();
+  let conflicts = 0, suppressed = 0, listedNumbers = 0;
+  for (const song of playlist) {
+    for (const provider of providers) {
+      const value = song.karaoke[provider];
+      expect(statuses).toContain(value.status);
+      counts[value.status][provider]++;
+      if (value.status === 'unknown' && value.correction) suppressed++;
+      if (value.status !== 'provider-confirmed') continue;
+      confirmedIds.add(song.id);
+      if (value.conflict) conflicts++;
+      if (song.availability === 'current' && value.evidence && !value.conflict) {
+        listedIds.add(song.id); listedNumbers++;
+      }
+    }
+  }
   await page.goto('/coverage/');
   await expect(page).toHaveTitle('관리 목록의 번호 범위 | jpop.today');
   await expect(page.locator('h1')).toHaveText('관리 목록의 번호 범위');
-  await expect(page.locator('#coverage-denominator')).toContainText('3,299개 곡 식별자');
-  await expect(page.locator('#coverage-denominator')).toContainText('차트 전용 18개 항목은 이 분모와 집계에서 제외');
+  await expect(page.locator('#coverage-denominator')).toContainText(`${formatCount(playlist.length)}개 곡 식별자`);
+  await expect(page.locator('#coverage-denominator')).toContainText(`차트 전용 ${formatCount(catalog.songs.length - playlist.length)}개 항목은 이 분모와 집계에서 제외`);
   for (const [status, providerCounts] of Object.entries(counts)) {
     const row = page.locator(`tr[data-status="${status}"]`);
     for (const [provider, count] of Object.entries(providerCounts)) {
-      await expect(row.locator(`td[data-provider="${provider}"]`)).toHaveText(count);
+      await expect(row.locator(`td[data-provider="${provider}"]`)).toHaveText(formatCount(count));
     }
   }
-  await expect(page.locator('[data-coverage="confirmed-numbers"]')).toHaveText('42건');
-  await expect(page.locator('[data-coverage="confirmed-songs"]')).toHaveText('22개');
-  await expect(page.locator('[data-coverage="listed-songs"]')).toHaveText('20개');
-  await expect(page.locator('#coverage-count-note')).toContainText('4건은 같은 번호의 다른 항목과 충돌');
+  for (const provider of providers) expect(statuses.reduce((total, status) => total + counts[status][provider], 0)).toBe(playlist.length);
+  await expect(page.locator('[data-coverage="confirmed-numbers"]')).toHaveText(`${formatCount(counts['provider-confirmed'].tj + counts['provider-confirmed'].ky)}건`);
+  await expect(page.locator('[data-coverage="confirmed-songs"]')).toHaveText(`${formatCount(confirmedIds.size)}개`);
+  await expect(page.locator('[data-coverage="listed-songs"]')).toHaveText(`${formatCount(listedIds.size)}개`);
+  await expect(page.locator('.reviewed-number strong')).toHaveCount(listedNumbers);
+  await expect(page.locator('#coverage-count-note')).toContainText(`${formatCount(conflicts)}건은 같은 번호의 다른 항목과 충돌`);
   await expect(page.locator('.coverage-note')).toContainText('확인 필요는 미수록이 아닙니다');
-  await expect(page.locator('.coverage-note')).toContainText('보류한 13건도 ‘확인 필요’에 포함');
+  await expect(page.locator('.coverage-note')).toContainText(`보류한 ${formatCount(suppressed)}건도 ‘확인 필요’에 포함`);
 });
 
 test('coverage exposes reviewed string numbers and their official identity, time and stable detail routes', async ({ page, request }) => {
@@ -36,8 +56,12 @@ test('coverage exposes reviewed string numbers and their official identity, time
     return value.status === 'provider-confirmed' && value.evidence && !value.conflict;
   }));
   await page.goto('/coverage/');
-  await expect(page.locator('.reviewed-song')).toHaveCount(20);
-  await expect(page.locator('.reviewed-number strong')).toHaveCount(38);
+  await expect(page.locator('.reviewed-song')).toHaveCount(reviewed.length);
+  const reviewedNumbers = reviewed.reduce((total, song) => total + providers.filter(provider => {
+    const value = song.karaoke[provider];
+    return value.status === 'provider-confirmed' && value.evidence && !value.conflict;
+  }).length, 0);
+  await expect(page.locator('.reviewed-number strong')).toHaveCount(reviewedNumbers);
   for (const song of reviewed) {
     const row = page.locator(`.reviewed-song[data-song-id="${song.id}"]`);
     await expect(row.locator('h3 .song-detail-link')).toHaveAttribute('href', pathFor(song.id));
