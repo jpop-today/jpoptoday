@@ -19,7 +19,7 @@ test('title and artist guide presents original comparison advice, exact historic
   await expect(page).toHaveTitle(title + ' | jpop.today');
   await expect(page.locator('h1')).toHaveText(title);
   await expect(page.locator('astro-error-overlay')).toHaveCount(0);
-  await expect(page.locator('.verification-note time')).toHaveAttribute('datetime', '2026-10-15');
+  await expect(page.locator('.verification-note time')).toHaveAttribute('datetime', '2026-10-16');
   await expect(page.locator('main')).toContainText('米津玄師，宇多田ヒカル');
   await expect(page.locator('main')).toContainText('米津玄師 & 宇多田ヒカル');
   await expect(page.locator('main')).toContainText('米津玄師、宇多田ヒカル');
@@ -29,7 +29,7 @@ test('title and artist guide presents original comparison advice, exact historic
   await expect(page.locator('main')).toContainText('공식 미수록을 확인했다는 뜻이 아닙니다');
   await expect(page.locator('main')).toContainText('번호를 새로 조회한 시각이 아닙니다');
   const sources = page.locator('section[aria-labelledby="guide-sources"]');
-  await expect(sources.locator('li')).toHaveCount(4);
+  await expect(sources.locator('li')).toHaveCount(8);
   for (const [url, checkedAt] of officialSources) {
     const row = sources.locator('li').filter({ has: page.locator(`a[href="${url}"]`) });
     await expect(row.locator('a')).toHaveAttribute('target', '_blank');
