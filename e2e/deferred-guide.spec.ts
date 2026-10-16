@@ -195,6 +195,10 @@ for (const item of cases) test(`${item.key} guide to exact detail, evidence and 
     await tabTo(page, official);
     const report = page.getByRole('link', { name: '이 곡 정보 제보', exact: true });
     await tabTo(page, report);
+    // No-JavaScript users must receive the usable mailto itself. Cloudflare's
+    // /cdn-cgi/l/email-protection fallback needs its decoder and is not usable
+    // here; do not decode it in this test or supply a URL base to hide that.
+    await expect(report).toHaveAttribute('href', /^mailto:/);
     const mail = new URL((await report.getAttribute('href'))!);
     expect(mail.protocol).toBe('mailto:');
     expect(mail.searchParams.get('subject')).toContain(item.title);
@@ -207,7 +211,19 @@ for (const item of cases) test(`${item.key} guide to exact detail, evidence and 
     await page.keyboard.press('Enter');
     await expect(page).toHaveURL('/contact/');
     await expect(page.locator('h1')).toHaveText('문의와 정보 정정');
+    const email = page.locator('article a[href^="mailto:"]');
+    await expect(email).toHaveCount(1);
+    await expect(email).toHaveAttribute('href', 'mailto:' + mail.pathname);
+    await tabTo(page, email);
     await checkPage(page);
+    await page.goto('/privacy/');
+    const privacyEmail = page.locator('article a[href^="mailto:"]');
+    await expect(privacyEmail).toHaveCount(1);
+    await expect(privacyEmail).toHaveAttribute('href', 'mailto:' + mail.pathname);
+    await tabTo(page, privacyEmail);
+    await checkPage(page);
+    await page.goBack();
+    await expect(page).toHaveURL('/contact/');
     await page.goBack();
     await expect(page).toHaveURL(guidePath);
     const back = page.locator('article > a.back-link');
