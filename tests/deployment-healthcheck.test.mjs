@@ -526,3 +526,79 @@ test('CF mailto query gets raw/normalized digest and form count in the safe rece
   assert.equal(check.normalizations[0].mailtoAnchors, 1);
   assert.doesNotMatch(JSON.stringify(receipt), /subject=|body=|editor@example.test/);
 });
+
+const emailOff = anchor => `<!--email_off-->${anchor}<!--/email_off-->`;
+
+test('consumed email_off markers restore only exact trusted direct mailto occurrences', () => {
+  for (const anchor of [plainEmail, plainQuery, plainQuery + plainEmail]) {
+    const anchors = anchor === plainQuery + plainEmail ? 2 : 1;
+    const expected = html(anchor === plainQuery + plainEmail ? emailOff(plainQuery) + emailOff(plainEmail) : emailOff(anchor));
+    const actual = html(anchor);
+    const result = normalizeCFEmailHTML(actual, expected);
+    assert.deepEqual(result.bytes, expected);
+    assert.deepEqual(result.normalizations, [{ type: 'cloudflare-email-exclusion-markers', anchors }]);
+    assert.deepEqual(normalizeCFEmailHTML(expected, expected), { bytes: expected, normalizations: [] });
+  }
+  const mixedExpected = html(emailOff(plainQuery) + plainEmail);
+  const mixed = normalizeCFEmailHTML(html(plainQuery + protectedEmail() + decoder), mixedExpected);
+  assert.deepEqual(mixed.bytes, mixedExpected);
+  assert.deepEqual(mixed.normalizations, [
+    { type: 'cloudflare-email-obfuscation', anchors: 1, decoderScripts: 1 },
+    { type: 'cloudflare-email-exclusion-markers', anchors: 1 },
+  ]);
+});
+
+test('JS-off email_off anchors cannot be accepted through CF decoding or ambiguous occurrence budgets', () => {
+  for (const [actual, expected] of [
+    [html(protectedQuery() + decoder), html(emailOff(plainQuery))],
+    [html(protectedEmail() + decoder), html(emailOff(plainEmail))],
+    [html(protectedQuery() + plainQuery + decoder), html(emailOff(plainQuery) + plainQuery)],
+  ]) assert.throws(() => normalizeCFEmailHTML(actual, expected), code('CF_EMAIL_MISMATCH'));
+});
+
+test('consumed email_off receipt records raw and fully restored hashes without mailto payloads', async t => {
+  const f = await fixture(t);
+  const expected = html(emailOff(plainQuery));
+  const actual = html(plainQuery);
+  f.resources.set('/contact/', expected);
+  await writeFile(path.join(f.dist, 'contact/index.html'), expected);
+  const receipt = await verifyDeployment({ ...f.options, fetchImpl: async (url, options) => new URL(url).pathname === '/contact/'
+    ? new Response(actual) : f.fetchImpl(url, options) });
+  assert.equal(receipt.passed, true);
+  const check = receipt.attempts[0].checks.find(check => check.path === '/contact/');
+  assert.equal(check.rawSha256, hash(actual));
+  assert.equal(check.expectedSha256, hash(expected));
+  assert.equal(check.normalizedSha256, hash(expected));
+  assert.deepEqual(check.normalizations, [{ type: 'cloudflare-email-exclusion-markers', anchors: 1 }]);
+  assert.doesNotMatch(JSON.stringify(receipt), /subject=|body=|editor@example.test/);
+});
+
+test('email_off marker support cannot hide changed payloads, attributes, extra content or broken marker pairs', async t => {
+  const f = await fixture(t);
+  const expected = html(emailOff(plainQuery));
+  f.resources.set('/contact/', expected);
+  await writeFile(path.join(f.dist, 'contact/index.html'), expected);
+  const altered = [
+    plainQuery.replace('editor@', 'private-secret@'),
+    plainQuery.replace('subject=jpop.today', 'subject=private-secret'),
+    plainQuery.replace('body=https', 'body=private-secret'),
+    plainQuery.replace('stable-', 'private-secret-'),
+    plainQuery.replace('&amp;', '&'),
+    plainQuery.replace(queryLabel, 'private-secret'),
+    plainQuery.replace('<a href=', '<a onclick="privateSecret()" href='),
+    plainQuery + plainQuery,
+    emailOff(plainQuery) + plainQuery,
+    '<!--email_off-->' + plainQuery,
+    plainQuery + '<!--/email_off-->',
+    plainQuery + '<!--private-secret-->',
+    plainQuery + '<script>privateSecret()</script>',
+    plainQuery + '<p>private-secret</p>',
+  ];
+  for (const contents of altered) {
+    const receipt = await verifyDeployment({ ...f.options, fetchImpl: async (url, options) => new URL(url).pathname === '/contact/'
+      ? new Response(html(contents)) : f.fetchImpl(url, options) });
+    assert.equal(receipt.passed, false);
+    assert.equal(receipt.code, 'BODY_MISMATCH');
+    assert.doesNotMatch(JSON.stringify(receipt), /private-secret|privateSecret|subject=|body=|editor@example.test/);
+  }
+});
