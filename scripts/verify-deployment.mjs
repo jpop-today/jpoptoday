@@ -108,8 +108,21 @@ export function normalizeCFEmailHTML(actualBytes, expectedBytes) {
   } catch { fail('BODY_MISMATCH'); }
   const allowed = new Map();
   const key = (payload, label) => payload + '\u0000' + label;
-  for (const match of expected.matchAll(/<a href="mailto:([A-Za-z0-9.+_-]+@[A-Za-z0-9.-]+(?:\?[^"<>]*)?)">([^<]*)<\/a>/g)) {
+  const anchorPattern = String.raw`<a href="mailto:[A-Za-z0-9.+_-]+@[A-Za-z0-9.-]+(?:\?[^"<>]*)?">[^<]*<\/a>`;
+  const excludedPattern = new RegExp(`<!--email_off-->(${anchorPattern})<!--/email_off-->`, 'g');
+  const excluded = new Map();
+  const excludedIdentities = new Set();
+  const unmarkedExpected = expected.replace(excludedPattern, (_, anchor) => {
+    excluded.set(anchor, (excluded.get(anchor) ?? 0) + 1);
+    const [, payload, label] = /^<a href="mailto:([^"]+)">([^<]*)<\/a>$/.exec(anchor);
+    excludedIdentities.add(key(payload, label));
+    return '';
+  });
+  for (const match of unmarkedExpected.matchAll(/<a href="mailto:([A-Za-z0-9.+_-]+@[A-Za-z0-9.-]+(?:\?[^"<>]*)?)">([^<]*)<\/a>/g)) {
     const entry = key(match[1], match[2]);
+    // An identical marked/unmarked anchor would make its position ambiguous
+    // after decoding. Fail closed rather than accept a broken JS-off link.
+    requireValue(!excludedIdentities.has(entry), 'CF_EMAIL_MISMATCH');
     allowed.set(entry, (allowed.get(entry) ?? 0) + 1);
   }
   function consume(payload, label) {
@@ -137,12 +150,33 @@ export function normalizeCFEmailHTML(actualBytes, expectedBytes) {
     mailtoAnchors++;
     return consume(payload, label);
   });
-  if (anchors === 0) return { bytes: actualBytes, normalizations: [] };
-  const decoder = '<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>';
-  requireValue(normalized.split(decoder).length === 2 && !expected.includes(decoder), 'CF_EMAIL_MISMATCH');
-  normalized = normalized.replace(decoder, '');
-  return { bytes: Buffer.from(normalized), normalizations: [{ type: 'cloudflare-email-obfuscation', anchors,
-    ...(mailtoAnchors ? { mailtoAnchors } : {}), decoderScripts: 1 }] };
+  const normalizations = [];
+  if (anchors) {
+    const decoder = '<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>';
+    requireValue(normalized.split(decoder).length === 2 && !expected.includes(decoder), 'CF_EMAIL_MISMATCH');
+    normalized = normalized.replace(decoder, '');
+    normalizations.push({ type: 'cloudflare-email-obfuscation', anchors,
+      ...(mailtoAnchors ? { mailtoAnchors } : {}), decoderScripts: 1 });
+  }
+  // Cloudflare consumes email_off comments while retaining the original direct
+  // mailto. Restore only exact trusted anchor occurrences; the caller still
+  // compares every byte, including all other comments, attributes and scripts.
+  let restored = 0;
+  if (excluded.size) {
+    const tokens = new RegExp(`<!--email_off-->${anchorPattern}<!--/email_off-->|${anchorPattern}`, 'g');
+    normalized = normalized.replace(tokens, token => {
+      const marked = token.startsWith('<!--email_off-->');
+      const anchor = marked ? token.slice('<!--email_off-->'.length, -'<!--/email_off-->'.length) : token;
+      const remaining = excluded.get(anchor) ?? 0;
+      if (!remaining) return token;
+      excluded.set(anchor, remaining - 1);
+      if (marked) return token;
+      restored++;
+      return `<!--email_off-->${anchor}<!--/email_off-->`;
+    });
+  }
+  if (restored) normalizations.push({ type: 'cloudflare-email-exclusion-markers', anchors: restored });
+  return { bytes: normalizations.length ? Buffer.from(normalized) : actualBytes, normalizations };
 }
 
 /** Consume a streamed response with a byte ceiling, not an unbounded text(). */
