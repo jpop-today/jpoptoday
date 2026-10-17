@@ -1157,6 +1157,111 @@
         "responseSha256": "528f6bf0d28542ee0307797860655b4d45735021b0f8c37e8030ba7b9edf725a"
       },
       "reason": "공식 전체 제목 レオ와 가수 優里가 staging 및 동결차트18위 원문과 정확히 일치합니다. 별도 버전·부제·공동명의 표기는 이 결과 셀에 없으며 원문을 그대로 보존합니다. 음원 동일성·반주기 모델 지원을 추정하지 않습니다."
+    },
+    {
+      "songId": "jpop-playlist-kana-boon-シルエット-52bb3cbb6c",
+      "provider": "tj",
+      "action": "confirm",
+      "expectedObservedNumber": "28214",
+      "number": "28214",
+      "evidence": {
+        "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=28214&strWord=Y",
+        "checkedAt": "2026-10-17T13:06:56.244122Z",
+        "title": "シルエット(NARUTO-ナルト- 16th OP)",
+        "artist": "KANA-BOON",
+        "responseSha256": "93061854fb8fa0703b5b907f85765a698e339b8869b3cd9f4ea12cdc8e04eb0d"
+      },
+      "reason": "공식 전체 제목 シルエット(NARUTO-ナルト- 16th OP)와 가수 KANA-BOON은 동결차트20위의 전체 원문과 일치하며 동일 canonicalId의 staging シルエット / KANA-BOON에 대응합니다. 공식 부제를 그대로 보존하며 오디오·반주기 모델의 동일성은 판단하지 않습니다."
+    },
+    {
+      "songId": "jpop-playlist-kana-boon-シルエット-52bb3cbb6c",
+      "provider": "ky",
+      "action": "confirm",
+      "expectedObservedNumber": "43862",
+      "number": "43862",
+      "evidence": {
+        "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=43862",
+        "checkedAt": "2026-10-17T13:06:59.502802Z",
+        "title": "シルエット (\"NARUTO-ナルト- 疾風伝\"OP)",
+        "artist": "KANA-BOON",
+        "responseSha256": "f65894a000bdf4bd15c41015c2c813a7a8fd641426ba5ec788fc74e20f75bff9"
+      },
+      "reason": "공식 전체 제목 シルエット (\"NARUTO-ナルト- 疾風伝\"OP)와 가수 KANA-BOON을 직접 읽었습니다. staging 본제 シルエット 및 동결차트20위의 KANA-BOON·NARUTO OP 표기에 대응하며 다른 가수·편곡·버전 표시는 없습니다. 금영의 疾風伝 부제를 그대로 보존하고 생략되지 않은 셀에 없는 16th나 오디오 동일성을 추가하지 않습니다."
+    },
+    {
+      "songId": "jpop-playlist-tani-yuuki-w-x-y-43434ad678",
+      "provider": "tj",
+      "action": "confirm",
+      "expectedObservedNumber": "52444",
+      "number": "52444",
+      "evidence": {
+        "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=52444&strWord=Y",
+        "checkedAt": "2026-10-17T13:07:01.038505Z",
+        "title": "W / X / Y",
+        "artist": "Tani Yuuki",
+        "responseSha256": "9d222b7aee0a98e15d182a1dafe4c883c29faddc2762fa76d5e1402cf549f761"
+      },
+      "reason": "공식 전체 제목 W / X / Y와 가수 Tani Yuuki가 staging 및 동일 canonicalId의 동결차트22위 원문과 정확히 일치합니다. 원본 unknown인 금영 번호를 추정하거나 추가하지 않습니다."
+    },
+    {
+      "songId": "jpop-playlist-mrs-green-apple-青と夏-89182753e8",
+      "provider": "tj",
+      "action": "confirm",
+      "expectedObservedNumber": "68127",
+      "number": "68127",
+      "evidence": {
+        "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=68127&strWord=Y",
+        "checkedAt": "2026-10-17T13:07:02.030760Z",
+        "title": "青と夏(映画'青夏 きみに恋した30日' OST)",
+        "artist": "Mrs. Green Apple",
+        "responseSha256": "2613ebe66de4ea373ba0fe65a30da260c8cd6c254c7c7d8dee64f5c35cad33ae"
+      },
+      "reason": "공식 전체 제목 青と夏(映画'青夏 きみに恋した30日' OST)와 가수 Mrs. Green Apple은 동결차트24위의 전체 원문과 정확히 일치합니다. staging의 青と夏 / Mrs. GREEN APPLE과는 가수의 대소문자 및 공식 영화 부제 표기 차이이며 원문 부제를 보존합니다. 별도 녹음·편곡 동일성을 추정하지 않습니다."
+    },
+    {
+      "songId": "jpop-playlist-mrs-green-apple-青と夏-89182753e8",
+      "provider": "ky",
+      "action": "confirm",
+      "expectedObservedNumber": "44466",
+      "number": "44466",
+      "evidence": {
+        "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=44466",
+        "checkedAt": "2026-10-17T13:07:06.340055Z",
+        "title": "青と夏 (映画\"青夏 きみに恋した30日\")",
+        "artist": "Mrs. GREEN APPLE",
+        "responseSha256": "0ff186fef867ac0263da512da962b2de640afe6225c1432afc35bd9d8489a9e4"
+      },
+      "reason": "공식 전체 제목 青と夏 (映画\"青夏 きみに恋した30日\")와 가수 Mrs. GREEN APPLE을 직접 읽었습니다. staging의 본제·가수와 일치하며 동결차트24위의 같은 영화 제목과도 대응합니다. 괄호 공백·인용부호와 OST 표기 유무의 차이를 검토하고 금영의 전체 표기를 그대로 보존하며 숨은 버전·오디오 동일성을 추정하지 않습니다."
+    },
+    {
+      "songId": "jpop-playlist-deco-27-モニタリンク-ed5c141bdb",
+      "provider": "tj",
+      "action": "confirm",
+      "expectedObservedNumber": "52468",
+      "number": "52468",
+      "evidence": {
+        "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=52468&strWord=Y",
+        "checkedAt": "2026-10-17T13:07:06.981424Z",
+        "title": "モニタリング",
+        "artist": "DECO*27(Feat.初音ミク)",
+        "responseSha256": "43829489694925b5eef0ecd2e46b7be23ed9a4532fd9cad15ce7aa241c0e7124"
+      },
+      "reason": "공식 전체 제목 モニタリング와 가수 DECO*27(Feat.初音ミク)는 동결차트25위의 전체 원문과 정확히 일치하며 staging의 モニタリング / DECO*27와 동일 canonicalId에 연결됩니다. 初音ミク feature 명의는 실제 공식 셀 및 차트의 동일한 전체 명의를 근거로 그대로 보존하며 별칭·권리를 추정하지 않습니다."
+    },
+    {
+      "songId": "jpop-playlist-deco-27-モニタリンク-ed5c141bdb",
+      "provider": "ky",
+      "action": "confirm",
+      "expectedObservedNumber": "57766",
+      "number": "57766",
+      "evidence": {
+        "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=57766",
+        "checkedAt": "2026-10-17T13:07:09.837464Z",
+        "title": "モニタリング",
+        "artist": "DECO*27 feat.初音ミク",
+        "responseSha256": "9d23064efa2f8142baa5cd1e6a3f0e7e3339a7881da85dd8e4892d9041be8b4e"
+      },
+      "reason": "공식 전체 제목 モニタリング와 가수 DECO*27 feat.初音ミク를 직접 읽었습니다. staging 본제·DECO*27 및 동결차트25위의 DECO*27(Feat.初音ミク)와 본제·주명의·feature 명의가 대응하며 차이는 괄호와 Feat. 대소문자 표기입니다. 공식 전체 명의를 보존하고 다른 가수의 별칭·녹음 동일성은 생성하지 않습니다."
     }
   ]
 }

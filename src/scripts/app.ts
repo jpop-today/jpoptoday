@@ -3,6 +3,11 @@ import { matchesSong, songHref } from '../../contracts/public-catalog.mjs';
 import type { Song } from '../lib/catalog';
 
 const byId = (id: string) => document.getElementById(id);
+const numberFilterLabels: Record<string, string> = {
+  'has-tj': 'TJ 번호 있음', 'has-ky': '금영 번호 있음',
+  'only-tj': 'TJ 번호만 확보', 'only-ky': '금영 번호만 확보',
+  'confirmed-tj': 'TJ 공식 확인', 'confirmed-ky': '금영 공식 확인',
+};
 const status = byId('status');
 let statusTimer: ReturnType<typeof setTimeout>;
 function announce(message: string) {
@@ -180,19 +185,29 @@ async function initialize() {
     const limit = hasQuery || isFavorites ? Math.max(30, shown) : shown;
     list.replaceChildren(...filtered.slice(offset, offset + limit).map(row));
     const count = byId('result-count'); if (count) count.textContent = `${filtered.length.toLocaleString('ko-KR')}곡`;
-    const empty = byId('empty-message'); if (empty) { empty.hidden = filtered.length > 0 && offset < filtered.length;
-      if (!empty.hidden) empty.textContent = filtered.length && offset >= filtered.length ? '이 페이지에 곡이 없습니다. 조건 해제로 첫 목록을 열어보세요.' : isFavorites ? '저장한 곡이 없거나 조건에 맞는 곡이 없습니다. 노래 찾기에서 곡을 저장하거나 조건을 해제하세요.' : '일치하는 곡이 없습니다. 제목 일부나 가수로 다시 찾아보세요.'; }
-    const more = byId('more'); if (more) more.hidden = filtered.length <= offset + limit;
     const numbers = params.getAll('number');
+    const hasConfirmedFilter = numbers.some(value => value === 'confirmed-tj' || value === 'confirmed-ky');
+    const empty = byId('empty-message');
+    if (empty) {
+      empty.hidden = filtered.length > 0 && offset < filtered.length;
+      if (!empty.hidden) {
+        if (filtered.length && offset >= filtered.length) empty.textContent = '이 페이지에 곡이 없습니다. 조건 해제로 첫 목록을 열어보세요.';
+        else if (hasConfirmedFilter) empty.textContent = isFavorites
+          ? '저장한 곡 중 현재 공식 확인 조건에 맞는 곡이 없습니다. 노래 찾기에서 곡을 저장하거나 조건을 줄여 보세요. 결과가 없어도 공식 미수록을 뜻하지 않습니다.'
+          : '현재 조건에 맞는 공식 확인곡이 없습니다. 조건을 줄여 보세요. 결과가 없어도 공식 미수록을 뜻하지 않습니다.';
+        else empty.textContent = isFavorites ? '저장한 곡이 없거나 조건에 맞는 곡이 없습니다. 노래 찾기에서 곡을 저장하거나 조건을 해제하세요.' : '일치하는 곡이 없습니다. 제목 일부나 가수로 다시 찾아보세요.';
+      }
+    }
+    const more = byId('more'); if (more) more.hidden = filtered.length <= offset + limit;
     document.querySelectorAll<HTMLElement>('[data-filter]').forEach(button => button.setAttribute('aria-pressed', String(button.dataset.filter === 'all' ? !numbers.length : numbers.includes(button.dataset.filter!))));
     const active = byId('active-filters'); if (active) active.hidden = !hasQuery;
-    const summary = byId('filter-summary'); if (summary) summary.textContent = [query.value, ...numbers.map(v => ({ 'has-tj': 'TJ 번호 있음', 'has-ky': '금영 번호 있음', 'only-tj': 'TJ 번호만 확보', 'only-ky': '금영 번호만 확보' })[v] ?? v), ...params.getAll('tag'), ...(params.get('anime') === 'all' ? ['애니메이션 전체'] : []), ...(params.get('artist') === 'all' ? ['가수 전체'] : [])].join(' · ');
+    const summary = byId('filter-summary'); if (summary) summary.textContent = [query.value, ...numbers.map(value => numberFilterLabels[value] ?? value), ...params.getAll('tag'), ...(params.get('anime') === 'all' ? ['애니메이션 전체'] : []), ...(params.get('artist') === 'all' ? ['가수 전체'] : [])].join(' · ');
     renderUnresolved(); syncSaveButtons();
   }
   const recent = readRecentFilters(storage);
   if (recent.entries.length) {
     const details = document.createElement('details'); details.className = 'recent-filters'; const label = document.createElement('summary'); label.textContent = '최근 사용한 필터'; details.append(label);
-    for (const item of recent.entries) { const button = document.createElement('button'); button.type = 'button'; button.textContent = item.value || (item.type === 'anime-all' ? '애니메이션 전체' : '가수 전체');
+    for (const item of recent.entries) { const button = document.createElement('button'); button.type = 'button'; button.textContent = (item.type === 'number' ? numberFilterLabels[item.value] : undefined) ?? (item.value || (item.type === 'anime-all' ? '애니메이션 전체' : '가수 전체'));
       button.addEventListener('click', () => { const params = new URLSearchParams(location.search); params.delete('page');
         if (item.type === 'number') params.append('number', item.value); else if (item.type === 'tag') params.append('tag', item.value);
         else params.set(item.type === 'anime-all' ? 'anime' : 'artist', 'all'); setUrl(params); }); details.append(button); }
