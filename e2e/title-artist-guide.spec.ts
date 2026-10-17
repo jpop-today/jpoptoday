@@ -72,11 +72,18 @@ test('guide index reaches the comparison guide without JavaScript at 360px and l
   await page.keyboard.press('Enter');
   await expect(page).toHaveURL('/contact/');
   await expect(page.locator('h1')).toHaveText('문의와 정보 정정');
-  for (const slug of ['find-japanese-songs', 'tj-ky-numbers', 'build-your-setlist', 'read-tj-chart', 'checking-song-numbers']) {
+  // Issue38 intentionally updates only the setlist copy instructions and its
+  // editorial date. The other four original guides keep their historical date.
+  for (const slug of ['find-japanese-songs', 'tj-ky-numbers', 'read-tj-chart', 'checking-song-numbers']) {
     const response = await request.get(`/guides/${slug}/`);
     expect(response.status()).toBe(200);
     expect(await response.text()).toMatch(/datetime="2026-10-14"/);
   }
+  const setlist = await request.get('/guides/build-your-setlist/');
+  expect(setlist.status()).toBe(200);
+  const setlistHtml = await setlist.text();
+  expect(setlistHtml).toMatch(/datetime="2026-10-18"/);
+  expect(setlistHtml).toContain('공식 확인, 관측·미확인, 확인 필요');
   expect(errors).toEqual([]);
   await context.close();
 });

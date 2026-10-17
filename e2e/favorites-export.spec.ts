@@ -205,7 +205,11 @@ test('export guidance is associated with the control, keeps the palette and expl
     await staticPage.goto((process.env.JPOP_TEST_BASE_URL ?? 'http://127.0.0.1:4321') + '/favorites/');
     await expect(staticPage.locator('h1')).toHaveText('내 즐겨찾기');
     await expect(copyButton(staticPage)).toBeDisabled();
-    await expect(staticPage.locator('[data-list-view="favorites"] > noscript')).toContainText('개인 저장 목록을 읽고 번호 목록을 복사하려면 JavaScript가 필요합니다');
+    // Playwright skips NOSCRIPT itself for text matching; assert its rendered
+    // child in a real JavaScript-disabled context, including visibility.
+    const noScriptNotice = staticPage.locator('[data-list-view="favorites"] > noscript > p');
+    await expect(noScriptNotice).toHaveText('개인 저장 목록을 읽고 번호 목록을 복사하려면 JavaScript가 필요합니다.');
+    await expect(noScriptNotice).toBeVisible();
     await expect(staticPage.locator('#favorites-export-status')).toContainText('관측·미확인');
     expect(await staticPage.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
     if (process.env.JPOP_SCREENSHOT_DIR) await staticPage.screenshot({ path: process.env.JPOP_SCREENSHOT_DIR + '/favorites-export-js-off-mobile.png', fullPage: false });
