@@ -1,3 +1,5 @@
+import { officialLookupMatches } from './provider-lookup.mjs';
+
 /** Explicit legacy observation projection; never a verified catalog v1. */
 export function buildPublicCatalog(staging) {
   if (staging?.stagingVersion !== 1 || staging.purpose !== 'legacy-catalog-staging' ||
@@ -27,6 +29,24 @@ export function buildPublicCatalog(staging) {
   return { version: 1, songs };
 }
 
+const nonempty = value => typeof value === 'string' && Boolean(value.trim());
+
+/** Boolean-only browser predicate; ledger validation supplies dates and reviewed identity. */
+export function hasConfirmedNumber(song, provider) {
+  if (!['tj', 'ky'].includes(provider) || song?.availability !== 'current' || song.origin !== 'playlist') return false;
+  const value = song.karaoke?.[provider], evidence = value?.evidence;
+  return value?.status === 'provider-confirmed' && value.conflict === false &&
+    Boolean(evidence) && ['checkedAt', 'title', 'artist'].every(key => nonempty(evidence[key])) &&
+    officialLookupMatches(evidence.url, provider, value.observedNumber);
+}
+
+/** Existing server projection keeps independent evidence copies; not needed by browser search. */
+export function confirmedNumbers(song) {
+  return ['tj', 'ky'].flatMap(provider => hasConfirmedNumber(song, provider)
+    ? [{ provider, number: song.karaoke[provider].observedNumber, evidence: { ...song.karaoke[provider].evidence } }]
+    : []);
+}
+
 export const normalizeSearch = value => String(value).normalize('NFKC').toLocaleLowerCase('ja').replace(/\s+/g, ' ').trim();
 export function songHref(id) { return '/songs/' + encodeURIComponent(id) + '/'; }
 export function matchesSong(song, params) {
@@ -34,7 +54,11 @@ export function matchesSong(song, params) {
     song.karaoke.tj.observedNumber, song.karaoke.ky.observedNumber, ...song.tags].join(' '));
   if (!normalizeSearch(params.get('q') ?? '').split(' ').filter(Boolean).every(term => text.includes(term))) return false;
   const tj = Boolean(song.karaoke.tj.observedNumber), ky = Boolean(song.karaoke.ky.observedNumber);
-  if (!params.getAll('number').every(value => ({ 'has-tj': tj, 'has-ky': ky, 'only-tj': tj && !ky, 'only-ky': ky && !tj })[value] ?? true)) return false;
+  const confirmed = params.getAll('number').some(value => value === 'confirmed-tj' || value === 'confirmed-ky')
+    ? ['tj', 'ky'].filter(provider => hasConfirmedNumber(song, provider)) : [];
+  if (!params.getAll('number').every(value => ({ 'has-tj': tj, 'has-ky': ky, 'only-tj': tj && !ky, 'only-ky': ky && !tj,
+    'confirmed-tj': confirmed.includes('tj'),
+    'confirmed-ky': confirmed.includes('ky') })[value] ?? true)) return false;
   const tags = [...song.tags, ...(song.artistKo ? ['가수:' + song.artistKo] : [])];
   if (!params.getAll('tag').every(tag => tags.includes(tag))) return false;
   if (params.get('anime') === 'all' && !tags.some(tag => tag.startsWith('애니메이션:') || ['애니메이션', '애니', 'anime'].includes(normalizeSearch(tag)))) return false;

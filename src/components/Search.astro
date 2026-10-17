@@ -5,5 +5,36 @@ import Icon from './Icon.astro';
   <label class="search-box"><Icon name="search" /><span class="sr-only">곡명, 가수, 노래방 번호 검색</span><input id="query" type="search" name="q" placeholder="곡명 · 가수 · TJ / 금영 번호" autocomplete="off" /></label>
   <button class="primary-button" type="submit">검색</button>
 </form>
-<div class="filters"><div class="filter-tabs" aria-label="번호 조건"><button type="button" data-filter="all" aria-pressed="true" disabled>전체</button><button type="button" data-filter="has-tj" aria-pressed="false" disabled>TJ 번호 있음</button><button type="button" data-filter="has-ky" aria-pressed="false" disabled>금영 번호 있음</button></div><span class="filter-note">관측 번호 · 재확인 필요</span></div>
+<div class="filters search-filters">
+  <div class="filter-tabs" role="group" aria-label="번호 조건" aria-describedby="number-filter-note">
+    <button type="button" data-filter="all" aria-pressed="true" disabled>전체</button>
+    <button type="button" data-filter="has-tj" aria-pressed="false" disabled>TJ 번호 있음</button>
+    <button type="button" data-filter="has-ky" aria-pressed="false" disabled>금영 번호 있음</button>
+    <button type="button" data-filter="confirmed-tj" aria-pressed="false" disabled>TJ 공식 확인</button>
+    <button type="button" data-filter="confirmed-ky" aria-pressed="false" disabled>금영 공식 확인</button>
+  </div>
+  <p id="number-filter-note" class="filter-note">공식 확인은 선택한 업체의 제목·가수 대조 근거 기준입니다. 두 공식 확인 조건을 함께 선택하면 양쪽 근거가 있어야 하며, 선택하지 않은 업체의 번호는 관측값일 수 있습니다. 결과 0건은 공식 미수록을 뜻하지 않습니다.</p>
+</div>
 <div id="active-filters" class="active-filters" hidden><span id="filter-summary"></span><button type="button" id="clear-filters">조건 해제</button></div>
+<noscript><p class="filter-fallback">번호 조건 검색에는 JavaScript가 필요합니다. 현재 표시된 목록에는 위 조건이 적용되지 않았습니다. <a href="/coverage/">공식 확인 번호 목록</a>과 <a href="/guides/tj-ky-numbers/">번호 확인 가이드</a>에서 업체별 근거를 읽을 수 있습니다.</p></noscript>
+
+<style>
+  .search-filters { align-items: flex-start; flex-direction: column; gap: 10px; padding-bottom: 14px; }
+  .search-filters .filter-tabs { flex-wrap: wrap; justify-content: flex-start; width: 100%; gap: 4px 8px; }
+  .search-filters .filter-tabs button { min-width: 44px; min-height: 44px; padding: 14px 16px 11px; }
+  .search-filters .filter-note { align-self: flex-start; max-width: 84ch; padding: 0; margin: 0; line-height: 1.7; }
+  .filter-fallback { color: var(--muted); font-size: 14px; line-height: 1.8; }
+  .filter-fallback a { display: inline-block; min-height: 44px; padding-block: 10px; }
+  @media (max-width: 600px) {
+    .search-filters .filter-tabs { gap: 4px; }
+    .search-filters .filter-tabs button { padding: 12px 10px 9px; }
+    .filter-fallback { font-size: 13px; }
+    :global([data-list-view] .number-cell) { display: grid; grid-template-columns: 24px minmax(0, 1fr); column-gap: 6px; row-gap: 4px; width: calc(50% - 4px); min-width: 0; align-self: start; }
+    :global([data-list-view] .number-cell:nth-of-type(3)) { margin-left: calc(50% + 4px); }
+    :global([data-list-view] .mobile-label) { width: auto; font-size: 11px; white-space: nowrap; }
+    :global([data-list-view] .number-button) { width: 100%; max-width: 100%; min-height: 44px; gap: 6px; padding: 7px 6px; font-size: 13px; }
+    :global([data-list-view] .verification-badge) { grid-column: 2; margin-top: 0; font-size: 11px; white-space: nowrap; }
+    :global([data-list-view] .unknown) { display: flex; align-items: center; min-height: 44px; }
+    :global([data-list-view] .save-button) { width: 44px; height: 44px; }
+  }
+</style>

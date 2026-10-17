@@ -99,7 +99,13 @@ async function checkCase(page: Page, item: GuideCase) {
 function checkCatalog(songs: Song[]) {
   expect(songs).toHaveLength(3317);
   expect(new Set(songs.map(song => song.id)).size).toBe(3317);
-  expect(ledger.entries).toHaveLength(77);
+  // Issue35 appends independently reviewed confirmations. Preserve the complete
+  // original Issue30 ledger prefix (base2964f7e), rather than freezing its length
+  // and preventing unrelated reviewed additions. The full current ledger hash
+  // is still compared with build-info below; contract validation checks appends.
+  expect(ledger.entries.length).toBeGreaterThanOrEqual(77);
+  expect(createHash('sha256').update(JSON.stringify(ledger.entries.slice(0, 77))).digest('hex'))
+    .toBe('c2396a2aa93c550e40dd8881527db06305fd01926f9498b54196a2db803e83cb');
   for (const item of cases) {
     const matches = songs.filter(song => song.id === item.id);
     expect(matches).toHaveLength(1);
