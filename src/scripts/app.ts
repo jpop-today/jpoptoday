@@ -1,5 +1,6 @@
 import { createIdentityResolver, readFavorites, updateFavorites, readRecentFilters, resolveLegacyUrl } from '../../contracts/legacy-compatibility.mjs';
 import { matchesSong, songHref } from '../../contracts/public-catalog.mjs';
+import { formatFavoritesExport } from '../../contracts/favorites-export.mjs';
 import type { Song } from '../lib/catalog';
 
 const byId = (id: string) => document.getElementById(id);
@@ -137,7 +138,7 @@ async function initialize() {
   window.addEventListener('storage', event => { if (event.key === 'jpop_today_favorites') { favorites = readFavorites(storage, resolver); render(); } });
   byId('copy-favorites')?.addEventListener('click', () => {
     if (!filtered.length) { announce('복사할 곡이 없습니다.'); return; }
-    void copy(filtered.map(song => `${song.titleOriginal} · ${song.artistOriginal} | TJ ${song.karaoke.tj.observedNumber ?? '확인 필요'} | 금영 ${song.karaoke.ky.observedNumber ?? '확인 필요'}`).join('\n'));
+    void copy(formatFavoritesExport(filtered));
   });
 
   function icon(name: 'copy' | 'star') {

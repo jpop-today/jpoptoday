@@ -126,7 +126,7 @@ test('reviewed corrections remove wrong-number copy controls and show the offici
   await expect(page.locator(`[data-song-id="${suppressed.songId}"] [data-copy="${suppressed.expectedObservedNumber}"]`)).toHaveCount(0);
   await page.getByRole('button', { name: '번호 목록 복사', exact: true }).click();
   await expect(page.getByRole('dialog')).toBeVisible();
-  await expect(page.locator('#copy-text')).toHaveValue(`${suppressedSong.titleOriginal} · ${suppressedSong.artistOriginal} | TJ ${suppressedSong.karaoke.tj.observedNumber ?? '확인 필요'} | 금영 ${suppressedSong.karaoke.ky.observedNumber ?? '확인 필요'}`);
+  await expect(page.locator('#copy-text')).toHaveValue(`${suppressedSong.titleOriginal} · ${suppressedSong.artistOriginal} | TJ 확인 필요 | 금영 확인 필요`);
 });
 
 test('chart ranks link to stable identities after snapshot rank changes', async ({ page }) => {
