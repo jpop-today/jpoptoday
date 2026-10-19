@@ -100,8 +100,13 @@ test('public boundary and actual 404; crawler behavior follows the artifact targ
 
 test('reviewed corrections remove wrong-number copy controls and show the official evidence', async ({ page, request }) => {
   const ledger = JSON.parse(readFileSync(new URL('../data/reviewed/provider-corrections.json', import.meta.url), 'utf8'));
+  const publicData = await (await request.get('/catalog.json')).json();
   const suppressed = ledger.entries.find((entry: { action: string }) => entry.action === 'suppress');
-  const confirmed = ledger.entries.find((entry: { action: string }) => entry.action === 'confirm');
+  // A historical official lookup can still have an unresolved duplicate-number
+  // conflict. This positive control must be current, playlist-origin and non-conflicting.
+  const confirmed = ledger.entries.find((entry: { action: string; songId: string; provider: 'tj' | 'ky' }) => entry.action === 'confirm'
+    && publicData.songs.some((song: Song) => song.id === entry.songId && song.availability === 'current'
+      && song.origin === 'playlist' && song.karaoke[entry.provider].conflict === false));
   expect(suppressed).toBeTruthy(); expect(confirmed).toBeTruthy();
   await page.goto(pathFor(suppressed.songId));
   await expect(page.getByRole('button', { name: `${suppressed.provider} 번호 복사`, exact: true })).toHaveCount(0);
@@ -113,7 +118,6 @@ test('reviewed corrections remove wrong-number copy controls and show the offici
   await expect(page.locator('main')).toContainText(confirmed.evidence.title);
   await expect(page.locator(`a[href="${confirmed.evidence.url}"]`)).toHaveCount(1);
   if (process.env.JPOP_SCREENSHOT_DIR) await page.screenshot({ path: process.env.JPOP_SCREENSHOT_DIR + '/reviewed-detail.png', fullPage: true });
-  const publicData = await (await request.get('/catalog.json')).json();
   expect(publicData.version).toBe(2); expect(JSON.stringify(publicData)).not.toContain('responseSha256');
   const suppressedSong = publicData.songs.find((song: Song) => song.id === suppressed.songId);
   await page.goto('/search/?q=' + encodeURIComponent(suppressedSong.titleOriginal) + '&number=has-' + suppressed.provider);

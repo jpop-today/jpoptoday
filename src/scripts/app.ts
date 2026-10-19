@@ -1,5 +1,5 @@
 import { createIdentityResolver, readFavorites, updateFavorites, readRecentFilters, resolveLegacyUrl } from '../../contracts/legacy-compatibility.mjs';
-import { matchesSong, songHref } from '../../contracts/public-catalog.mjs';
+import { hasConfirmedNumber, matchesSong, songHref } from '../../contracts/public-catalog.mjs';
 import { formatFavoritesExport } from '../../contracts/favorites-export.mjs';
 import type { Song } from '../lib/catalog';
 
@@ -157,10 +157,12 @@ async function initialize() {
       const cell = document.createElement('div'); cell.className = 'number-cell';
       const label = document.createElement('span'); label.className = 'mobile-label'; label.textContent = provider === 'tj' ? 'TJ' : '금영'; cell.append(label);
       const value = song.karaoke[provider];
-      if (value.observedNumber) { const button = document.createElement('button'); button.type = 'button'; button.className = 'number-button' + (value.conflict ? ' conflict' : '');
-        button.dataset.copy = value.observedNumber; button.setAttribute('aria-label', `${song.titleOriginal} ${label.textContent} ${value.status === 'provider-confirmed' ? '공식 확인' : '관측'} 번호 ${value.observedNumber} 복사`);
+      if (value.conflict) { const withheld = document.createElement('span'); withheld.className = 'unknown'; withheld.textContent = '번호 충돌 · 재확인 필요'; cell.append(withheld);
+      } else if (value.observedNumber) { const button = document.createElement('button'); button.type = 'button'; button.className = 'number-button';
+        const confirmed = hasConfirmedNumber(song, provider);
+        button.dataset.copy = value.observedNumber; button.setAttribute('aria-label', `${song.titleOriginal} ${label.textContent} ${confirmed ? '공식 확인' : '관측'} 번호 ${value.observedNumber} 복사`);
         button.append(document.createTextNode(value.observedNumber), icon('copy')); cell.append(button);
-        if (value.status === 'provider-confirmed') { const badge = document.createElement('small'); badge.className = 'verification-badge'; badge.textContent = '공식 확인'; cell.append(badge); }
+        if (confirmed) { const badge = document.createElement('small'); badge.className = 'verification-badge'; badge.textContent = '공식 확인'; cell.append(badge); }
       } else { const unknown = document.createElement('span'); unknown.className = 'unknown'; unknown.textContent = '확인 필요'; cell.append(unknown); }
       li.append(cell);
     }

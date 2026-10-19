@@ -4,7 +4,7 @@ import { lstat, readFile, readdir } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { isDeepStrictEqual } from 'node:util';
-import { buildPublicCatalog } from '../contracts/public-catalog.mjs';
+import { buildPublicCatalog, hasConfirmedNumber } from '../contracts/public-catalog.mjs';
 import { applyProviderCorrections } from '../contracts/provider-corrections.mjs';
 import { buildTarget, robotsFor } from '../contracts/publication.mjs';
 import { validateChartSnapshot } from './import-chart-snapshot.mjs';
@@ -118,6 +118,46 @@ function canonicalFor(file) {
   return `${origin}/${route.split('/').map(encodeURIComponent).join('/')}`;
 }
 
+function visibleText(html) {
+  return normalized(decodeEntities(html.replace(/<(script|style)\b[^>]*>[\s\S]*?<\/\1>/gi, '').replace(/<!--[\s\S]*?-->/g, '').replace(/<[^>]*>/g, ' ')));
+}
+
+/** Check the displayed number controls per provider, separately from historical evidence. */
+export function verifyDetailNumbers(html, song, file = 'detail') {
+  const group = /<div\b[^>]*class=["']detail-numbers["'][^>]*>([\s\S]*?)<\/div>/i.exec(html)?.[1];
+  requireCondition(group !== undefined, `${file}: missing provider number sections`);
+  const sections = [...group.matchAll(/<section\b[^>]*>([\s\S]*?)<\/section>/gi)].map(match => match[1]);
+  requireCondition(sections.length === 2, `${file}: expected exactly two provider number sections`);
+  for (const [index, provider] of ['tj', 'ky'].entries()) {
+    const section = sections[index];
+    const heading = visibleText(/<h2\b[^>]*>([\s\S]*?)<\/h2>/i.exec(section)?.[1] ?? '');
+    requireCondition(heading === (provider === 'tj' ? 'TJ' : '금영'), `${file}: ${provider} section heading differs`);
+    // Reviewed correction reasons and source links may retain the old number.
+    // They cannot establish a current display/copy permission.
+    const presentation = section.split(/<p\b[^>]*class=["']verification-note["']/i)[0];
+    const text = visibleText(presentation);
+    const copyTags = [...section.matchAll(/<[^>]+>/g)].map(match => ({ tag: match[0], attr: attributes(match[0]) }))
+      .filter(({ tag }) => /\sdata-copy(?=\s|=|\/?>)/i.test(tag));
+    const entry = song.karaoke[provider];
+    if (entry.conflict) {
+      requireCondition(text.includes('번호 충돌 · 재확인 필요') && text.includes('번호 표시와 복사를 보류') && text.includes('미수록을 뜻하지 않습니다'), `${file}: ${provider} conflict withholding notice is absent`);
+      requireCondition(!/<button\b/i.test(section) && copyTags.length === 0 && !/공식 (?:검색에서 확인|확인)/.test(text), `${file}: ${provider} conflict exposes a copy control or official claim`);
+      requireCondition(!entry.observedNumber || !text.includes(entry.observedNumber), `${file}: ${provider} conflict exposes its number`);
+    } else if (entry.observedNumber) {
+      const buttons = [...presentation.matchAll(/<button\b([^>]*)>([\s\S]*?)<\/button>/gi)];
+      requireCondition(copyTags.length === 1 && /^<button\b/i.test(copyTags[0].tag) && copyTags[0].attr.type === 'button'
+        && copyTags[0].attr['data-copy'] === entry.observedNumber && buttons.length === 1 && visibleText(buttons[0][2]) === entry.observedNumber,
+      `${file}: ${provider} observed number or copy control differs`);
+      requireCondition(text.includes(hasConfirmedNumber(song, provider) ? '공식 검색에서 확인' : '관측 번호 · 재확인 필요'), `${file}: ${provider} verification label differs`);
+      requireCondition(hasConfirmedNumber(song, provider) || !/공식 (?:검색에서 확인|확인)/.test(text), `${file}: ${provider} unconfirmed official claim`);
+    } else {
+      const numericDisplay = [...presentation.matchAll(/<(p|span|strong|output|div)\b[^>]*>([\s\S]*?)<\/\1>/gi)]
+        .some(match => /^[0-9]{1,10}$/.test(visibleText(match[2])));
+      requireCondition(copyTags.length === 0 && !/<button\b/i.test(section) && !numericDisplay && !/공식 (?:검색에서 확인|확인)/.test(text) && text.includes('미수록을 뜻하지 않습니다'), `${file}: ${provider} unknown number boundary differs`);
+    }
+  }
+}
+
 function verifyHtml(html, file, song, canonicals, target) {
   const canonicalsOnPage = [...html.matchAll(/<link\b[^>]*>/gi)].map(match => attributes(match[0])).filter(attr => attr.rel?.toLowerCase().split(/\s+/).includes('canonical'));
   requireCondition(canonicalsOnPage.length === 1 && canonicalsOnPage[0].href === canonicalFor(file), `${file}: canonical must match the encoded static route`);
@@ -136,13 +176,10 @@ function verifyHtml(html, file, song, canonicals, target) {
   if (!song) return;
   const body = /<body\b[^>]*>([\s\S]*?)<\/body>/i.exec(html)?.[1];
   requireCondition(body !== undefined, `${file}: missing static body`);
-  const text = normalized(decodeEntities(body.replace(/<(script|style)\b[^>]*>[\s\S]*?<\/\1>/gi, '').replace(/<!--([\s\S]*?)-->/g, '').replace(/<[^>]*>/g, ' ')));
+  const text = visibleText(body);
   for (const field of ['titleOriginal', 'artistOriginal']) requireCondition(text.includes(normalized(song[field])), `${file}: ${field} is absent from the static body`);
   requireCondition(title.includes(normalized(song.titleOriginal)), `${file}: title does not identify the song`);
-  for (const provider of ['tj', 'ky']) {
-    const number = song.karaoke[provider].observedNumber;
-    if (number) requireCondition(text.includes(number), `${file}: ${provider} observed number is absent from the static body`);
-  }
+  verifyDetailNumbers(body, song, file);
   if (['tj', 'ky'].some(provider => song.karaoke[provider].observedNumber)) requireCondition(text.includes('관측') && text.includes('확인'), `${file}: observed numbers need a visible verification notice`);
   if (song.availability === 'archived') requireCondition(text.includes('보관'), `${file}: archived status must be visible`);
 }
