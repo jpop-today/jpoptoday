@@ -121,11 +121,13 @@ async function captureClipboard(page: Page, denied = false) {
 test('frozen actual inputs and public catalog retain all conflict numbers, evidence and stable identities', async ({ request }) => {
   const expectedHashes: Record<string, string> = {
     'data/staging/legacy-catalog.json': 'a3d482ca2da082852883960d200841b4ad4ff26336eaf1174c55677881eecbf3',
-    'data/reviewed/provider-corrections.json': 'dbef4ae6abc202b90e7e709f24d5654cee6840ec9f8ac7998ac0e43da0356cc1',
+    'data/reviewed/provider-corrections.json': 'a0d23d04cc705d444325f1ea8662cc00044fcba3f86074c66800569840a6eae9',
     'data/chart-snapshot.json': '7ade29897828967b98b2bca64b285b9694356ad3d2b97498f06270217c91da97',
   };
   for (const [path, hash] of Object.entries(expectedHashes)) expect(createHash('sha256').update(bytes(path)).digest('hex'), path).toBe(hash);
-  expect(staging.songs).toHaveLength(3317); expect(ledger.entries).toHaveLength(84);
+  expect(staging.songs).toHaveLength(3317); expect(ledger.entries).toHaveLength(92);
+  // Original Issue41 ledger84 is an immutable prefix; new reviews append only.
+  expect(createHash('sha256').update(JSON.stringify({ ...ledger, entries: ledger.entries.slice(0, 84) })).digest('hex')).toBe('5275c44ef1cd30a57b0cf633be33be16d5be500ed8ee4446012cda54be939370');
   expect(conflicts).toHaveLength(4);
   expect(conflicts.flatMap(song => providers.filter(provider => oracle(song, provider).conflict))).toHaveLength(8);
   expect(chart.songs.filter(row => conflicts.some(song => song.id === row.canonicalId)).map(row => row.rank)).toEqual([28, 37]);

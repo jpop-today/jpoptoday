@@ -1262,6 +1262,126 @@
         "responseSha256": "9d23064efa2f8142baa5cd1e6a3f0e7e3339a7881da85dd8e4892d9041be8b4e"
       },
       "reason": "공식 전체 제목 モニタリング와 가수 DECO*27 feat.初音ミク를 직접 읽었습니다. staging 본제·DECO*27 및 동결차트25위의 DECO*27(Feat.初音ミク)와 본제·주명의·feature 명의가 대응하며 차이는 괄호와 Feat. 대소문자 표기입니다. 공식 전체 명의를 보존하고 다른 가수의 별칭·녹음 동일성은 생성하지 않습니다."
+    },
+    {
+      "songId": "jpop-playlist-orangestar-feat-ia-アスノヨソ-ラ哨戒班-45d82ae042",
+      "provider": "tj",
+      "action": "confirm",
+      "expectedObservedNumber": "27984",
+      "number": "27984",
+      "evidence": {
+        "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=27984&strWord=Y",
+        "checkedAt": "2026-10-19T18:55:46.875855Z",
+        "title": "アスノヨゾラ哨戒班",
+        "artist": "Orangestar(Feat.IA)",
+        "responseSha256": "c12859c173e9f0d2877549755c307bab0789c63f05fca00edd7f565b1c8cdfb8"
+      },
+      "reason": "TJ 공식 제목 アスノヨゾラ哨戒班은 staging 본제와 같고 가수 Orangestar(Feat.IA)는 동일 canonicalId의 동결차트 전체 명의와 정확히 일치합니다. staging Orangestar feat.IA와는 Feat 대소문자·괄호·공백 차이이며 전체 명의 IA를 보존합니다. 음원·편곡 또는 기기 모델의 동일성은 판단하지 않습니다."
+    },
+    {
+      "songId": "jpop-playlist-orangestar-feat-ia-アスノヨソ-ラ哨戒班-45d82ae042",
+      "provider": "ky",
+      "action": "confirm",
+      "expectedObservedNumber": "44091",
+      "number": "44091",
+      "evidence": {
+        "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=44091",
+        "checkedAt": "2026-10-19T18:55:50.513829Z",
+        "title": "アスノヨゾラ哨戒班",
+        "artist": "Orangestar feat.IA",
+        "responseSha256": "4aa57c859d7b8f4dfc07fe2ac15d0ab9a621a319ddca6038e74d82746206fddb"
+      },
+      "reason": "금영 공식 제목 アスノヨゾラ哨戒班과 가수 Orangestar feat.IA는 staging 원문과 정확히 일치합니다. 동결차트의 Orangestar(Feat.IA)와는 feat 대소문자·괄호·공백 차이를 검토했습니다. 전체 명의를 보존하며 음원·편곡 또는 현장 수록 동일성을 추정하지 않습니다."
+    },
+    {
+      "songId": "jpop-playlist-mrs-green-apple-ライラック-845233e093",
+      "provider": "tj",
+      "action": "confirm",
+      "expectedObservedNumber": "68461",
+      "number": "68461",
+      "evidence": {
+        "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=68461&strWord=Y",
+        "checkedAt": "2026-10-19T18:55:51.860999Z",
+        "title": "ライラック(アニメ '忘却バッテリー' OST)",
+        "artist": "Mrs. GREEN APPLE",
+        "responseSha256": "3b131a20449211a8c308f4bb805900f9e95f5a3d564dcd64deace1477a88a160"
+      },
+      "reason": "TJ 공식 전체 제목 ライラック(アニメ '忘却バッテリー' OST)와 가수 Mrs. GREEN APPLE은 동일 canonicalId의 동결차트 전체 표기와 정확히 일치합니다. staging 본제 ライラック·가수와 대응하며 공식 작품 부제를 그대로 보존합니다. 오디오·반주기 버전의 동일성은 판단하지 않습니다."
+    },
+    {
+      "songId": "jpop-playlist-mrs-green-apple-ライラック-845233e093",
+      "provider": "ky",
+      "action": "confirm",
+      "expectedObservedNumber": "75996",
+      "number": "75996",
+      "evidence": {
+        "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=75996",
+        "checkedAt": "2026-10-19T18:55:54.727123Z",
+        "title": "ライラック (\"忘却バッテリー\"OP)",
+        "artist": "Mrs. GREEN APPLE",
+        "responseSha256": "173207a515933cbec1d668cf802004866e78b6144cb6020b47a7fcf62b75a031"
+      },
+      "reason": "금영 공식 본제 ライラック과 가수 Mrs. GREEN APPLE은 staging과 일치하며 작품명 忘却バッテリー는 동일 canonicalId의 동결차트와 대응합니다. 공식 부제의 OP와 TJ 차트의 OST 표기는 작품에서의 사용 표기 차이로 읽고 금영 전체 셀을 그대로 보존합니다. 이를 같은 녹음·편곡 또는 모든 기기 수록의 근거로 확대하지 않습니다."
+    },
+    {
+      "songId": "jpop-playlist-back-number-高嶺の花子さん-2433a62d20",
+      "provider": "tj",
+      "action": "confirm",
+      "expectedObservedNumber": "27805",
+      "number": "27805",
+      "evidence": {
+        "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=27805&strWord=Y",
+        "checkedAt": "2026-10-19T18:55:55.401885Z",
+        "title": "高嶺の花子さん",
+        "artist": "back number",
+        "responseSha256": "b9c5e42c18461c14ade1d619a94c9aff5d80027f659dc05cb65046f9bd863e45"
+      },
+      "reason": "TJ 공식 전체 제목 高嶺の花子さん과 가수 back number가 staging 및 동일 canonicalId의 동결차트 원문과 정확히 일치합니다. 이 번호의 제목·가수 대조만 확인하며 음원·편곡 또는 현장 기기 지원을 추정하지 않습니다."
+    },
+    {
+      "songId": "jpop-playlist-back-number-高嶺の花子さん-2433a62d20",
+      "provider": "ky",
+      "action": "confirm",
+      "expectedObservedNumber": "43932",
+      "number": "43932",
+      "evidence": {
+        "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=43932",
+        "checkedAt": "2026-10-19T18:55:58.398530Z",
+        "title": "高嶺の花子さん",
+        "artist": "back number",
+        "responseSha256": "03397b55b424ef2c7ec7f3785b3885fc58519c687356d418a35ae624d95e2e31"
+      },
+      "reason": "금영 공식 전체 제목 高嶺の花子さん과 가수 back number가 staging 및 동일 canonicalId의 동결차트 원문과 정확히 일치합니다. 업체별 번호와 근거를 보존하며 음원·편곡 또는 현장 기기 지원을 추정하지 않습니다."
+    },
+    {
+      "songId": "jpop-playlist-x-japan-endless-rain-a5ac0ff8b8",
+      "provider": "tj",
+      "action": "confirm",
+      "expectedObservedNumber": "6773",
+      "number": "6773",
+      "evidence": {
+        "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=6773&strWord=Y",
+        "checkedAt": "2026-10-19T18:55:59.099286Z",
+        "title": "Endless Rain",
+        "artist": "X-JAPAN",
+        "responseSha256": "803c1b21543c0064ab5cfb920858caccb4865131c5d0f48f278b1a21f8f49c24"
+      },
+      "reason": "TJ 공식 전체 제목 Endless Rain과 가수 X-JAPAN은 동일 canonicalId의 동결차트 전체 표기와 정확히 일치합니다. staging ENDLESS RAIN / X JAPAN과는 제목 대소문자 및 가수 하이픈·공백 차이를 검토했습니다. 별도 명의 병합·오디오 동일성은 추정하지 않습니다."
+    },
+    {
+      "songId": "jpop-playlist-x-japan-endless-rain-a5ac0ff8b8",
+      "provider": "ky",
+      "action": "confirm",
+      "expectedObservedNumber": "40993",
+      "number": "40993",
+      "evidence": {
+        "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=40993",
+        "checkedAt": "2026-10-19T18:56:01.553677Z",
+        "title": "Endless Rain (\"X2\",\"乙姫CONNECTION\"OST,映画\"ジパング\")",
+        "artist": "X JAPAN",
+        "responseSha256": "55ef88f620c9ccf38bf2ac634175f21813a6327ade5ab33d753b6b992e32bb82"
+      },
+      "reason": "금영 공식 본제 Endless Rain은 staging ENDLESS RAIN과 대소문자 차이이고 가수 X JAPAN은 staging과 정확히 일치합니다. 공식 셀의 X2·乙姫CONNECTION·영화 ジパング 작품 부제를 생략 없이 보존합니다. 동결차트 X-JAPAN과의 하이픈·공백 차이를 검토했으며 부제 없는 원본에 새 버전·녹음 동일성을 만들어 넣지 않습니다."
     }
   ]
 }

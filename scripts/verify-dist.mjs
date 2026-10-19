@@ -122,6 +122,86 @@ function visibleText(html) {
   return normalized(decodeEntities(html.replace(/<(script|style)\b[^>]*>[\s\S]*?<\/\1>/gi, '').replace(/<!--[\s\S]*?-->/g, '').replace(/<[^>]*>/g, ' ')));
 }
 
+/** Validate the rendered intersection, including visible counts and the usable AND link. */
+export function verifyBothProviderDiscovery(html, songs) {
+  // Static visibility only; computed CSS and keyboard behavior remain browser gates.
+  const stack = [], voidTags = new Set(['area', 'base', 'br', 'col', 'embed', 'hr', 'img', 'input', 'link', 'meta', 'param', 'source', 'track', 'wbr']);
+  html = html.replace(/<!--[\s\S]*?-->|<\/?[a-zA-Z][^>]*>|[^<]+|</g, token => {
+    if (token.startsWith('<!--')) return '';
+    const closing = /^<\/([\w:-]+)/.exec(token);
+    if (closing) {
+      const index = stack.findLastIndex(frame => frame.tag === closing[1].toLowerCase());
+      const hidden = index >= 0 ? stack[index].hidden : stack.at(-1)?.hidden;
+      if (index >= 0) stack.splice(index);
+      return hidden ? '' : token;
+    }
+    const opening = /^<([\w:-]+)\b([\s\S]*?)>$/.exec(token);
+    if (!opening) return stack.at(-1)?.hidden ? '' : token;
+    const tag = opening[1].toLowerCase(), raw = opening[2], attrs = attributes(raw);
+    const booleanAttrs = raw.replace(/"[^"]*"|'[^']*'/g, '');
+    const hidden = Boolean(stack.at(-1)?.hidden || ['script', 'style', 'template'].includes(tag)
+      || /(?:^|\s)(?:hidden|inert)(?:\s|=|\/|$)/i.test(booleanAttrs) || attrs['aria-hidden']?.toLowerCase() === 'true'
+      || /(?:^|;)\s*(?:display\s*:\s*none|visibility\s*:\s*(?:hidden|collapse)|content-visibility\s*:\s*hidden)\s*(?:!important)?\s*(?:;|$)/i.test(attrs.style ?? ''));
+    if (!voidTags.has(tag) && !/\/\s*$/.test(raw)) stack.push({ tag, hidden });
+    return hidden ? '' : token;
+  });
+  const groups = new Map(), seen = new Set();
+  let total = 0;
+  for (const song of songs) {
+    requireCondition(!seen.has(song.id), 'artists: duplicate input ID');
+    seen.add(song.id);
+    const tj = hasConfirmedNumber(song, 'tj'), ky = hasConfirmedNumber(song, 'ky');
+    if (!tj && !ky) continue;
+    const id = 'artist-' + createHash('sha256').update(song.artistOriginal, 'utf8').digest('hex').slice(0, 16);
+    if (!groups.has(id)) groups.set(id, { name: song.artistOriginal, both: 0 });
+    if (tj && ky) { groups.get(id).both += 1; total += 1; }
+  }
+  const markers = body => [...body.matchAll(/<(dd|span)\b(?=[^>]*\bdata-provider-count=)([^>]*)>([\s\S]*?)<\/\1>/gi)]
+    .map(match => ({ attrs: attributes(match[2]), text: visibleText(match[3]) }))
+    .filter(marker => marker.attrs['data-provider'] === 'both');
+  const check = (body, scope, expected) => {
+    const values = markers(body).filter(marker => marker.attrs['data-provider-count'] === scope);
+    requireCondition(values.length === 1, `artists: missing or duplicate ${scope} both count`);
+    const value = values[0], digits = value.text.match(/[0-9][0-9,]*/g) ?? [];
+    requireCondition(value.attrs['data-count'] === String(expected) && digits.length === 1
+      && digits[0].replaceAll(',', '') === String(expected), `artists: ${scope} both count differs from strict ID intersection`);
+  };
+  check(html, 'global', total);
+  const indexes = [...html.matchAll(/<a\b([^>]*)>([\s\S]*?)<\/a>/gi)]
+    .map(match => ({ attrs: attributes(match[1]), body: match[2] }))
+    .filter(item => item.attrs['data-artist-index'] !== undefined);
+  const sections = [...html.matchAll(/<section\b([^>]*)>\s*<header\b[^>]*>([\s\S]*?)<\/header>/gi)]
+    .map(match => ({ attrs: attributes(match[1]), body: match[2] }))
+    .filter(item => item.attrs.id?.startsWith('artist-'));
+  for (const [items, scope, key] of [[indexes, 'index', 'data-artist-index'], [sections, 'group', 'id']]) {
+    requireCondition(items.length === groups.size && new Set(items.map(item => item.attrs[key])).size === groups.size,
+      `artists: ${scope} groups differ from exact artist labels`);
+    for (const item of items) {
+      requireCondition(groups.has(item.attrs[key]), `artists: unexpected ${scope} artist`);
+      const expected = groups.get(item.attrs[key]);
+      if (scope === 'index') {
+        requireCondition(item.attrs.href === '#' + item.attrs[key], 'artists: changed artist anchor');
+        const name = /<span\b[^>]*>([^<]*)<\/span>/i.exec(item.body)?.[1];
+        requireCondition(name !== undefined && visibleText(name) === normalized(expected.name), 'artists: changed visible index name');
+      } else {
+        const headings = [...item.body.matchAll(/<h2\b[^>]*>([\s\S]*?)<\/h2>/gi)];
+        requireCondition(item.attrs['data-artist-name'] === expected.name && headings.length === 1
+          && visibleText(headings[0][1]) === normalized(expected.name), 'artists: changed exact group name');
+      }
+      check(item.body, scope, expected.both);
+    }
+  }
+  requireCondition(markers(html).length === 1 + groups.size * 2, 'artists: extra both counts');
+  const links = [...html.matchAll(/<a\b([^>]*)>([\s\S]*?)<\/a>/gi)]
+    .filter(match => /\bdata-confirmed-both-search(?:\s|=|$)/.test(match[1]));
+  requireCondition(links.length === 1 && visibleText(links[0][2]), 'artists: missing or duplicate usable both search link');
+  const link = new URL(attributes(links[0][1]).href, origin);
+  requireCondition(link.origin === origin && link.pathname === '/search/' && !link.hash
+    && [...link.searchParams.keys()].every(key => key === 'number')
+    && isDeepStrictEqual(link.searchParams.getAll('number').sort(), ['confirmed-ky', 'confirmed-tj']), 'artists: both search link must require both providers');
+  return { both: total, artists: groups.size };
+}
+
 /** Check the displayed number controls per provider, separately from historical evidence. */
 export function verifyDetailNumbers(html, song, file = 'detail') {
   const group = /<div\b[^>]*class=["']detail-numbers["'][^>]*>([\s\S]*?)<\/div>/i.exec(html)?.[1];
@@ -253,6 +333,7 @@ export async function verifyDist({ distPath = path.join(projectRoot, 'dist'), st
     requireCondition(!/(?:["'](?:lyrics|lyric|imageUrl|image_url|thumbnailUrl)["']|\b(?:lyrics|lyric|imageUrl|image_url|thumbnailUrl))\s*:/i.test(text) && !/url\(\s*["']?\s*(?:https?:)?\/\//i.test(text), `${file}: lyrics or external image payload is forbidden`);
     if (file.endsWith('.html')) {
       verifyHtml(text, file, songByFile.get(file), canonicals, metadata.target);
+      if (file === 'artists/index.html') verifyBothProviderDiscovery(text, catalog.songs);
       htmlCount += 1;
     }
   }
