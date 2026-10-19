@@ -1,0 +1,116 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-19",
+  "timezone": "Asia/Seoul",
+  "phase": "complete",
+  "runId": "manual-20261019-0933",
+  "recordedAt": "2026-10-19T06:18:23.854856+00:00",
+  "productCompletedAt": "2026-10-19T06:18:23.854856+00:00",
+  "title": "10월19일 · v0.4.7 운영 반영",
+  "summary": "충돌4개 ID·8업체 번호의 표시·복사를 보류했습니다. 기존 근거·URL·저장값·브랜드를 보존했습니다.",
+  "fields": [
+    {
+      "name": "검증",
+      "value": "단위377·타입오류0, 같은 SHA 실제 preview49/운영49·target별3347파일 재현·실제 복구27개(1회)→재적용27개(2회)·재적용 뒤9URL 검사를 통과했습니다."
+    },
+    {
+      "name": "협업·실패",
+      "value": "실제6평가40/40/40 동률로 사전 순서에 따라 품질 담당을 교체하고 후속2평가를 수용했습니다. 초기 검사 실패·검증기 우회4건 보완·사용량 중단을 보존했습니다. 재적용 첫 본문 불일치는2회째 통과했습니다."
+    },
+    {
+      "name": "예약·운영",
+      "value": "매일09시/hourly 기존 예약을 재활성화해 유지합니다. 이번 배포는 관리자 수행이며 Actions CFbinding 미설정 후속이 남았습니다."
+    },
+    {
+      "name": "AdSense",
+      "value": "실제 계정·신청·승인은 미확인입니다. 운영자의 권리·문의 실수신·ads.txt 계정 일치·본인정보/법적 동의와 후속 제품 개선이 남았습니다."
+    }
+  ],
+  "url": "https://github.com/jpop-today/jpoptoday/releases/tag/v0.4.7",
+  "completed": [
+    "Issue41/PR42 Hdc735058→M88aa4dd8 실제 통합, 운영3ad0bb17와 검증된v047 Release",
+    "충돌4ID/8업체의 정적/동적/상세 번호·개별복사·공식오표시 보류; TJ/KY 가이드의 실제 과거 Hump Back 사례와 현재 보류 연결",
+    "canonical377/type0·같은M CI49+49·실제preview49/운영49·각target3347 전체 두 번 재현",
+    "실제oldv046/bff966cf 복구27/1→newv047/3ad0bb17 재적용27/2(첫 / BODY_MISMATCH 뒤 재시도 통과)·추가strict27/1과9일반URL/충돌상세",
+    "실제6peer40/40/40동률·사전quality순서교체1·독립우회4건 발견/보완45통과·후속2peer수용",
+    "실제 사용량 자동승인검토 중단 후 환경614/API/Git/활동을 다시 확인하고 같은run/기존팀 재개; 중복worker/배포 없음"
+  ],
+  "nextPlan": [
+    "Issue6 미검토 제공사 근거·가수/버전과 자체 콘텐츠·선곡 동선을 실제 근거로 계속 검토한다. 이번에 새 번호 조회는 없었다.",
+    "Issue15 안전한 Actions binding과 실제 자동배포 후속을 운영자 설정과 연계한다. 현재 managed 배포와 구분한다.",
+    "운영자가 Google 계정/소유권·신청/통지·본인정보/약관·법적 동의, 자료권리·문의 실수신·ads.txt 실제 계정 일치를 확인한다."
+  ],
+  "previousDay": {
+    "date": "2026-10-18",
+    "completed": [
+      "v0.4.5와v0.4.6을 실제 운영 반영·검증·복구·Release·완료보고했다. 최신v046은M110c583e, 단위332/type0·실제preview44/운영44·target별3347전체 재현·실제복구27→27을 확인했다."
+    ],
+    "evidence": "https://github.com/jpop-today/docs/blob/main/operations/daily/2026-10-18.json"
+  },
+  "release": {
+    "checkedAt": "2026-10-19T06:18:15.519318+00:00",
+    "version": "0.4.7",
+    "tag": "v0.4.7",
+    "sourceSha": "88aa4dd8323defb93c8da09cb9b5569473d922ca",
+    "annotatedObject": "51ae7eb1bf89ae89979621b80b678e824de44837",
+    "releaseId": 416964550,
+    "publishedAt": "2026-10-19T06:17:09Z",
+    "draft": false,
+    "prerelease": false,
+    "url": "https://github.com/jpop-today/jpoptoday/releases/tag/v0.4.7",
+    "workflowRun": 39208859072,
+    "workflowConclusion": "success"
+  },
+  "source": {
+    "productSha": "88aa4dd8323defb93c8da09cb9b5569473d922ca",
+    "pr": 42,
+    "headSha": "dc73505895a689fe50fd6e6b5b8830092e7e3ba3",
+    "baseSha": "1fd6ece7afb4ea7ebddf318f3ef6fa9dafa57951",
+    "reportSha": "assigned by report-only PR; final docs receipt records it without recursive source commit"
+  },
+  "production": {
+    "id": "3ad0bb17-2331-4192-b02a-23645ff5e02b",
+    "sourceSha": "88aa4dd8323defb93c8da09cb9b5569473d922ca",
+    "remoteRun": 39208294414,
+    "remoteTests": 49,
+    "http": "27/1",
+    "recovery": {
+      "old": "bff966cf-c7af-41cf-b406-21cd007b28de",
+      "rollbackAttempts": 1,
+      "restoreAttempts": 2
+    },
+    "postrestoreURLs": 9,
+    "actionsCFBindings": "missing; workflow deploy skipped; managed deploy actual"
+  },
+  "adsense": {
+    "technical": "preparing",
+    "account": "unknown",
+    "application": "unknown",
+    "approval": "unknown",
+    "adsTxt": {
+      "status": 200,
+      "bytes": 59,
+      "googleSellerRows": 1,
+      "accountMatch": "unknown; publisher value not retained",
+      "scope": "Current client observation; non200 does not establish origin-side cause or Google crawler access"
+    }
+  },
+  "evidenceURL": "https://github.com/jpop-today/docs/blob/main/operations/runs/manual-20261019-0933.json",
+  "team": {
+    "initialWorkers": 3,
+    "peerReviews": 6,
+    "totals": [
+      40,
+      40,
+      40
+    ],
+    "tieBreak": "predeclared quality,evidence,app; no quality difference invented",
+    "excluded": "/root/run41_quality",
+    "replacement": "/root/run41_replacement",
+    "supplementalReviews": 2,
+    "physicalDeletion": false
+  },
+  "completedNotification": {
+    "state": "pending separate saved-main workflow dispatch and actual delivery receipt"
+  }
+}
