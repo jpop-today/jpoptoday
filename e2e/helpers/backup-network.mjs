@@ -1,4 +1,10 @@
 /** Test-only: never retain payloads, tokens, complete URLs or file contents. */
+const analyticsEndpoints = [
+  'https://cloudflareinsights.com/cdn-cgi/rum',
+  // Actual production browser observation: POST, no query, eventType 1,
+  // string pageloadId/location/siteToken. QA intercepts it before delivery.
+  'https://jpop.today/cdn-cgi/rum',
+];
 export function classifyBackupRequest({ method, url, body = '' }, canaries) {
   const pending = [url, body], seen = new Set();
   if (url.includes('?')) {
@@ -37,9 +43,9 @@ export function classifyBackupRequest({ method, url, body = '' }, canaries) {
     } catch {}
   }
   if (['GET', 'HEAD'].includes(method)) return 'read';
-  // This exact endpoint was read in the actual public Cloudflare beacon code.
+  // Public beacon code and the production browser establish these endpoints.
   // A familiar hostname, query, alternate path or non-JSON body is insufficient.
-  if (method === 'POST' && url === 'https://cloudflareinsights.com/cdn-cgi/rum') {
+  if (method === 'POST' && analyticsEndpoints.includes(url)) {
     try {
       const value = JSON.parse(body);
       if (value && !Array.isArray(value) && typeof value.pageloadId === 'string' &&
@@ -56,5 +62,6 @@ export async function guardBackupNetwork(page, violations, canaries) {
     if (!['read', 'analytics'].includes(kind)) violations.push(kind);
   });
   // Inspect attempted analytics requests above but avoid publishing QA visits.
-  await page.route('https://cloudflareinsights.com/cdn-cgi/rum', route => route.fulfill({ status: 204 }));
+  for (const endpoint of analyticsEndpoints)
+    await page.route(endpoint, route => route.fulfill({ status: 204 }));
 }
