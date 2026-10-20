@@ -25,7 +25,6 @@ const untouchedFiles = {
 const untouchedGuides = {
   'find-japanese-songs': '4c626a0f7d5a20eba6a5883327eb5e472e1d45c053a3aa16e41b3164cef2ba03',
   'tj-ky-numbers': '04c5fffe6a6d4db4e2bbc911e33526ad5f92c44d0c14de16b9b56c3734d965c8',
-  'build-your-setlist': '42df98f8716128ccf7adca026641962ced062d12a33dcb264c57b4f504c26319',
   'checking-song-numbers': 'd68bd8e60c1cf7cbdde292f18ee05df6627b0d8e14d9bed1cbf25d7160cc7c5f',
   'title-artist-variants': '3d15b8cd2bebafe13050644de7d7ff79207fdb39658c2edd05e77f8fcf65bbd5',
 };
@@ -90,11 +89,16 @@ test('actual projection eligibility equals independent ledger/post-correction mu
   for (const id of ambiguous) assert.ok(!sets.ky.has(id), 'A matching TJ result cannot resolve separate KY identity uncertainty');
 });
 
-test('the five other complete guide objects and all six public guide paths retain the base contract', () => {
+test('the four unrelated guide objects and all six public guide paths retain the base contract after Issue51', () => {
   assert.deepEqual(guides.map(guide => guide.slug), ['find-japanese-songs', 'tj-ky-numbers', 'build-your-setlist', 'read-tj-chart', 'checking-song-numbers', 'title-artist-variants']);
   for (const [slug, hash] of Object.entries(untouchedGuides)) {
     const matches = guides.filter(guide => guide.slug === slug); assert.equal(matches.length, 1);
     assert.equal(sha(JSON.stringify(matches[0])), hash, slug);
   }
   assert.equal(guides.find(guide => guide.slug === 'read-tj-chart').reviewedAt, '2026-10-20');
+  // Issue51 intentionally extends this existing guide with a distinct ID backup.
+  const setlist = guides.find(guide => guide.slug === 'build-your-setlist');
+  assert.equal(setlist.reviewedAt, '2026-10-21');
+  const setlistText = JSON.stringify(setlist);
+  for (const fact of ['256KiB', 'JSON', '곡 식별자', '기존', '자동']) assert.ok(setlistText.includes(fact), fact);
 });

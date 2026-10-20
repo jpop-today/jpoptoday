@@ -1,6 +1,7 @@
-import { createIdentityResolver, readFavorites, updateFavorites, readRecentFilters, resolveLegacyUrl } from '../../contracts/legacy-compatibility.mjs';
+import { createIdentityResolver, readFavorites, updateFavorites, mergeFavorites, readRecentFilters, resolveLegacyUrl } from '../../contracts/legacy-compatibility.mjs';
 import { hasConfirmedNumber, matchesSong, songHref } from '../../contracts/public-catalog.mjs';
 import { formatFavoritesExport } from '../../contracts/favorites-export.mjs';
+import { MAX_FAVORITES_BACKUP_BYTES, formatFavoritesBackup, parseFavoritesBackup } from '../../contracts/favorites-backup.mjs';
 import type { Song } from '../lib/catalog';
 
 const byId = (id: string) => document.getElementById(id);
@@ -79,7 +80,27 @@ async function initialize() {
       else sessionStorage.removeItem(sessionKey);
     } catch { sessionAvailable = false; }
   }
+  const backupFile = byId('favorites-backup-file') as HTMLInputElement | null;
+  const backupPreview = byId('favorites-backup-preview');
+  const backupMerge = byId('merge-favorites-backup') as HTMLButtonElement | null;
+  const backupCancel = byId('cancel-favorites-backup') as HTMLButtonElement | null;
+  let backupGeneration = 0;
+  let backupReading = false;
+  let pendingBackup: { values: ReturnType<typeof parseFavoritesBackup>['values']; expectedRaw: string | null } | null = null;
+  function backupMessage(message: string) {
+    const note = byId('favorites-backup-status'); if (note) note.textContent = message;
+  }
+  function invalidateBackup(message = '') {
+    const wasPending = pendingBackup !== null || backupReading;
+    backupGeneration++; backupReading = false; pendingBackup = null;
+    if (backupPreview) backupPreview.hidden = true;
+    if (backupMerge) backupMerge.disabled = true;
+    if (backupCancel) backupCancel.disabled = true;
+    if (backupFile) backupFile.value = '';
+    if (message && wasPending) backupMessage(message);
+  }
   const savedIds = () => new Set(favorites.entries.filter((entry: { status: string }) => entry.status === 'known').map((entry: { canonicalId: string }) => entry.canonicalId));
+  const recoveryUnverified = () => favorites.diagnostics.some((item: { code: string }) => ['rollback-failed', 'rollback-concurrent-change'].includes(item.code));
   function syncSaveButtons() {
     const ids = savedIds();
     document.querySelectorAll<HTMLButtonElement>('[data-save]').forEach(button => {
@@ -91,13 +112,19 @@ async function initialize() {
       if (button.classList.contains('detail-save')) button.lastChild!.textContent = selected ? ' 즐겨찾기 해제' : ' 즐겨찾기 저장';
     });
     const note = byId('storage-note');
-    if (note) { note.hidden = favorites.mode !== 'session'; note.textContent = sessionAvailable ? '브라우저에 영구 저장할 수 없어 이 탭에서만 유지합니다. 기존 저장값은 보존했습니다. 번호 목록을 복사해 두세요.' : '브라우저에 저장할 수 없어 현재 화면에서만 유지합니다. 이동하기 전에 번호 목록을 복사해 두세요. 기존 저장값은 보존했습니다.'; }
+    if (note) {
+      note.hidden = favorites.mode !== 'session';
+      note.textContent = recoveryUnverified()
+        ? '저장 결과와 원본 복구를 확인하지 못했습니다. 이동 전에 현재 읽을 수 있는 목록을 복사하거나 즐겨찾기에서 파일로 보관해 주세요.'
+        : sessionAvailable ? '브라우저에 영구 저장할 수 없어 이 탭에서만 유지합니다. 기존 저장값은 보존했습니다. 번호 목록을 복사하거나 즐겨찾기에서 유효한 목록을 파일로 보관해 두세요.' : '브라우저에 저장할 수 없어 현재 화면에서만 유지합니다. 이동 전에 번호 목록을 복사하거나 즐겨찾기에서 유효한 목록을 파일로 보관해 두세요. 기존 저장값은 보존했습니다.';
+    }
   }
   document.addEventListener('click', event => {
     const button = (event.target as Element).closest<HTMLButtonElement>('[data-save]');
     const remove = (event.target as Element).closest<HTMLButtonElement>('[data-remove]');
     const id = button?.dataset.save ?? remove?.dataset.remove;
     if (!id) return;
+    invalidateBackup('저장 목록이 바뀌어 가져오기 확인을 취소했습니다. 파일을 다시 선택해 주세요.');
     const action = remove || savedIds().has(id) ? 'remove' : 'save';
     favorites = updateFavorites(storage, resolver, { action, id }, { state: favorites });
     preserveSession();
@@ -135,10 +162,85 @@ async function initialize() {
   byId('clear-filters')?.addEventListener('click', () => setUrl(new URLSearchParams()));
   byId('more')?.addEventListener('click', () => { shown += 30; render(); });
   window.addEventListener('popstate', () => { shown = 5; render(); });
-  window.addEventListener('storage', event => { if (event.key === 'jpop_today_favorites') { favorites = readFavorites(storage, resolver); render(); } });
+  window.addEventListener('storage', event => {
+    // sessionStorage has its own events; clearing it must not discard a valid
+    // session-only favorites list held by this page.
+    try { if (event.storageArea !== null && event.storageArea !== window.localStorage) return; } catch { return; }
+    if (event.key === 'jpop_today_favorites' || event.key === null) {
+    invalidateBackup('다른 탭의 저장 목록 변경으로 가져오기 확인을 취소했습니다. 파일을 다시 선택해 주세요.');
+    favorites = readFavorites(storage, resolver); preserveSession(); render();
+  } });
   byId('copy-favorites')?.addEventListener('click', () => {
     if (!filtered.length) { announce('복사할 곡이 없습니다.'); return; }
     void copy(formatFavoritesExport(filtered));
+  });
+  byId('download-favorites-backup')?.addEventListener('click', () => {
+    try {
+      // Damaged/unreadable storage is represented as an empty values array.
+      // Do not pass that placeholder off as a successful empty backup.
+      if (['invalid-json', 'invalid-shape', 'invalid-storage', 'read-failed'].includes(favorites.status)) {
+        backupMessage('원래 저장 목록을 정상적으로 읽을 수 없어 파일로 보관하지 않았습니다. 원본을 빈 파일로 대신하지 않았습니다.'); return;
+      }
+      const contents = formatFavoritesBackup(favorites.values, resolver);
+      const url = URL.createObjectURL(new Blob([contents], { type: 'application/json;charset=utf-8' }));
+      const link = document.createElement('a'); link.href = url; link.download = 'jpoptoday-favorites-v1.json'; link.hidden = true;
+      document.body.append(link);
+      try { link.click(); } finally { link.remove(); setTimeout(() => URL.revokeObjectURL(url), 1000); }
+      backupMessage(favorites.mode === 'session'
+        ? '현재 읽을 수 있는 임시 목록의 파일 저장을 요청했습니다. 손상되거나 읽을 수 없는 원본 데이터는 포함하지 않습니다. 다운로드 폴더에서 확인하고 직접 보관해 주세요.'
+        : '파일 저장을 요청했습니다. 다운로드 폴더에서 파일을 확인하고 직접 보관해 주세요.');
+    } catch {
+      backupMessage('파일로 보관하지 못했습니다. 손상된 항목이 있거나 파일 크기 한도를 넘었을 수 있습니다. 원래 저장값은 그대로 두었습니다.');
+    }
+  });
+  backupFile?.addEventListener('change', async () => {
+    const file = backupFile.files?.[0];
+    invalidateBackup();
+    if (!file) { backupMessage('가져올 보관 파일을 선택해 주세요. 저장 목록은 바꾸지 않았습니다.'); return; }
+    if (file.size > MAX_FAVORITES_BACKUP_BYTES) { backupMessage('파일이 256KiB를 넘습니다. 저장 목록은 바꾸지 않았습니다.'); return; }
+    const generation = backupGeneration;
+    const expectedRaw = typeof favorites.raw === 'string' ? favorites.raw : null;
+    backupReading = true;
+    if (backupCancel) backupCancel.disabled = false;
+    backupMessage('파일을 확인하고 있습니다. 아직 저장 목록은 바꾸지 않았습니다.');
+    try {
+      const bytes = await file.arrayBuffer();
+      const text = new TextDecoder('utf-8', { fatal: true }).decode(bytes);
+      const backup = parseFavoritesBackup(text, resolver);
+      if (generation !== backupGeneration) return;
+      backupReading = false; pendingBackup = { values: backup.values, expectedRaw };
+      const counts = byId('favorites-backup-counts');
+      if (counts) counts.textContent = `파일 항목 ${backup.total}개: 현재 곡 자료에서 찾은 ID ${backup.known}개, 다시 확인할 ID ${backup.unresolved}개입니다. 중복 항목도 개수에 포함합니다.`;
+      if (backupPreview) backupPreview.hidden = false;
+      if (backupMerge) backupMerge.disabled = false;
+      backupMessage('파일 확인을 마쳤습니다. 아직 저장 목록은 바꾸지 않았습니다. 내용을 확인한 뒤 현재 목록에 합쳐 주세요.');
+    } catch {
+      if (generation !== backupGeneration) return;
+      invalidateBackup();
+      backupMessage('보관 파일을 읽지 못했습니다. UTF-8 JSON, 지원 형식·버전과 유효한 ID인지 확인해 주세요. 저장 목록은 바꾸지 않았습니다.');
+    }
+  });
+  backupCancel?.addEventListener('click', () => {
+    invalidateBackup(); backupMessage('가져오기를 취소했습니다. 저장 목록은 바꾸지 않았습니다.');
+  });
+  backupMerge?.addEventListener('click', () => {
+    if (!pendingBackup) return;
+    const candidate = pendingBackup; invalidateBackup();
+    try {
+      const result = mergeFavorites(storage, resolver, candidate.values, { state: favorites, expectedRaw: candidate.expectedRaw });
+      if (result.status === 'conflict') {
+        favorites = readFavorites(storage, resolver); preserveSession(); render();
+        backupMessage('저장 목록이 바뀌어 합치지 않았습니다. 파일을 다시 선택하고 확인해 주세요.'); return;
+      }
+      favorites = result; preserveSession(); render();
+      if (recoveryUnverified()) backupMessage('저장 결과와 원본 복구를 확인하지 못했습니다. 이동 전에 현재 읽을 수 있는 합친 목록을 파일로 보관해 주세요.');
+      else if (favorites.mode === 'session') backupMessage(sessionAvailable
+        ? '영구 저장하지 못해 합친 목록을 이 탭에서만 유지합니다. 기존 저장값은 보존했습니다. 이동 전에 유효한 목록을 파일로 보관해 주세요.'
+        : '영구 저장하지 못해 합친 목록을 현재 화면에서만 유지합니다. 기존 저장값은 보존했습니다. 이동 전에 유효한 목록을 파일로 보관해 주세요.');
+      else backupMessage(`현재 목록에 새 ID ${result.addedCount}개를 합쳤습니다. 기존 항목과 다시 확인할 ID는 보존했습니다.`);
+    } catch {
+      backupMessage('합치기를 완료하지 못했습니다. 파일을 다시 확인해 주세요.');
+    }
   });
 
   function icon(name: 'copy' | 'star') {
@@ -218,5 +320,8 @@ async function initialize() {
   }
   render();
   document.querySelectorAll<HTMLButtonElement>('[data-filter], #more, #copy-favorites').forEach(button => { button.disabled = false; });
+  const backupDownload = byId('download-favorites-backup') as HTMLButtonElement | null;
+  if (backupDownload) backupDownload.disabled = false;
+  if (backupFile) { backupFile.disabled = false; backupMessage('파일로 보관하거나 보관한 파일을 선택해 주세요. 자동 동기화는 하지 않습니다.'); }
   document.documentElement.dataset.appReady = 'true';
 }
