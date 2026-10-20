@@ -122,11 +122,10 @@ function visibleText(html) {
   return normalized(decodeEntities(html.replace(/<(script|style)\b[^>]*>[\s\S]*?<\/\1>/gi, '').replace(/<!--[\s\S]*?-->/g, '').replace(/<[^>]*>/g, ' ')));
 }
 
-/** Validate the rendered intersection, including visible counts and the usable AND link. */
-export function verifyBothProviderDiscovery(html, songs) {
+function exposedHtml(html) {
   // Static visibility only; computed CSS and keyboard behavior remain browser gates.
   const stack = [], voidTags = new Set(['area', 'base', 'br', 'col', 'embed', 'hr', 'img', 'input', 'link', 'meta', 'param', 'source', 'track', 'wbr']);
-  html = html.replace(/<!--[\s\S]*?-->|<\/?[a-zA-Z][^>]*>|[^<]+|</g, token => {
+  return html.replace(/<!--[\s\S]*?-->|<\/?[a-zA-Z][^>]*>|[^<]+|</g, token => {
     if (token.startsWith('<!--')) return '';
     const closing = /^<\/([\w:-]+)/.exec(token);
     if (closing) {
@@ -145,6 +144,11 @@ export function verifyBothProviderDiscovery(html, songs) {
     if (!voidTags.has(tag) && !/\/\s*$/.test(raw)) stack.push({ tag, hidden });
     return hidden ? '' : token;
   });
+}
+
+/** Validate the rendered intersection, including visible counts and the usable AND link. */
+export function verifyBothProviderDiscovery(html, songs) {
+  html = exposedHtml(html);
   const groups = new Map(), seen = new Set();
   let total = 0;
   for (const song of songs) {
@@ -200,6 +204,71 @@ export function verifyBothProviderDiscovery(html, songs) {
     && [...link.searchParams.keys()].every(key => key === 'number')
     && isDeepStrictEqual(link.searchParams.getAll('number').sort(), ['confirmed-ky', 'confirmed-tj']), 'artists: both search link must require both providers');
   return { both: total, artists: groups.size };
+}
+
+/** Check the optional native chart disclosure against the exact frozen ID intersection. */
+export function verifyChartBothDiscovery(html, songs, chart) {
+  html = exposedHtml(html);
+  const byId = new Map(songs.map(song => [song.id, song]));
+  requireCondition(byId.size === songs.length, 'chart both: duplicate catalog IDs');
+  const rows = chart.songs.map(row => ({ ...row, song: byId.get(row.canonicalId) }));
+  requireCondition(rows.length === 100 && rows.every((row, i) => row.rank === i + 1 && row.song)
+    && new Set(rows.map(row => row.canonicalId)).size === 100, 'chart both: invalid frozen rows');
+  const expected = rows.filter(row => hasConfirmedNumber(row.song, 'tj') && hasConfirmedNumber(row.song, 'ky'));
+  const counts = [...html.matchAll(/<dd\b([^>]*)>([\s\S]*?)<\/dd>/gi)]
+    .filter(match => attributes(match[1])['data-chart-count'] === 'both');
+  requireCondition(counts.length === 1, 'chart both: missing or duplicate count');
+  const digits = visibleText(counts[0][2]).match(/[0-9][0-9,]*/g) ?? [];
+  requireCondition(attributes(counts[0][1])['data-count'] === String(expected.length)
+    && isDeepStrictEqual(digits.map(value => value.replaceAll(',', '')), [String(expected.length), '100']),
+  'chart both: visible count or denominator differs from frozen intersection');
+  const panels = [...html.matchAll(/<details\b([^>]*)>([\s\S]*?)<\/details>/gi)]
+    .filter(match => attributes(match[1])['data-chart-provider'] === 'both');
+  requireCondition(panels.length === 1 && /\bdata-chart-both-disclosure(?:\s|=|$)/.test(panels[0][1]),
+    'chart both: missing native disclosure');
+  const panelAttributes = panels[0][1].replace(/"[^"]*"|'[^']*'/g, '');
+  requireCondition(!/(?:^|\s)open(?:\s|=|\/|$)/i.test(panelAttributes), 'chart both: disclosure must start closed');
+  const notes = [...html.replace(panels[0][0], '').matchAll(/<p\b([^>]*)>([\s\S]*?)<\/p>/gi)]
+    .filter(match => attributes(match[1]).id === 'chart-both-note');
+  requireCondition(notes.length === 1 && visibleText(notes[0][2]).includes('같은 곡')
+    && visibleText(notes[0][2]).includes('미수록'), 'chart both: missing visible scope note outside disclosure');
+  const panel = panels[0][2], summary = /^\s*<summary\b([^>]*)>([\s\S]*?)<\/summary>/i.exec(panel);
+  const summaryAttributes = summary ? attributes(summary[1]) : {};
+  requireCondition(summary && [...panel.matchAll(/<summary\b/gi)].length === 1
+    && summaryAttributes.id === 'chart-both-heading'
+    && (summaryAttributes.tabindex === undefined || summaryAttributes.tabindex === '0')
+    && (summaryAttributes['aria-describedby'] ?? '').split(/\s+/).includes('chart-both-note')
+    && visibleText(summary[2]).includes('TJ·금영 모두 확인된 곡')
+    && isDeepStrictEqual(visibleText(summary[2]).match(/[0-9][0-9,]*/g)?.map(value => value.replaceAll(',', '')),
+      [String(expected.length)]), 'chart both: unusable summary or count');
+  const links = [...panel.matchAll(/<a\b([^>]*)>([\s\S]*?)<\/a>/gi)]
+    .filter(match => attributes(match[1])['data-chart-shortcut'] === 'both');
+  requireCondition(links.length === expected.length, 'chart both: wrong shortcut count');
+  requireCondition([...html.matchAll(/<a\b([^>]*)>/gi)].filter(match => attributes(match[1])['data-chart-shortcut'] === 'both').length === expected.length,
+    'chart both: shortcut outside disclosure');
+  for (const [index, match] of links.entries()) {
+    const { song, rank } = expected[index], attrs = attributes(match[1]);
+    requireCondition(attrs['data-song-id'] === song.id && attrs['data-chart-rank'] === String(rank)
+      && attrs.href === `#chart-${song.id}`, 'chart both: changed ID, order, rank or anchor');
+    const title = /<strong\b[^>]*>([\s\S]*?)<\/strong>\s*<span\b[^>]*>([\s\S]*?)<\/span>/i.exec(match[2]);
+    requireCondition(title && visibleText(title[1]) === normalized(song.titleOriginal)
+      && visibleText(title[2]) === normalized(song.artistOriginal), 'chart both: changed visible identity');
+    const rankText = /<span\b[^>]*class=["'][^"']*\bshortcut-rank\b[^"']*["'][^>]*>([\s\S]*?)<\/span>/i.exec(match[2]);
+    requireCondition(rankText && visibleText(rankText[1]).replaceAll(' ', '') === `${rank}위`, 'chart both: changed visible rank');
+    const numbers = [...match[2].matchAll(/<span\b([^>]*\bdata-chart-confirmed-number=[^>]*)>([\s\S]*?)<\/span>/gi)];
+    requireCondition(numbers.length === 2, 'chart both: missing or duplicate provider number');
+    for (const provider of ['tj', 'ky']) {
+      const value = numbers.filter(item => attributes(item[1])['data-provider'] === provider);
+      const number = song.karaoke[provider].observedNumber, label = provider === 'tj' ? 'TJ' : '금영';
+      requireCondition(value.length === 1 && attributes(value[0][1])['data-chart-confirmed-number'] === number
+        && visibleText(value[0][2]) === `${label} ${number} · 공식 확인`, 'chart both: changed visible provider number');
+    }
+  }
+  const original = [...html.matchAll(/<li\b([^>]*)>/gi)].map(match => attributes(match[1]))
+    .filter(attrs => (attrs.class ?? '').split(/\s+/).includes('chart-entry'));
+  requireCondition(isDeepStrictEqual(original.map(attrs => [attrs.id, attrs['data-chart-rank']]),
+    rows.map(row => [`chart-${row.canonicalId}`, String(row.rank)])), 'chart both: changed original 100 ranks or anchors');
+  return { both: expected.length, chartRows: rows.length };
 }
 
 /** Check the displayed number controls per provider, separately from historical evidence. */
@@ -334,6 +403,7 @@ export async function verifyDist({ distPath = path.join(projectRoot, 'dist'), st
     if (file.endsWith('.html')) {
       verifyHtml(text, file, songByFile.get(file), canonicals, metadata.target);
       if (file === 'artists/index.html') verifyBothProviderDiscovery(text, catalog.songs);
+      if (file === 'chart/index.html') verifyChartBothDiscovery(text, catalog.songs, chart);
       htmlCount += 1;
     }
   }
