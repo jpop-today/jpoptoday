@@ -1,0 +1,119 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-20",
+  "timezone": "Asia/Seoul",
+  "phase": "complete",
+  "runId": "manual-20261020-0352",
+  "recordedAt": "2026-10-20T00:17:53.868471+00:00",
+  "productCompletedAt": "2026-10-20T00:17:53.868471+00:00",
+  "title": "10월20일 · v0.4.8 운영 반영",
+  "summary": "가수별 TJ·금영 모두 확인된 곡 수와 두 업체 AND 검색을 추가했습니다. 공식4곡8근거로 안전한 확인 범위는36곡·67번호, 양쪽 확인은31곡입니다.",
+  "fields": [
+    {
+      "name": "검증",
+      "value": "단위424·타입오류0, 같은 SHA CI53+53·실제 preview53/운영53, target별3347파일 두 번 재현, 실제 복구27/1→재적용27/1과 재적용 뒤10URL을 통과했습니다."
+    },
+    {
+      "name": "협업·실패",
+      "value": "실제6평가40/40/40 동률로 사전 순서에 따라 자료 담당을 교체했습니다. 독립 감사의8개 검증 우회를 보완해47검사와후속2평가를 수용했습니다. 초기 제한환경 검사실패·브라우저 trace충돌·가이드 날짜 assertion 실패를 보존했습니다."
+    },
+    {
+      "name": "예약·운영",
+      "value": "매일09시/hourly 기존 예약은 변경하지 않았습니다. 관리자 managed 배포이며 Actions CFbinding 미설정 후속이 남았습니다."
+    },
+    {
+      "name": "AdSense",
+      "value": "실제 계정·신청·승인은 미확인입니다. 운영자의 권리·문의 실수신·ads.txt 계정 일치·본인정보/법적 동의와 실제 Google 심사 결과가 필요합니다."
+    }
+  ],
+  "url": "https://github.com/jpop-today/jpoptoday/releases/tag/v0.4.8",
+  "completed": [
+    "Issue44/PR45 H2821e395→M4870024c 통합·실제 jpop.today v0.4.8 배포·복구·Release",
+    "동결 차트4ID의 공식 numeric 조회8건·ledger84 원객체/순서 보존 뒤92append·안전36ID/TJ36/KY31=67번호·양쪽31ID",
+    "가수 전역/바로가기/그룹의 strict교집합 수·두 업체 AND검색·첫 검색가이드 보강·다른5가이드와3317ID/URL/storage/원브랜드 보존",
+    "단위424·타입오류0, 같은 SHA CI53+53·실제 preview53/운영53, target별3347파일 두 번 재현, 실제 복구27/1→재적용27/1과 재적용 뒤10URL을 통과했습니다.",
+    "실제6평가40/40/40 동률로 사전 순서에 따라 자료 담당을 교체했습니다. 독립 감사의8개 검증 우회를 보완해47검사와후속2평가를 수용했습니다. 초기 제한환경 검사실패·브라우저 trace충돌·가이드 날짜 assertion 실패를 보존했습니다."
+  ],
+  "nextPlan": [
+    "Issue6 미검토 공식근거·제목/가수/버전과 자체 콘텐츠·선곡 동선, 차트 갱신과 실패 last-good 보존을 이어 검토한다.",
+    "Issue15 안전한 Actions CFbinding과 실제 자동배포 후속을 운영자 설정과 연계한다. 현재 managed 배포와 구분한다.",
+    "운영자가 Google 계정/소유권·신청/실제 통지·본인정보/약관/법적 동의, 자료권리·문의 실수신·ads.txt 실제 계정 일치를 확인한다."
+  ],
+  "previousDay": {
+    "date": "2026-10-19",
+    "completed": [
+      "v0.4.7 충돌4ID/8셀 표시·복사 보류와 가이드 근거 안내를 운영 반영했다. 단위377/type0·동일M 실제preview49/운영49·target별3347파일 재현·실제복구27/1→재적용27/2·Release·완료Discord를 확인했다."
+    ],
+    "evidence": "https://github.com/jpop-today/docs/blob/main/operations/daily/2026-10-19.json"
+  },
+  "release": {
+    "checkedAt": "2026-10-20T00:17:47.017772+00:00",
+    "version": "0.4.8",
+    "tag": "v0.4.8",
+    "sourceSha": "4870024cba877be8b4006a9036934086e7e1d6f7",
+    "annotatedObject": "1d87e491af953edb0aeeca5fe8dcb35fec52a0e1",
+    "releaseId": 417876747,
+    "publishedAt": "2026-10-20T00:17:41Z",
+    "draft": false,
+    "prerelease": false,
+    "url": "https://github.com/jpop-today/jpoptoday/releases/tag/v0.4.8",
+    "workflowRun": 39346504008,
+    "workflowConclusion": "success"
+  },
+  "source": {
+    "productSha": "4870024cba877be8b4006a9036934086e7e1d6f7",
+    "pr": 45,
+    "headSha": "2821e395bf8fb3eabfcdfeaee934be2e0ba9e9b9",
+    "baseSha": "49d6806bb00e813bb3dcda15a22f2cf8d2d21da8",
+    "reportSha": "Assigned by report-only PR; docs handoff records final SHA without recursive source commit"
+  },
+  "production": {
+    "id": "ca7a98a4-e8e3-4e2c-8eee-2b41a7f3f4ca",
+    "sourceSha": "4870024cba877be8b4006a9036934086e7e1d6f7",
+    "remoteRun": 39345873779,
+    "remoteTests": 53,
+    "http": "27/1",
+    "recovery": {
+      "old": "3ad0bb17-2331-4192-b02a-23645ff5e02b",
+      "rollbackAttempts": 1,
+      "restoreAttempts": 1
+    },
+    "postrestoreURLs": 10,
+    "actionsCFBindings": "missing; managed deploy actual; verify_only workflow separately succeeded"
+  },
+  "adsense": {
+    "technical": "preparing",
+    "account": "unknown",
+    "application": "unknown",
+    "approval": "unknown",
+    "adsTxt": {
+      "status": 200,
+      "bytes": 59,
+      "googleSellerRows": 1,
+      "accountMatch": "unknown; publisher value not retained",
+      "scope": "Client observation does not establish Google crawler access or operator account match"
+    }
+  },
+  "evidenceURL": "https://github.com/jpop-today/docs/blob/main/operations/runs/manual-20261020-0352.json",
+  "team": {
+    "initialWorkers": 3,
+    "peerReviews": 6,
+    "totals": [
+      40,
+      40,
+      40
+    ],
+    "tieBreak": "predeclared evidence,app,quality; no quality inferiority invented",
+    "excluded": "/root/run44_evidence",
+    "replacement": "/root/run44_replacement",
+    "supplementalReviews": 2,
+    "physicalDeletion": false
+  },
+  "limits": [
+    "Full remote53 occurred before actual recovery; postrestore strict27 and10 ordinary URLs are separate checks.",
+    "Full CI ZIP-to-local comparison, other browser engines, OS clipboard permission, field performance, universal CDN convergence, rights or Google approval not established."
+  ],
+  "completedNotification": {
+    "state": "Immutable pre-delivery snapshot; actual delivery recorded separately in docs receipt"
+  }
+}
