@@ -58,6 +58,45 @@ async function fixture(t, target = 'production') {
 function code(code) { return error => error instanceof DeploymentVerificationError && error.code === code; }
 function changedInfo(f, changes) { return new Response(JSON.stringify({ ...f.info, ...changes })); }
 
+test('original ads.txt is pinned only when the production artifact includes it, with safe failure diagnostics', async t => {
+  const f = await fixture(t);
+  const before = await verifyDeployment(f.options);
+  const original = await readFile(new URL('../public/ads.txt', import.meta.url));
+  await writeFile(path.join(f.dist, 'ads.txt'), original);
+  f.resources.set('/ads.txt', original);
+  let mime = 'text/plain; charset=utf-8', status = 200;
+  const fetchImpl = async (input, options) => {
+    const response = await f.fetchImpl(input, options);
+    return new URL(input).pathname === '/ads.txt'
+      ? new Response(await response.arrayBuffer(), { status, headers: { 'content-type': mime } }) : response;
+  };
+  const options = { ...f.options, fetchImpl };
+  const result = await verifyDeployment(options);
+  assert.equal(result.passed, true);
+  assert.equal(result.attempts[0].checks.length, before.attempts[0].checks.length + 1);
+  const check = result.attempts[0].checks.find(check => check.path === '/ads.txt');
+  assert.equal(check.sha256, hash(original)); assert.equal(check.bytes, 59);
+  const values = original.toString('utf8').match(/pub-\d{16}/g) ?? [];
+  assert.equal(values.length, 1);
+  for (const [name, change, expected] of [
+    ['stale bytes', () => { f.resources.set('/ads.txt', Buffer.concat([original, Buffer.from('\n')])); }, 'BODY_MISMATCH'],
+    ['missing route', () => { f.resources.set('/ads.txt', original); status = 404; }, 'HTTP_STATUS'],
+    ['HTML MIME despite matching bytes', () => { status = 200; mime = 'text/html'; }, 'CONTENT_TYPE'],
+  ]) await t.test(name, async () => {
+    change(); const failed = await verifyDeployment(options);
+    assert.equal(failed.passed, false); assert.equal(failed.code, expected);
+    assert.equal(JSON.stringify(failed).includes(values[0]), false, 'Publisher value must not enter diagnostics');
+  });
+});
+
+test('a preview artifact cannot use the production seller file; earlier frozen artifacts without it remain valid', async t => {
+  const f = await fixture(t, 'preview');
+  assert.equal((await verifyDeployment(f.options)).passed, true);
+  const original = await readFile(new URL('../public/ads.txt', import.meta.url));
+  await writeFile(path.join(f.dist, 'ads.txt'), original);
+  await assert.rejects(verifyDeployment(f.options), code('INVALID_ARTIFACT'));
+});
+
 test('new artist directory is pinned while a previous artifact without it remains recoverable', async t => {
   const legacy = await fixture(t);
   const oldReceipt = await verifyDeployment(legacy.options);

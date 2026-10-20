@@ -53,7 +53,7 @@ async function walk(directory, relative = '') {
     if (stat.isDirectory()) files.push(...await walk(file, child));
     else {
       requireCondition(stat.isFile(), `${child}: only regular files may be published`);
-      const permitted = ['_headers', '_redirects', 'robots.txt', 'catalog.json', 'build-info.json', 'sitemap.xml'].includes(child)
+      const permitted = ['_headers', '_redirects', 'robots.txt', 'ads.txt', 'catalog.json', 'build-info.json', 'sitemap.xml'].includes(child)
         || child.endsWith('.html')
         || /^_astro\/[A-Za-z0-9_.-]+\.(?:css|js)$/.test(child);
       requireCondition(permitted, `${child}: unapproved artifact file type or location`);
@@ -366,7 +366,25 @@ function verifyPrivateBoundary(text, file) {
   }
 }
 
-/** Validate a built preview; this function never writes or publishes files. */
+/** Preserve the existing public seller file without inventing account data. */
+export function verifyAdsTxt({ target, bytes, expectedBytes } = {}) {
+  requireCondition(['preview', 'production'].includes(target), 'ads.txt: invalid target');
+  if (target === 'preview') {
+    requireCondition(bytes === undefined, 'ads.txt: preview seller declaration is forbidden');
+    return { present: false };
+  }
+  requireCondition(Buffer.isBuffer(bytes) && Buffer.isBuffer(expectedBytes)
+    && bytes.length > 0 && bytes.length <= 16384 && bytes.equals(expectedBytes),
+  'ads.txt: production must preserve the exact original public bytes');
+  let text;
+  try { text = decodeUtf8(bytes); } catch { throw new Error('ads.txt: invalid UTF-8'); }
+  const rows = text.split(/\r?\n/).filter(line => line.trim());
+  requireCondition(rows.length === 1 && /^google\.com,\s*pub-\d{16},\s*(?:DIRECT|RESELLER),\s*[a-f0-9]+\s*$/i.test(rows[0]),
+    'ads.txt: expected one existing Google seller declaration');
+  return { present: true, bytes: bytes.length, sha256: digest(bytes), googleSellerRows: 1 };
+}
+
+/** Validate a built artifact; this function never writes or publishes files. */
 export async function verifyDist({ distPath = path.join(projectRoot, 'dist'), stagingPath = path.join(projectRoot, 'data/staging/legacy-catalog.json'), expectedSourceSha = process.env.EXPECTED_SOURCE_SHA ?? process.env.GITHUB_SHA, expectedTarget = process.env.JPOP_BUILD_TARGET } = {}) {
   const directory = path.resolve(distPath);
   const files = await walk(directory);
@@ -383,6 +401,9 @@ export async function verifyDist({ distPath = path.join(projectRoot, 'dist'), st
   exactFields(metadata, metadataFields, 'build-info.json');
   requireCondition(metadata.schemaVersion === 2 && fullSha(metadata.sourceSha), 'build-info.json: sourceSha must be a full lowercase commit SHA');
   buildTarget(metadata.target);
+  verifyAdsTxt({ target: metadata.target,
+    bytes: fileSet.has('ads.txt') ? await readFile(path.join(directory, 'ads.txt')) : undefined,
+    expectedBytes: await readFile(path.join(projectRoot, 'public/ads.txt')) });
   requireCondition(!expectedTarget || metadata.target === expectedTarget, 'build-info.json: target differs from required deployment target');
   requireCondition(metadata.ledgerSha256 === digest(JSON.stringify(ledger)) && metadata.chartSha256 === digest(JSON.stringify(chart)), 'build-info.json: pinned ledger/chart differs from build input');
   requireCondition(!expectedSourceSha || metadata.sourceSha === expectedSourceSha, 'build-info.json: sourceSha differs from the CI source SHA');
