@@ -1,8 +1,10 @@
 /** Produce mode-specific crawler files from the already-built, reviewed catalog. */
-import { readFile, writeFile, readdir } from 'node:fs/promises';
+import { readFile, writeFile, readdir, rm } from 'node:fs/promises';
 import { robotsFor } from '../contracts/publication.mjs';
 const dist = new URL('../dist/', import.meta.url);
 const info = JSON.parse(await readFile(new URL('build-info.json', dist), 'utf8'));
+// The original seller declaration belongs only to the production origin.
+if (info.target === 'preview') await rm(new URL('ads.txt', dist), { force: true });
 const catalog = JSON.parse(await readFile(new URL('catalog.json', dist), 'utf8'));
 const byId = new Map(catalog.songs.map(song => [song.id, song]));
 const routes = ['/'];

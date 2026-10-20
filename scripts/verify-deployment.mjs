@@ -8,7 +8,7 @@ import { isDeepStrictEqual } from 'node:util';
 import { setTimeout as delay } from 'node:timers/promises';
 
 const fields = ['schemaVersion', 'target', 'sourceSha', 'legacyRevision', 'catalogSha256', 'ledgerSha256', 'chartSha256', 'songCount', 'currentSongCount', 'dirty'];
-const codes = new Set(['INVALID_URL', 'INVALID_OPTIONS', 'INVALID_ARTIFACT', 'INVALID_METADATA', 'METADATA_MISMATCH', 'CATALOG_MISMATCH', 'BODY_MISMATCH', 'CF_EMAIL_MISMATCH', 'CRAWLER_MISMATCH', 'HTTP_STATUS', 'REDIRECT', 'REQUEST_TIMEOUT', 'DEADLINE_EXCEEDED', 'RESPONSE_TOO_LARGE', 'TRANSPORT_ERROR', 'OUTPUT_EXISTS', 'OUTPUT_WRITE_FAILED', 'PROXY_CONFIGURATION_ERROR', 'PROXY_RUNTIME_UNSUPPORTED']);
+const codes = new Set(['INVALID_URL', 'INVALID_OPTIONS', 'INVALID_ARTIFACT', 'INVALID_METADATA', 'METADATA_MISMATCH', 'CATALOG_MISMATCH', 'BODY_MISMATCH', 'CF_EMAIL_MISMATCH', 'CRAWLER_MISMATCH', 'HTTP_STATUS', 'CONTENT_TYPE', 'REDIRECT', 'REQUEST_TIMEOUT', 'DEADLINE_EXCEEDED', 'RESPONSE_TOO_LARGE', 'TRANSPORT_ERROR', 'OUTPUT_EXISTS', 'OUTPUT_WRITE_FAILED', 'PROXY_CONFIGURATION_ERROR', 'PROXY_RUNTIME_UNSUPPORTED']);
 const digest = bytes => createHash('sha256').update(bytes).digest('hex');
 const sha = value => typeof value === 'string' && /^[a-f0-9]{40}$/.test(value);
 const hash = value => typeof value === 'string' && /^[a-f0-9]{64}$/.test(value);
@@ -82,7 +82,7 @@ function detailFile(route, knownIds) {
 }
 
 function header(response, name) {
-  // Only the crawler policy and size limit are read; never persist headers.
+  // Only crawler policy, content type and size limits are read; never persist headers.
   return response.headers?.get?.(name) ?? null;
 }
 
@@ -288,6 +288,14 @@ export async function verifyDeployment({ url, distPath, outputPath, expectedSour
     }
   }
   const resources = [];
+  // Pin a production declaration when present; older frozen releases remain recoverable.
+  try {
+    await lstat(path.join(root, 'ads.txt'));
+    requireValue(info.target === 'production', 'INVALID_ARTIFACT');
+    staticRoutes.set('/ads.txt', 'ads.txt');
+  } catch (error) {
+    if (error.code !== 'ENOENT') fail('INVALID_ARTIFACT');
+  }
   for (const [route, file] of staticRoutes) resources.push({ route, bytes: await localBytes(root, file, maxResponseBytes) });
   const home = resources[0].bytes.toString('utf8');
   const assets = [...new Set([...home.matchAll(/(?:href|src)="(\/_astro\/[A-Za-z0-9_.-]+\.(?:css|js))"/g)].map(match => match[1]))];
@@ -318,6 +326,7 @@ export async function verifyDeployment({ url, distPath, outputPath, expectedSour
       requireValue(Number.isInteger(response?.status) && response.status >= 100 && response.status <= 599, 'TRANSPORT_ERROR');
       requireValue(!response.redirected && !(response.status >= 300 && response.status <= 399), 'REDIRECT');
       requireValue(response.status === status, 'HTTP_STATUS');
+      requireValue(route !== '/ads.txt' || /^text\/plain(?:\s*;|$)/i.test(header(response, 'content-type') ?? ''), 'CONTENT_TYPE');
       const bytes = await responseBytes(response, limit, controller.signal);
       requireValue(!controller.signal.aborted, 'REQUEST_TIMEOUT');
       const crawler = header(response, 'x-robots-tag') ?? '';
