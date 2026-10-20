@@ -27,3 +27,21 @@ test('file canaries in any request query or body override the analytics exceptio
       assert.equal(classify('POST', url, body), 'favorite-data-in-request');
   }
 });
+
+test('unrelated malformed percent sequences cannot hide an encoded canary in a separate query or JSON field', () => {
+  for (const noise of ['100%', '%', '%FF', '%invalid']) {
+    assert.equal(classify('GET', 'https://jpop.today/?noise=' + noise + '&data=' + encodeURIComponent(canary)), 'favorite-data-in-request');
+    assert.equal(classify('POST', endpoint, JSON.stringify({ ...beacon, progress: noise, note: encodeURIComponent(canary) })), 'favorite-data-in-request');
+    assert.equal(classify('POST', endpoint, JSON.stringify({ ...beacon, progress: noise, note: encodeURIComponent(encodeURIComponent(canary)) })), 'favorite-data-in-request');
+  }
+});
+
+test('percent encoding and JSON Unicode escapes are inspected in either order and nested strings/keys', () => {
+  const escaped = JSON.stringify({ note: canary }).replace('日本語', '\\u65e5\\u672c\\u8a9e');
+  for (const note of [encodeURIComponent(escaped), encodeURIComponent(encodeURIComponent(escaped)), JSON.stringify(encodeURIComponent(escaped))]) {
+    assert.equal(classify('POST', endpoint, JSON.stringify({ ...beacon, progress: '100%', nested: [{ note }] })), 'favorite-data-in-request');
+    assert.equal(classify('GET', 'https://jpop.today/?noise=%&data=' + note), 'favorite-data-in-request');
+  }
+  assert.equal(classify('POST', endpoint, JSON.stringify({ ...beacon, [encodeURIComponent(canary)]: 'synthetic' })), 'favorite-data-in-request');
+  assert.equal(classify('POST', endpoint, JSON.stringify({ ...beacon, progress: '100%', note: '%not-private' })), 'analytics');
+});
