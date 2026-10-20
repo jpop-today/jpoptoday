@@ -72,7 +72,7 @@ test('guide index reaches the comparison guide without JavaScript at 360px and l
   await page.keyboard.press('Enter');
   await expect(page).toHaveURL('/contact/');
   await expect(page.locator('h1')).toHaveText('문의와 정보 정정');
-  // The search guide keeps its Issue44 date; Issue47 edits only the chart guide.
+  // Issue51 edits the setlist guide; the other five guide dates remain unchanged.
   const firstGuide = await request.get('/guides/find-japanese-songs/');
   expect(firstGuide.status()).toBe(200);
   expect(await firstGuide.text()).toMatch(/datetime="2026-10-20"/);
@@ -94,7 +94,7 @@ test('guide index reaches the comparison guide without JavaScript at 360px and l
   const setlist = await request.get('/guides/build-your-setlist/');
   expect(setlist.status()).toBe(200);
   const setlistHtml = await setlist.text();
-  expect(setlistHtml).toMatch(/datetime="2026-10-18"/);
+  expect(setlistHtml).toMatch(/datetime="2026-10-21"/);
   expect(setlistHtml).toContain('공식 확인, 관측·미확인, 확인 필요');
   expect(errors).toEqual([]);
   await context.close();

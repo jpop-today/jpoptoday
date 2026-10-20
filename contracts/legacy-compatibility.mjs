@@ -226,6 +226,42 @@ export function updateFavorites(storage, resolver, { action, id }, { state } = {
   return persistCandidate(storage, current, values, candidate => parseFavorites(candidate, resolver));
 }
 
+/** Explicit single-candidate merge after a read-only file preview. */
+export function mergeFavorites(storage, resolver, incoming, options = {}) {
+  if (!Array.isArray(incoming) || parseFavorites(incoming, resolver).mode !== 'persistent')
+    throw new Error('A valid favorite import array is required');
+  if (!Object.hasOwn(options, 'expectedRaw') ||
+      (options.expectedRaw !== null && typeof options.expectedRaw !== 'string'))
+    throw new Error('The preview storage snapshot is required');
+  const fresh = readFavorites(storage, resolver);
+  const previous = options.state?.key === FAVORITES_STORAGE_KEY && options.state.raw === options.expectedRaw
+    ? options.state : null;
+  const current = previous && !fresh.readable
+    ? { ...previous, mode: 'session', readable: false, diagnostics: [...previous.diagnostics, ...fresh.diagnostics] }
+    : previous?.mode === 'session' ? previous : fresh;
+  const conflict = diagnostics => ({ ...current, status: 'conflict', addedCount: 0, diagnostics });
+  if (fresh.readable && fresh.raw !== options.expectedRaw)
+    return conflict([diagnostic('concurrent-change')]);
+  const identityKey = value => {
+    const id = typeof value === 'string' ? value : record(value) ? value.id : undefined;
+    const identity = resolver.resolve(id);
+    return identity.status === 'invalid' ? null : identity.status === 'known'
+      ? 'known:' + identity.canonicalId : 'missing:' + id;
+  };
+  const values = [...current.values];
+  const seen = new Set(values.map(identityKey));
+  for (const value of incoming) {
+    const key = identityKey(value);
+    if (!seen.has(key)) { seen.add(key); values.push(value); }
+  }
+  const addedCount = values.length - current.values.length;
+  if (!addedCount) return { ...current, status: 'unchanged', addedCount: 0 };
+  const result = persistCandidate(storage, current, values, candidate => parseFavorites(candidate, resolver));
+  // A concurrent writer wins; never install the abandoned candidate as a session import.
+  if (result.status === 'conflict') return conflict(result.diagnostics);
+  return { ...result, addedCount };
+}
+
 function normalizeFilter(value, index, position = 0) {
   if (!record(value)) return null;
   const type = ({ animeAll: 'anime-all', artistAll: 'artist-all' })[value.type] ?? value.type;
