@@ -1382,6 +1382,111 @@
         "responseSha256": "55ef88f620c9ccf38bf2ac634175f21813a6327ade5ab33d753b6b992e32bb82"
       },
       "reason": "금영 공식 본제 Endless Rain은 staging ENDLESS RAIN과 대소문자 차이이고 가수 X JAPAN은 staging과 정확히 일치합니다. 공식 셀의 X2·乙姫CONNECTION·영화 ジパング 작품 부제를 생략 없이 보존합니다. 동결차트 X-JAPAN과의 하이픈·공백 차이를 검토했으며 부제 없는 원본에 새 버전·녹음 동일성을 만들어 넣지 않습니다."
+    },
+    {
+      "songId": "jpop-playlist-yoasobi-夜に駆ける-677d131f3f",
+      "provider": "tj",
+      "action": "confirm",
+      "expectedObservedNumber": "68381",
+      "number": "68381",
+      "evidence": {
+        "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=68381&strWord=Y",
+        "checkedAt": "2026-10-20T04:27:27.495315Z",
+        "title": "夜に駆ける",
+        "artist": "YOASOBI",
+        "responseSha256": "c99505193a90a987dfb94d68e65e029f5c883aa17c91255358e325da5215e9b7"
+      },
+      "reason": "TJ 공식 전체 제목 夜に駆ける와 가수 YOASOBI가 staging 및 동일 canonicalId의 동결차트 전체 표기와 정확히 일치합니다. 이 번호의 제목·가수 대조만 확인하며 음원·편곡·모든 현장 기기 지원이나 자료 권리를 추정하지 않습니다."
+    },
+    {
+      "songId": "jpop-playlist-yoasobi-夜に駆ける-677d131f3f",
+      "provider": "ky",
+      "action": "confirm",
+      "expectedObservedNumber": "44656",
+      "number": "44656",
+      "evidence": {
+        "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=44656",
+        "checkedAt": "2026-10-20T04:27:30.847513Z",
+        "title": "夜に駆ける",
+        "artist": "YOASOBI",
+        "responseSha256": "ad1910655fdda3109a8ecb0bd749aec4f234a6e48183a8c3a1f77378ad1e8b41"
+      },
+      "reason": "금영 공식 전체 제목 夜に駆ける와 가수 YOASOBI가 staging 및 동일 canonicalId의 동결차트 전체 표기와 정확히 일치합니다. 이 번호의 제목·가수 대조만 확인하며 음원·편곡·모든 현장 기기 지원이나 자료 권리를 추정하지 않습니다."
+    },
+    {
+      "songId": "jpop-playlist-あいみょん-マリ-コ-ルト-ebdb512207",
+      "provider": "tj",
+      "action": "confirm",
+      "expectedObservedNumber": "28927",
+      "number": "28927",
+      "evidence": {
+        "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=28927&strWord=Y",
+        "checkedAt": "2026-10-20T04:27:31.646254Z",
+        "title": "マリーゴールド",
+        "artist": "あいみょん",
+        "responseSha256": "6bd310807c19bfda1bdaa8ed274cb36baff38a4ddc082e020b55de7696234ca9"
+      },
+      "reason": "TJ 공식 전체 제목 マリーゴールド와 가수 あいみょん가 staging 및 동일 canonicalId의 동결차트 전체 표기와 정확히 일치합니다. 이 번호의 제목·가수 대조만 확인하며 음원·편곡·모든 현장 기기 지원이나 자료 권리를 추정하지 않습니다."
+    },
+    {
+      "songId": "jpop-playlist-あいみょん-マリ-コ-ルト-ebdb512207",
+      "provider": "ky",
+      "action": "confirm",
+      "expectedObservedNumber": "44314",
+      "number": "44314",
+      "evidence": {
+        "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=44314",
+        "checkedAt": "2026-10-20T04:27:34.455094Z",
+        "title": "マリーゴールド",
+        "artist": "あいみょん",
+        "responseSha256": "9cac98004920d622f6b169fe403aca19c185e23973bd12d293e9eefe545d5a6b"
+      },
+      "reason": "금영 공식 전체 제목 マリーゴールド와 가수 あいみょん가 staging 및 동일 canonicalId의 동결차트 전체 표기와 정확히 일치합니다. 이 번호의 제목·가수 대조만 확인하며 음원·편곡·모든 현장 기기 지원이나 자료 권리를 추정하지 않습니다."
+    },
+    {
+      "songId": "jpop-playlist-松田聖子-青い珊瑚礁-f8e4a0a705",
+      "provider": "tj",
+      "action": "confirm",
+      "expectedObservedNumber": "27121",
+      "number": "27121",
+      "evidence": {
+        "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=27121&strWord=Y",
+        "checkedAt": "2026-10-20T04:27:35.230268Z",
+        "title": "青い珊瑚礁",
+        "artist": "松田聖子",
+        "responseSha256": "7e525e011184817c54b51e17ccd0dd79e9ef58dbacf0c6e951b15a67465cc6cb"
+      },
+      "reason": "TJ 공식 전체 제목 青い珊瑚礁와 가수 松田聖子가 staging 및 동일 canonicalId의 동결차트 전체 표기와 정확히 일치합니다. 이 번호의 제목·가수 대조만 확인하며 음원·편곡·모든 현장 기기 지원이나 자료 권리를 추정하지 않습니다."
+    },
+    {
+      "songId": "jpop-playlist-松田聖子-青い珊瑚礁-f8e4a0a705",
+      "provider": "ky",
+      "action": "confirm",
+      "expectedObservedNumber": "40403",
+      "number": "40403",
+      "evidence": {
+        "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=40403",
+        "checkedAt": "2026-10-20T04:27:38.365949Z",
+        "title": "青い珊瑚礁",
+        "artist": "松田聖子",
+        "responseSha256": "35e0bd196b3df621d9c4c08eb89d07d10758477a1d4055cd5b123d476d12eceb"
+      },
+      "reason": "금영 공식 전체 제목 青い珊瑚礁와 가수 松田聖子가 staging 및 동일 canonicalId의 동결차트 전체 표기와 정확히 일치합니다. 이 번호의 제목·가수 대조만 확인하며 음원·편곡·모든 현장 기기 지원이나 자료 권리를 추정하지 않습니다."
+    },
+    {
+      "songId": "jpop-playlist-なとり-フ-ロホ-ス-5b000e662c",
+      "provider": "tj",
+      "action": "confirm",
+      "expectedObservedNumber": "52402",
+      "number": "52402",
+      "evidence": {
+        "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=52402&strWord=Y",
+        "checkedAt": "2026-10-20T04:27:39.732463Z",
+        "title": "プロポーズ",
+        "artist": "なとり",
+        "responseSha256": "1b350067961642ab834c6f9b99e3afd41183602be741803d3df07f6bb44309c5"
+      },
+      "reason": "TJ 공식 전체 제목 プロポーズ와 가수 なとり가 staging 및 동일 canonicalId의 동결차트 전체 표기와 정확히 일치합니다. 이 번호의 제목·가수 대조만 확인하며 음원·편곡·모든 현장 기기 지원이나 자료 권리를 추정하지 않습니다."
     }
   ]
 }

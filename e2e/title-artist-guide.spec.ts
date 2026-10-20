@@ -72,15 +72,20 @@ test('guide index reaches the comparison guide without JavaScript at 360px and l
   await page.keyboard.press('Enter');
   await expect(page).toHaveURL('/contact/');
   await expect(page.locator('h1')).toHaveText('문의와 정보 정정');
-  // Issue44 edits only the first search guide; other guides retain their own historical dates.
+  // The search guide keeps its Issue44 date; Issue47 edits only the chart guide.
   const firstGuide = await request.get('/guides/find-japanese-songs/');
   expect(firstGuide.status()).toBe(200);
   expect(await firstGuide.text()).toMatch(/datetime="2026-10-20"/);
-  for (const slug of ['read-tj-chart', 'checking-song-numbers']) {
+  for (const slug of ['checking-song-numbers']) {
     const response = await request.get(`/guides/${slug}/`);
     expect(response.status()).toBe(200);
     expect(await response.text()).toMatch(/datetime="2026-10-14"/);
   }
+  const chartGuide = await request.get('/guides/read-tj-chart/');
+  expect(chartGuide.status()).toBe(200);
+  const chartGuideHtml = await chartGuide.text();
+  expect(chartGuideHtml).toMatch(/datetime="2026-10-20"/);
+  expect(chartGuideHtml).toContain('두 업체');
   const providerGuide = await request.get('/guides/tj-ky-numbers/');
   expect(providerGuide.status()).toBe(200);
   const providerGuideHtml = await providerGuide.text();
