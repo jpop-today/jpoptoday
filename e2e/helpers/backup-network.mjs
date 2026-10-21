@@ -4,6 +4,9 @@ const analyticsEndpoints = [
   // Actual production browser observation: POST, no query, eventType 1,
   // string pageloadId/location/siteToken. QA intercepts it before delivery.
   'https://jpop.today/cdn-cgi/rum',
+  // Chromium preserves the empty query delimiter used by the actual beacon.
+  // Query values, additional delimiters and fragments remain unexpected.
+  'https://jpop.today/cdn-cgi/rum?',
 ];
 export function classifyBackupRequest({ method, url, body = '' }, canaries) {
   const pending = [url, body], seen = new Set();
@@ -62,6 +65,6 @@ export async function guardBackupNetwork(page, violations, canaries) {
     if (!['read', 'analytics'].includes(kind)) violations.push(kind);
   });
   // Inspect attempted analytics requests above but avoid publishing QA visits.
-  for (const endpoint of analyticsEndpoints)
-    await page.route(endpoint, route => route.fulfill({ status: 204 }));
+  await page.route(url => analyticsEndpoints.includes(url.href),
+    route => route.fulfill({ status: 204 }));
 }

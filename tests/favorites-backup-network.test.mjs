@@ -9,7 +9,7 @@ const classify = (method, url, body = '') => classifyBackupRequest({ method, url
 
 test('only exact recognized analytics POSTs are distinguished from unexpected writes', () => {
   assert.equal(classify('GET', 'https://jpop.today/catalog.json'), 'read');
-  for (const url of [endpoint, productionEndpoint]) {
+  for (const url of [endpoint, productionEndpoint, productionEndpoint + '?']) {
     for (const eventType of [1, 3]) assert.equal(classify('POST', url, JSON.stringify({ ...beacon, eventType })), 'analytics');
     for (const body of ['', '{}', '[]', 'file bytes', JSON.stringify({ ...beacon, eventType: 999 })])
       assert.equal(classify('POST', url, body), 'unexpected-write');
@@ -20,6 +20,14 @@ test('only exact recognized analytics POSTs are distinguished from unexpected wr
     productionEndpoint + '#extra', productionEndpoint + '/extra', 'https://jpop.today.evil.invalid/cdn-cgi/rum',
     'https://jpop.today:8443/cdn-cgi/rum', 'http://jpop.today/cdn-cgi/rum', 'https://unknown.pages.dev/cdn-cgi/rum'])
     assert.equal(classify('POST', url, JSON.stringify(beacon)), 'unexpected-write');
+});
+
+test('the observed empty query delimiter is distinct from any actual query, extra delimiter or fragment', () => {
+  assert.equal(classify('POST', productionEndpoint + '?', JSON.stringify(beacon)), 'analytics');
+  for (const suffix of ['??', '?file=', '?=', '?#', '?#fragment', '?%00', '?&'])
+    assert.equal(classify('POST', productionEndpoint + suffix, JSON.stringify(beacon)), 'unexpected-write');
+  assert.equal(classify('POST', endpoint + '?', JSON.stringify(beacon)), 'unexpected-write');
+  assert.equal(classify('POST', productionEndpoint + '?', JSON.stringify({ ...beacon, note: canary })), 'favorite-data-in-request');
 });
 
 test('file canaries in any request query or body override the analytics exception without retaining private text', () => {
@@ -33,17 +41,20 @@ test('file canaries in any request query or body override the analytics exceptio
   }
 });
 
-test('both observed analytics endpoints are intercepted while request inspection still rejects private data', async () => {
+test('all observed analytics URL variants are intercepted while request inspection still rejects private data', async () => {
   const routes = [], violations = []; let listener;
   const page = { on(name, handler) { assert.equal(name, 'request'); listener = handler; },
-    async route(url, handler) { routes.push(url); let response; await handler({ fulfill(value) { response = value; } });
+    async route(matcher, handler) { routes.push(matcher); let response; await handler({ fulfill(value) { response = value; } });
       assert.deepEqual(response, { status: 204 }); } };
   await guardBackupNetwork(page, violations, [canary]);
-  assert.deepEqual(routes, [endpoint, productionEndpoint]);
-  for (const url of routes) {
+  assert.equal(routes.length, 1);
+  for (const url of [endpoint, productionEndpoint, productionEndpoint + '?']) {
+    assert.equal(routes[0](new URL(url)), true);
     listener({ method: () => 'POST', url: () => url, postData: () => JSON.stringify(beacon) });
     assert.deepEqual(violations, []);
   }
+  for (const url of [productionEndpoint + '?file=', productionEndpoint + '/extra', endpoint + '?', 'https://other.invalid/cdn-cgi/rum'])
+    assert.equal(routes[0](new URL(url)), false);
   listener({ method: () => 'POST', url: () => productionEndpoint, postData: () => JSON.stringify({ ...beacon, private: canary }) });
   listener({ method: () => 'POST', url: () => 'https://jpop.today/upload', postData: () => '{}' });
   assert.deepEqual(violations, ['favorite-data-in-request', 'unexpected-write']);
