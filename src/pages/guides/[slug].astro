@@ -1,17 +1,42 @@
 ---
 import Layout from '../../layouts/Layout.astro';
-import { guides } from '../../content/guides';
-export function getStaticPaths() { return guides.map(guide => ({ params: { slug: guide.slug }, props: { guide } })); }
-const { guide } = Astro.props;
-type GuideSection = {
-  title: string;
-  paragraphs: string[];
-  caseId?: string;
-  links?: { label: string; href: string }[];
-};
+import SongRow from '../../components/SongRow.astro';
+import { getCollection, render } from 'astro:content';
+import { target } from '../../lib/catalog';
+import { buildGuideTable } from '../../lib/guide-tables';
+import { loadGuides, guidesForTarget, type Guide } from '../../../contracts/guides.mjs';
+
+export function getStaticPaths() {
+  return guidesForTarget(loadGuides(), target).map(guide => ({ params: { slug: guide.slug }, props: { guide } }));
+}
+const { guide } = Astro.props as { guide: Guide };
+const entry = (await getCollection('guides')).find(item => item.id === guide.slug)!;
+const { Content } = await render(entry);
+const table = guide.table ? buildGuideTable(guide.table) : null;
+const timeFormat = new Intl.DateTimeFormat('ko-KR', { dateStyle: 'medium', timeStyle: 'short', timeZone: 'Asia/Seoul' });
 ---
-<Layout title={guide.title} description={guide.description}><article class="reading"><a class="back-link" href="/guides/">← 이용 가이드</a><h1>{guide.title}</h1><p>{guide.description}</p><p class="verification-note">작성·검토: {guide.editor} · 본문 확인일: <time datetime={guide.reviewedAt}>{guide.reviewedAt}</time></p>{guide.sections.map((section: GuideSection) => <section data-guide-case={section.caseId}><h2>{section.title}</h2>{section.paragraphs.map(paragraph => <p>{paragraph}</p>)}{section.links && <ul class="guide-section-links">{section.links.map(link => <li><a href={link.href}>{link.label}</a></li>)}</ul>}</section>)}{guide.sources && <section aria-labelledby="guide-sources"><h2 id="guide-sources">사례에 사용한 공식 대조 자료</h2><p>아래 날짜는 각 제공사 결과를 대조한 실제 시각입니다. 글의 편집일과 구분하며, 현재 기기의 수록·버전은 방문 전에 다시 확인하세요.</p><ul>{guide.sources.map((source: { label: string; url: string; checkedAt: string }) => <li><a href={source.url} target="_blank" rel="noopener noreferrer">{source.label} (새 탭)</a> · <time datetime={source.checkedAt}>{new Intl.DateTimeFormat('ko-KR', { dateStyle: 'medium', timeStyle: 'short', timeZone: 'Asia/Seoul' }).format(new Date(source.checkedAt))}</time> 한국 시간</li>)}</ul></section>}<p><a href="/search/">노래 찾기</a> · <a href="/favorites/">내 즐겨찾기</a> · <a href="/contact/">문의와 정정</a></p><p><a href="https://www.tjmedia.com/song/accompaniment_search">TJ 공식 곡 검색</a> · <a href="https://www.kygabang.com/">금영 공식 곡 검색</a></p></article></Layout>
+<Layout title={guide.title} description={guide.description} guide={guide}>
+  <article class="reading">
+    <a class="back-link" href="/guides/">← 이용 가이드</a>
+    <h1>{guide.title}</h1>
+    <p>{guide.description}</p>
+    {guide.draft && <p class="notice">작성 중인 글입니다. 검색엔진에 노출되지 않습니다.</p>}
+    {guide.reviewedAt && <p class="verification-note">작성·검토: {guide.editor} · 본문 확인일: <time datetime={guide.reviewedAt}>{guide.reviewedAt}</time></p>}
+    <Content />
+    {table?.kind === 'songs' && <section aria-labelledby="guide-table"><h2 id="guide-table">{table.caption}</h2>
+      {table.songs.length ? <ul class="song-list">{table.songs.map(song => <SongRow song={song} />)}</ul> : <p>{table.empty}</p>}</section>}
+    {table?.kind === 'coverage' && <section aria-labelledby="guide-table"><h2 id="guide-table">{table.caption}</h2>
+      <table class="coverage-table"><thead><tr><th>구분</th><th>TJ</th><th>금영</th></tr></thead>
+      <tbody>{table.rows.map(row => <tr><td>{row.label}</td><td>{row.tj.toLocaleString('ko-KR')}곡</td><td>{row.ky.toLocaleString('ko-KR')}곡</td></tr>)}</tbody></table></section>}
+    {guide.sources && <section aria-labelledby="guide-sources"><h2 id="guide-sources">사례에 사용한 공식 대조 자료</h2>
+      <p>아래 날짜는 각 제공사 결과를 대조한 실제 시각입니다. 글의 편집일과 구분하며, 현재 기기의 수록·버전은 방문 전에 다시 확인하세요.</p>
+      <ul>{guide.sources.map(source => <li><a href={source.url} target="_blank" rel="noopener noreferrer">{source.label} (새 탭)</a> · <time datetime={source.checkedAt}>{timeFormat.format(new Date(source.checkedAt))}</time> 한국 시간</li>)}</ul></section>}
+    <p class="guide-disclaimer">번호와 수록 여부는 업체 사정에 따라 바뀔 수 있습니다. 공식 확인 표시는 표시된 날짜의 대조 결과이며, 예약 전에 방문할 기기에서 제목·가수·버전을 한 번 더 확인하세요.</p>
+    <p><a href="/search/">노래 찾기</a> · <a href="/favorites/">내 즐겨찾기</a> · <a href="/contact/">문의와 정정</a></p>
+    <p><a href="https://www.tjmedia.com/song/accompaniment_search">TJ 공식 곡 검색</a> · <a href="https://www.kygabang.com/">금영 공식 곡 검색</a></p>
+  </article>
+</Layout>
 <style>
-  .guide-section-links { list-style: none; padding: 0; margin: 20px 0 0; }
-  .guide-section-links a { display: flex; align-items: center; min-height: 44px; padding: 10px 14px; border: 1px solid var(--border); border-radius: 6px; background: var(--accent-soft); overflow-wrap: anywhere; }
+  .reading :global(ul) { overflow-wrap: anywhere; }
+  .guide-disclaimer { font-size: 14px !important; color: #535d6d !important; border-top: 1px solid var(--border); padding-top: 16px; margin-top: 40px; }
 </style>

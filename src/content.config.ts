@@ -8,4 +8,13 @@ const artists = defineCollection({
   schema: z.object({ name: z.string().min(1), artists: z.array(z.string().min(1)).min(1), draft: z.boolean() }),
 });
 
-export const collections = { artists };
+// Same frontmatter rules as contracts/guides.mjs; table specs are validated there.
+const guides = defineCollection({
+  loader: glob({ pattern: '*.md', base: './src/content/guides' }),
+  schema: z.object({ title: z.string().min(1), description: z.string().min(1), draft: z.boolean(),
+    editor: z.string().optional(), reviewedAt: z.string().optional(),
+    sources: z.array(z.object({ label: z.string(), url: z.string(), checkedAt: z.string() })).optional(),
+    table: z.record(z.string(), z.unknown()).optional() }),
+});
+
+export const collections = { artists, guides };

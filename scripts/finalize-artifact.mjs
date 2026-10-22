@@ -2,6 +2,7 @@
 import { readFile, writeFile, readdir, rm } from 'node:fs/promises';
 import { robotsFor } from '../contracts/publication.mjs';
 import { buildArtistPages, loadArtistIntros, loadSongClassification } from '../contracts/artists.mjs';
+import { loadGuides } from '../contracts/guides.mjs';
 const dist = new URL('../dist/', import.meta.url);
 const info = JSON.parse(await readFile(new URL('build-info.json', dist), 'utf8'));
 // The original seller declaration belongs only to the production origin.
@@ -9,7 +10,8 @@ if (info.target === 'preview') await rm(new URL('ads.txt', dist), { force: true 
 const catalog = JSON.parse(await readFile(new URL('catalog.json', dist), 'utf8'));
 const byId = new Map(catalog.songs.map(song => [song.id, song]));
 const artistBySlug = new Map(buildArtistPages(catalog.songs, loadArtistIntros(), loadSongClassification()).map(page => [page.slug, page]));
-const recordFor = route => (route.startsWith('/artists/') ? artistBySlug : byId).get(decodeURIComponent(route.split('/')[2] ?? ''));
+const guideBySlug = new Map(loadGuides().map(guide => [guide.slug, guide]));
+const recordFor = route => (route.startsWith('/artists/') ? artistBySlug : route.startsWith('/guides/') ? guideBySlug : byId).get(decodeURIComponent(route.split('/')[2] ?? ''));
 const routes = ['/'];
 async function walk(directory, prefix = '') {
   for (const entry of await readdir(directory, { withFileTypes: true })) {

@@ -5,28 +5,33 @@ import { pathToFileURL } from 'node:url';
 import { confirmedNumbers } from './public-catalog.mjs';
 
 export const ARTIST_INDEX_MIN_CONFIRMED = 3;
-const SLUG = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
+export const SLUG = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
 const compare = (left, right) => left < right ? -1 : left > right ? 1 : 0;
 // Resolved from the working directory: Astro bundles this module, so import.meta.url is not the source path.
-const projectRoot = pathToFileURL(process.cwd() + '/');
+export const projectRoot = pathToFileURL(process.cwd() + '/');
 
 /** Frontmatter values are JSON-compatible YAML scalars/arrays so Astro and Node read the same data. */
-export function parseIntro(slug, text) {
-  if (!SLUG.test(slug)) throw new Error(`Invalid artist slug: ${slug}`);
+export function parseFrontmatter(label, text) {
   const match = /^---\r?\n([\s\S]*?)\r?\n---\r?\n?([\s\S]*)$/.exec(text);
-  if (!match) throw new Error(`${slug}: missing frontmatter`);
+  if (!match) throw new Error(`${label}: missing frontmatter`);
   const data = {};
   for (const line of match[1].split(/\r?\n/)) {
     if (!line.trim() || line.trimStart().startsWith('#')) continue;
     const field = /^([A-Za-z]+):\s*(.*)$/.exec(line);
-    if (!field) throw new Error(`${slug}: unsupported frontmatter line`);
+    if (!field) throw new Error(`${label}: unsupported frontmatter line`);
     try { data[field[1]] = JSON.parse(field[2]); } catch { data[field[1]] = field[2].trim(); }
   }
+  return { data, body: match[2].trim() };
+}
+
+export function parseIntro(slug, text) {
+  if (!SLUG.test(slug)) throw new Error(`Invalid artist slug: ${slug}`);
+  const { data, body } = parseFrontmatter(slug, text);
   if (typeof data.name !== 'string' || !data.name.trim()) throw new Error(`${slug}: name required`);
   if (!Array.isArray(data.artists) || !data.artists.length || !data.artists.every(value => typeof value === 'string' && value.trim()))
     throw new Error(`${slug}: artists must list exact artist labels`);
   if (typeof data.draft !== 'boolean') throw new Error(`${slug}: draft must be true or false`);
-  return { slug, name: data.name, artists: data.artists, draft: data.draft, body: match[2].trim() };
+  return { slug, name: data.name, artists: data.artists, draft: data.draft, body };
 }
 
 export function loadArtistIntros(directory = new URL('src/content/artists/', projectRoot)) {

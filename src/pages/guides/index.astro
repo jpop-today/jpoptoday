@@ -1,5 +1,7 @@
 ---
 import Layout from '../../layouts/Layout.astro';
-import { guides } from '../../content/guides';
+import { target } from '../../lib/catalog';
+import { loadGuides, guidesForTarget } from '../../../contracts/guides.mjs';
+const guides = guidesForTarget(loadGuides(), target);
 ---
-<Layout title="이용 가이드"><article class="reading"><h1>이용 가이드</h1><p>찾고, 확인하고, 다음에 부를 곡을 모아두는 방법.</p><ul class="guide-list">{guides.map(guide => <li><a href={`/guides/${guide.slug}/`}>{guide.title}</a><p>{guide.description}</p></li>)}</ul><p><a href="/coverage/">관리 목록의 TJ·금영 번호 범위</a> · <a href="/faq/">자주 묻는 질문</a></p></article></Layout>
+<Layout title="이용 가이드"><article class="reading"><h1>이용 가이드</h1><p>찾고, 확인하고, 다음에 부를 곡을 모아두는 방법.</p><ul class="guide-list">{guides.map(guide => <li><a href={`/guides/${guide.slug}/`}>{guide.title}</a>{guide.draft && ' (작성 중)'}<p>{guide.description}</p></li>)}</ul><p><a href="/coverage/">관리 목록의 TJ·금영 번호 범위</a> · <a href="/faq/">자주 묻는 질문</a></p></article></Layout>

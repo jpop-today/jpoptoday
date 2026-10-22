@@ -10,3 +10,6 @@ export function isJpop(classification: Map<string, boolean>, song: Song): boolea
 export function buildArtistPages(songs: Song[], intros: ArtistIntro[], classification: Map<string, boolean>): ArtistPage[];
 export function relatedArtists(page: ArtistPage, pages: ArtistPage[], limit?: number): ArtistPage[];
 export function artistHref(slug: string): string;
+export const SLUG: RegExp;
+export const projectRoot: URL;
+export function parseFrontmatter(label: string, text: string): { data: Record<string, unknown>; body: string };
