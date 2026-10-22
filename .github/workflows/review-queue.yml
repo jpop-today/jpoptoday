@@ -34,6 +34,8 @@ jobs:
           SONGS: ${{ inputs.songs }}
         run: |
           DATE=$(TZ=Asia/Seoul date +%F)
+          # A second run on the same day gets its own queue file and branch.
+          if [ -e "data/review-queue/$DATE.json" ]; then DATE="$DATE-$GITHUB_RUN_NUMBER"; fi
           echo "DATE=$DATE" >> "$GITHUB_ENV"
           node scripts/build-review-targets.mjs "$RUNNER_TEMP/targets.json" "$SONGS"
           python3 scripts/provider-metadata.py batch "$RUNNER_TEMP/targets.json" --output "data/review-queue/$DATE.json" --cache data/provider-cache
