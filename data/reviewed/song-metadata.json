@@ -1,0 +1,6 @@
+{
+  "version": 1,
+  "purpose": "reviewed-song-metadata",
+  "note": "발매연도·앨범·타이업은 출처 URL이 있는 값만 넣는다. 출처 없는 값은 만들지 않는다.",
+  "entries": []
+}
