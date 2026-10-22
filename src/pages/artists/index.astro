@@ -1,7 +1,8 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import { songs, songHref } from '../lib/catalog';
-import { buildConfirmedArtistGroups, confirmedNumbers } from '../../contracts/confirmed-discovery.mjs';
+import Layout from '../../layouts/Layout.astro';
+import { songs, songHref, artistPages } from '../../lib/catalog';
+import { artistHref } from '../../../contracts/artists.mjs';
+import { buildConfirmedArtistGroups, confirmedNumbers } from '../../../contracts/confirmed-discovery.mjs';
 
 const providerLabel = { tj: 'TJ', ky: '금영' };
 const providers = ['tj', 'ky'] as const;
@@ -13,6 +14,7 @@ const countProviders = (groupSongs: typeof songs) => {
   const both = [...ids.tj].filter(id => ids.ky.has(id)).length;
   return { tj: ids.tj.size, ky: ids.ky.size, both };
 };
+const pageByLabel = new Map(artistPages.flatMap(page => page.labels.map(label => [label, page])));
 const groups = buildConfirmedArtistGroups(songs).map(group => ({ ...group, counts: countProviders(group.songs) }));
 const directorySongs = groups.flatMap(group => group.songs);
 const songCount = new Set(directorySongs.map(song => song.id)).size;
@@ -68,6 +70,7 @@ const formatCount = (count: number) => count.toLocaleString('ko-KR');
             <h2 id={`${group.id}-heading`}>{group.name}</h2>
             {group.namesKo.length > 0 && <p class="artist-korean">기존 한글 표기: {group.namesKo.join(' · ')}</p>}
             <p class="group-count">공식 확인곡 {group.songs.length}개 ID</p>
+            {pageByLabel.has(group.name) && <p class="group-page-link"><a href={artistHref(pageByLabel.get(group.name)!.slug)}>{group.name} 전곡 번호 보기 <span aria-hidden="true">→</span></a></p>}
             <div class="group-provider-counts" role="group" aria-label="업체별 공식 확인곡 수" aria-describedby="provider-count-note">{providers.map(provider => <span data-provider-count="group" data-provider={provider} data-count={group.counts[provider]}>{providerLabel[provider]} <strong>{formatCount(group.counts[provider])}</strong>개 ID</span>)}<span data-provider-count="group" data-provider="both" data-count={group.counts.both}>TJ·금영 모두 <strong>{formatCount(group.counts.both)}</strong>개 ID</span></div>
           </header>
           <ul class="artist-song-list">

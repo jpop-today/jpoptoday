@@ -1,0 +1,59 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import SongRow from '../../components/SongRow.astro';
+import { getCollection, render } from 'astro:content';
+import { artistPages, type ArtistPage } from '../../lib/catalog';
+import { artistHref, relatedArtists } from '../../../contracts/artists.mjs';
+import { confirmedNumbers } from '../../../contracts/public-catalog.mjs';
+
+export function getStaticPaths() { return artistPages.map(artist => ({ params: { slug: artist.slug }, props: { artist } })); }
+const { artist } = Astro.props as { artist: ArtistPage };
+// The intro is rendered only once a person has written it and cleared draft.
+const entry = artist.intro && !artist.intro.draft && artist.intro.body
+  ? (await getCollection('artists')).find(item => item.id === artist.slug) : undefined;
+const Intro = entry ? (await render(entry)).Content : null;
+const confirmed = artist.songs.filter(song => confirmedNumbers(song).length);
+const observed = artist.songs.filter(song => !confirmedNumbers(song).length);
+const related = relatedArtists(artist, artistPages);
+const description = `${artist.name} JPOP 노래방 번호. 공식 검색으로 확인한 ${confirmed.length}곡과 관리 목록의 ${artist.songs.length}곡을 TJ·금영 번호로 정리했습니다.`;
+---
+<Layout title={`${artist.name} 노래방 번호 (TJ·금영)`} description={description} artist={artist}>
+  <article class="reading artist-page">
+    <a class="back-link" href="/artists/">← 가수별 확인곡</a>
+    <h1>{artist.name} 노래방 번호</h1>
+    {artist.labels.length > 1 && <p class="artist">관리 목록 표기: {artist.labels.join(' · ')}</p>}
+    <p class="artist-summary">공식 확인 {confirmed.length}곡 · 관리 목록 {artist.songs.length}곡</p>
+    {Intro ? <section class="artist-intro"><Intro /></section> :
+      <p class="notice">가수 소개를 준비하고 있습니다. 아래 번호 표는 관리 목록과 공식 대조 결과에서 바로 만들어집니다.</p>}
+
+    <section aria-labelledby="confirmed-heading">
+      <h2 id="confirmed-heading">공식 검색으로 확인한 곡 ({confirmed.length})</h2>
+      {confirmed.length ? <ul class="song-list">{confirmed.map(song => <SongRow song={song} />)}</ul> :
+        <p>아직 공식 대조를 마친 곡이 없습니다. 아래 관측 번호는 예약 전에 업체 공식 검색에서 다시 확인하세요.</p>}
+    </section>
+
+    {observed.length > 0 && <section aria-labelledby="observed-heading">
+      <h2 id="observed-heading">관측 번호 · 재확인 필요 ({observed.length})</h2>
+      <p>기존 관리 자료의 번호입니다. 공식 대조 전이므로 방문할 노래방 기기에서 제목·가수·버전을 함께 확인하세요. ‘확인 필요’는 미수록을 뜻하지 않습니다.</p>
+      <ul class="song-list">{observed.map(song => <SongRow song={song} />)}</ul>
+    </section>}
+
+    {related.length > 0 && <section aria-labelledby="related-heading">
+      <h2 id="related-heading">함께 찾는 가수</h2>
+      <ul class="related-artists">{related.map(other => <li><a href={artistHref(other.slug)}>{other.name}</a> <span>확인 {other.confirmedCount}곡</span></li>)}</ul>
+    </section>}
+
+    <section aria-labelledby="method-heading">
+      <h2 id="method-heading">번호를 확인하는 방법</h2>
+      <p>공식 확인 표시는 TJ·금영 공식 검색의 제목·가수를 대조한 근거가 있는 번호입니다. 곡 이름을 누르면 근거 링크와 대조 시각을 볼 수 있습니다. <a href="/guides/tj-ky-numbers/">TJ와 금영 번호 이용 가이드</a></p>
+    </section>
+  </article>
+</Layout>
+
+<style>
+  .artist-page { max-width: 960px; }
+  .artist-summary { color: #535d6d; }
+  .artist-page .song-list { margin-top: 12px; }
+  .related-artists { display: flex; flex-wrap: wrap; gap: 8px 20px; padding: 0; list-style: none; }
+  .related-artists span { color: #535d6d; font-size: 14px; }
+</style>

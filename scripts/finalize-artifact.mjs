@@ -1,12 +1,15 @@
 /** Produce mode-specific crawler files from the already-built, reviewed catalog. */
 import { readFile, writeFile, readdir, rm } from 'node:fs/promises';
 import { robotsFor } from '../contracts/publication.mjs';
+import { buildArtistPages, loadArtistIntros, loadSongClassification } from '../contracts/artists.mjs';
 const dist = new URL('../dist/', import.meta.url);
 const info = JSON.parse(await readFile(new URL('build-info.json', dist), 'utf8'));
 // The original seller declaration belongs only to the production origin.
 if (info.target === 'preview') await rm(new URL('ads.txt', dist), { force: true });
 const catalog = JSON.parse(await readFile(new URL('catalog.json', dist), 'utf8'));
 const byId = new Map(catalog.songs.map(song => [song.id, song]));
+const artistBySlug = new Map(buildArtistPages(catalog.songs, loadArtistIntros(), loadSongClassification()).map(page => [page.slug, page]));
+const recordFor = route => (route.startsWith('/artists/') ? artistBySlug : byId).get(decodeURIComponent(route.split('/')[2] ?? ''));
 const routes = ['/'];
 async function walk(directory, prefix = '') {
   for (const entry of await readdir(directory, { withFileTypes: true })) {
@@ -15,7 +18,7 @@ async function walk(directory, prefix = '') {
   }
 }
 await walk(dist);
-const indexed = routes.filter(route => robotsFor(info.target, route, byId.get(route.split('/')[2])) === 'index, follow');
+const indexed = routes.filter(route => robotsFor(info.target, route, recordFor(route)) === 'index, follow');
 const escaped = value => value.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 const urlFor = route => 'https://jpop.today' + route.split('/').map(encodeURIComponent).join('/');
 await writeFile(new URL('sitemap.xml', dist), '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' + indexed.map(route => `<url><loc>${escaped(urlFor(route))}</loc></url>`).join('') + '</urlset>\n');

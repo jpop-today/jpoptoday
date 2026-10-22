@@ -8,11 +8,13 @@ export function indexableSong(song) {
     song.karaoke[provider].status === 'provider-confirmed' &&
     song.karaoke[provider].evidence && !song.karaoke[provider].conflict);
 }
-export function indexableRoute(pathname, song) {
-  if (pathname.startsWith('/songs/')) return Boolean(indexableSong(song));
+/** `record` is the song for /songs/{id}/ and the artist page (contracts/artists.mjs) for /artists/{slug}/. */
+export function indexableRoute(pathname, record) {
+  if (pathname.startsWith('/songs/')) return Boolean(indexableSong(record));
+  if (/^\/artists\/[a-z0-9-]+\/$/.test(pathname)) return record?.indexable === true;
   return ['/', '/about/', '/contact/', '/privacy/', '/faq/', '/coverage/', '/chart/', '/guides/', '/artists/'].includes(pathname)
     || /^\/guides\/[a-z0-9-]+\/$/.test(pathname);
 }
-export function robotsFor(target, pathname, song) {
-  return buildTarget(target) === 'production' && indexableRoute(pathname, song) ? 'index, follow' : 'noindex, follow';
+export function robotsFor(target, pathname, record) {
+  return buildTarget(target) === 'production' && indexableRoute(pathname, record) ? 'index, follow' : 'noindex, follow';
 }

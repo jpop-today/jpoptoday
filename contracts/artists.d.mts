@@ -1,0 +1,12 @@
+import type { Song } from '../src/lib/catalog';
+export type ArtistIntro = { slug: string; name: string; artists: string[]; draft: boolean; body: string };
+export type ArtistPage = { slug: string; name: string; labels: string[]; intro: ArtistIntro | null;
+  songs: Song[]; confirmedCount: number; indexable: boolean };
+export const ARTIST_INDEX_MIN_CONFIRMED: number;
+export function parseIntro(slug: string, text: string): ArtistIntro;
+export function loadArtistIntros(directory?: URL): ArtistIntro[];
+export function loadSongClassification(file?: URL): Map<string, boolean>;
+export function isJpop(classification: Map<string, boolean>, song: Song): boolean | null;
+export function buildArtistPages(songs: Song[], intros: ArtistIntro[], classification: Map<string, boolean>): ArtistPage[];
+export function relatedArtists(page: ArtistPage, pages: ArtistPage[], limit?: number): ArtistPage[];
+export function artistHref(slug: string): string;

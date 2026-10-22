@@ -8,6 +8,7 @@ import { buildPublicCatalog, hasConfirmedNumber } from '../contracts/public-cata
 import { applyProviderCorrections } from '../contracts/provider-corrections.mjs';
 import { buildTarget, robotsFor } from '../contracts/publication.mjs';
 import { validateChartSnapshot } from './import-chart-snapshot.mjs';
+import { buildArtistPages, loadArtistIntros, loadSongClassification } from '../contracts/artists.mjs';
 
 const projectRoot = fileURLToPath(new URL('../', import.meta.url));
 const origin = 'https://jpop.today';
@@ -307,14 +308,14 @@ export function verifyDetailNumbers(html, song, file = 'detail') {
   }
 }
 
-function verifyHtml(html, file, song, canonicals, target) {
+function verifyHtml(html, file, song, canonicals, target, artist) {
   const canonicalsOnPage = [...html.matchAll(/<link\b[^>]*>/gi)].map(match => attributes(match[0])).filter(attr => attr.rel?.toLowerCase().split(/\s+/).includes('canonical'));
   requireCondition(canonicalsOnPage.length === 1 && canonicalsOnPage[0].href === canonicalFor(file), `${file}: canonical must match the encoded static route`);
   requireCondition(!canonicals.has(canonicalsOnPage[0].href), `${file}: duplicate canonical`);
   canonicals.add(canonicalsOnPage[0].href);
   const robots = [...html.matchAll(/<meta\b[^>]*>/gi)].map(match => attributes(match[0])).filter(attr => attr.name?.toLowerCase() === 'robots');
   const route = file === 'index.html' ? '/' : file.endsWith('/index.html') ? '/' + file.slice(0, -'index.html'.length) : '/' + file;
-  requireCondition(robots.length === 1 && robots[0].content === robotsFor(target, route, song), `${file}: robots meta differs from publication policy`);
+  requireCondition(robots.length === 1 && robots[0].content === robotsFor(target, route, song ?? artist), `${file}: robots meta differs from publication policy`);
   const title = normalized(decodeEntities(/<title\b[^>]*>([\s\S]*?)<\/title>/i.exec(html)?.[1] ?? ''));
   requireCondition(title.length > 0, `${file}: missing document title`);
   requireCondition(!/<(?:img|image|picture)\b/i.test(html), `${file}: image elements are outside this preview's public boundary`);
@@ -413,6 +414,8 @@ export async function verifyDist({ distPath = path.join(projectRoot, 'dist'), st
   if (expectedSourceSha) requireCondition(metadata.dirty === false, 'build-info.json: CI build must use a clean source tree');
   const songByFile = new Map(catalog.songs.map(song => [`songs/${song.id}/index.html`, song]));
   for (const file of songByFile.keys()) requireCondition(fileSet.has(file), `${file}: missing static legacy detail`);
+  const artistByFile = new Map(buildArtistPages(catalog.songs, loadArtistIntros(), loadSongClassification()).map(page => [`artists/${page.slug}/index.html`, page]));
+  for (const file of artistByFile.keys()) requireCondition(fileSet.has(file), `${file}: missing artist page`);
   requireCondition(files.filter(file => file.startsWith('songs/')).length === songByFile.size, 'songs/: expected exactly one static detail file per legacy ID');
   const canonicals = new Set();
   let htmlCount = 0;
@@ -422,7 +425,7 @@ export async function verifyDist({ distPath = path.join(projectRoot, 'dist'), st
     verifyPrivateBoundary(text, file);
     requireCondition(!/(?:["'](?:lyrics|lyric|imageUrl|image_url|thumbnailUrl)["']|\b(?:lyrics|lyric|imageUrl|image_url|thumbnailUrl))\s*:/i.test(text) && !/url\(\s*["']?\s*(?:https?:)?\/\//i.test(text), `${file}: lyrics or external image payload is forbidden`);
     if (file.endsWith('.html')) {
-      verifyHtml(text, file, songByFile.get(file), canonicals, metadata.target);
+      verifyHtml(text, file, songByFile.get(file), canonicals, metadata.target, artistByFile.get(file));
       if (file === 'artists/index.html') verifyBothProviderDiscovery(text, catalog.songs);
       if (file === 'chart/index.html') verifyChartBothDiscovery(text, catalog.songs, chart);
       htmlCount += 1;
@@ -432,7 +435,7 @@ export async function verifyDist({ distPath = path.join(projectRoot, 'dist'), st
   const sitemap = await readText(path.join(directory, 'sitemap.xml'), 'sitemap.xml');
   const expectedUrls = files.filter(file => file.endsWith('.html')).filter(file => {
     const route = file === 'index.html' ? '/' : file.endsWith('/index.html') ? '/' + file.slice(0, -'index.html'.length) : '/' + file;
-    return robotsFor(metadata.target, route, songByFile.get(file)) === 'index, follow';
+    return robotsFor(metadata.target, route, songByFile.get(file) ?? artistByFile.get(file)) === 'index, follow';
   }).map(canonicalFor).sort();
   const sitemapUrls = [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map(match => decodeEntities(match[1])).sort();
   requireCondition(isDeepStrictEqual(sitemapUrls, expectedUrls), 'sitemap.xml: differs from reviewed indexable routes');
