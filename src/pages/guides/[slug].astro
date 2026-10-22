@@ -38,5 +38,7 @@ const timeFormat = new Intl.DateTimeFormat('ko-KR', { dateStyle: 'medium', timeS
 </Layout>
 <style>
   .reading :global(ul) { overflow-wrap: anywhere; }
+  .reading :global(.guide-section-links) { list-style: none; padding: 0; margin: 20px 0 0; }
+  .reading :global(.guide-section-links a) { display: flex; align-items: center; min-height: 44px; padding: 10px 14px; border: 1px solid var(--border); border-radius: 6px; background: var(--accent-soft); overflow-wrap: anywhere; }
   .guide-disclaimer { font-size: 14px !important; color: #535d6d !important; border-top: 1px solid var(--border); padding-top: 16px; margin-top: 40px; }
 </style>

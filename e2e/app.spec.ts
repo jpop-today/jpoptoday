@@ -1,6 +1,7 @@
 import { test, expect } from '@playwright/test';
 import { readFileSync } from 'node:fs';
 import type { Song } from '../src/lib/catalog';
+import { sitemapRoutes } from './helpers/sitemap';
 const catalog = JSON.parse(readFileSync(new URL('../data/staging/legacy-catalog.json', import.meta.url), 'utf8')) as { songs: Song[] };
 const pretender = catalog.songs.find(song => song.titleOriginal === 'Pretender' && song.origin === 'playlist')!;
 const archived = catalog.songs.find(song => song.availability === 'archived')!;
@@ -176,7 +177,7 @@ test('actual sitemap and route metadata enforce preview and reviewed-production 
   const unreviewed = publicData.songs.find((song: Song) => song.availability === 'current' && ['tj', 'ky'].every(provider => song.karaoke[provider as 'tj' | 'ky'].status !== 'provider-confirmed'));
   expect(reviewed).toBeTruthy(); expect(unreviewed).toBeTruthy();
   const sitemapResponse = await request.get('/sitemap.xml'); expect(sitemapResponse.ok()).toBe(true);
-  const sitemap = await sitemapResponse.text();
+  const sitemap = await sitemapRoutes(request);
   for (const route of ['/search/', '/favorites/', '/song/', pathFor(unreviewed.id), pathFor(archived.id)]) {
     const response = await request.get(route);
     expect(await response.text(), route).toContain('content="noindex, follow"');

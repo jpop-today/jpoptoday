@@ -49,6 +49,8 @@ test('coverage distinguishes provider numbers, song IDs and unknown within the p
 });
 
 test('coverage exposes reviewed string numbers and their official identity, time and stable detail routes', async ({ page, request }) => {
+  // Checks every reviewed song against the served catalog; grows with the ledger.
+  test.setTimeout(120_000);
   const catalog = await (await request.get('/catalog.json')).json() as { songs: Song[] };
   const playlist = catalog.songs.filter(song => song.origin === 'playlist');
   const reviewed = playlist.filter(song => song.availability === 'current' && ['tj', 'ky'].some(provider => {

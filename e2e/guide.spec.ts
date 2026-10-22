@@ -1,4 +1,5 @@
 import { test, expect } from '@playwright/test';
+import { sitemapRoutes } from './helpers/sitemap';
 
 test('number-checking guide renders correction cases and dated official sources without JavaScript', async ({ browser, request }) => {
   const baseURL = process.env.JPOP_TEST_BASE_URL ?? 'http://127.0.0.1:4321';
@@ -23,7 +24,7 @@ test('number-checking guide renders correction cases and dated official sources 
   await expect(page.locator('link[rel="canonical"]')).toHaveAttribute('href', 'https://jpop.today/guides/checking-song-numbers/');
   const metadata = await (await request.get('/build-info.json')).json();
   await expect(page.locator('meta[name="robots"]')).toHaveAttribute('content', metadata.target === 'production' ? 'index, follow' : 'noindex, follow');
-  const sitemap = await (await request.get('/sitemap.xml')).text();
+  const sitemap = await sitemapRoutes(request);
   if (metadata.target === 'production') expect(sitemap).toContain('<loc>https://jpop.today/guides/checking-song-numbers/</loc>');
   else expect(sitemap).not.toContain('<loc>');
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
@@ -42,7 +43,7 @@ test('home provides a direct entry to reviewed numbers while all six guides rema
   await expect(page).toHaveURL(/\/coverage\/$/);
   await expect(page.locator('#reviewed-heading')).toBeVisible();
   await page.goto('/guides/');
-  await expect(page.locator('.guide-list > li')).toHaveCount(6);
+  await expect(page.locator('.guide-list > li').filter({ hasNotText: '(작성 중)' })).toHaveCount(6);
   for (const slug of ['find-japanese-songs', 'tj-ky-numbers', 'build-your-setlist', 'read-tj-chart', 'checking-song-numbers']) {
     await expect(page.locator(`.guide-list a[href="/guides/${slug}/"]`)).toBeVisible();
   }

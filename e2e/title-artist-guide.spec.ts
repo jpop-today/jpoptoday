@@ -1,4 +1,5 @@
 import { test, expect } from '@playwright/test';
+import { sitemapRoutes } from './helpers/sitemap';
 
 const path = '/guides/title-artist-variants/';
 const title = '제목·가수 표기가 다를 때 같은 곡인지 확인하는 법';
@@ -39,7 +40,7 @@ test('title and artist guide presents original comparison advice, exact historic
   await expect(page.locator('link[rel="canonical"]')).toHaveAttribute('href', 'https://jpop.today' + path);
   const info = await (await request.get('/build-info.json')).json();
   await expect(page.locator('meta[name="robots"]')).toHaveAttribute('content', info.target === 'production' ? 'index, follow' : 'noindex, follow');
-  const sitemap = await (await request.get('/sitemap.xml')).text();
+  const sitemap = await sitemapRoutes(request);
   if (info.target === 'production') expect(sitemap).toContain('<loc>https://jpop.today' + path + '</loc>');
   else expect(sitemap).not.toContain('<loc>');
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
@@ -56,7 +57,7 @@ test('guide index reaches the comparison guide without JavaScript at 360px and l
   page.on('pageerror', error => errors.push(error.message));
   page.on('console', message => { if (message.type() === 'error') errors.push(message.text()); });
   await page.goto('/guides/');
-  await expect(page.locator('.guide-list > li')).toHaveCount(6);
+  await expect(page.locator('.guide-list > li').filter({ hasNotText: '(작성 중)' })).toHaveCount(6);
   const entry = page.getByRole('link', { name: title, exact: true });
   await entry.focus();
   await expect(entry).toBeFocused();
