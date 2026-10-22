@@ -24,6 +24,9 @@ const statusLines = (['tj', 'ky'] as const).map(provider => {
   return `${providerName[provider]}: 확인된 번호가 없습니다. 미수록을 뜻하지 않습니다.`;
 });
 const report = 'mailto:nossee160@gmail.com?subject=' + encodeURIComponent('jpop.today 곡 정보 제보: ' + song.titleOriginal) + '&body=' + encodeURIComponent(`${song.titleOriginal} / ${song.artistOriginal}\n곡 주소: https://jpop.today${songHref(song.id)}\n업체와 확인한 번호·출처:\n`);
+// Raw HTML keeps the anchor free of scoped-style attributes so it matches the
+// Cloudflare email_off normalization in verify-deployment exactly.
+const reportLink = `<!--email_off--><a href="${report.replaceAll('&', '&amp;').replaceAll('"', '&quot;')}">이 곡 정보 제보</a><!--/email_off-->`;
 ---
 <Layout title={`${song.titleOriginal} · ${song.artistOriginal} 노래방 번호`} canonicalPath={songHref(song.id)} song={song}>
   <script slot="head" type="application/ld+json" is:inline set:html={songJsonLd(song, artistPage, meta)} />
@@ -42,7 +45,7 @@ const report = 'mailto:nossee160@gmail.com?subject=' + encodeURIComponent('jpop.
     {conflict && <p class="notice">같은 번호를 가진 다른 항목이 목록에 있습니다. 원제와 가수를 공식 검색에서 대조한 뒤 예약하세요.</p>}
     {song.availability === 'archived' && <p class="notice">이전 목록에 보관된 곡입니다. 현재 기본 검색에서는 제외되며 저장한 주소로 조회할 수 있습니다.</p>}
     <button class="detail-save secondary-button" type="button" disabled data-save={song.id} aria-pressed="false"><Icon name="star" /> 즐겨찾기 저장</button>
-    <section><h2>번호를 확인하는 방법</h2><p>공식 확인 표시에는 제목·가수를 대조한 근거와 확인일을 제공합니다. 나머지 관측 번호는 기존 관리 자료의 값이며 최신 공식 확인이 완료된 정보는 아닙니다. 방문할 기기의 업체와 곡 버전을 함께 확인하세요.</p><p><a href="https://www.tjmedia.com/song/accompaniment_search" rel="noopener noreferrer" target="_blank">TJ 공식 곡 검색</a> · <a href="https://www.kygabang.com/" rel="noopener noreferrer" target="_blank">금영 공식 곡 검색</a></p><p><!--email_off--><a href={report}>이 곡 정보 제보</a><!--/email_off--> · <a href="/guides/tj-ky-numbers/">TJ와 금영 번호 이용 가이드</a></p></section>
+    <section><h2>번호를 확인하는 방법</h2><p>공식 확인 표시에는 제목·가수를 대조한 근거와 확인일을 제공합니다. 나머지 관측 번호는 기존 관리 자료의 값이며 최신 공식 확인이 완료된 정보는 아닙니다. 방문할 기기의 업체와 곡 버전을 함께 확인하세요.</p><p><a href="https://www.tjmedia.com/song/accompaniment_search" rel="noopener noreferrer" target="_blank">TJ 공식 곡 검색</a> · <a href="https://www.kygabang.com/" rel="noopener noreferrer" target="_blank">금영 공식 곡 검색</a></p><p><Fragment set:html={reportLink} /> · <a href="/guides/tj-ky-numbers/">TJ와 금영 번호 이용 가이드</a></p></section>
     <section aria-labelledby="status-heading"><h2 id="status-heading">이 곡의 확인 상태</h2><ul>{statusLines.map(line => <li>{line}</li>)}</ul></section>
     {meta && <section aria-labelledby="info-heading"><h2 id="info-heading">곡 정보</h2><ul>
       {meta.releaseYear && <li>발매: {meta.releaseYear}년</li>}{meta.album && <li>앨범: {meta.album}</li>}{meta.tieup && <li>타이업: {meta.tieup}</li>}

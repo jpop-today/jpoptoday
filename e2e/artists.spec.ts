@@ -1,5 +1,6 @@
 import { test, expect } from '@playwright/test';
 import type { Song } from '../src/lib/catalog';
+import { sitemapRoutes } from './helpers/sitemap';
 
 const pathFor = (id: string) => '/songs/' + encodeURIComponent(id) + '/';
 const providers = ['tj', 'ky'] as const;
@@ -13,6 +14,8 @@ const currentReviewed = (songs: Song[]) => songs.filter(song => song.origin === 
   && providers.some(provider => safe(song, provider)));
 
 test('artist directory independently matches the served reviewed catalog, identity, numbers, evidence and crawler target', async ({ page, request }) => {
+  // Checks every reviewed song against the served catalog; grows with the ledger.
+  test.setTimeout(120_000);
   const catalog = await (await request.get('/catalog.json')).json() as { songs: Song[] };
   const reviewed = currentReviewed(catalog.songs);
   expect(reviewed.length).toBeGreaterThan(0);
@@ -58,7 +61,7 @@ test('artist directory independently matches the served reviewed catalog, identi
   const info = await (await request.get('/build-info.json')).json();
   await expect(page.locator('link[rel="canonical"]')).toHaveAttribute('href', 'https://jpop.today/artists/');
   await expect(page.locator('meta[name="robots"]')).toHaveAttribute('content', info.target === 'production' ? 'index, follow' : 'noindex, follow');
-  const sitemap = await (await request.get('/sitemap.xml')).text();
+  const sitemap = await sitemapRoutes(request);
   if (info.target === 'production') expect(sitemap).toContain('<loc>https://jpop.today/artists/</loc>');
   else expect(sitemap).not.toContain('<loc>');
   expect(ads).toEqual([]);

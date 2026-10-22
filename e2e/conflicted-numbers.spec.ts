@@ -2,6 +2,7 @@ import { test, expect, type Locator, type Page } from '@playwright/test';
 import { createHash } from 'node:crypto';
 import { readFileSync } from 'node:fs';
 import type { Song } from '../src/lib/catalog';
+import { sitemapRoutes } from './helpers/sitemap';
 
 type Provider = 'tj' | 'ky';
 type Entry = { songId: string; provider: Provider; action: 'confirm' | 'suppress'; number: string | null;
@@ -235,7 +236,7 @@ test('conflict surfaces follow artifact crawler boundaries and make no advertisi
   page.on('request', request => { const hostname = new URL(request.url()).hostname;
     if (/(?:^|\.)(?:googlesyndication\.com|doubleclick\.net|googleadservices\.com)$/u.test(hostname)) adRequests.push(hostname); });
   const info = await (await request.get('/build-info.json')).json();
-  const sitemap = await (await request.get('/sitemap.xml')).text();
+  const sitemap = await sitemapRoutes(request);
   for (const path of ['/', '/chart/', '/search/', '/favorites/', ...conflicts.map(song => pathFor(song.id))]) {
     const response = await request.get(path); expect(response.status()).toBe(200);
     const html = await response.text(); expect(html).not.toMatch(/googlesyndication|doubleclick|googleadservices/iu);
