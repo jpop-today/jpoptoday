@@ -6797,6 +6797,3726 @@
         "responseSha256": "6d88d222761f57e59c44e8a69d875a88e48f1ebde7ac4655e25f5a7a3fc6df23"
       },
       "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다."
+    },
+    {
+      "songId": "jpop-playlist-neru-テロル-3beaf50a6a",
+      "provider": "tj",
+      "action": "confirm",
+      "expectedObservedNumber": "27979",
+      "number": "27979",
+      "evidence": {
+        "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=27979&strWord=Y",
+        "checkedAt": "2026-10-22T08:02:21.042760Z",
+        "title": "テロル",
+        "artist": "Neru(Feat.鏡音リン)",
+        "responseSha256": "6c20a4de40a525b7d7d24ed53ea742616bfda293e8a73391ded19390d187514f"
+      },
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다."
+    },
+    {
+      "songId": "jpop-playlist-neru-テロル-3beaf50a6a",
+      "provider": "ky",
+      "action": "confirm",
+      "expectedObservedNumber": "44082",
+      "number": "44082",
+      "evidence": {
+        "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=44082",
+        "checkedAt": "2026-10-22T08:02:26.509928Z",
+        "title": "テロル",
+        "artist": "Neru feat.鏡音リン",
+        "responseSha256": "4a502287d408f27a37ecbd665cb52c46c448443a31e15e4f232f43647f763cf6"
+      },
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다."
+    },
+    {
+      "songId": "jpop-playlist-asian-kung-fu-generation-リライト-3bf0cc04d4",
+      "provider": "tj",
+      "action": "confirm",
+      "expectedObservedNumber": "25822",
+      "number": "25822",
+      "evidence": {
+        "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=25822&strWord=Y",
+        "checkedAt": "2026-10-22T08:02:39.612551Z",
+        "title": "リライト(鋼の錬金術師 OP)",
+        "artist": "ASIAN KUNG-FU GENERATION",
+        "responseSha256": "b1927572d7c28b09e46737a8906f3aaefcb1aacb2044ed26b734be3a1b7ade7e"
+      },
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다."
+    },
+    {
+      "songId": "jpop-playlist-asian-kung-fu-generation-リライト-3bf0cc04d4",
+      "provider": "ky",
+      "action": "confirm",
+      "expectedObservedNumber": "41793",
+      "number": "41793",
+      "evidence": {
+        "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=41793",
+        "checkedAt": "2026-10-22T08:02:44.877101Z",
+        "title": "リライト (\"鋼の錬金術師\"OP)",
+        "artist": "ASIAN KUNG-FU GENERATION",
+        "responseSha256": "3dd308080efdf0b74ab19045fc7717c12d89ae4c67d940de6a5accaed0ff7c3c"
+      },
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다."
+    },
+    {
+      "songId": "jpop-playlist-まふまふ-メリ-ハ-ット-エント-4127e00f78",
+      "provider": "tj",
+      "action": "confirm",
+      "expectedObservedNumber": "28847",
+      "number": "28847",
+      "evidence": {
+        "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=28847&strWord=Y",
+        "checkedAt": "2026-10-22T08:02:54.403134Z",
+        "title": "メリーバッドエンド",
+        "artist": "まふまふ(Feat.初音ミク)",
+        "responseSha256": "07d0dd4b7de3a7ef29274307b8c06ee90eaafecf63e9d78c7e0a7c423d9ac64d"
+      },
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다."
+    },
+    {
+      "songId": "jpop-playlist-まふまふ-メリ-ハ-ット-エント-4127e00f78",
+      "provider": "ky",
+      "action": "confirm",
+      "expectedObservedNumber": "44255",
+      "number": "44255",
+      "evidence": {
+        "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=44255",
+        "checkedAt": "2026-10-22T08:02:59.830567Z",
+        "title": "メリーバッドエンド",
+        "artist": "まふまふ feat.初音ミク",
+        "responseSha256": "aa22df8f595cebd14eb42a6b0ce3ac16ef7d48f8502daa6665e323df62f85b05"
+      },
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다."
+    },
+    {
+      "songId": "jpop-playlist-unison-square-garden-いけないfool-logic-812220cf3c",
+      "provider": "tj",
+      "action": "confirm",
+      "expectedObservedNumber": "68914",
+      "number": "68914",
+      "evidence": {
+        "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=68914&strWord=Y",
+        "checkedAt": "2026-10-22T08:03:04.324098Z",
+        "title": "いけない fool logic(アニメ '鴨乃橋ロンの禁断推理' OP)",
+        "artist": "UNISON SQUARE GARDEN",
+        "responseSha256": "1d678a53bc60233cdd63e5bafe188d6c5c991840b4c481972d6b52540a02f32f"
+      },
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다."
+    },
+    {
+      "songId": "jpop-playlist-unison-square-garden-いけないfool-logic-812220cf3c",
+      "provider": "ky",
+      "action": "confirm",
+      "expectedObservedNumber": "75859",
+      "number": "75859",
+      "evidence": {
+        "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=75859",
+        "checkedAt": "2026-10-22T08:03:10.724218Z",
+        "title": "いけない fool logic (\"鴨乃橋ロンの禁断..",
+        "artist": "UNISON SQUARE GARDEN",
+        "responseSha256": "33ac80778fc536168e41be363209c8578023d2464a028f9cb3bf4b9dec7384c3"
+      },
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다."
+    },
+    {
+      "songId": "jpop-playlist-uru-break-ad02264b96",
+      "provider": "tj",
+      "action": "confirm",
+      "expectedObservedNumber": "68368",
+      "number": "68368",
+      "evidence": {
+        "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=68368&strWord=Y",
+        "checkedAt": "2026-10-22T08:04:39.481421Z",
+        "title": "Break(半妖の夜叉姫 ED)",
+        "artist": "Uru",
+        "responseSha256": "662ac436d27afd936a8e7cf25094bc2540cee46af38661a085e02ed9ccab44ad"
+      },
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다."
+    },
+    {
+      "songId": "jpop-playlist-uru-break-ad02264b96",
+      "provider": "ky",
+      "action": "confirm",
+      "expectedObservedNumber": "44635",
+      "number": "44635",
+      "evidence": {
+        "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=44635",
+        "checkedAt": "2026-10-22T08:04:44.864951Z",
+        "title": "Break (\"半妖の夜叉姫\"ED)",
+        "artist": "Uru",
+        "responseSha256": "04cdbd9bf3caa6f8e24e678e8e67d3a6109ebf328fe0c4a39c9bf155521bd0cc"
+      },
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다."
+    },
+    {
+      "songId": "jpop-playlist-uru-remember-604434ab4a",
+      "provider": "tj",
+      "action": "confirm",
+      "expectedObservedNumber": "28985",
+      "number": "28985",
+      "evidence": {
+        "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=28985&strWord=Y",
+        "checkedAt": "2026-10-22T08:04:48.845392Z",
+        "title": "Remember(映画'夏目友人帳~うつせみに結ぶ~' OST)",
+        "artist": "Uru",
+        "responseSha256": "928894c4c84369dc478422de7d1fc5a38225441fcd98e595293df1ec374622ba"
+      },
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다."
+    },
+    {
+      "songId": "jpop-playlist-uru-remember-604434ab4a",
+      "provider": "ky",
+      "action": "confirm",
+      "expectedObservedNumber": "44930",
+      "number": "44930",
+      "evidence": {
+        "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=44930",
+        "checkedAt": "2026-10-22T08:04:55.295398Z",
+        "title": "remember (\"劇場版 夏目友人帳~うつせみ..",
+        "artist": "Uru",
+        "responseSha256": "b8efff893366e19dc4e8a6cc1fdb016cbcb9b6890a0516b31bb944173b5a0486"
+      },
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다."
+    },
+    {
+      "songId": "jpop-playlist-uru-あなたか-いることて-be4f3ec243",
+      "provider": "tj",
+      "action": "confirm",
+      "expectedObservedNumber": "68247",
+      "number": "68247",
+      "evidence": {
+        "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=68247&strWord=Y",
+        "checkedAt": "2026-10-22T08:04:59.262139Z",
+        "title": "あなたがいることで(テーマ'テセウスの船' OST)",
+        "artist": "Uru",
+        "responseSha256": "d5046879f7dc0d5f1f5968e9613abf10d56e39fedcf12bf06fa5b38096de5f74"
+      },
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다."
+    },
+    {
+      "songId": "jpop-playlist-uru-あなたか-いることて-be4f3ec243",
+      "provider": "ky",
+      "action": "confirm",
+      "expectedObservedNumber": "44574",
+      "number": "44574",
+      "evidence": {
+        "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=44574",
+        "checkedAt": "2026-10-22T08:05:04.439505Z",
+        "title": "あなたがいることで (ドラマ\"テセウスの船\")",
+        "artist": "Uru",
+        "responseSha256": "fe86d9b6f6e62b6c64900dbe2f89b942e4639f73c0170c7ebe78b963e46c7436"
+      },
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다."
+    },
+    {
+      "songId": "jpop-playlist-yama-oz-ee7d05afd2",
+      "provider": "tj",
+      "action": "confirm",
+      "expectedObservedNumber": "68573",
+      "number": "68573",
+      "evidence": {
+        "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=68573&strWord=Y",
+        "checkedAt": "2026-10-22T08:05:08.440965Z",
+        "title": "Oz.(王様ランキング ED)",
+        "artist": "yama",
+        "responseSha256": "f66ed4aed10328f7e2a13486d9ed2cb74461f6f8fda42179cd953d98c4ed57a2"
+      },
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다."
+    },
+    {
+      "songId": "jpop-playlist-yama-oz-ee7d05afd2",
+      "provider": "ky",
+      "action": "confirm",
+      "expectedObservedNumber": "44761",
+      "number": "44761",
+      "evidence": {
+        "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=44761",
+        "checkedAt": "2026-10-22T08:05:14.667017Z",
+        "title": "Oz. (\"王様ランキング\"ED)",
+        "artist": "yama",
+        "responseSha256": "5cf8a3300adf89d9844a192d700816169543103962bf35dd7a2639f30b058ee3"
+      },
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다."
+    },
+    {
+      "songId": "jpop-playlist-yama-a-m-3-21-from-the-first-take-16441df97b",
+      "provider": "tj",
+      "action": "confirm",
+      "expectedObservedNumber": "68756",
+      "number": "68756",
+      "evidence": {
+        "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=68756&strWord=Y",
+        "checkedAt": "2026-10-22T08:05:18.704450Z",
+        "title": "a.m.3:21 - From THE FIRST TAKE",
+        "artist": "yama",
+        "responseSha256": "0cb36b35c7373ec5ac3d1506aa401a7cbfca288a7e3a994346a2e50c6fe8668e"
+      },
+      "reason": "TJ 공식 번호 검색의 제목과 가수가 관리 목록 표기와 일치합니다."
+    },
+    {
+      "songId": "jpop-playlist-yama-a-m-3-21-from-the-first-take-16441df97b",
+      "provider": "ky",
+      "action": "confirm",
+      "expectedObservedNumber": "44899",
+      "number": "44899",
+      "evidence": {
+        "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=44899",
+        "checkedAt": "2026-10-22T08:05:27.048312Z",
+        "title": "a.m.3:21 -From THE FIRST TAKE",
+        "artist": "yama",
+        "responseSha256": "c44f586f133da2e4aa4cc1584a04a90d57e4d6e6556b987c1a90231b12ea98f6"
+      },
+      "reason": "금영 공식 번호 검색의 제목과 가수가 관리 목록 표기와 일치합니다."
+    },
+    {
+      "songId": "jpop-playlist-yama-slash-8a0e328935",
+      "provider": "tj",
+      "action": "confirm",
+      "expectedObservedNumber": "68817",
+      "number": "68817",
+      "evidence": {
+        "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=68817&strWord=Y",
+        "checkedAt": "2026-10-22T08:05:31.170967Z",
+        "title": "slash(アニメ '機動戦士ガンダム 水星の魔女 Season2' OP)",
+        "artist": "yama",
+        "responseSha256": "680e921d71a8e97f113d59cd258956da70b28a00dfab7e18cf9ad0f66c0dbb83"
+      },
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다."
+    },
+    {
+      "songId": "jpop-playlist-yama-slash-8a0e328935",
+      "provider": "ky",
+      "action": "confirm",
+      "expectedObservedNumber": "44949",
+      "number": "44949",
+      "evidence": {
+        "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=44949",
+        "checkedAt": "2026-10-22T08:05:36.237286Z",
+        "title": "slash (\"機動戦士ガンダム 水星の魔女\"OP)",
+        "artist": "yama",
+        "responseSha256": "3ad7b79622cdea128f6b0f35cd91ec4fe67897d953577fd99df3040f9bbb1819"
+      },
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다."
+    },
+    {
+      "songId": "jpop-playlist-レミオロメン-3月9日-2b01e20f4a",
+      "provider": "tj",
+      "action": "confirm",
+      "expectedObservedNumber": "26547",
+      "number": "26547",
+      "evidence": {
+        "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=26547&strWord=Y",
+        "checkedAt": "2026-10-22T08:05:40.190271Z",
+        "title": "3月9日(1リットルの涙 OST)",
+        "artist": "レミオロメン",
+        "responseSha256": "ffbbd6571244d897dce91f822843f35e34f2261484744417504337e1ed2e58d8"
+      },
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다."
+    },
+    {
+      "songId": "jpop-playlist-レミオロメン-3月9日-2b01e20f4a",
+      "provider": "ky",
+      "action": "confirm",
+      "expectedObservedNumber": "40328",
+      "number": "40328",
+      "evidence": {
+        "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=40328",
+        "checkedAt": "2026-10-22T08:05:46.640258Z",
+        "title": "3月9日 (ドラマ\"1リットルの涙\")",
+        "artist": "レミオロメン",
+        "responseSha256": "6d6e3cd1393d75d7c2a8e55d2a5915b347493e66a7dc497bbc6d12ba782438ad"
+      },
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다."
+    },
+    {
+      "songId": "jpop-playlist-レミオロメン-太陽の下-9adc7f6ec4",
+      "provider": "tj",
+      "action": "confirm",
+      "expectedObservedNumber": "26185",
+      "number": "26185",
+      "evidence": {
+        "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=26185&strWord=Y",
+        "checkedAt": "2026-10-22T08:05:50.666051Z",
+        "title": "太陽の下",
+        "artist": "レミオロメン",
+        "responseSha256": "1a32ec962b1c49d34cd6e8f969bdf6a92658c323008eab680b0008e2ee9592d0"
+      },
+      "reason": "TJ 공식 번호 검색의 제목과 가수가 관리 목록 표기와 일치합니다."
+    },
+    {
+      "songId": "jpop-playlist-レミオロメン-太陽の下-9adc7f6ec4",
+      "provider": "ky",
+      "action": "confirm",
+      "expectedObservedNumber": "40456",
+      "number": "40456",
+      "evidence": {
+        "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=40456",
+        "checkedAt": "2026-10-22T08:05:55.957733Z",
+        "title": "太陽の下 (映画\"子ぎつねヘレン\")",
+        "artist": "レミオロメン",
+        "responseSha256": "670368598b003b587696403235110cb37bdcaf9f88976ce42673201d59752507"
+      },
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다."
+    },
+    {
+      "songId": "jpop-playlist-レミオロメン-粉雪-7357cc9343",
+      "provider": "tj",
+      "action": "confirm",
+      "expectedObservedNumber": "26132",
+      "number": "26132",
+      "evidence": {
+        "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=26132&strWord=Y",
+        "checkedAt": "2026-10-22T08:05:59.931638Z",
+        "title": "粉雪",
+        "artist": "レミオロメン",
+        "responseSha256": "43fd9edc4232c3f4265259b836f98ed5d070ba186d30a18ae61736a36168f100"
+      },
+      "reason": "TJ 공식 번호 검색의 제목과 가수가 관리 목록 표기와 일치합니다."
+    },
+    {
+      "songId": "jpop-playlist-レミオロメン-粉雪-7357cc9343",
+      "provider": "ky",
+      "action": "confirm",
+      "expectedObservedNumber": "40206",
+      "number": "40206",
+      "evidence": {
+        "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=40206",
+        "checkedAt": "2026-10-22T08:06:05.064026Z",
+        "title": "粉雪 (ドラマ\"1リットルの涙\")",
+        "artist": "レミオロメン",
+        "responseSha256": "fade9457102a09a9f9efbe8849156656523607ac272007149d2889fe7318e1c0"
+      },
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다."
+    },
+    {
+      "songId": "jpop-playlist-中森明菜-desire-情熱-dee46ac196",
+      "provider": "tj",
+      "action": "confirm",
+      "expectedObservedNumber": "26551",
+      "number": "26551",
+      "evidence": {
+        "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=26551&strWord=Y",
+        "checkedAt": "2026-10-22T08:06:09.203522Z",
+        "title": "DESIRE -情熱-",
+        "artist": "中森明菜",
+        "responseSha256": "84e725100d40f60048a7c242ba74bfc712635e8a5df0fbfb7a77261ab0f8670d"
+      },
+      "reason": "TJ 공식 번호 검색의 제목과 가수가 관리 목록 표기와 일치합니다."
+    },
+    {
+      "songId": "jpop-playlist-中森明菜-desire-情熱-dee46ac196",
+      "provider": "ky",
+      "action": "confirm",
+      "expectedObservedNumber": "42247",
+      "number": "42247",
+      "evidence": {
+        "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=42247",
+        "checkedAt": "2026-10-22T08:06:14.219548Z",
+        "title": "DESIRE -情熱-",
+        "artist": "中森明菜",
+        "responseSha256": "b2b22bd495ff7fe439ae6e1ad9e56dc4c71b75fc1e0fb461c96137aa479964f0"
+      },
+      "reason": "금영 공식 번호 검색의 제목과 가수가 관리 목록 표기와 일치합니다."
+    },
+    {
+      "songId": "jpop-playlist-中森明菜-難破船-3cfda2a6c5",
+      "provider": "tj",
+      "action": "confirm",
+      "expectedObservedNumber": "6709",
+      "number": "6709",
+      "evidence": {
+        "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=6709&strWord=Y",
+        "checkedAt": "2026-10-22T08:06:18.422695Z",
+        "title": "難破船",
+        "artist": "中森明菜",
+        "responseSha256": "aa86462935c8ddeb777fa39356d5b99ff120c0de34bab96dd2224d326316fca6"
+      },
+      "reason": "TJ 공식 번호 검색의 제목과 가수가 관리 목록 표기와 일치합니다."
+    },
+    {
+      "songId": "jpop-playlist-中森明菜-難破船-3cfda2a6c5",
+      "provider": "ky",
+      "action": "confirm",
+      "expectedObservedNumber": "44540",
+      "number": "44540",
+      "evidence": {
+        "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=44540",
+        "checkedAt": "2026-10-22T08:06:23.822882Z",
+        "title": "難破船",
+        "artist": "中森明菜",
+        "responseSha256": "eda23d314f1d507a9edc1944eb1b03e59391ccc205850a768c96a8687a3fb176"
+      },
+      "reason": "금영 공식 번호 검색의 제목과 가수가 관리 목록 표기와 일치합니다."
+    },
+    {
+      "songId": "jpop-playlist-中森明菜-rojo-tierra-5584e91677",
+      "provider": "tj",
+      "action": "confirm",
+      "expectedObservedNumber": "27786",
+      "number": "27786",
+      "evidence": {
+        "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=27786&strWord=Y",
+        "checkedAt": "2026-10-22T08:06:27.986769Z",
+        "title": "Rojo-Tierra-",
+        "artist": "中森明菜",
+        "responseSha256": "2d48ee6451324b9d7892c661e3d665e025ad83b56af1063f7ed9beca29bc3764"
+      },
+      "reason": "TJ 공식 번호 검색의 제목과 가수가 관리 목록 표기와 일치합니다."
+    },
+    {
+      "songId": "jpop-playlist-菅田将暉-さよならエレシ-be036d99ce",
+      "provider": "tj",
+      "action": "confirm",
+      "expectedObservedNumber": "28834",
+      "number": "28834",
+      "evidence": {
+        "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=28834&strWord=Y",
+        "checkedAt": "2026-10-22T08:06:32.178863Z",
+        "title": "さよならエレジー(ドラマ'トドメの接吻' OST)",
+        "artist": "菅田将暉",
+        "responseSha256": "026e00c3685a15175b2a28c3b4a5405efbfd9fcc1a3296eb158f6117d55c6dff"
+      },
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다."
+    },
+    {
+      "songId": "jpop-playlist-菅田将暉-さよならエレシ-be036d99ce",
+      "provider": "ky",
+      "action": "confirm",
+      "expectedObservedNumber": "44256",
+      "number": "44256",
+      "evidence": {
+        "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=44256",
+        "checkedAt": "2026-10-22T08:06:37.893749Z",
+        "title": "さよならエレジー (ドラマ\"トドメの接吻\")",
+        "artist": "菅田将暉",
+        "responseSha256": "10d31d691d4662486ddbe1e6c5da22913ef6a8a8ae1d5db4ca6a820b21a6393b"
+      },
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다."
+    },
+    {
+      "songId": "jpop-playlist-菅田将暉-まちか-いさか-し-7535777470",
+      "provider": "tj",
+      "action": "confirm",
+      "expectedObservedNumber": "68040",
+      "number": "68040",
+      "evidence": {
+        "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=68040&strWord=Y",
+        "checkedAt": "2026-10-22T08:06:42.242627Z",
+        "title": "まちがいさがし(ドラマ'パーフェクトワールド' OST)",
+        "artist": "菅田将暉",
+        "responseSha256": "8a2e88939937eeaa281a9e95106dc3fb945c58ed201c417f1f29a8942b0e5a4b"
+      },
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다."
+    },
+    {
+      "songId": "jpop-playlist-菅田将暉-まちか-いさか-し-7535777470",
+      "provider": "ky",
+      "action": "confirm",
+      "expectedObservedNumber": "44481",
+      "number": "44481",
+      "evidence": {
+        "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=44481",
+        "checkedAt": "2026-10-22T08:06:48.197983Z",
+        "title": "まちがいさがし (ドラマ\"パーフェクトワールド\")",
+        "artist": "菅田将暉",
+        "responseSha256": "4e9a9632555ccf4fcc8481fe75236f4890747c64d427cb535d2b2d4773f4febf"
+      },
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다."
+    },
+    {
+      "songId": "jpop-playlist-菅田将暉-ロンク-ホ-フ-フィリア-8ea2c87655",
+      "provider": "tj",
+      "action": "confirm",
+      "expectedObservedNumber": "28904",
+      "number": "28904",
+      "evidence": {
+        "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=28904&strWord=Y",
+        "checkedAt": "2026-10-22T08:06:52.205858Z",
+        "title": "ロングホープ・フィリア(僕のヒーローアカデミア THE MOVIE~２人の英 OST)",
+        "artist": "菅田将暉",
+        "responseSha256": "8080c5e536a05353b40035e34211612e3230e58e16e04c5658a40ab71e4f416c"
+      },
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다."
+    },
+    {
+      "songId": "jpop-playlist-菅田将暉-ロンク-ホ-フ-フィリア-8ea2c87655",
+      "provider": "ky",
+      "action": "confirm",
+      "expectedObservedNumber": "44306",
+      "number": "44306",
+      "evidence": {
+        "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=44306",
+        "checkedAt": "2026-10-22T08:06:57.837413Z",
+        "title": "ロングホープ・フィリア (\"僕のヒーローアカデミア\"ED)",
+        "artist": "菅田将暉",
+        "responseSha256": "3c3113cc39126bba668cf51e1484b0ed3824289d227c0006a5a253d4e51fe3ac"
+      },
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다."
+    },
+    {
+      "songId": "jpop-playlist-creepy-nuts-bling-bang-bang-born-011aaffc9c",
+      "provider": "tj",
+      "action": "confirm",
+      "expectedObservedNumber": "68950",
+      "number": "68950",
+      "evidence": {
+        "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=68950&strWord=Y",
+        "checkedAt": "2026-10-22T08:07:02.003312Z",
+        "title": "Bling-Bang-Bang-Born(アニメ 'マッシュル-MASHLE- 神覚者候補選抜試験編' OP)",
+        "artist": "Creepy Nuts",
+        "responseSha256": "788917fcaf129d0f0a457e59d13ba3e09710ae1d34093f3789ac9bbc39eda280"
+      },
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다."
+    },
+    {
+      "songId": "jpop-playlist-creepy-nuts-bling-bang-bang-born-011aaffc9c",
+      "provider": "ky",
+      "action": "confirm",
+      "expectedObservedNumber": "75920",
+      "number": "75920",
+      "evidence": {
+        "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=75920",
+        "checkedAt": "2026-10-22T08:07:08.043572Z",
+        "title": "Bling-Bang-Bang-Born (\"マッシュル..",
+        "artist": "Creepy Nuts",
+        "responseSha256": "904e6287d01d38a8424005fa1dce665b31782feec9497a4839456edbda4a3764"
+      },
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다."
+    },
+    {
+      "songId": "jpop-playlist-creepy-nuts-よふかしのうた-2c7ea30ee6",
+      "provider": "tj",
+      "action": "confirm",
+      "expectedObservedNumber": "52421",
+      "number": "52421",
+      "evidence": {
+        "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=52421&strWord=Y",
+        "checkedAt": "2026-10-22T08:07:12.259210Z",
+        "title": "よふかしのうた(TVアニメ 'よふかしのうた' OST)",
+        "artist": "Creepy Nuts",
+        "responseSha256": "9bb7cca54422f956c32eb86bc1330d1229044f1e906a64fcc804bc8fc80b052a"
+      },
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다."
+    },
+    {
+      "songId": "jpop-playlist-creepy-nuts-よふかしのうた-2c7ea30ee6",
+      "provider": "ky",
+      "action": "confirm",
+      "expectedObservedNumber": "57776",
+      "number": "57776",
+      "evidence": {
+        "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=57776",
+        "checkedAt": "2026-10-22T08:07:17.804118Z",
+        "title": "よふかしのうた",
+        "artist": "Creepy Nuts",
+        "responseSha256": "50ea837ebffd0e451d333fb5bfd1ee9b00d3d41d2a76fec1288e9dd726781d1b"
+      },
+      "reason": "금영 공식 번호 검색의 제목과 가수가 관리 목록 표기와 일치합니다."
+    },
+    {
+      "songId": "jpop-playlist-creepy-nuts-オトノケ-77b13d7ba3",
+      "provider": "tj",
+      "action": "confirm",
+      "expectedObservedNumber": "52704",
+      "number": "52704",
+      "evidence": {
+        "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=52704&strWord=Y",
+        "checkedAt": "2026-10-22T08:07:21.869223Z",
+        "title": "オトノケ - Otonoke(TVアニメ 'ダンダダン' OP)",
+        "artist": "Creepy Nuts",
+        "responseSha256": "e95167b58a7bb8772d86bf65a62f419f5455c5f6b8a8a87694245be2894d4cf9"
+      },
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다."
+    },
+    {
+      "songId": "jpop-playlist-creepy-nuts-オトノケ-77b13d7ba3",
+      "provider": "ky",
+      "action": "confirm",
+      "expectedObservedNumber": "76525",
+      "number": "76525",
+      "evidence": {
+        "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=76525",
+        "checkedAt": "2026-10-22T08:07:27.420667Z",
+        "title": "オトノケ (\"ダンダダン\"OP)",
+        "artist": "Creepy Nuts",
+        "responseSha256": "711c3d4c87c59df0577a6be44a0cda1cf45c65af00100ea74aab67aafa09c88f"
+      },
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다."
+    },
+    {
+      "songId": "jpop-playlist-superfly-愛をこめて花束を-35fa32aae4",
+      "provider": "tj",
+      "action": "confirm",
+      "expectedObservedNumber": "27391",
+      "number": "27391",
+      "evidence": {
+        "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=27391&strWord=Y",
+        "checkedAt": "2026-10-22T08:07:31.666888Z",
+        "title": "愛をこめて花束を",
+        "artist": "Superfly",
+        "responseSha256": "cc7ce5299cf0133d0c04c399e316896f506ab0841ae29c7c4c53f9dac33f223d"
+      },
+      "reason": "TJ 공식 번호 검색의 제목과 가수가 관리 목록 표기와 일치합니다."
+    },
+    {
+      "songId": "jpop-playlist-superfly-愛をこめて花束を-35fa32aae4",
+      "provider": "ky",
+      "action": "confirm",
+      "expectedObservedNumber": "42823",
+      "number": "42823",
+      "evidence": {
+        "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=42823",
+        "checkedAt": "2026-10-22T08:07:37.114443Z",
+        "title": "愛をこめて花束を (ドラマ\"エジソンの母\")",
+        "artist": "Superfly",
+        "responseSha256": "a268cce1a365b292daec65ab145f7e16764e02dc16360f316281012f3318c4c7"
+      },
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다."
+    },
+    {
+      "songId": "jpop-playlist-superfly-覚醒-769a64d391",
+      "provider": "tj",
+      "action": "confirm",
+      "expectedObservedNumber": "68819",
+      "number": "68819",
+      "evidence": {
+        "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=68819&strWord=Y",
+        "checkedAt": "2026-10-22T08:07:41.288819Z",
+        "title": "覚醒(映画 'プロメア' OST)",
+        "artist": "Superfly",
+        "responseSha256": "bb31d7db4eb8169cdcc521ddc13163be2587a28bc765af18e4b6ec854de99f56"
+      },
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다."
+    },
+    {
+      "songId": "jpop-playlist-superfly-覚醒-769a64d391",
+      "provider": "ky",
+      "action": "confirm",
+      "expectedObservedNumber": "44956",
+      "number": "44956",
+      "evidence": {
+        "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=44956",
+        "checkedAt": "2026-10-22T08:07:46.330493Z",
+        "title": "覚醒 (\"プロメア\"OST)",
+        "artist": "Superfly",
+        "responseSha256": "dc94eaa8e6eef9ac84bef78b467d0eecd547da69981e010d91d794c565846536"
+      },
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다."
+    },
+    {
+      "songId": "jpop-playlist-superfly-輝く月のように-9987dbe7c7",
+      "provider": "tj",
+      "action": "confirm",
+      "expectedObservedNumber": "27342",
+      "number": "27342",
+      "evidence": {
+        "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=27342&strWord=Y",
+        "checkedAt": "2026-10-22T08:07:50.328566Z",
+        "title": "輝く月のように",
+        "artist": "Superfly",
+        "responseSha256": "e8c23c9274be54099cb97824afa6f6622da302af9c477f5e0108544943487091"
+      },
+      "reason": "TJ 공식 번호 검색의 제목과 가수가 관리 목록 표기와 일치합니다."
+    },
+    {
+      "songId": "jpop-playlist-superfly-輝く月のように-9987dbe7c7",
+      "provider": "ky",
+      "action": "confirm",
+      "expectedObservedNumber": "43677",
+      "number": "43677",
+      "evidence": {
+        "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=43677",
+        "checkedAt": "2026-10-22T08:07:55.970544Z",
+        "title": "輝く月のように (ドラマ\"サマーレスキュー\")",
+        "artist": "Superfly",
+        "responseSha256": "46658565899c60cdc19902005d61e90adaa84e6d2f552d0cf01754aea0f3706a"
+      },
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다."
+    },
+    {
+      "songId": "jpop-playlist-t-m-revolution-heart-of-sword-夜明け前-a2882afd41",
+      "provider": "tj",
+      "action": "confirm",
+      "expectedObservedNumber": "25187",
+      "number": "25187",
+      "evidence": {
+        "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=25187&strWord=Y",
+        "checkedAt": "2026-10-22T08:08:00.268523Z",
+        "title": "Heart of sword∼夜明け前∼(るろうに剣心 ED)",
+        "artist": "T.M.Revolution",
+        "responseSha256": "47eae2c68b3697bdb0fcf9704273441af3a20eb795b3a1559d52e75a87ca8982"
+      },
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다."
+    },
+    {
+      "songId": "jpop-playlist-t-m-revolution-heart-of-sword-夜明け前-a2882afd41",
+      "provider": "ky",
+      "action": "confirm",
+      "expectedObservedNumber": "42183",
+      "number": "42183",
+      "evidence": {
+        "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=42183",
+        "checkedAt": "2026-10-22T08:08:05.312806Z",
+        "title": "HEART OF SWORD ~夜明け前~ (\"るろうに剣心\"ED)",
+        "artist": "T.M.Revolution",
+        "responseSha256": "17c6b3a0176d487e7b2af61c68735051507029ed98539ed87f604546315e841c"
+      },
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다."
+    },
+    {
+      "songId": "jpop-playlist-t-m-revolution-invoke-ff9e838941",
+      "provider": "tj",
+      "action": "confirm",
+      "expectedObservedNumber": "25432",
+      "number": "25432",
+      "evidence": {
+        "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=25432&strWord=Y",
+        "checkedAt": "2026-10-22T08:08:09.629048Z",
+        "title": "INVOKE(機動戦士ガンダムSEED OP)",
+        "artist": "T.M.Revolution",
+        "responseSha256": "7c5620ef4afae3df11a1ad69f28f0c942a409608f1c04287bc832ef84637a6f6"
+      },
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다."
+    },
+    {
+      "songId": "jpop-playlist-t-m-revolution-invoke-ff9e838941",
+      "provider": "ky",
+      "action": "confirm",
+      "expectedObservedNumber": "41514",
+      "number": "41514",
+      "evidence": {
+        "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=41514",
+        "checkedAt": "2026-10-22T08:08:14.684150Z",
+        "title": "INVOKE (\"機動戦士ガンダムSEED\"OP)",
+        "artist": "T.M.Revolution",
+        "responseSha256": "469f485e8c44d15370ade1f2281aa301132b5c705cd7d2e6e816ebae572c8c80"
+      },
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다."
+    },
+    {
+      "songId": "jpop-playlist-t-m-revolution-ignited-イク-ナイテット-5607539829",
+      "provider": "tj",
+      "action": "confirm",
+      "expectedObservedNumber": "25887",
+      "number": "25887",
+      "evidence": {
+        "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=25887&strWord=Y",
+        "checkedAt": "2026-10-22T08:08:18.709443Z",
+        "title": "Ignited-イグナイテッド-(機動戦士ガンダムSEED OP)",
+        "artist": "T.M.Revolution",
+        "responseSha256": "c3cf1398efff3ee0a95c002aba43d56a459a6fbff7db246645f4ca04028cbc68"
+      },
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다."
+    },
+    {
+      "songId": "jpop-playlist-t-m-revolution-ignited-イク-ナイテット-5607539829",
+      "provider": "ky",
+      "action": "confirm",
+      "expectedObservedNumber": "41826",
+      "number": "41826",
+      "evidence": {
+        "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=41826",
+        "checkedAt": "2026-10-22T08:08:23.656559Z",
+        "title": "ignited-イグナイテッド-(\"機動戦士ガンダムSEED DESTINY\"OP)",
+        "artist": "T.M.Revolution",
+        "responseSha256": "d7340bab391e52097ca7f4e659b5058aeb8bd85b8aa5deb0785b73eb0d8760d2"
+      },
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다."
+    },
+    {
+      "songId": "jpop-playlist-ユイカ-すないは-f52a90d079",
+      "provider": "tj",
+      "action": "confirm",
+      "expectedObservedNumber": "52419",
+      "number": "52419",
+      "evidence": {
+        "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=52419&strWord=Y",
+        "checkedAt": "2026-10-22T08:08:27.666863Z",
+        "title": "すないぱー",
+        "artist": "『ユイカ』",
+        "responseSha256": "1b8474d111a0e8fbd85743208968645fe7fa3c97a7aa6577e4603c19581c5b96"
+      },
+      "reason": "TJ 공식 번호 검색의 제목과 가수가 관리 목록 표기와 일치합니다."
+    },
+    {
+      "songId": "jpop-playlist-ユイカ-すないは-f52a90d079",
+      "provider": "ky",
+      "action": "confirm",
+      "expectedObservedNumber": "57777",
+      "number": "57777",
+      "evidence": {
+        "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=57777",
+        "checkedAt": "2026-10-22T08:08:32.841777Z",
+        "title": "すないぱー。",
+        "artist": "『ユイカ』",
+        "responseSha256": "2c3e6b8ec3cbd1092929e6349c8647dc729915bd8f566801a272ffd24464ae83"
+      },
+      "reason": "금영 공식 번호 검색의 제목과 가수가 관리 목록 표기와 일치합니다."
+    },
+    {
+      "songId": "jpop-playlist-ユイカ-好きた-から-c08de2ff1f",
+      "provider": "tj",
+      "action": "confirm",
+      "expectedObservedNumber": "68523",
+      "number": "68523",
+      "evidence": {
+        "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=68523&strWord=Y",
+        "checkedAt": "2026-10-22T08:08:36.902569Z",
+        "title": "好きだから。",
+        "artist": "『ユイカ』",
+        "responseSha256": "98ba91acbe28e6851c4b89b8a82fe6c5cb34565e7534eb642e264331d91f1280"
+      },
+      "reason": "TJ 공식 번호 검색의 제목과 가수가 관리 목록 표기와 일치합니다."
+    },
+    {
+      "songId": "jpop-playlist-ユイカ-好きた-から-c08de2ff1f",
+      "provider": "ky",
+      "action": "confirm",
+      "expectedObservedNumber": "44734",
+      "number": "44734",
+      "evidence": {
+        "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=44734",
+        "checkedAt": "2026-10-22T08:08:42.148826Z",
+        "title": "好きだから。",
+        "artist": "『ユイカ』",
+        "responseSha256": "441603df008fadf843cc2e10cb3ed94e11ea2ff356e46c6bd789fdf8d54fb542"
+      },
+      "reason": "금영 공식 번호 검색의 제목과 가수가 관리 목록 표기와 일치합니다."
+    },
+    {
+      "songId": "jpop-playlist-ユイカ-恋泥棒-b3145f72ac",
+      "provider": "tj",
+      "action": "confirm",
+      "expectedObservedNumber": "68661",
+      "number": "68661",
+      "evidence": {
+        "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=68661&strWord=Y",
+        "checkedAt": "2026-10-22T08:08:46.139341Z",
+        "title": "恋泥棒。",
+        "artist": "『ユイカ』",
+        "responseSha256": "a556db8bfa5433fd0ada0e4db28b05bcf2ebf100e77cf23e2c4d620b792774f5"
+      },
+      "reason": "TJ 공식 번호 검색의 제목과 가수가 관리 목록 표기와 일치합니다."
+    },
+    {
+      "songId": "jpop-playlist-ユイカ-恋泥棒-b3145f72ac",
+      "provider": "ky",
+      "action": "confirm",
+      "expectedObservedNumber": "44954",
+      "number": "44954",
+      "evidence": {
+        "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=44954",
+        "checkedAt": "2026-10-22T08:08:51.375810Z",
+        "title": "恋泥棒。",
+        "artist": "『ユイカ』",
+        "responseSha256": "90c2b8969a0683793e34fbf3e944f0de882995ea7306aef1bae24cf36d7cee37"
+      },
+      "reason": "금영 공식 번호 검색의 제목과 가수가 관리 목록 표기와 일치합니다."
+    },
+    {
+      "songId": "jpop-playlist-いきものか-かり-hanabi-6a8b4b6202",
+      "provider": "tj",
+      "action": "confirm",
+      "expectedObservedNumber": "26208",
+      "number": "26208",
+      "evidence": {
+        "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=26208&strWord=Y",
+        "checkedAt": "2026-10-22T08:08:55.630553Z",
+        "title": "HANABI(BLEACH ED)",
+        "artist": "いきものがかり",
+        "responseSha256": "e9dbc69208bfb7ef83b67c4426dbb2ae18aeff64b7962a71067a86cb7399e30c"
+      },
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다."
+    },
+    {
+      "songId": "jpop-playlist-いきものか-かり-hanabi-6a8b4b6202",
+      "provider": "ky",
+      "action": "confirm",
+      "expectedObservedNumber": "42028",
+      "number": "42028",
+      "evidence": {
+        "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=42028",
+        "checkedAt": "2026-10-22T08:09:00.862962Z",
+        "title": "HANABI (\"BLEACH\"ED)",
+        "artist": "いきものがかり",
+        "responseSha256": "95c1e82853357926421d82c774511b699bb983d4841655cd9dcf824f388244a2"
+      },
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다."
+    },
+    {
+      "songId": "jpop-playlist-いきものか-かり-ハルウタ-745a936c8d",
+      "provider": "tj",
+      "action": "confirm",
+      "expectedObservedNumber": "27335",
+      "number": "27335",
+      "evidence": {
+        "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=27335&strWord=Y",
+        "checkedAt": "2026-10-22T08:09:04.736824Z",
+        "title": "ハルウタ(名探偵コナン 11人目のストライカー OST)",
+        "artist": "いきものがかり",
+        "responseSha256": "7e124fba1d8b3eabb73563f088c69b0e8c39b6c55e0327daeefa86fb312b44e6"
+      },
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다."
+    },
+    {
+      "songId": "jpop-playlist-いきものか-かり-ハルウタ-745a936c8d",
+      "provider": "ky",
+      "action": "confirm",
+      "expectedObservedNumber": "43490",
+      "number": "43490",
+      "evidence": {
+        "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=43490",
+        "checkedAt": "2026-10-22T08:09:09.810673Z",
+        "title": "ハルウタ (\"名探偵コナン 11人目のストライカー\"OST)",
+        "artist": "いきものがかり",
+        "responseSha256": "e08077ed21b9bec920fee96655df279a1504fb801b260ad34453ce85acf60a4e"
+      },
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다."
+    },
+    {
+      "songId": "jpop-playlist-いきものか-かり-フ-ル-ハ-ト-blue-bird-f58c50b1d8",
+      "provider": "tj",
+      "action": "confirm",
+      "expectedObservedNumber": "27325",
+      "number": "27325",
+      "evidence": {
+        "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=27325&strWord=Y",
+        "checkedAt": "2026-10-22T08:09:13.833230Z",
+        "title": "ブルーバード (Blue Bird)(NARUTO-ナルト-疾風伝 OP)",
+        "artist": "いきものがかり",
+        "responseSha256": "b5b43232701f0d51b384f97ddcd0c51da3763978db0dcdbf6c5f597cc09dd25c"
+      },
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다."
+    },
+    {
+      "songId": "jpop-playlist-ツユ-いつかオトナになれるといいね-6e92107645",
+      "provider": "tj",
+      "action": "confirm",
+      "expectedObservedNumber": "68743",
+      "number": "68743",
+      "evidence": {
+        "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=68743&strWord=Y",
+        "checkedAt": "2026-10-22T08:09:23.372692Z",
+        "title": "いつかオトナになれるといいね。",
+        "artist": "ツユ",
+        "responseSha256": "e1ceb717c9816a87121217cbc3eaf9cb0cb5cd1c2afb74ac61f1b869130964ff"
+      },
+      "reason": "TJ 공식 번호 검색의 제목과 가수가 관리 목록 표기와 일치합니다."
+    },
+    {
+      "songId": "jpop-playlist-ツユ-いつかオトナになれるといいね-6e92107645",
+      "provider": "ky",
+      "action": "confirm",
+      "expectedObservedNumber": "44883",
+      "number": "44883",
+      "evidence": {
+        "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=44883",
+        "checkedAt": "2026-10-22T08:09:28.821793Z",
+        "title": "いつかオトナになれるといいね。",
+        "artist": "ツユ",
+        "responseSha256": "1dd710d46aa30c325a0263eaaf4137498f5d8c5ec7285c7d6ad963931bc7b4dd"
+      },
+      "reason": "금영 공식 번호 검색의 제목과 가수가 관리 목록 표기와 일치합니다."
+    },
+    {
+      "songId": "jpop-playlist-ツユ-雨模様-9ae139855e",
+      "provider": "tj",
+      "action": "confirm",
+      "expectedObservedNumber": "68765",
+      "number": "68765",
+      "evidence": {
+        "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=68765&strWord=Y",
+        "checkedAt": "2026-10-22T08:09:42.385219Z",
+        "title": "雨模様",
+        "artist": "ツユ",
+        "responseSha256": "2ebf715891419fddb13ac7b129385b74e3fb404b0443d0c94ee3b52f1faaa139"
+      },
+      "reason": "TJ 공식 번호 검색의 제목과 가수가 관리 목록 표기와 일치합니다."
+    },
+    {
+      "songId": "jpop-playlist-ツユ-雨模様-9ae139855e",
+      "provider": "ky",
+      "action": "confirm",
+      "expectedObservedNumber": "44907",
+      "number": "44907",
+      "evidence": {
+        "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=44907",
+        "checkedAt": "2026-10-22T08:09:47.518241Z",
+        "title": "雨模様",
+        "artist": "ツユ",
+        "responseSha256": "eb0829660dfacb4bb2b647ca519d84a490bb8f09c4f65a36bc7c1c424e26982d"
+      },
+      "reason": "금영 공식 번호 검색의 제목과 가수가 관리 목록 표기와 일치합니다."
+    },
+    {
+      "songId": "jpop-playlist-トケ-ナシトケ-アリ-もう何もいらない未来-152ee09b10",
+      "provider": "tj",
+      "action": "confirm",
+      "expectedObservedNumber": "52463",
+      "number": "52463",
+      "evidence": {
+        "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=52463&strWord=Y",
+        "checkedAt": "2026-10-22T08:09:51.505081Z",
+        "title": "もう何もいらない未来(劇場版総集編 'ガールズバンドクライ' OST)",
+        "artist": "トゲナシトゲアリ",
+        "responseSha256": "30be7ab7e3798fbe0aa0f6e407ce5e974170c5694252c9acadf674dfded7a7b5"
+      },
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다."
+    },
+    {
+      "songId": "jpop-playlist-トケ-ナシトケ-アリ-空の箱-井芹仁菜-河原木桃香-b5366a6912",
+      "provider": "tj",
+      "action": "confirm",
+      "expectedObservedNumber": "52811",
+      "number": "52811",
+      "evidence": {
+        "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=52811&strWord=Y",
+        "checkedAt": "2026-10-22T08:09:55.627104Z",
+        "title": "空の箱(井芹仁菜,河原木桃香)(TVアニメ 'ガールズバンドクライ' OST)",
+        "artist": "トゲナシトゲアリ",
+        "responseSha256": "d43762568e7b2c26b3123e22a32ccd5c4c01e3c13d827fd82143bf4030c271be"
+      },
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다."
+    },
+    {
+      "songId": "jpop-playlist-トケ-ナシトケ-アリ-空白とカタルシス-fddf5dc0ff",
+      "provider": "tj",
+      "action": "confirm",
+      "expectedObservedNumber": "52830",
+      "number": "52830",
+      "evidence": {
+        "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=52830&strWord=Y",
+        "checkedAt": "2026-10-22T08:09:59.618880Z",
+        "title": "空白とカタルシス(アニメ 'ガールズバンドクライ' OST)",
+        "artist": "トゲナシトゲアリ",
+        "responseSha256": "44e61d94d0ebc725d105a2ca9b0e3793ac7a7fc69035540a3dca0890af6c4f79"
+      },
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다."
+    },
+    {
+      "songId": "jpop-playlist-藍井エイル-i-will-5ce144260a",
+      "provider": "tj",
+      "action": "confirm",
+      "expectedObservedNumber": "68621",
+      "number": "68621",
+      "evidence": {
+        "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=68621&strWord=Y",
+        "checkedAt": "2026-10-22T08:10:32.733923Z",
+        "title": "I will...(ソードアート・オンラインアリシゼーション War of Underworld ED)",
+        "artist": "藍井エイル",
+        "responseSha256": "3d0a40a49e48d9a483fc37e747d359dc89421d7e0a8aec632cef4ed8ec59a35c"
+      },
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다."
+    },
+    {
+      "songId": "jpop-playlist-藍井エイル-i-will-5ce144260a",
+      "provider": "ky",
+      "action": "confirm",
+      "expectedObservedNumber": "44801",
+      "number": "44801",
+      "evidence": {
+        "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=44801",
+        "checkedAt": "2026-10-22T08:10:38.171639Z",
+        "title": "I will... (\"ソードアート・オンライン..",
+        "artist": "藍井エイル",
+        "responseSha256": "79912f2bcd0d0c7f34d69fe38f4842234bef5cb0938aebbe125ae4d993cf55c9"
+      },
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다."
+    },
+    {
+      "songId": "jpop-playlist-藍井エイル-ignite-2ff58bf34a",
+      "provider": "tj",
+      "action": "confirm",
+      "expectedObservedNumber": "28075",
+      "number": "28075",
+      "evidence": {
+        "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=28075&strWord=Y",
+        "checkedAt": "2026-10-22T08:10:42.328426Z",
+        "title": "Ignite(ソードアート・オンライン 2nd OP)",
+        "artist": "藍井エイル",
+        "responseSha256": "36a6d3e651ad475b460150f42625c75a2d4c3002901b7f5aec7e484a1e82d506"
+      },
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다."
+    },
+    {
+      "songId": "jpop-playlist-藍井エイル-ignite-2ff58bf34a",
+      "provider": "ky",
+      "action": "confirm",
+      "expectedObservedNumber": "43829",
+      "number": "43829",
+      "evidence": {
+        "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=43829",
+        "checkedAt": "2026-10-22T08:10:47.800542Z",
+        "title": "IGNITE (\"ソードアート・オンラインII\"OP)",
+        "artist": "藍井エイル",
+        "responseSha256": "09d63f352647da064839ed4b82c9ca705a456d553ed2219848338cb77dea873b"
+      },
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다."
+    },
+    {
+      "songId": "jpop-playlist-藍井エイル-innocence-be4fa02327",
+      "provider": "tj",
+      "action": "confirm",
+      "expectedObservedNumber": "28001",
+      "number": "28001",
+      "evidence": {
+        "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=28001&strWord=Y",
+        "checkedAt": "2026-10-22T08:10:51.754795Z",
+        "title": "Innocence(ソードアート・オンラインフェアリィ・ダンス OP)",
+        "artist": "藍井エイル",
+        "responseSha256": "fed5b69b47e1d57393424b95e44aa2fb6d7dbbc9c3a6bb210b4073982e7dcb67"
+      },
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다."
+    },
+    {
+      "songId": "jpop-playlist-藍井エイル-innocence-be4fa02327",
+      "provider": "ky",
+      "action": "confirm",
+      "expectedObservedNumber": "43559",
+      "number": "43559",
+      "evidence": {
+        "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=43559",
+        "checkedAt": "2026-10-22T08:10:57.398567Z",
+        "title": "INNOCENCE (\"ソードアート・オンライン\"OP)",
+        "artist": "藍井エイル",
+        "responseSha256": "f8b3c1dba58cb5e0896d36855af13bca2f8d20cafea519f7d6aa048367130142"
+      },
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다."
+    },
+    {
+      "songId": "jpop-playlist-claris-alive-5fc0f62ed4",
+      "provider": "tj",
+      "action": "confirm",
+      "expectedObservedNumber": "68651",
+      "number": "68651",
+      "evidence": {
+        "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=68651&strWord=Y",
+        "checkedAt": "2026-10-22T08:11:01.438216Z",
+        "title": "ALIVE",
+        "artist": "ClariS",
+        "responseSha256": "8423b78dd88f6793dc16469006c70e03ee02cefb6bb0ee08136578167dd5d4f1"
+      },
+      "reason": "TJ 공식 번호 검색의 제목과 가수가 관리 목록 표기와 일치합니다."
+    },
+    {
+      "songId": "jpop-playlist-claris-alive-5fc0f62ed4",
+      "provider": "ky",
+      "action": "confirm",
+      "expectedObservedNumber": "44813",
+      "number": "44813",
+      "evidence": {
+        "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=44813",
+        "checkedAt": "2026-10-22T08:11:06.915358Z",
+        "title": "ALIVE (\"リコリス・リコイル\"OP)",
+        "artist": "ClariS",
+        "responseSha256": "0e7a8ffb9ad8b5959f2f31507f0e0c5d8dec7de8d23b2c48ac375a4c3387b1ec"
+      },
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다."
+    },
+    {
+      "songId": "jpop-playlist-claris-カラフル-f6c5dd1d8d",
+      "provider": "tj",
+      "action": "confirm",
+      "expectedObservedNumber": "27504",
+      "number": "27504",
+      "evidence": {
+        "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=27504&strWord=Y",
+        "checkedAt": "2026-10-22T08:11:11.140120Z",
+        "title": "カラフル(魔法少女まどか☆マギカ 主題歌)",
+        "artist": "ClariS",
+        "responseSha256": "fe679aac9e89022b2b0f0719c1e42ab0a4f0277dec3c645867cdbd5a0bbb9ca8"
+      },
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다."
+    },
+    {
+      "songId": "jpop-playlist-claris-カラフル-f6c5dd1d8d",
+      "provider": "ky",
+      "action": "confirm",
+      "expectedObservedNumber": "43673",
+      "number": "43673",
+      "evidence": {
+        "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=43673",
+        "checkedAt": "2026-10-22T08:11:16.396966Z",
+        "title": "カラフル (\"劇場版 魔法少女まどか☆マギカ\"OST)",
+        "artist": "ClariS",
+        "responseSha256": "cf47c0b4f683a229c3b6678ce76de6c54ad9402f5d058b680f26a2c8f3dadbb3"
+      },
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다."
+    },
+    {
+      "songId": "jpop-playlist-claris-コネクト-f0815991d8",
+      "provider": "tj",
+      "action": "confirm",
+      "expectedObservedNumber": "27252",
+      "number": "27252",
+      "evidence": {
+        "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=27252&strWord=Y",
+        "checkedAt": "2026-10-22T08:11:20.557588Z",
+        "title": "コネクト(魔法少女まどか☆マギカ OP)",
+        "artist": "ClariS",
+        "responseSha256": "d27dcc0096d718db723482b1c52d002b80059aac4cbf756d98202465994d2696"
+      },
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다."
+    },
+    {
+      "songId": "jpop-playlist-claris-コネクト-f0815991d8",
+      "provider": "ky",
+      "action": "confirm",
+      "expectedObservedNumber": "43328",
+      "number": "43328",
+      "evidence": {
+        "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=43328",
+        "checkedAt": "2026-10-22T08:11:25.840589Z",
+        "title": "コネクト (\"魔法少女まどか☆マギカ\"OP)",
+        "artist": "ClariS",
+        "responseSha256": "0317437c4f7b817a65889c373d91f4c4c599ba13a0fa12f96cbfe875672689b6"
+      },
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다."
+    },
+    {
+      "songId": "jpop-playlist-hy-366日-fd7325f7e8",
+      "provider": "tj",
+      "action": "confirm",
+      "expectedObservedNumber": "27094",
+      "number": "27094",
+      "evidence": {
+        "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=27094&strWord=Y",
+        "checkedAt": "2026-10-22T08:11:30.053838Z",
+        "title": "366日",
+        "artist": "HY",
+        "responseSha256": "8eb06eaf9299dea25c24fd3108e8e8de9d37c9032d11987d4925bce0c2f8811f"
+      },
+      "reason": "TJ 공식 번호 검색의 제목과 가수가 관리 목록 표기와 일치합니다."
+    },
+    {
+      "songId": "jpop-playlist-hy-366日-fd7325f7e8",
+      "provider": "ky",
+      "action": "confirm",
+      "expectedObservedNumber": "43569",
+      "number": "43569",
+      "evidence": {
+        "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=43569",
+        "checkedAt": "2026-10-22T08:11:35.317261Z",
+        "title": "366日 (ドラマ&映画\"赤い糸\")",
+        "artist": "HY",
+        "responseSha256": "2e9440553113f79d7a3881040ef5c4c426e2b81f50a2241c5dac1d614e266302"
+      },
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다."
+    },
+    {
+      "songId": "jpop-playlist-hy-am11-00-242093e0e0",
+      "provider": "tj",
+      "action": "confirm",
+      "expectedObservedNumber": "25674",
+      "number": "25674",
+      "evidence": {
+        "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=25674&strWord=Y",
+        "checkedAt": "2026-10-22T08:11:39.315921Z",
+        "title": "AM11:00",
+        "artist": "HY",
+        "responseSha256": "b93a98ee09f294a27eeb8e51f7ab49dc6154531e1344d372ab354eee07761526"
+      },
+      "reason": "TJ 공식 번호 검색의 제목과 가수가 관리 목록 표기와 일치합니다."
+    },
+    {
+      "songId": "jpop-playlist-hy-am11-00-242093e0e0",
+      "provider": "ky",
+      "action": "confirm",
+      "expectedObservedNumber": "41612",
+      "number": "41612",
+      "evidence": {
+        "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=41612",
+        "checkedAt": "2026-10-22T08:11:44.427077Z",
+        "title": "AM11:00",
+        "artist": "HY",
+        "responseSha256": "b455a1d5c69ea333c8de74f1e8d7e6de7fc8e852dc16ed54e770f6ec60ba234d"
+      },
+      "reason": "금영 공식 번호 검색의 제목과 가수가 관리 목록 표기와 일치합니다."
+    },
+    {
+      "songId": "jpop-playlist-hy-nao-a3bb0bf752",
+      "provider": "ky",
+      "action": "confirm",
+      "expectedObservedNumber": "42084",
+      "number": "42084",
+      "evidence": {
+        "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=42084",
+        "checkedAt": "2026-10-22T08:11:49.744101Z",
+        "title": "NAO",
+        "artist": "HY",
+        "responseSha256": "9496e3209c40fcb68cc514ffbbbafecef62aeb62c097a750653ac48d160dbdaf"
+      },
+      "reason": "금영 공식 번호 검색의 제목과 가수가 관리 목록 표기와 일치합니다."
+    },
+    {
+      "songId": "jpop-playlist-kotoko-blaze-6f824084e3",
+      "provider": "tj",
+      "action": "confirm",
+      "expectedObservedNumber": "28018",
+      "number": "28018",
+      "evidence": {
+        "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=28018&strWord=Y",
+        "checkedAt": "2026-10-22T08:11:53.917775Z",
+        "title": "Blaze(灼眼のシャナ2 OP)",
+        "artist": "KOTOKO",
+        "responseSha256": "64ab18e3e4195d56b7e552fd3d1063cc2ecc3b572d6821a766604a64b229aa0c"
+      },
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다."
+    },
+    {
+      "songId": "jpop-playlist-kotoko-blaze-6f824084e3",
+      "provider": "ky",
+      "action": "confirm",
+      "expectedObservedNumber": "42700",
+      "number": "42700",
+      "evidence": {
+        "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=42700",
+        "checkedAt": "2026-10-22T08:11:59.492560Z",
+        "title": "BLAZE (\"灼眼のシャナII\"OP)",
+        "artist": "KOTOKO",
+        "responseSha256": "fbba2e2a1525e822e50d2ab9abebcb0c691ae25fdbd359ce10d149f457cf4edf"
+      },
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다."
+    },
+    {
+      "songId": "jpop-playlist-kotoko-sociometry-4cfecb33a6",
+      "provider": "tj",
+      "action": "confirm",
+      "expectedObservedNumber": "28131",
+      "number": "28131",
+      "evidence": {
+        "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=28131&strWord=Y",
+        "checkedAt": "2026-10-22T08:12:03.640282Z",
+        "title": "Sociometry(灼眼のシャナ2 ED)",
+        "artist": "KOTOKO",
+        "responseSha256": "1082d4cf7176ef67a9180f95052ad6f4c9510642dc3b0bd6fd17dedbbaf767b3"
+      },
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다."
+    },
+    {
+      "songId": "jpop-playlist-kotoko-sociometry-4cfecb33a6",
+      "provider": "ky",
+      "action": "confirm",
+      "expectedObservedNumber": "42796",
+      "number": "42796",
+      "evidence": {
+        "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=42796",
+        "checkedAt": "2026-10-22T08:12:08.823801Z",
+        "title": "Sociometry (\"灼眼のシャナII\"ED)",
+        "artist": "KOTOKO",
+        "responseSha256": "05fc340269d0b66b3812fa3f74a2f0a5c4351a8ae08a8c5b143d877cdb22c147"
+      },
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다."
+    },
+    {
+      "songId": "jpop-playlist-kotoko-being-7776eb9b5c",
+      "provider": "tj",
+      "action": "confirm",
+      "expectedObservedNumber": "26228",
+      "number": "26228",
+      "evidence": {
+        "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=26228&strWord=Y",
+        "checkedAt": "2026-10-22T08:12:12.660785Z",
+        "title": "being(灼眼のシャナ2 OP)",
+        "artist": "KOTOKO",
+        "responseSha256": "440e7590411d461c3c791ab259a36d8d49f0f61cc9b5bd36677354b57f6f9949"
+      },
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다."
+    },
+    {
+      "songId": "jpop-playlist-kotoko-being-7776eb9b5c",
+      "provider": "ky",
+      "action": "confirm",
+      "expectedObservedNumber": "40515",
+      "number": "40515",
+      "evidence": {
+        "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=40515",
+        "checkedAt": "2026-10-22T08:12:17.946090Z",
+        "title": "being (\"灼眼のシャナ\"OP)",
+        "artist": "KOTOKO",
+        "responseSha256": "1e53b7607bf38d390ba3bb5dc9cf9d2bfec8969520c3035a5afbea25eb229c03"
+      },
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다."
+    },
+    {
+      "songId": "jpop-playlist-kalafina-lacrimosa-c9544b3bb4",
+      "provider": "tj",
+      "action": "confirm",
+      "expectedObservedNumber": "26886",
+      "number": "26886",
+      "evidence": {
+        "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=26886&strWord=Y",
+        "checkedAt": "2026-10-22T08:12:22.108195Z",
+        "title": "Lacrimosa(黒執事 ED)",
+        "artist": "Kalafina",
+        "responseSha256": "8f7a09fe969f1b2eaae384ae599809eab97b638a92d8fad9d7281f8a15622600"
+      },
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다."
+    },
+    {
+      "songId": "jpop-playlist-kalafina-lacrimosa-c9544b3bb4",
+      "provider": "ky",
+      "action": "confirm",
+      "expectedObservedNumber": "42957",
+      "number": "42957",
+      "evidence": {
+        "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=42957",
+        "checkedAt": "2026-10-22T08:12:27.231127Z",
+        "title": "Lacrimosa (\"黒執事\"ED)",
+        "artist": "Kalafina",
+        "responseSha256": "b1b6c4f9ffa087e3c08803e8114c10c5b2558dc5b4bdc383e468e81e012e999a"
+      },
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다."
+    },
+    {
+      "songId": "jpop-playlist-kalafina-magia-bd43f44e6d",
+      "provider": "tj",
+      "action": "confirm",
+      "expectedObservedNumber": "27418",
+      "number": "27418",
+      "evidence": {
+        "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=27418&strWord=Y",
+        "checkedAt": "2026-10-22T08:12:31.374648Z",
+        "title": "Magia(魔法少女まどか☆マギカ ED)",
+        "artist": "Kalafina",
+        "responseSha256": "9e5f10df9fa88ee3d85e903bcd3f6c6654bd437cbc58b351c5627eed3b070024"
+      },
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다."
+    },
+    {
+      "songId": "jpop-playlist-kalafina-magia-bd43f44e6d",
+      "provider": "ky",
+      "action": "confirm",
+      "expectedObservedNumber": "43336",
+      "number": "43336",
+      "evidence": {
+        "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=43336",
+        "checkedAt": "2026-10-22T08:12:36.659933Z",
+        "title": "Magia (\"魔法少女まどか☆マギカ\"ED)",
+        "artist": "Kalafina",
+        "responseSha256": "d16f8289edcd639985f58a01969f9033be0c4f0f2e916f1eae641c886b27a90f"
+      },
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다."
+    },
+    {
+      "songId": "jpop-playlist-kalafina-to-the-beginning-37332bc162",
+      "provider": "tj",
+      "action": "confirm",
+      "expectedObservedNumber": "27305",
+      "number": "27305",
+      "evidence": {
+        "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=27305&strWord=Y",
+        "checkedAt": "2026-10-22T08:12:40.717008Z",
+        "title": "To The Beginning(Fate/Zero 2 OP)",
+        "artist": "Kalafina",
+        "responseSha256": "ec0d885e413a3631f3626f908fc59d34102dcb84493347fea47fa1d0a7938182"
+      },
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다."
+    },
+    {
+      "songId": "jpop-playlist-kalafina-to-the-beginning-37332bc162",
+      "provider": "ky",
+      "action": "confirm",
+      "expectedObservedNumber": "43485",
+      "number": "43485",
+      "evidence": {
+        "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=43485",
+        "checkedAt": "2026-10-22T08:12:45.848763Z",
+        "title": "to the beginning (\"Fate/Zero\"OP)",
+        "artist": "Kalafina",
+        "responseSha256": "e116d5489acfd068272bc542cf0740e145e36a369580488360af9ccca844cf3a"
+      },
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다."
+    },
+    {
+      "songId": "jpop-playlist-l-arc-en-ciel-daybreak-s-bell-46dcb78d68",
+      "provider": "tj",
+      "action": "confirm",
+      "expectedObservedNumber": "26668",
+      "number": "26668",
+      "evidence": {
+        "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=26668&strWord=Y",
+        "checkedAt": "2026-10-22T08:12:49.837961Z",
+        "title": "DAYBREAK'S BELL(機動戦士ガンダム00 OP)",
+        "artist": "L'Arc~en~Ciel",
+        "responseSha256": "51e176edce740949fa99bc1f8b2e53b535399e4771c327f63f71ec9a8c6c8689"
+      },
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다."
+    },
+    {
+      "songId": "jpop-playlist-l-arc-en-ciel-daybreak-s-bell-46dcb78d68",
+      "provider": "ky",
+      "action": "confirm",
+      "expectedObservedNumber": "42582",
+      "number": "42582",
+      "evidence": {
+        "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=42582",
+        "checkedAt": "2026-10-22T08:12:54.711692Z",
+        "title": "DAYBREAK'S BELL (\"機動戦士ガンダムOO\"OP)",
+        "artist": "L'Arc~en~Ciel",
+        "responseSha256": "32df55ec7de7a87d243174d01a678d1307787c5fce6ced97e645f22a4b341c25"
+      },
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다."
+    },
+    {
+      "songId": "jpop-playlist-l-arc-en-ciel-good-luck-my-way-5b6499b9b9",
+      "provider": "tj",
+      "action": "confirm",
+      "expectedObservedNumber": "27584",
+      "number": "27584",
+      "evidence": {
+        "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=27584&strWord=Y",
+        "checkedAt": "2026-10-22T08:12:58.579635Z",
+        "title": "Good Luck My Way(鋼の錬金術師 嘆きの丘の聖なる星OST)",
+        "artist": "L'Arc~en~Ciel",
+        "responseSha256": "a3e19d2af947965af32b469ec9a699df7e69243028e7021bee3d73c3a03a6d03"
+      },
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다."
+    },
+    {
+      "songId": "jpop-playlist-l-arc-en-ciel-good-luck-my-way-5b6499b9b9",
+      "provider": "ky",
+      "action": "confirm",
+      "expectedObservedNumber": "43380",
+      "number": "43380",
+      "evidence": {
+        "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=43380",
+        "checkedAt": "2026-10-22T08:13:04.160808Z",
+        "title": "GOOD LUCK MY WAY (\"鋼の錬金術師 嘆きの丘の聖なる星\"OST)",
+        "artist": "L'Arc~en~Ciel",
+        "responseSha256": "c93deaa8e1a7c4b8e51f83183beb1a8238a2400892497c0d885310cb5dd94843"
+      },
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다."
+    },
+    {
+      "songId": "jpop-playlist-l-arc-en-ciel-lost-heaven-b4d5fbaede",
+      "provider": "tj",
+      "action": "confirm",
+      "expectedObservedNumber": "26448",
+      "number": "26448",
+      "evidence": {
+        "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=26448&strWord=Y",
+        "checkedAt": "2026-10-22T08:13:07.986700Z",
+        "title": "LOST HEAVEN(鋼の錬金術師 OST)",
+        "artist": "L'Arc~en~Ciel",
+        "responseSha256": "d2595f297dff0e0fc01bc5c83ad760177a4ede8c5d1d52ba74d82bfa311e9fb5"
+      },
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다."
+    },
+    {
+      "songId": "jpop-playlist-l-arc-en-ciel-lost-heaven-b4d5fbaede",
+      "provider": "ky",
+      "action": "confirm",
+      "expectedObservedNumber": "41957",
+      "number": "41957",
+      "evidence": {
+        "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=41957",
+        "checkedAt": "2026-10-22T08:13:13.068860Z",
+        "title": "LOST HEAVEN (\"鋼の錬金術師\"OST)",
+        "artist": "L'Arc~en~Ciel",
+        "responseSha256": "e5203fe2d109de10b30fe515a44b4bfda14c0e379825fcb11d78fc907a6adeec"
+      },
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다."
+    },
+    {
+      "songId": "jpop-playlist-leina-と-うて-もいい話か-したい-c3d032a902",
+      "provider": "tj",
+      "action": "confirm",
+      "expectedObservedNumber": "68994",
+      "number": "68994",
+      "evidence": {
+        "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=68994&strWord=Y",
+        "checkedAt": "2026-10-22T08:13:17.301413Z",
+        "title": "どうでもいい話がしたい",
+        "artist": "Leina",
+        "responseSha256": "a8f34e2966bbf3ca99587eca7abc3a6a479cc5217659c7b818ade23f2bbebe48"
+      },
+      "reason": "TJ 공식 번호 검색의 제목과 가수가 관리 목록 표기와 일치합니다."
+    },
+    {
+      "songId": "jpop-playlist-leina-と-うて-もいい話か-したい-c3d032a902",
+      "provider": "ky",
+      "action": "confirm",
+      "expectedObservedNumber": "75931",
+      "number": "75931",
+      "evidence": {
+        "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=75931",
+        "checkedAt": "2026-10-22T08:13:22.233473Z",
+        "title": "どうでもいい話がしたい",
+        "artist": "Leina",
+        "responseSha256": "4139c085065a8c7aa0165d5e01029c9c21acf134e65260756be66458e244e836"
+      },
+      "reason": "금영 공식 번호 검색의 제목과 가수가 관리 목록 표기와 일치합니다."
+    },
+    {
+      "songId": "jpop-playlist-leina-medicine-ceec7b35bb",
+      "provider": "tj",
+      "action": "confirm",
+      "expectedObservedNumber": "52909",
+      "number": "52909",
+      "evidence": {
+        "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=52909&strWord=Y",
+        "checkedAt": "2026-10-22T08:13:26.218450Z",
+        "title": "medicine",
+        "artist": "Leina",
+        "responseSha256": "7e53b3a217105ac66c29c11185df33a3819e824a5f32588da2444b2769033034"
+      },
+      "reason": "TJ 공식 번호 검색의 제목과 가수가 관리 목록 표기와 일치합니다."
+    },
+    {
+      "songId": "jpop-playlist-nico-touches-the-walls-diver-62f096f742",
+      "provider": "tj",
+      "action": "confirm",
+      "expectedObservedNumber": "27665",
+      "number": "27665",
+      "evidence": {
+        "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=27665&strWord=Y",
+        "checkedAt": "2026-10-22T08:13:34.441452Z",
+        "title": "Diver(NARUTO-ナルト-疾風伝 OP)",
+        "artist": "NICO Touches the Walls",
+        "responseSha256": "4c01cf2de3eba857f42f91252b904ed5ead6430cf9753fd2ce637fa24cc31c3f"
+      },
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다."
+    },
+    {
+      "songId": "jpop-playlist-nico-touches-the-walls-diver-62f096f742",
+      "provider": "ky",
+      "action": "confirm",
+      "expectedObservedNumber": "43856",
+      "number": "43856",
+      "evidence": {
+        "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=43856",
+        "checkedAt": "2026-10-22T08:13:39.451219Z",
+        "title": "Diver (\"NARUTO-ナルト- 疾風伝\"OP)",
+        "artist": "NICO Touches the Walls",
+        "responseSha256": "157b86141b0ec816476279a7ea4cb1655057f8196af4aa2019824d51387d4246"
+      },
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다."
+    },
+    {
+      "songId": "jpop-playlist-nico-touches-the-walls-ニワカ雨ニモ負ケス-3e63b0f705",
+      "provider": "tj",
+      "action": "confirm",
+      "expectedObservedNumber": "27695",
+      "number": "27695",
+      "evidence": {
+        "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=27695&strWord=Y",
+        "checkedAt": "2026-10-22T08:13:43.582242Z",
+        "title": "ニワカ雨ニモ負ケズ(NARUTO-ナルト-疾風伝 OP)",
+        "artist": "NICO Touches the Walls",
+        "responseSha256": "599c9dc9a2a133e738fa5b00905e0791a230d0aff7bc814200c180427910ac94"
+      },
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다."
+    },
+    {
+      "songId": "jpop-playlist-nico-touches-the-walls-ニワカ雨ニモ負ケス-3e63b0f705",
+      "provider": "ky",
+      "action": "confirm",
+      "expectedObservedNumber": "43882",
+      "number": "43882",
+      "evidence": {
+        "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=43882",
+        "checkedAt": "2026-10-22T08:13:48.756703Z",
+        "title": "ニワカ雨ニモ負ケズ (\"NARUTO-ナルト- 疾風伝\"OP)",
+        "artist": "NICO Touches the Walls",
+        "responseSha256": "a5a2072910e58ce6aa0813391e244645d5049e752e885d0de0d885f2ecc2d10e"
+      },
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다."
+    },
+    {
+      "songId": "jpop-playlist-nico-touches-the-walls-ホロク-ラム-5326f2ecd0",
+      "provider": "tj",
+      "action": "confirm",
+      "expectedObservedNumber": "26960",
+      "number": "26960",
+      "evidence": {
+        "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=26960&strWord=Y",
+        "checkedAt": "2026-10-22T08:13:52.788905Z",
+        "title": "ホログラム(鋼の錬金術師 FULLMETAL ALCHEMIST OP)",
+        "artist": "NICO Touches the Walls",
+        "responseSha256": "f38663cd986af9cfc84b04db32e8c4f9fe381fed3c948103e0ea39d67b2f65cc"
+      },
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다."
+    },
+    {
+      "songId": "jpop-playlist-nico-touches-the-walls-ホロク-ラム-5326f2ecd0",
+      "provider": "ky",
+      "action": "confirm",
+      "expectedObservedNumber": "43124",
+      "number": "43124",
+      "evidence": {
+        "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=43124",
+        "checkedAt": "2026-10-22T08:13:58.808686Z",
+        "title": "ホログラム (\"鋼の錬金術師 FULLMETAL ALCHEMIST\"OP)",
+        "artist": "NICO Touches the Walls",
+        "responseSha256": "355a8f9c67e51a8b00b9043ded384a5a0271f2c35485ee419d5cf40b6b3fe39e"
+      },
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다."
+    },
+    {
+      "songId": "jpop-playlist-p丸様-ないは-いたりてぃ-f866d31567",
+      "provider": "tj",
+      "action": "confirm",
+      "expectedObservedNumber": "68735",
+      "number": "68735",
+      "evidence": {
+        "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=68735&strWord=Y",
+        "checkedAt": "2026-10-22T08:14:02.848383Z",
+        "title": "ないばいたりてぃ",
+        "artist": "P丸様。",
+        "responseSha256": "634047dbaed2062994d9270295ec08b08a57d1d20fa94f548adf2221e5cae138"
+      },
+      "reason": "TJ 공식 번호 검색의 제목과 가수가 관리 목록 표기와 일치합니다."
+    },
+    {
+      "songId": "jpop-playlist-p丸様-ないは-いたりてぃ-f866d31567",
+      "provider": "ky",
+      "action": "confirm",
+      "expectedObservedNumber": "44877",
+      "number": "44877",
+      "evidence": {
+        "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=44877",
+        "checkedAt": "2026-10-22T08:14:07.789515Z",
+        "title": "ないばいたりてぃ",
+        "artist": "P丸様。",
+        "responseSha256": "286867a9790964e33581204abcee26790a5ff18699f0891f3d98b21fadc10782"
+      },
+      "reason": "금영 공식 번호 검색의 제목과 가수가 관리 목록 표기와 일치합니다."
+    },
+    {
+      "songId": "jpop-playlist-p丸様-シル-ウ-フ-レシ-テ-ント-ca79c3fbbf",
+      "provider": "tj",
+      "action": "confirm",
+      "expectedObservedNumber": "68442",
+      "number": "68442",
+      "evidence": {
+        "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=68442&strWord=Y",
+        "checkedAt": "2026-10-22T08:14:11.778341Z",
+        "title": "シル・ヴ・プレジデント",
+        "artist": "P丸様。",
+        "responseSha256": "3b6b4270d011ac2c72e717abf741abbfc602ad0c17127708db486233088ce4c9"
+      },
+      "reason": "TJ 공식 번호 검색의 제목과 가수가 관리 목록 표기와 일치합니다."
+    },
+    {
+      "songId": "jpop-playlist-p丸様-シル-ウ-フ-レシ-テ-ント-ca79c3fbbf",
+      "provider": "ky",
+      "action": "confirm",
+      "expectedObservedNumber": "44688",
+      "number": "44688",
+      "evidence": {
+        "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=44688",
+        "checkedAt": "2026-10-22T08:14:17.178758Z",
+        "title": "シル・ヴ・プレジデント",
+        "artist": "P丸様。",
+        "responseSha256": "0b834ef4129b63ad12bb7f4d15952e200fef894fc630f341ac9e7e841adb4a57"
+      },
+      "reason": "금영 공식 번호 검색의 제목과 가수가 관리 목록 표기와 일치합니다."
+    },
+    {
+      "songId": "jpop-playlist-p丸様-メンタルチェンソ-0038744119",
+      "provider": "tj",
+      "action": "confirm",
+      "expectedObservedNumber": "68557",
+      "number": "68557",
+      "evidence": {
+        "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=68557&strWord=Y",
+        "checkedAt": "2026-10-22T08:14:21.137226Z",
+        "title": "メンタルチェンソー",
+        "artist": "P丸様。",
+        "responseSha256": "d49a044521279bc2884d85a38f7b3349345b4ab3343ab23d46b18f6df602272b"
+      },
+      "reason": "TJ 공식 번호 검색의 제목과 가수가 관리 목록 표기와 일치합니다."
+    },
+    {
+      "songId": "jpop-playlist-p丸様-メンタルチェンソ-0038744119",
+      "provider": "ky",
+      "action": "confirm",
+      "expectedObservedNumber": "44737",
+      "number": "44737",
+      "evidence": {
+        "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=44737",
+        "checkedAt": "2026-10-22T08:14:26.629076Z",
+        "title": "メンタルチェンソー",
+        "artist": "P丸様。",
+        "responseSha256": "4a194fc3cdb5c7ba7f78b0dc189a077be9c25296c3ea9f11e9620400e84acefc"
+      },
+      "reason": "금영 공식 번호 검색의 제목과 가수가 관리 목록 표기와 일치합니다."
+    },
+    {
+      "songId": "jpop-playlist-wands-raise-insight-fa6b907cf9",
+      "provider": "tj",
+      "action": "confirm",
+      "expectedObservedNumber": "68809",
+      "number": "68809",
+      "evidence": {
+        "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=68809&strWord=Y",
+        "checkedAt": "2026-10-22T08:14:30.872771Z",
+        "title": "RAISE INSIGHT(アニメ '名探偵コナン' OP)",
+        "artist": "WANDS",
+        "responseSha256": "12f902854ad6f0d5f7aa01378baca3c11c993b9be6c6826dfce75c0261ccd5fc"
+      },
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다."
+    },
+    {
+      "songId": "jpop-playlist-wands-raise-insight-fa6b907cf9",
+      "provider": "ky",
+      "action": "confirm",
+      "expectedObservedNumber": "44944",
+      "number": "44944",
+      "evidence": {
+        "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=44944",
+        "checkedAt": "2026-10-22T08:14:36.116437Z",
+        "title": "RAISE INSIGHT (\"名探偵コナン\"OP)",
+        "artist": "WANDS",
+        "responseSha256": "e7b25599474412e3072a2a9fec8c59f0f9244ffcb6121ca742fe02161ad369c3"
+      },
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다."
+    },
+    {
+      "songId": "jpop-playlist-wands-世界か-終るまて-は-95c8d3c3ca",
+      "provider": "tj",
+      "action": "confirm",
+      "expectedObservedNumber": "25277",
+      "number": "25277",
+      "evidence": {
+        "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=25277&strWord=Y",
+        "checkedAt": "2026-10-22T08:14:40.482625Z",
+        "title": "世界が終るまでは...(SLAM DUNK ED)",
+        "artist": "WANDS",
+        "responseSha256": "9ad04326f996af65966d8cb129329b950908e90425c33836b49280140d1f98e0"
+      },
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다."
+    },
+    {
+      "songId": "jpop-playlist-wands-世界か-終るまて-は-95c8d3c3ca",
+      "provider": "ky",
+      "action": "confirm",
+      "expectedObservedNumber": "41682",
+      "number": "41682",
+      "evidence": {
+        "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=41682",
+        "checkedAt": "2026-10-22T08:14:45.752914Z",
+        "title": "世界が終るまでは（\"スラムダンク\"OP）",
+        "artist": "WANDS",
+        "responseSha256": "ff981537201d0645bf4b9837da40c74ad0e5c8a8140f1065e796720210e0115b"
+      },
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다."
+    },
+    {
+      "songId": "jpop-playlist-wands-大胆-8a6f533e62",
+      "provider": "tj",
+      "action": "confirm",
+      "expectedObservedNumber": "68487",
+      "number": "68487",
+      "evidence": {
+        "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=68487&strWord=Y",
+        "checkedAt": "2026-10-22T08:14:49.926540Z",
+        "title": "大胆(アニメ '名探偵コナン vs. 怪盗キッド' OST)",
+        "artist": "WANDS",
+        "responseSha256": "bea555a6e27d63abaccedde04869340094ac74740cd3dc8bff56d0421926e0b4"
+      },
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다."
+    },
+    {
+      "songId": "jpop-playlist-wands-大胆-8a6f533e62",
+      "provider": "ky",
+      "action": "confirm",
+      "expectedObservedNumber": "75966",
+      "number": "75966",
+      "evidence": {
+        "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=75966",
+        "checkedAt": "2026-10-22T08:14:55.794701Z",
+        "title": "大胆 (\"名探偵コナン vs. 怪盗キッド\"OST)",
+        "artist": "WANDS",
+        "responseSha256": "4c6ff7abb8bd4432ecb00f8041d6edf482af69b5a7db3a72f51b578fc5f965af"
+      },
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다."
+    },
+    {
+      "songId": "jpop-playlist-fripside-level5-judgelight-22ab43f276",
+      "provider": "tj",
+      "action": "confirm",
+      "expectedObservedNumber": "27659",
+      "number": "27659",
+      "evidence": {
+        "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=27659&strWord=Y",
+        "checkedAt": "2026-10-22T08:14:59.856782Z",
+        "title": "Level 5-judgelight-(とある科学の超電磁砲S OP)",
+        "artist": "fripSide",
+        "responseSha256": "1775a633cfc39c972f6dc70edb22bfdf3b21e55d24f8924c6d65233c67c980a5"
+      },
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다."
+    },
+    {
+      "songId": "jpop-playlist-fripside-level5-judgelight-22ab43f276",
+      "provider": "ky",
+      "action": "confirm",
+      "expectedObservedNumber": "43196",
+      "number": "43196",
+      "evidence": {
+        "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=43196",
+        "checkedAt": "2026-10-22T08:15:05.021618Z",
+        "title": "LEVEL5 -judgelight- (\"とある科学の超電磁砲\"OP)",
+        "artist": "fripSide",
+        "responseSha256": "21b9c9e3e793c759f81223a201af55ddb457271aa327e404a5ca21dd5b52799b"
+      },
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다."
+    },
+    {
+      "songId": "jpop-playlist-fripside-eternal-reality-8f6e532e26",
+      "provider": "tj",
+      "action": "confirm",
+      "expectedObservedNumber": "27753",
+      "number": "27753",
+      "evidence": {
+        "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=27753&strWord=Y",
+        "checkedAt": "2026-10-22T08:15:09.320669Z",
+        "title": "Eternal Reality(とある科学の超電磁砲S OP)",
+        "artist": "fripSide",
+        "responseSha256": "a2ff44e26833548e2c9efea15c689557a2d7221c2d6d334b40ecdb0b9ee03d25"
+      },
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다."
+    },
+    {
+      "songId": "jpop-playlist-fripside-eternal-reality-8f6e532e26",
+      "provider": "ky",
+      "action": "confirm",
+      "expectedObservedNumber": "43648",
+      "number": "43648",
+      "evidence": {
+        "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=43648",
+        "checkedAt": "2026-10-22T08:15:16.122623Z",
+        "title": "eternal reality (\"とある科学の超電磁砲S\"OP)",
+        "artist": "fripSide",
+        "responseSha256": "91d46c0bdf5b621660e76b2f64718cdca1ee0162549e13dfa4f7772d5e61880b"
+      },
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다."
+    },
+    {
+      "songId": "jpop-playlist-fripside-final-phase-e78989c227",
+      "provider": "tj",
+      "action": "confirm",
+      "expectedObservedNumber": "68190",
+      "number": "68190",
+      "evidence": {
+        "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=68190&strWord=Y",
+        "checkedAt": "2026-10-22T08:15:20.257068Z",
+        "title": "final phase(とある科学の超電磁砲Ｔ OP)",
+        "artist": "fripSide",
+        "responseSha256": "648d75962f3e08d6efd7f19fc589c350e957e1f30b3a1f7401cef4e4933d9285"
+      },
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다."
+    },
+    {
+      "songId": "jpop-playlist-fripside-final-phase-e78989c227",
+      "provider": "ky",
+      "action": "confirm",
+      "expectedObservedNumber": "44517",
+      "number": "44517",
+      "evidence": {
+        "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=44517",
+        "checkedAt": "2026-10-22T08:15:26.023478Z",
+        "title": "final phase (\"とある科学の超電磁砲T\"OP)",
+        "artist": "fripSide",
+        "responseSha256": "808c359b79b553b195b79fe13888d6b7f1e4750d71e0ce5e8f254175f8ef61f1"
+      },
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다."
+    },
+    {
+      "songId": "jpop-playlist-kemu-インヒ-シ-フ-ル-6a3c65243f",
+      "provider": "tj",
+      "action": "confirm",
+      "expectedObservedNumber": "28173",
+      "number": "28173",
+      "evidence": {
+        "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=28173&strWord=Y",
+        "checkedAt": "2026-10-22T08:15:30.183750Z",
+        "title": "インビジブル",
+        "artist": "kemu(Feat.GUMI,鏡音リン)",
+        "responseSha256": "f413ff1f0ea5c237ece2571db352b668a88f1c0389318ae98c164f46ff2b0bb5"
+      },
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다."
+    },
+    {
+      "songId": "jpop-playlist-kemu-インヒ-シ-フ-ル-6a3c65243f",
+      "provider": "ky",
+      "action": "confirm",
+      "expectedObservedNumber": "43675",
+      "number": "43675",
+      "evidence": {
+        "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=43675",
+        "checkedAt": "2026-10-22T08:15:36.631290Z",
+        "title": "インビジブル",
+        "artist": "kemu feat.GUMI・鏡音リン",
+        "responseSha256": "2db9c8d967dfe1004b4744fba5892ce5accddad92c133ff1026c503e73834252"
+      },
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다."
+    },
+    {
+      "songId": "jpop-playlist-kemu-人生リセットホ-タン-02ce467ed2",
+      "provider": "tj",
+      "action": "confirm",
+      "expectedObservedNumber": "28379",
+      "number": "28379",
+      "evidence": {
+        "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=28379&strWord=Y",
+        "checkedAt": "2026-10-22T08:15:40.599350Z",
+        "title": "人生リセットボタン",
+        "artist": "kemu(Feat.GUMI)",
+        "responseSha256": "58053f01dad8672cb3130d34101d63981f9647bd9fc660accd2f7e1214b8f6fc"
+      },
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다."
+    },
+    {
+      "songId": "jpop-playlist-kemu-人生リセットホ-タン-02ce467ed2",
+      "provider": "ky",
+      "action": "confirm",
+      "expectedObservedNumber": "43806",
+      "number": "43806",
+      "evidence": {
+        "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=43806",
+        "checkedAt": "2026-10-22T08:15:45.855836Z",
+        "title": "人生リセットボタン",
+        "artist": "kemu feat.GUMI",
+        "responseSha256": "b4261a8530b1526aab30beea42d5ee55378b48ac54e58a9ad6cc19f23f72bc54"
+      },
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다."
+    },
+    {
+      "songId": "jpop-playlist-kemu-六兆年と一夜物語-9388e4f928",
+      "provider": "tj",
+      "action": "confirm",
+      "expectedObservedNumber": "28318",
+      "number": "28318",
+      "evidence": {
+        "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=28318&strWord=Y",
+        "checkedAt": "2026-10-22T08:15:49.840287Z",
+        "title": "六兆年と一夜物語",
+        "artist": "kemu(Feat.IA)",
+        "responseSha256": "3dfa74f9a67dd834ba245803ec203bda3124b21aaf9d1172ff90affc12ee13fc"
+      },
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다."
+    },
+    {
+      "songId": "jpop-playlist-kemu-六兆年と一夜物語-9388e4f928",
+      "provider": "ky",
+      "action": "confirm",
+      "expectedObservedNumber": "43599",
+      "number": "43599",
+      "evidence": {
+        "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=43599",
+        "checkedAt": "2026-10-22T08:15:55.454254Z",
+        "title": "六兆年と一夜物語",
+        "artist": "kemu feat.IA",
+        "responseSha256": "9408b422d124e9b38179c46dc830afb055e57238f9541c22cdaf5c03dbff5101"
+      },
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다."
+    },
+    {
+      "songId": "jpop-playlist-オ-イシマサヨシ-uni-verse-715de1c0dd",
+      "provider": "tj",
+      "action": "confirm",
+      "expectedObservedNumber": "68777",
+      "number": "68777",
+      "evidence": {
+        "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=68777&strWord=Y",
+        "checkedAt": "2026-10-22T08:15:59.445826Z",
+        "title": "uni-verse(グリッドマン ユニバース 主題歌)",
+        "artist": "オーイシマサヨシ",
+        "responseSha256": "5d9fb4a8aea11f9682fe6119f5dc6a3baef890a7879a99cc11ebc5e94bf49401"
+      },
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다."
+    },
+    {
+      "songId": "jpop-playlist-オ-イシマサヨシ-uni-verse-715de1c0dd",
+      "provider": "ky",
+      "action": "confirm",
+      "expectedObservedNumber": "44916",
+      "number": "44916",
+      "evidence": {
+        "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=44916",
+        "checkedAt": "2026-10-22T08:16:04.570953Z",
+        "title": "uni-verse (\"グリッドマン ユニバース\"OST)",
+        "artist": "オーイシマサヨシ",
+        "responseSha256": "cfd479a7da99ee7261aa62133de28e2e997ec13645bfc2bef3e36f506d1825b6"
+      },
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다."
+    },
+    {
+      "songId": "jpop-playlist-オ-イシマサヨシ-なまらめんこいキ-ャル-15cf48b1dc",
+      "provider": "tj",
+      "action": "confirm",
+      "expectedObservedNumber": "68997",
+      "number": "68997",
+      "evidence": {
+        "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=68997&strWord=Y",
+        "checkedAt": "2026-10-22T08:16:08.587843Z",
+        "title": "なまらめんこいギャル(アニメ '産子ギャルはなまらめんこい' OP)",
+        "artist": "オーイシマサヨシ",
+        "responseSha256": "5bfca8d00ae4427ba6ed5a6db2a46bdf603479c4c41837936f1974558e3bbda1"
+      },
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다."
+    },
+    {
+      "songId": "jpop-playlist-オ-イシマサヨシ-なまらめんこいキ-ャル-15cf48b1dc",
+      "provider": "ky",
+      "action": "confirm",
+      "expectedObservedNumber": "75924",
+      "number": "75924",
+      "evidence": {
+        "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=75924",
+        "checkedAt": "2026-10-22T08:16:14.103268Z",
+        "title": "なまらめんこいギャル (\"道産子ギャルは..",
+        "artist": "オーイシマサヨシ",
+        "responseSha256": "49d9d01ebb58b2e46d6c2a2e2fab8a9533207c25f3a105d208ca5cac51e96693"
+      },
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다."
+    },
+    {
+      "songId": "jpop-playlist-オ-イシマサヨシ-君し-ゃなきゃタ-メみたい-f3a1d521ff",
+      "provider": "tj",
+      "action": "confirm",
+      "expectedObservedNumber": "27649",
+      "number": "27649",
+      "evidence": {
+        "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=27649&strWord=Y",
+        "checkedAt": "2026-10-22T08:16:18.105360Z",
+        "title": "君じゃなきゃダメみたい(月刊少女野崎くん OP)",
+        "artist": "オーイシマサヨシ",
+        "responseSha256": "1da840f8068d16d9311a6e9eb5864998c766dadd5d10866a2cd3cd129190978c"
+      },
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다."
+    },
+    {
+      "songId": "jpop-playlist-オ-イシマサヨシ-君し-ゃなきゃタ-メみたい-f3a1d521ff",
+      "provider": "ky",
+      "action": "confirm",
+      "expectedObservedNumber": "43840",
+      "number": "43840",
+      "evidence": {
+        "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=43840",
+        "checkedAt": "2026-10-22T08:16:23.292254Z",
+        "title": "君じゃなきゃダメみたい (\"月刊少女野崎くん\"OP)",
+        "artist": "オーイシマサヨシ",
+        "responseSha256": "6ef86a87689d4bf01c9f2c60d0602cb75cb4166d3794426489aac783fbfd1797"
+      },
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다."
+    },
+    {
+      "songId": "jpop-playlist-七人のカリスマ-おつカリスマ-忘年会-5e776838d2",
+      "provider": "tj",
+      "action": "confirm",
+      "expectedObservedNumber": "68978",
+      "number": "68978",
+      "evidence": {
+        "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=68978&strWord=Y",
+        "checkedAt": "2026-10-22T08:16:27.242605Z",
+        "title": "おつカリスマ！忘年会(プロジェクト 'カリスマ' OST)",
+        "artist": "七人のカリスマ",
+        "responseSha256": "97eb565ebb2168d3826ef3268fceb315248ce12485b08dd5f1695d54a9167127"
+      },
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다."
+    },
+    {
+      "songId": "jpop-playlist-七人のカリスマ-おつカリスマ-忘年会-5e776838d2",
+      "provider": "ky",
+      "action": "confirm",
+      "expectedObservedNumber": "75906",
+      "number": "75906",
+      "evidence": {
+        "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=75906",
+        "checkedAt": "2026-10-22T08:16:34.050521Z",
+        "title": "おつカリスマ!忘年会",
+        "artist": "七人のカリスマ",
+        "responseSha256": "27eacdfbe1f578ca5a00faac2eb609dc98289277060cbd891fbfc05039c55570"
+      },
+      "reason": "금영 공식 번호 검색의 제목과 가수가 관리 목록 표기와 일치합니다."
+    },
+    {
+      "songId": "jpop-playlist-七人のカリスマ-みんなか-カリスマ-e7a5745379",
+      "provider": "tj",
+      "action": "confirm",
+      "expectedObservedNumber": "68972",
+      "number": "68972",
+      "evidence": {
+        "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=68972&strWord=Y",
+        "checkedAt": "2026-10-22T08:16:38.051916Z",
+        "title": "みんながカリスマ(プロジェクト 'カリスマ' OST)",
+        "artist": "七人のカリスマ",
+        "responseSha256": "c5cb22a09421e186814aac2937692ab5e6273853c2cfe815d8f570ed614cceec"
+      },
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다."
+    },
+    {
+      "songId": "jpop-playlist-七人のカリスマ-みんなか-カリスマ-e7a5745379",
+      "provider": "ky",
+      "action": "confirm",
+      "expectedObservedNumber": "75947",
+      "number": "75947",
+      "evidence": {
+        "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=75947",
+        "checkedAt": "2026-10-22T08:16:43.356897Z",
+        "title": "みんながカリスマ",
+        "artist": "七人のカリスマ",
+        "responseSha256": "ad6f36e529f0adf22e7309c2c417850a13d9e23a05355d2efd52d36c46741b95"
+      },
+      "reason": "금영 공식 번호 검색의 제목과 가수가 관리 목록 표기와 일치합니다."
+    },
+    {
+      "songId": "jpop-playlist-七人のカリスマ-めちゃめちゃカリスマ-4fcb85d318",
+      "provider": "tj",
+      "action": "confirm",
+      "expectedObservedNumber": "68909",
+      "number": "68909",
+      "evidence": {
+        "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=68909&strWord=Y",
+        "checkedAt": "2026-10-22T08:16:47.382571Z",
+        "title": "めちゃめちゃカリスマ(超人的シェアハウスストーリー 'カリスマ' OST)",
+        "artist": "七人のカリスマ",
+        "responseSha256": "56015dc1cdeedf7c4dd8740aaef126670fe9f9eacb8042b08c88a880ff88f9fb"
+      },
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다."
+    },
+    {
+      "songId": "jpop-playlist-七人のカリスマ-めちゃめちゃカリスマ-4fcb85d318",
+      "provider": "ky",
+      "action": "confirm",
+      "expectedObservedNumber": "75854",
+      "number": "75854",
+      "evidence": {
+        "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=75854",
+        "checkedAt": "2026-10-22T08:16:53.544218Z",
+        "title": "めちゃめちゃカリスマ",
+        "artist": "七人のカリスマ",
+        "responseSha256": "6865de74bc5df28390c392dca6f1cb5d5e997923eadc67b996f82e8ac4f796e7"
+      },
+      "reason": "금영 공식 번호 검색의 제목과 가수가 관리 목록 표기와 일치합니다."
+    },
+    {
+      "songId": "jpop-playlist-中島みゆき-地上の星-263df605ef",
+      "provider": "tj",
+      "action": "confirm",
+      "expectedObservedNumber": "25496",
+      "number": "25496",
+      "evidence": {
+        "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=25496&strWord=Y",
+        "checkedAt": "2026-10-22T08:16:57.521344Z",
+        "title": "地上の星",
+        "artist": "中島みゆき",
+        "responseSha256": "4ce2ef0ef547215074c1a82168a0424c5c3902c70c5db0d2cd040cce65193268"
+      },
+      "reason": "TJ 공식 번호 검색의 제목과 가수가 관리 목록 표기와 일치합니다."
+    },
+    {
+      "songId": "jpop-playlist-中島みゆき-地上の星-263df605ef",
+      "provider": "ky",
+      "action": "confirm",
+      "expectedObservedNumber": "41565",
+      "number": "41565",
+      "evidence": {
+        "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=41565",
+        "checkedAt": "2026-10-22T08:17:02.491735Z",
+        "title": "地上の星",
+        "artist": "中島みゆき",
+        "responseSha256": "adb5c3feec6a7466e8be6c84ae72ca11afdda28d98d998cca5eae858316f0076"
+      },
+      "reason": "금영 공식 번호 검색의 제목과 가수가 관리 목록 표기와 일치합니다."
+    },
+    {
+      "songId": "jpop-playlist-中島みゆき-悪女-dd55d3ebd7",
+      "provider": "ky",
+      "action": "confirm",
+      "expectedObservedNumber": "40690",
+      "number": "40690",
+      "evidence": {
+        "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=40690",
+        "checkedAt": "2026-10-22T08:17:11.381401Z",
+        "title": "悪女",
+        "artist": "中島みゆき",
+        "responseSha256": "0c9c67264b227f33fe0233f4a273adea7208a7c1a11e8cf8515710f3e0cf03db"
+      },
+      "reason": "금영 공식 번호 검색의 제목과 가수가 관리 목록 표기와 일치합니다."
+    },
+    {
+      "songId": "jpop-playlist-中島みゆき-糸-01656e5c49",
+      "provider": "tj",
+      "action": "confirm",
+      "expectedObservedNumber": "28767",
+      "number": "28767",
+      "evidence": {
+        "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=28767&strWord=Y",
+        "checkedAt": "2026-10-22T08:17:15.371884Z",
+        "title": "糸",
+        "artist": "中島みゆき",
+        "responseSha256": "6fcf0c24403cdcf15910e1a76e92be2cf3d827a314b80f090f1cacc89fc36451"
+      },
+      "reason": "TJ 공식 번호 검색의 제목과 가수가 관리 목록 표기와 일치합니다."
+    },
+    {
+      "songId": "jpop-playlist-中島みゆき-糸-01656e5c49",
+      "provider": "ky",
+      "action": "confirm",
+      "expectedObservedNumber": "43831",
+      "number": "43831",
+      "evidence": {
+        "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=43831",
+        "checkedAt": "2026-10-22T08:17:20.249796Z",
+        "title": "糸 (ドラマ\"聖者の行進\")",
+        "artist": "中島みゆき",
+        "responseSha256": "001b34191d90d60102c7308a0d0d9b11a1ecc605d35d918b5bd53c596b5f14b1"
+      },
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다."
+    },
+    {
+      "songId": "jpop-playlist-山下達郎-ride-on-time-f38731c42c",
+      "provider": "tj",
+      "action": "confirm",
+      "expectedObservedNumber": "25574",
+      "number": "25574",
+      "evidence": {
+        "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=25574&strWord=Y",
+        "checkedAt": "2026-10-22T08:17:24.265030Z",
+        "title": "RIDE ON TIME(GOOD LUCK OST)",
+        "artist": "山下達郎",
+        "responseSha256": "e9ec1390ca6b07ff3321df0cabd15850125f05da68a36ba724d15358e7eecddb"
+      },
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다."
+    },
+    {
+      "songId": "jpop-playlist-山下達郎-さよなら夏の日-0803817bfa",
+      "provider": "tj",
+      "action": "confirm",
+      "expectedObservedNumber": "6429",
+      "number": "6429",
+      "evidence": {
+        "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=6429&strWord=Y",
+        "checkedAt": "2026-10-22T08:17:33.688470Z",
+        "title": "さよなら夏の日",
+        "artist": "山下達郎",
+        "responseSha256": "6e938fa3ecd926be44dfae342d5ca7bc0573a422850ced0305fdf1c825939c46"
+      },
+      "reason": "TJ 공식 번호 검색의 제목과 가수가 관리 목록 표기와 일치합니다."
+    },
+    {
+      "songId": "jpop-playlist-山下達郎-さよなら夏の日-0803817bfa",
+      "provider": "ky",
+      "action": "confirm",
+      "expectedObservedNumber": "40547",
+      "number": "40547",
+      "evidence": {
+        "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=40547",
+        "checkedAt": "2026-10-22T08:17:38.610393Z",
+        "title": "さよなら夏の日",
+        "artist": "山下達郎",
+        "responseSha256": "2fa40dd7d014d9221e0f5b5026b852059f9697f09193f51f5091d7eb50b47e0b"
+      },
+      "reason": "금영 공식 번호 검색의 제목과 가수가 관리 목록 표기와 일치합니다."
+    },
+    {
+      "songId": "jpop-playlist-山下達郎-クリスマス-イフ-d5c69c61a6",
+      "provider": "tj",
+      "action": "confirm",
+      "expectedObservedNumber": "6675",
+      "number": "6675",
+      "evidence": {
+        "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=6675&strWord=Y",
+        "checkedAt": "2026-10-22T08:17:42.449355Z",
+        "title": "クリスマス・イブ",
+        "artist": "山下達郎",
+        "responseSha256": "8fdfbb9eb5e147d78c70676ab18c921df725886f63d5867843cf3c6ff8f32c9c"
+      },
+      "reason": "TJ 공식 번호 검색의 제목과 가수가 관리 목록 표기와 일치합니다."
+    },
+    {
+      "songId": "jpop-playlist-山下達郎-クリスマス-イフ-d5c69c61a6",
+      "provider": "ky",
+      "action": "confirm",
+      "expectedObservedNumber": "41252",
+      "number": "41252",
+      "evidence": {
+        "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=41252",
+        "checkedAt": "2026-10-22T08:17:47.333119Z",
+        "title": "クリスマス・イブ",
+        "artist": "山下達郎",
+        "responseSha256": "64240cf2e274faa85d8b000dd93d4399fb65c2892618877e611805ffd9b1a010"
+      },
+      "reason": "금영 공식 번호 검색의 제목과 가수가 관리 목록 표기와 일치합니다."
+    },
+    {
+      "songId": "jpop-playlist-星街すいせい-stellar-stellar-347dec4cbb",
+      "provider": "tj",
+      "action": "confirm",
+      "expectedObservedNumber": "68567",
+      "number": "68567",
+      "evidence": {
+        "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=68567&strWord=Y",
+        "checkedAt": "2026-10-22T08:17:51.335397Z",
+        "title": "Stellar Stellar",
+        "artist": "星街すいせい",
+        "responseSha256": "3ee0b95e44498f797f252668cfc51df11868ec461a5bdafa2e76086b2a153c6c"
+      },
+      "reason": "TJ 공식 번호 검색의 제목과 가수가 관리 목록 표기와 일치합니다."
+    },
+    {
+      "songId": "jpop-playlist-星街すいせい-stellar-stellar-347dec4cbb",
+      "provider": "ky",
+      "action": "confirm",
+      "expectedObservedNumber": "44829",
+      "number": "44829",
+      "evidence": {
+        "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=44829",
+        "checkedAt": "2026-10-22T08:17:57.168913Z",
+        "title": "Stellar Stellar",
+        "artist": "星街すいせい",
+        "responseSha256": "036d1b730246979e33a7300cf7a61a6c49b37b879c6326f28a2e76624c608788"
+      },
+      "reason": "금영 공식 번호 검색의 제목과 가수가 관리 목록 표기와 일치합니다."
+    },
+    {
+      "songId": "jpop-playlist-星街すいせい-ghost-fedfee5729",
+      "provider": "tj",
+      "action": "confirm",
+      "expectedObservedNumber": "52400",
+      "number": "52400",
+      "evidence": {
+        "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=52400&strWord=Y",
+        "checkedAt": "2026-10-22T08:18:01.334819Z",
+        "title": "GHOST",
+        "artist": "星街すいせい",
+        "responseSha256": "1ec6dc7767ea3c714bb0ae0fa9d2a76648b03a540bfdfdc062c60431e5405945"
+      },
+      "reason": "TJ 공식 번호 검색의 제목과 가수가 관리 목록 표기와 일치합니다."
+    },
+    {
+      "songId": "jpop-playlist-星街すいせい-next-color-planet-6e9cb22176",
+      "provider": "tj",
+      "action": "confirm",
+      "expectedObservedNumber": "52403",
+      "number": "52403",
+      "evidence": {
+        "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=52403&strWord=Y",
+        "checkedAt": "2026-10-22T08:18:05.480416Z",
+        "title": "NEXT COLOR PLANET",
+        "artist": "星街すいせい",
+        "responseSha256": "832ef44a49e9a098bb3849a20eb7ed3d44bb1fd7e7b42e2d32740462d9edc276"
+      },
+      "reason": "TJ 공식 번호 검색의 제목과 가수가 관리 목록 표기와 일치합니다."
+    },
+    {
+      "songId": "jpop-playlist-3年e組うた担-question-fdd474dc8d",
+      "provider": "tj",
+      "action": "confirm",
+      "expectedObservedNumber": "27895",
+      "number": "27895",
+      "evidence": {
+        "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=27895&strWord=Y",
+        "checkedAt": "2026-10-22T08:18:37.374926Z",
+        "title": "QUESTION(暗殺教室 OP)",
+        "artist": "3年E組うた担",
+        "responseSha256": "7953755c459f9a9f29c2853193c3efa508579efe90d146bf05c4628aa4362824"
+      },
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다."
+    },
+    {
+      "songId": "jpop-playlist-3年e組うた担-question-fdd474dc8d",
+      "provider": "ky",
+      "action": "confirm",
+      "expectedObservedNumber": "44015",
+      "number": "44015",
+      "evidence": {
+        "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=44015",
+        "checkedAt": "2026-10-22T08:18:44.799957Z",
+        "title": "QUESTION (\"暗殺教室\"OP)",
+        "artist": "3年E組うた担",
+        "responseSha256": "5dfb391bb46f069c74dc13fbd58518a19b96006e0cba71470b94e86bb92aac2d"
+      },
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다."
+    },
+    {
+      "songId": "jpop-playlist-3年e組うた担-ハ-イハ-イ-yesterday-6fae6570b5",
+      "provider": "tj",
+      "action": "confirm",
+      "expectedObservedNumber": "27932",
+      "number": "27932",
+      "evidence": {
+        "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=27932&strWord=Y",
+        "checkedAt": "2026-10-22T08:18:48.946130Z",
+        "title": "バイバイ YESTERDAY(暗殺教室 OP)",
+        "artist": "3年E組うた担",
+        "responseSha256": "62f715fa3b0cfbd4b9be0311a4bfe888c86d91099b589dd2b24bf55f56e3879c"
+      },
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다."
+    },
+    {
+      "songId": "jpop-playlist-3年e組うた担-ハ-イハ-イ-yesterday-6fae6570b5",
+      "provider": "ky",
+      "action": "confirm",
+      "expectedObservedNumber": "44053",
+      "number": "44053",
+      "evidence": {
+        "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=44053",
+        "checkedAt": "2026-10-22T08:18:55.390339Z",
+        "title": "バイバイ YESTERDAY (\"暗殺教室\"OP)",
+        "artist": "3年E組うた担",
+        "responseSha256": "d9beaff617f1b474041a591980a58d29b9bfd979432f939e6612c4ab10d1ba99"
+      },
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다."
+    },
+    {
+      "songId": "jpop-playlist-3年e組うた担-旅立ちのうた-a7f7521804",
+      "provider": "tj",
+      "action": "confirm",
+      "expectedObservedNumber": "28802",
+      "number": "28802",
+      "evidence": {
+        "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=28802&strWord=Y",
+        "checkedAt": "2026-10-22T08:18:59.437987Z",
+        "title": "旅立ちのうた(暗殺教室 OST)",
+        "artist": "3年E組うた担",
+        "responseSha256": "632110d8f82b4ac92a0ce10fc38abe39340cebeb160ed56deaee96aaf5e26975"
+      },
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다."
+    },
+    {
+      "songId": "jpop-playlist-3年e組うた担-旅立ちのうた-a7f7521804",
+      "provider": "ky",
+      "action": "confirm",
+      "expectedObservedNumber": "44239",
+      "number": "44239",
+      "evidence": {
+        "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=44239",
+        "checkedAt": "2026-10-22T08:19:04.689688Z",
+        "title": "旅立ちのうた (\"暗殺教室\"OST)",
+        "artist": "3年E組",
+        "responseSha256": "dfeb23ccbf49215e28637dd26dc8cffe8df9075533b85e129b97df91266025b6"
+      },
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다."
+    },
+    {
+      "songId": "jpop-playlist-ali-project-わか-臈たし悪の華-7f4ad92a20",
+      "provider": "tj",
+      "action": "confirm",
+      "expectedObservedNumber": "28286",
+      "number": "28286",
+      "evidence": {
+        "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=28286&strWord=Y",
+        "checkedAt": "2026-10-22T08:19:09.049380Z",
+        "title": "わが臈たし悪の華(コードギアス反逆のルルーシュR2 2nd ED)",
+        "artist": "ALI PROJECT",
+        "responseSha256": "2b8d0081a4ec32da680150a1218dc8d8f40ed84335e498d2f8511ea9185bfbe6"
+      },
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다."
+    },
+    {
+      "songId": "jpop-playlist-ali-project-わか-臈たし悪の華-7f4ad92a20",
+      "provider": "ky",
+      "action": "confirm",
+      "expectedObservedNumber": "42886",
+      "number": "42886",
+      "evidence": {
+        "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=42886",
+        "checkedAt": "2026-10-22T08:19:14.505364Z",
+        "title": "わが臈たし悪の華 (\"コードギアス 反逆のルルーシュR2\"ED)",
+        "artist": "ALI PROJECT",
+        "responseSha256": "541e0641b8292f08bb21d31156799c9bdf079d2b1c7b7890230be552bb5692de"
+      },
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다."
+    },
+    {
+      "songId": "jpop-playlist-ali-project-勇侠青春謳-6e866608a4",
+      "provider": "tj",
+      "action": "confirm",
+      "expectedObservedNumber": "26312",
+      "number": "26312",
+      "evidence": {
+        "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=26312&strWord=Y",
+        "checkedAt": "2026-10-22T08:19:18.627831Z",
+        "title": "勇侠青春謳(コードギアス反逆のルルーシュ ED)",
+        "artist": "ALI PROJECT",
+        "responseSha256": "35b77e34dc9cbf48fb2746bb25b3754d885b967bd75c747411f09f02bd2426ab"
+      },
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다."
+    },
+    {
+      "songId": "jpop-playlist-ali-project-勇侠青春謳-6e866608a4",
+      "provider": "ky",
+      "action": "confirm",
+      "expectedObservedNumber": "42324",
+      "number": "42324",
+      "evidence": {
+        "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=42324",
+        "checkedAt": "2026-10-22T08:19:24.592344Z",
+        "title": "勇侠青春謳 (\"コードギアス 反逆のルルーシュ\"ED)",
+        "artist": "ALI PROJECT",
+        "responseSha256": "7b5358287ad606c9922823f875f181f7c714670907ac9f0aeaf611717d7b4199"
+      },
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다."
+    },
+    {
+      "songId": "jpop-playlist-ali-project-禁し-られた遊ひ-411baaae9a",
+      "provider": "tj",
+      "action": "confirm",
+      "expectedObservedNumber": "25954",
+      "number": "25954",
+      "evidence": {
+        "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=25954&strWord=Y",
+        "checkedAt": "2026-10-22T08:19:28.765344Z",
+        "title": "禁じられた遊び(ROZEN MAIDEN OP)",
+        "artist": "ALI PROJECT",
+        "responseSha256": "46b65b81ffa5b22105d6f5e7ff4ed084097d1358398f88fc84fc44565c64b3a9"
+      },
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다."
+    },
+    {
+      "songId": "jpop-playlist-ali-project-禁し-られた遊ひ-411baaae9a",
+      "provider": "ky",
+      "action": "confirm",
+      "expectedObservedNumber": "40195",
+      "number": "40195",
+      "evidence": {
+        "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=40195",
+        "checkedAt": "2026-10-22T08:19:33.964548Z",
+        "title": "禁じられた遊び (\"Rozen Maiden\"OP)",
+        "artist": "ALI PROJECT",
+        "responseSha256": "899bc0e58e4e7601adabfb28b4ec84972ed589d98c17608c9165aa9fd6aef14f"
+      },
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다."
+    },
+    {
+      "songId": "jpop-playlist-b-z-don-t-wanna-lie-88ef949c78",
+      "provider": "tj",
+      "action": "confirm",
+      "expectedObservedNumber": "27193",
+      "number": "27193",
+      "evidence": {
+        "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=27193&strWord=Y",
+        "checkedAt": "2026-10-22T08:19:37.989739Z",
+        "title": "Don't Wanna Lie(名探偵コナン OP)",
+        "artist": "B'z",
+        "responseSha256": "43c0ae31d73cfe1ab417ac64c2d1bd34ce6d0ab0e9435d3f05a4aec9726ba0c1"
+      },
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다."
+    },
+    {
+      "songId": "jpop-playlist-b-z-don-t-wanna-lie-88ef949c78",
+      "provider": "ky",
+      "action": "confirm",
+      "expectedObservedNumber": "43397",
+      "number": "43397",
+      "evidence": {
+        "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=43397",
+        "checkedAt": "2026-10-22T08:19:43.048989Z",
+        "title": "Don't Wanna Lie (\"名探偵コナン\"OST)",
+        "artist": "B'z",
+        "responseSha256": "57040317bef38d8d6df135bed0f12277f47942c686833fbb089a48f20eaa6c54"
+      },
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다."
+    },
+    {
+      "songId": "jpop-playlist-b-z-one-51c945470d",
+      "provider": "tj",
+      "action": "confirm",
+      "expectedObservedNumber": "6930",
+      "number": "6930",
+      "evidence": {
+        "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=6930&strWord=Y",
+        "checkedAt": "2026-10-22T08:19:47.041692Z",
+        "title": "One(場版名探偵コナンOST)",
+        "artist": "B'z",
+        "responseSha256": "37c0d6cd493f40dff68e44339fdd83efb75f9dc071845f1b5f86bc09290d5e06"
+      },
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다."
+    },
+    {
+      "songId": "jpop-playlist-b-z-one-51c945470d",
+      "provider": "ky",
+      "action": "confirm",
+      "expectedObservedNumber": "40556",
+      "number": "40556",
+      "evidence": {
+        "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=40556",
+        "checkedAt": "2026-10-22T08:19:52.380937Z",
+        "title": "ONE (\"名探偵コナン\"OST)",
+        "artist": "B'z",
+        "responseSha256": "9cc04d77f993b9b2ae0e5a50e5c4dd0176ee58f8a317fbd0129c2791078f1904"
+      },
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다."
+    },
+    {
+      "songId": "jpop-playlist-b-z-ゆるき-ないものひとつ-66c3dc7e7a",
+      "provider": "tj",
+      "action": "confirm",
+      "expectedObservedNumber": "26193",
+      "number": "26193",
+      "evidence": {
+        "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=26193&strWord=Y",
+        "checkedAt": "2026-10-22T08:19:57.460580Z",
+        "title": "ゆるぎないものひとつ(劇場版 名探偵コナン探偵たちの鎮魂歌 主題歌)",
+        "artist": "B'z",
+        "responseSha256": "536c5b9a80109583990a43bb64f898c0ede07fdad1d8cd0cb06a3b7fb7511be3"
+      },
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다."
+    },
+    {
+      "songId": "jpop-playlist-b-z-ゆるき-ないものひとつ-66c3dc7e7a",
+      "provider": "ky",
+      "action": "confirm",
+      "expectedObservedNumber": "40464",
+      "number": "40464",
+      "evidence": {
+        "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=40464",
+        "checkedAt": "2026-10-22T08:20:03.449222Z",
+        "title": "ゆるぎないものひとつ (\"名探偵コナン\"OST)",
+        "artist": "B'z",
+        "responseSha256": "eb3578b45943531a0ae2ec69e3ffac54d61abdb72235687f94d41e817c0aba79"
+      },
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다."
+    },
+    {
+      "songId": "jpop-playlist-buono-co-no-mi-chi-729509ac8f",
+      "provider": "tj",
+      "action": "confirm",
+      "expectedObservedNumber": "28028",
+      "number": "28028",
+      "evidence": {
+        "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=28028&strWord=Y",
+        "checkedAt": "2026-10-22T08:20:07.469715Z",
+        "title": "Co・No・Mi・Chi(しゅごキャラ!! どきっ ED)",
+        "artist": "Buono!",
+        "responseSha256": "41a09988f2be09e57f3a78724466bd1ab9f3c4cf0d3c94fa84738f66b45a0938"
+      },
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다."
+    },
+    {
+      "songId": "jpop-playlist-buono-co-no-mi-chi-729509ac8f",
+      "provider": "ky",
+      "action": "confirm",
+      "expectedObservedNumber": "43040",
+      "number": "43040",
+      "evidence": {
+        "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=43040",
+        "checkedAt": "2026-10-22T08:20:12.394491Z",
+        "title": "co・no・mi・chi (\"しゅごキャラ!!どきっ\"ED)",
+        "artist": "Buono!",
+        "responseSha256": "db14b1cb5519333bd78824312484e8117573a379440c4ba3ca3bf53abe7dcb26"
+      },
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다."
+    },
+    {
+      "songId": "jpop-playlist-buono-kiss-kiss-kiss-f3ec86f0e9",
+      "provider": "tj",
+      "action": "confirm",
+      "expectedObservedNumber": "27902",
+      "number": "27902",
+      "evidence": {
+        "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=27902&strWord=Y",
+        "checkedAt": "2026-10-22T08:20:16.431416Z",
+        "title": "Kiss! Kiss! Kiss!(しゅごキャラ! ED)",
+        "artist": "Buono!",
+        "responseSha256": "31f3414b1849711ee388956ad94afa81b50c2e1008da9ea69f9dfdbc9dc913cc"
+      },
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다."
+    },
+    {
+      "songId": "jpop-playlist-buono-こころのたまこ-3ef068692d",
+      "provider": "tj",
+      "action": "confirm",
+      "expectedObservedNumber": "28204",
+      "number": "28204",
+      "evidence": {
+        "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=28204&strWord=Y",
+        "checkedAt": "2026-10-22T08:20:25.021664Z",
+        "title": "こころのたまご(しゅごキャラ OP)",
+        "artist": "Buono!",
+        "responseSha256": "7d4db23820d100db6306f5617728a58a24a9af2a8ee2bb043484e3f3eee5499c"
+      },
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다."
+    },
+    {
+      "songId": "jpop-playlist-buono-こころのたまこ-3ef068692d",
+      "provider": "ky",
+      "action": "confirm",
+      "expectedObservedNumber": "42724",
+      "number": "42724",
+      "evidence": {
+        "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=42724",
+        "checkedAt": "2026-10-22T08:20:30.494065Z",
+        "title": "こころのたまご (\"しゅごキャラ!\"OP)",
+        "artist": "Buono!",
+        "responseSha256": "702328ebecf181332ec20fa84cccbb9349b95bbb33fa9c216ab15ffa2d59f937"
+      },
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다."
+    },
+    {
+      "songId": "jpop-playlist-changin-my-life-eternal-snow-d25e6ec590",
+      "provider": "tj",
+      "action": "confirm",
+      "expectedObservedNumber": "25803",
+      "number": "25803",
+      "evidence": {
+        "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=25803&strWord=Y",
+        "checkedAt": "2026-10-22T08:20:34.508794Z",
+        "title": "ETERNAL SNOW(満月をさがして ED)",
+        "artist": "Changin' My Life",
+        "responseSha256": "e59e7fd79bc595006ac3a289747156c0da6d57267d57e405d5a47dc88cbac803"
+      },
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다."
+    },
+    {
+      "songId": "jpop-playlist-changin-my-life-eternal-snow-d25e6ec590",
+      "provider": "ky",
+      "action": "confirm",
+      "expectedObservedNumber": "41827",
+      "number": "41827",
+      "evidence": {
+        "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=41827",
+        "checkedAt": "2026-10-22T08:20:39.309321Z",
+        "title": "ETERNAL SNOW (\"満月をさがして\"ED)",
+        "artist": "Changin' My Life",
+        "responseSha256": "cbed06f0d824362ce015292f0ed23ad2698c4c35d768783a1421abfd024aef7d"
+      },
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다."
+    },
+    {
+      "songId": "jpop-playlist-changin-my-life-love-chronicle-c2fa8d2992",
+      "provider": "tj",
+      "action": "confirm",
+      "expectedObservedNumber": "26440",
+      "number": "26440",
+      "evidence": {
+        "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=26440&strWord=Y",
+        "checkedAt": "2026-10-22T08:20:43.481513Z",
+        "title": "Love Chronicle(満月をさがして ED)",
+        "artist": "Changin' My Life",
+        "responseSha256": "694be9e2afcda6d196e745a81f32c4f9c29eca8e421a59cdffa6e78ddc6b869c"
+      },
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다."
+    },
+    {
+      "songId": "jpop-playlist-changin-my-life-love-chronicle-c2fa8d2992",
+      "provider": "ky",
+      "action": "confirm",
+      "expectedObservedNumber": "42579",
+      "number": "42579",
+      "evidence": {
+        "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=42579",
+        "checkedAt": "2026-10-22T08:20:48.916533Z",
+        "title": "Love Chronicle (\"満月をさがして\"ED)",
+        "artist": "Changin' My Life",
+        "responseSha256": "4ab26fdd0f6ba04a7b31c26e3add2d73efb0f7dd0dd1a23ed900a70f1bdb6297"
+      },
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다."
+    },
+    {
+      "songId": "jpop-playlist-changin-my-life-myself-ea6012a339",
+      "provider": "tj",
+      "action": "confirm",
+      "expectedObservedNumber": "25391",
+      "number": "25391",
+      "evidence": {
+        "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=25391&strWord=Y",
+        "checkedAt": "2026-10-22T08:20:52.941380Z",
+        "title": "Myself(満月をさがして ED)",
+        "artist": "Changin' My Life",
+        "responseSha256": "12b67a07b10f944f821448b7a41c2d1e2b9a2f195eca73c4fa5aabdb96beb626"
+      },
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다."
+    },
+    {
+      "songId": "jpop-playlist-changin-my-life-myself-ea6012a339",
+      "provider": "ky",
+      "action": "confirm",
+      "expectedObservedNumber": "41764",
+      "number": "41764",
+      "evidence": {
+        "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=41764",
+        "checkedAt": "2026-10-22T08:20:58.421866Z",
+        "title": "Myself (\"満月をさがして\"ED)",
+        "artist": "Changin' My Life",
+        "responseSha256": "466aa9e35b4ef29392e25e065121737446a27c8d534660414061e05a831a880c"
+      },
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다."
+    },
+    {
+      "songId": "jpop-playlist-flow-colors-72be050e55",
+      "provider": "tj",
+      "action": "confirm",
+      "expectedObservedNumber": "26301",
+      "number": "26301",
+      "evidence": {
+        "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=26301&strWord=Y",
+        "checkedAt": "2026-10-22T08:21:02.277784Z",
+        "title": "COLORS(コードギアス 反逆のルルーシュR2 OP)",
+        "artist": "FLOW",
+        "responseSha256": "4b2da3045ea5810fa470486b3e422cf92037ce9f619f142076dcd5b9be55b368"
+      },
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다."
+    },
+    {
+      "songId": "jpop-playlist-flow-colors-72be050e55",
+      "provider": "ky",
+      "action": "confirm",
+      "expectedObservedNumber": "42294",
+      "number": "42294",
+      "evidence": {
+        "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=42294",
+        "checkedAt": "2026-10-22T08:21:07.814314Z",
+        "title": "COLORS (\"コードギアス 反逆のルルーシュ\"OP)",
+        "artist": "FLOW",
+        "responseSha256": "4afcf04cf22c2bae6d7a5c4a1ac13a791818265cd4df79802fbc485ee114ce9e"
+      },
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다."
+    },
+    {
+      "songId": "jpop-playlist-flow-go-c7e85f8910",
+      "provider": "tj",
+      "action": "confirm",
+      "expectedObservedNumber": "25881",
+      "number": "25881",
+      "evidence": {
+        "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=25881&strWord=Y",
+        "checkedAt": "2026-10-22T08:21:11.674551Z",
+        "title": "GO!!!(NARUTO-ナルト-疾風伝 OP)",
+        "artist": "FLOW",
+        "responseSha256": "08604193bc58ebf119f8a5e241c6e990ce48827368851b04916bd9ea607105f3"
+      },
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다."
+    },
+    {
+      "songId": "jpop-playlist-flow-go-c7e85f8910",
+      "provider": "ky",
+      "action": "confirm",
+      "expectedObservedNumber": "41759",
+      "number": "41759",
+      "evidence": {
+        "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=41759",
+        "checkedAt": "2026-10-22T08:21:17.055805Z",
+        "title": "GO!!! (\"NARUTO-ナルト-\"OP)",
+        "artist": "FLOW",
+        "responseSha256": "badd441e23ca06272ca8ecf8eb337e4779857d6da20b9ecfaa337545ebe85e20"
+      },
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다."
+    },
+    {
+      "songId": "jpop-playlist-flow-sign-2d32ede16a",
+      "provider": "tj",
+      "action": "confirm",
+      "expectedObservedNumber": "27006",
+      "number": "27006",
+      "evidence": {
+        "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=27006&strWord=Y",
+        "checkedAt": "2026-10-22T08:21:21.008285Z",
+        "title": "Sign(NARUTO-ナルト-疾風伝 OP)",
+        "artist": "FLOW",
+        "responseSha256": "73b220f1d883a6b6811a36bd94fc5d8eb5fdfcff0faa15779a7a09a62fd32dde"
+      },
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다."
+    },
+    {
+      "songId": "jpop-playlist-flow-sign-2d32ede16a",
+      "provider": "ky",
+      "action": "confirm",
+      "expectedObservedNumber": "43872",
+      "number": "43872",
+      "evidence": {
+        "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=43872",
+        "checkedAt": "2026-10-22T08:21:26.232582Z",
+        "title": "Sign (\"NARUTO-ナルト- 疾風伝\"OP)",
+        "artist": "FLOW",
+        "responseSha256": "c9c08e6667009ccefaf796ac0d8283b93e0ca58f74950403fff37b41fd70b0ad"
+      },
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다."
+    },
+    {
+      "songId": "jpop-playlist-garnet-crow-mysterious-eyes-e5fc8b60af",
+      "provider": "tj",
+      "action": "confirm",
+      "expectedObservedNumber": "25689",
+      "number": "25689",
+      "evidence": {
+        "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=25689&strWord=Y",
+        "checkedAt": "2026-10-22T08:21:30.188529Z",
+        "title": "Mysterious Eyes(名探偵コナン OP)",
+        "artist": "GARNET CROW",
+        "responseSha256": "5fee24529acac04e5dbe873aef5e3b2966c85f38100e7bc9ff6964381bbbb894"
+      },
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다."
+    },
+    {
+      "songId": "jpop-playlist-garnet-crow-mysterious-eyes-e5fc8b60af",
+      "provider": "ky",
+      "action": "confirm",
+      "expectedObservedNumber": "40564",
+      "number": "40564",
+      "evidence": {
+        "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=40564",
+        "checkedAt": "2026-10-22T08:21:35.198835Z",
+        "title": "Mysterious Eyes (\"名探偵コナン\"OP)",
+        "artist": "GARNET CROW",
+        "responseSha256": "369deebbf77f9d4a8993779dcf434674fd01a75fcf2b02726e11ac626a7a68ea"
+      },
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다."
+    },
+    {
+      "songId": "jpop-playlist-garnet-crow-夏の幻-01eea5e8d5",
+      "provider": "tj",
+      "action": "confirm",
+      "expectedObservedNumber": "25546",
+      "number": "25546",
+      "evidence": {
+        "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=25546&strWord=Y",
+        "checkedAt": "2026-10-22T08:21:39.200033Z",
+        "title": "夏の幻(名探偵コナン ED)",
+        "artist": "GARNET CROW",
+        "responseSha256": "30be38b3d1e92a085456b78cb80c3940ae77d5b93987573139751fa131eb2d0d"
+      },
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다."
+    },
+    {
+      "songId": "jpop-playlist-garnet-crow-夏の幻-01eea5e8d5",
+      "provider": "ky",
+      "action": "confirm",
+      "expectedObservedNumber": "41318",
+      "number": "41318",
+      "evidence": {
+        "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=41318",
+        "checkedAt": "2026-10-22T08:21:44.324019Z",
+        "title": "夏の幻 (\"名探偵コナン\"OST)",
+        "artist": "GARNET CROW",
+        "responseSha256": "36e296be6e95f4b85d8c6f11aba456e960b53c2bac6a645cbb5b3f3a79ed6f16"
+      },
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다."
+    },
+    {
+      "songId": "jpop-playlist-garnet-crow-夢みたあとて-5782529d1d",
+      "provider": "tj",
+      "action": "confirm",
+      "expectedObservedNumber": "28468",
+      "number": "28468",
+      "evidence": {
+        "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=28468&strWord=Y",
+        "checkedAt": "2026-10-22T08:21:48.193770Z",
+        "title": "夢みたあとで(名探偵コナン OST)",
+        "artist": "GARNET CROW",
+        "responseSha256": "368ad56fbbf46ca6d48ba7e224105f99662ab575fa6ff371616b227814ca6774"
+      },
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다."
+    },
+    {
+      "songId": "jpop-playlist-garnet-crow-夢みたあとて-5782529d1d",
+      "provider": "ky",
+      "action": "confirm",
+      "expectedObservedNumber": "41406",
+      "number": "41406",
+      "evidence": {
+        "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=41406",
+        "checkedAt": "2026-10-22T08:21:53.301519Z",
+        "title": "夢みたあとで (\"名探偵コナン\"OST)",
+        "artist": "GARNET CROW",
+        "responseSha256": "5d5daa31f987a03ed733f32a2e08805fbfbe5bc5e75695a92b917cf13349038f"
+      },
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다."
+    },
+    {
+      "songId": "jpop-playlist-idolish7-discover-the-future-0d84c0a030",
+      "provider": "tj",
+      "action": "confirm",
+      "expectedObservedNumber": "68301",
+      "number": "68301",
+      "evidence": {
+        "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=68301&strWord=Y",
+        "checkedAt": "2026-10-22T08:21:57.160932Z",
+        "title": "DiSCOVER THE FUTURE(アイドリッシュセブン OST)",
+        "artist": "IDOLiSH 7",
+        "responseSha256": "47a87671b5f2e863a55adf6133a62a7459523c5a77d1b0a18ae1f57b9c7bd68c"
+      },
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다."
+    },
+    {
+      "songId": "jpop-playlist-idolish7-discover-the-future-0d84c0a030",
+      "provider": "ky",
+      "action": "confirm",
+      "expectedObservedNumber": "44588",
+      "number": "44588",
+      "evidence": {
+        "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=44588",
+        "checkedAt": "2026-10-22T08:22:02.362419Z",
+        "title": "DiSCOVER THE FUTURE (\"アイドリッシュセブン..",
+        "artist": "IDOLiSH7",
+        "responseSha256": "72e7651b864727f15950056c3e28dbe595f5d916eb30a3038f1a1122dc8eed40"
+      },
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다."
+    },
+    {
+      "songId": "jpop-playlist-idolish7-memories-melodies-dab20cc9b8",
+      "provider": "tj",
+      "action": "confirm",
+      "expectedObservedNumber": "28987",
+      "number": "28987",
+      "evidence": {
+        "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=28987&strWord=Y",
+        "checkedAt": "2026-10-22T08:22:06.322346Z",
+        "title": "MEMORiES MELODiES(アイドリッシュセブン OST)",
+        "artist": "IDOLiSH 7",
+        "responseSha256": "88cc46298b4aa628c4962cb86c0ea759a197aa8da5c82ebc7c3ab427b3f05f99"
+      },
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다."
+    },
+    {
+      "songId": "jpop-playlist-idolish7-memories-melodies-dab20cc9b8",
+      "provider": "ky",
+      "action": "confirm",
+      "expectedObservedNumber": "44362",
+      "number": "44362",
+      "evidence": {
+        "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=44362",
+        "checkedAt": "2026-10-22T08:22:11.498944Z",
+        "title": "MEMORiES MELODiES (\"アイドリッシュセブン\"OST)",
+        "artist": "IDOLiSH7",
+        "responseSha256": "bac5406081dd7f041ad7623e219d8bfc4cbf2598723d576e006e4447f2a0b414"
+      },
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다."
+    },
+    {
+      "songId": "jpop-playlist-idolish7-monster-generation-3c62ee6e4a",
+      "provider": "tj",
+      "action": "confirm",
+      "expectedObservedNumber": "68992",
+      "number": "68992",
+      "evidence": {
+        "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=68992&strWord=Y",
+        "checkedAt": "2026-10-22T08:22:15.447685Z",
+        "title": "MONSTER GENERATiON('劇場版 IDOLiSH7 LIVE 4bit Compilation Album ''BEYOND THE PERiOD''' OST)",
+        "artist": "IDOLiSH7",
+        "responseSha256": "26758b856b48382caa241b140ed0addaeaa1a29c0175997552d1c7636076569e"
+      },
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다."
+    },
+    {
+      "songId": "jpop-playlist-idolish7-monster-generation-3c62ee6e4a",
+      "provider": "ky",
+      "action": "confirm",
+      "expectedObservedNumber": "75917",
+      "number": "75917",
+      "evidence": {
+        "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=75917",
+        "checkedAt": "2026-10-22T08:22:20.654409Z",
+        "title": "MONSTER GENERATiON (\"アイドリッシュ..",
+        "artist": "IDOLiSH7",
+        "responseSha256": "72196becd575ee000500253768e92e42920a0f501f260a3b99d4c3673cef2fe0"
+      },
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다."
+    },
+    {
+      "songId": "jpop-playlist-liella-start-true-dreams-3864da256b",
+      "provider": "tj",
+      "action": "confirm",
+      "expectedObservedNumber": "68575",
+      "number": "68575",
+      "evidence": {
+        "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=68575&strWord=Y",
+        "checkedAt": "2026-10-22T08:22:24.793509Z",
+        "title": "START!! True dreams(ラブライブ！スーパースター！！ OP)",
+        "artist": "Liella!",
+        "responseSha256": "af1e5816af2f77896d7f7f6753e6b78effa37006cfc51057d93a4d1428df055c"
+      },
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다."
+    },
+    {
+      "songId": "jpop-playlist-liella-start-true-dreams-3864da256b",
+      "provider": "ky",
+      "action": "confirm",
+      "expectedObservedNumber": "44777",
+      "number": "44777",
+      "evidence": {
+        "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=44777",
+        "checkedAt": "2026-10-22T08:22:30.335880Z",
+        "title": "START!! True dreams (\"ラブライブ!スーパ..",
+        "artist": "Liella!",
+        "responseSha256": "61104af4d1916169ba002d4ead73a51b3254b99c9a484fe39f8811a529c641a4"
+      },
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다."
+    },
+    {
+      "songId": "jpop-playlist-liella-second-sparkle-35ef59b0f8",
+      "provider": "tj",
+      "action": "confirm",
+      "expectedObservedNumber": "68796",
+      "number": "68796",
+      "evidence": {
+        "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=68796&strWord=Y",
+        "checkedAt": "2026-10-22T08:22:34.424288Z",
+        "title": "Second Sparkle('ラブライブ!スーパースター!!' OST )",
+        "artist": "Liella!",
+        "responseSha256": "4be94ae24479702f670f1c00e75e7929a639a8661660a15fed3dd29c78cb8a0e"
+      },
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다."
+    },
+    {
+      "songId": "jpop-playlist-liella-second-sparkle-35ef59b0f8",
+      "provider": "ky",
+      "action": "confirm",
+      "expectedObservedNumber": "44931",
+      "number": "44931",
+      "evidence": {
+        "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=44931",
+        "checkedAt": "2026-10-22T08:22:39.873476Z",
+        "title": "Second Sparkle",
+        "artist": "Liella!",
+        "responseSha256": "303cabb11b61530c87b4c4f4ce648a7829a02103bf77a33846232b306467437c"
+      },
+      "reason": "금영 공식 번호 검색의 제목과 가수가 관리 목록 표기와 일치합니다."
+    },
+    {
+      "songId": "jpop-playlist-liella-始まりは君の空-c59fb9d911",
+      "provider": "tj",
+      "action": "confirm",
+      "expectedObservedNumber": "68410",
+      "number": "68410",
+      "evidence": {
+        "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=68410&strWord=Y",
+        "checkedAt": "2026-10-22T08:22:43.918435Z",
+        "title": "始まりは君の空(ラブライブ！スーパースター!! OST)",
+        "artist": "Liella!",
+        "responseSha256": "eb6e6201daa1c5039f504dfbdfef9e40167f45bd38440568b9e0a0efa8cccb34"
+      },
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다."
+    },
+    {
+      "songId": "jpop-playlist-liella-始まりは君の空-c59fb9d911",
+      "provider": "ky",
+      "action": "confirm",
+      "expectedObservedNumber": "44664",
+      "number": "44664",
+      "evidence": {
+        "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=44664",
+        "checkedAt": "2026-10-22T08:22:49.716234Z",
+        "title": "始まりは君の空 (\"ラブライブ!スーパースタ..",
+        "artist": "Liella!",
+        "responseSha256": "a7db732ea589e360541aaefa9a64e713e911de3474a2afa478ed9d23a195ae46"
+      },
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다."
+    },
+    {
+      "songId": "jpop-playlist-maretu-ひ-んく-170267efd5",
+      "provider": "tj",
+      "action": "confirm",
+      "expectedObservedNumber": "52707",
+      "number": "52707",
+      "evidence": {
+        "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=52707&strWord=Y",
+        "checkedAt": "2026-10-22T08:22:53.741191Z",
+        "title": "ぴんく",
+        "artist": "MARETU(Feat.初音ミク)",
+        "responseSha256": "aae8f55f78ff407eb27bccefa744318564a11d75bbf047a4b27dcaf385d10bf3"
+      },
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다."
+    },
+    {
+      "songId": "jpop-playlist-maretu-ひ-んく-170267efd5",
+      "provider": "ky",
+      "action": "confirm",
+      "expectedObservedNumber": "75988",
+      "number": "75988",
+      "evidence": {
+        "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=75988",
+        "checkedAt": "2026-10-22T08:23:02.405673Z",
+        "title": "ぴんく",
+        "artist": "MARETU feat.初音ミク",
+        "responseSha256": "4cc856e55f954f2e94df66108a469f0b8e1b322707a0dc7e57e8127224b4ed01"
+      },
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다."
+    },
+    {
+      "songId": "jpop-playlist-maretu-ニュ-タ-リン-de8ce92c13",
+      "provider": "tj",
+      "action": "confirm",
+      "expectedObservedNumber": "52583",
+      "number": "52583",
+      "evidence": {
+        "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=52583&strWord=Y",
+        "checkedAt": "2026-10-22T08:23:06.507016Z",
+        "title": "ニューダーリン",
+        "artist": "MARETU(Feat.初音ミク)",
+        "responseSha256": "95894508109318cb329c1904cab79cd119c6d947b03838aca28672bcb7bedb8e"
+      },
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다."
+    },
+    {
+      "songId": "jpop-playlist-maretu-ニュ-タ-リン-de8ce92c13",
+      "provider": "ky",
+      "action": "confirm",
+      "expectedObservedNumber": "75945",
+      "number": "75945",
+      "evidence": {
+        "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=75945",
+        "checkedAt": "2026-10-22T08:23:12.071913Z",
+        "title": "ニューダーリン",
+        "artist": "MARETU feat.初音ミク",
+        "responseSha256": "8123e28b09f13a196dd3e153f15bac0eb4b273c1325c1c2d55f8f751adf4e5d9"
+      },
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다."
+    },
+    {
+      "songId": "jpop-playlist-maretu-ヒ-ノミ-539849afa8",
+      "provider": "tj",
+      "action": "confirm",
+      "expectedObservedNumber": "52742",
+      "number": "52742",
+      "evidence": {
+        "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=52742&strWord=Y",
+        "checkedAt": "2026-10-22T08:23:16.099274Z",
+        "title": "ビノミ",
+        "artist": "MARETU(Feat.初音ミク)",
+        "responseSha256": "97a1521f342274d723e2116b67d7fa555484bf69f75e8314c979cb662013ac8d"
+      },
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다."
+    },
+    {
+      "songId": "jpop-playlist-maretu-ヒ-ノミ-539849afa8",
+      "provider": "ky",
+      "action": "confirm",
+      "expectedObservedNumber": "76539",
+      "number": "76539",
+      "evidence": {
+        "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=76539",
+        "checkedAt": "2026-10-22T08:23:21.710745Z",
+        "title": "ビノミ",
+        "artist": "MARETU feat.初音ミク",
+        "responseSha256": "a1026762a3f6d3771550adc7494e3a9661e4394964cb4262a6d0caf4b585e6a5"
+      },
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다."
+    },
+    {
+      "songId": "jpop-playlist-myth-and-roid-paradisus-paradoxum-09e8ce10ea",
+      "provider": "tj",
+      "action": "confirm",
+      "expectedObservedNumber": "27946",
+      "number": "27946",
+      "evidence": {
+        "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=27946&strWord=Y",
+        "checkedAt": "2026-10-22T08:23:54.365689Z",
+        "title": "Paradisus-Paradoxum(Re:ゼロから始める異世界生活 OP)",
+        "artist": "MYTH & ROID",
+        "responseSha256": "19ef0b9742c312fb672ed8fa319bfcffd4c9d2f5b2956711f9269c200ea81aa8"
+      },
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다."
+    },
+    {
+      "songId": "jpop-playlist-myth-and-roid-paradisus-paradoxum-09e8ce10ea",
+      "provider": "ky",
+      "action": "confirm",
+      "expectedObservedNumber": "44069",
+      "number": "44069",
+      "evidence": {
+        "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=44069",
+        "checkedAt": "2026-10-22T08:23:59.858542Z",
+        "title": "Paradisus-Paradoxum(\"Re:ゼロから始める異世界生活\"OP)",
+        "artist": "MYTH & ROID",
+        "responseSha256": "20e53a23238dcccdd6d87fe9dfe4b89400dfc01910cf6e2de7771e6bbd1e5dec"
+      },
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다."
+    },
+    {
+      "songId": "jpop-playlist-saucy-dog-いつか-5ce58814f9",
+      "provider": "tj",
+      "action": "confirm",
+      "expectedObservedNumber": "52423",
+      "number": "52423",
+      "evidence": {
+        "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=52423&strWord=Y",
+        "checkedAt": "2026-10-22T08:24:03.884402Z",
+        "title": "いつか",
+        "artist": "Saucy Dog",
+        "responseSha256": "88f6186641c263fcaf8d844eea9bc47ba628a0cb1e8ff9f7e7f969f12ff5ec6c"
+      },
+      "reason": "TJ 공식 번호 검색의 제목과 가수가 관리 목록 표기와 일치합니다."
+    },
+    {
+      "songId": "jpop-playlist-saucy-dog-いつか-5ce58814f9",
+      "provider": "ky",
+      "action": "confirm",
+      "expectedObservedNumber": "57772",
+      "number": "57772",
+      "evidence": {
+        "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=57772",
+        "checkedAt": "2026-10-22T08:24:08.911856Z",
+        "title": "いつか",
+        "artist": "Saucy Dog",
+        "responseSha256": "f65d5b17a99aca15e7b6a4151fdc052b48c93fe6d55bf5b1f0e217cd8acbd18a"
+      },
+      "reason": "금영 공식 번호 검색의 제목과 가수가 관리 목록 표기와 일치합니다."
+    },
+    {
+      "songId": "jpop-playlist-saucy-dog-シンテ-レラホ-イ-8aaf35e963",
+      "provider": "tj",
+      "action": "confirm",
+      "expectedObservedNumber": "52464",
+      "number": "52464",
+      "evidence": {
+        "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=52464&strWord=Y",
+        "checkedAt": "2026-10-22T08:24:13.025219Z",
+        "title": "シンデレラボーイ",
+        "artist": "Saucy Dog",
+        "responseSha256": "0159b540130b2eaad8f17eb03a33b0a28f5984c65ea2fea096836722e0547d6e"
+      },
+      "reason": "TJ 공식 번호 검색의 제목과 가수가 관리 목록 표기와 일치합니다."
+    },
+    {
+      "songId": "jpop-playlist-saucy-dog-シンテ-レラホ-イ-8aaf35e963",
+      "provider": "ky",
+      "action": "confirm",
+      "expectedObservedNumber": "57769",
+      "number": "57769",
+      "evidence": {
+        "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=57769",
+        "checkedAt": "2026-10-22T08:24:18.074291Z",
+        "title": "シンデレラボーイ",
+        "artist": "Saucy Dog",
+        "responseSha256": "2f8c7fed49b40622f668432e534a93b2b5d617593f6491160fe7a0c6d3589fd6"
+      },
+      "reason": "금영 공식 번호 검색의 제목과 가수가 관리 목록 표기와 일치합니다."
+    },
+    {
+      "songId": "jpop-playlist-saucy-dog-結-2c3d418329",
+      "provider": "tj",
+      "action": "confirm",
+      "expectedObservedNumber": "52473",
+      "number": "52473",
+      "evidence": {
+        "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=52473&strWord=Y",
+        "checkedAt": "2026-10-22T08:24:22.204739Z",
+        "title": "結",
+        "artist": "Saucy Dog",
+        "responseSha256": "7867c43ba5eef0066152f379944f3b2c419b14f78d24dcecede106fdb2121d75"
+      },
+      "reason": "TJ 공식 번호 검색의 제목과 가수가 관리 목록 표기와 일치합니다."
+    },
+    {
+      "songId": "jpop-playlist-saucy-dog-結-2c3d418329",
+      "provider": "ky",
+      "action": "confirm",
+      "expectedObservedNumber": "57763",
+      "number": "57763",
+      "evidence": {
+        "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=57763",
+        "checkedAt": "2026-10-22T08:24:27.993331Z",
+        "title": "結",
+        "artist": "Saucy Dog",
+        "responseSha256": "44aac6b23cc1cee60aabe290ea5116811c79e23182e6b1675b09a545e5826856"
+      },
+      "reason": "금영 공식 번호 검색의 제목과 가수가 관리 목록 표기와 일치합니다."
+    },
+    {
+      "songId": "jpop-playlist-two-mix-just-communication-715e184b18",
+      "provider": "tj",
+      "action": "confirm",
+      "expectedObservedNumber": "6737",
+      "number": "6737",
+      "evidence": {
+        "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=6737&strWord=Y",
+        "checkedAt": "2026-10-22T08:24:32.050503Z",
+        "title": "JUST COMMUNICATION(新機動戦記ガンダムW OP)",
+        "artist": "TWO-MIX",
+        "responseSha256": "f8fa4791b9a590b2f4b8251b6674b258a6b6c04787535971f933b0e9ba80d95c"
+      },
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다."
+    },
+    {
+      "songId": "jpop-playlist-two-mix-just-communication-715e184b18",
+      "provider": "ky",
+      "action": "confirm",
+      "expectedObservedNumber": "40523",
+      "number": "40523",
+      "evidence": {
+        "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=40523",
+        "checkedAt": "2026-10-22T08:24:37.257743Z",
+        "title": "JUST COMMUNICATION (\"新機動戦士ガンダムW\"OP)",
+        "artist": "TWO-MIX",
+        "responseSha256": "5c18019acbd8b451436d95f8800e3a8173f4f8953948d3a763fc05f9feb77999"
+      },
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다."
+    },
+    {
+      "songId": "jpop-playlist-two-mix-rhythm-emotion-d24d48c6c6",
+      "provider": "tj",
+      "action": "confirm",
+      "expectedObservedNumber": "6350",
+      "number": "6350",
+      "evidence": {
+        "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=6350&strWord=Y",
+        "checkedAt": "2026-10-22T08:24:41.267459Z",
+        "title": "RHYTHM EMOTION(新機動戦記ガンダムW OP)",
+        "artist": "TWO-MIX",
+        "responseSha256": "210443026b042f0096d2171effbb341232ee2611346a160b5b4d6f5e877f23dc"
+      },
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다."
+    },
+    {
+      "songId": "jpop-playlist-two-mix-rhythm-emotion-d24d48c6c6",
+      "provider": "ky",
+      "action": "confirm",
+      "expectedObservedNumber": "41080",
+      "number": "41080",
+      "evidence": {
+        "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=41080",
+        "checkedAt": "2026-10-22T08:24:47.167165Z",
+        "title": "RHYTHM EMOTION (\"新機動戦記ガンダムW\"OP)",
+        "artist": "TWO-MIX",
+        "responseSha256": "4ed45890618d8ac92bded0f14286c10e4b50e3ed1a6cc2870d197f8f14a40401"
+      },
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다."
+    },
+    {
+      "songId": "jpop-playlist-two-mix-truth-a-great-detective-of-love-716ee1a474",
+      "provider": "tj",
+      "action": "confirm",
+      "expectedObservedNumber": "25350",
+      "number": "25350",
+      "evidence": {
+        "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=25350&strWord=Y",
+        "checkedAt": "2026-10-22T08:24:51.148186Z",
+        "title": "Truth 〜A Great Detective of Love〜(名探偵コナン OP)",
+        "artist": "TWO-MIX",
+        "responseSha256": "0b214199336a4ee6dabcab46f924f22abc5ae91ec4087d6720b63173f33138a7"
+      },
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다."
+    },
+    {
+      "songId": "jpop-playlist-two-mix-truth-a-great-detective-of-love-716ee1a474",
+      "provider": "ky",
+      "action": "confirm",
+      "expectedObservedNumber": "42364",
+      "number": "42364",
+      "evidence": {
+        "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=42364",
+        "checkedAt": "2026-10-22T08:24:56.178132Z",
+        "title": "TRUTH ~A Great Detective of Love~ (\"名探偵コナン\"OP)",
+        "artist": "TWO-MIX",
+        "responseSha256": "69eb15faf1ea0ca2518d12dc00f67d5810354db15570c1d66eb97a5820679537"
+      },
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다."
+    },
+    {
+      "songId": "jpop-playlist-zaq-aseed-f5c027a8cb",
+      "provider": "tj",
+      "action": "confirm",
+      "expectedObservedNumber": "68658",
+      "number": "68658",
+      "evidence": {
+        "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=68658&strWord=Y",
+        "checkedAt": "2026-10-22T08:24:59.986372Z",
+        "title": "ASEED('ブラックロックシューターDAWN FALL' OP)",
+        "artist": "ZAQ",
+        "responseSha256": "97d51d5e040f78c1d6f4df51d9e1e9cf731da79863ce20da2c33e68e2b16c51c"
+      },
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다."
+    },
+    {
+      "songId": "jpop-playlist-zaq-aseed-f5c027a8cb",
+      "provider": "ky",
+      "action": "confirm",
+      "expectedObservedNumber": "44819",
+      "number": "44819",
+      "evidence": {
+        "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=44819",
+        "checkedAt": "2026-10-22T08:25:05.577392Z",
+        "title": "ASEED (\"ブラック★★ロックシューター..",
+        "artist": "ZAQ",
+        "responseSha256": "83941e58ce591daa8b0471b4bb7f0d5c131124e5b749b5fab24a6c9b9d4fb2d8"
+      },
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다."
+    },
+    {
+      "songId": "jpop-playlist-zaq-alteration-d4c8f1dbb1",
+      "provider": "tj",
+      "action": "confirm",
+      "expectedObservedNumber": "28010",
+      "number": "28010",
+      "evidence": {
+        "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=28010&strWord=Y",
+        "checkedAt": "2026-10-22T08:25:09.776853Z",
+        "title": "Alteration(ささみさん＠がんばらない OP)",
+        "artist": "ZAQ",
+        "responseSha256": "599988c6dded1c90ae0e40f62758d9dd94139d353a16869a0b7df36eb94604f1"
+      },
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다."
+    },
+    {
+      "songId": "jpop-playlist-zaq-alteration-d4c8f1dbb1",
+      "provider": "ky",
+      "action": "confirm",
+      "expectedObservedNumber": "43590",
+      "number": "43590",
+      "evidence": {
+        "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=43590",
+        "checkedAt": "2026-10-22T08:25:14.835602Z",
+        "title": "Alteration (\"ささみさん@がんばらない\"OP)",
+        "artist": "ZAQ",
+        "responseSha256": "1af84e7165c1b9c9f886f8f10ff9120d8d97b1370c66cfa26333f808e337a332"
+      },
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다."
+    },
+    {
+      "songId": "jpop-playlist-zaq-sparkling-daydream-eba96ed327",
+      "provider": "tj",
+      "action": "confirm",
+      "expectedObservedNumber": "27370",
+      "number": "27370",
+      "evidence": {
+        "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=27370&strWord=Y",
+        "checkedAt": "2026-10-22T08:25:19.001864Z",
+        "title": "Sparkling Daydream(中二病でも恋がしたい! OP)",
+        "artist": "ZAQ",
+        "responseSha256": "488ee6f7c702991cb0527e4013d0cc355a0250d02d89400979daca07bca819d7"
+      },
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다."
+    },
+    {
+      "songId": "jpop-playlist-zaq-sparkling-daydream-eba96ed327",
+      "provider": "ky",
+      "action": "confirm",
+      "expectedObservedNumber": "43551",
+      "number": "43551",
+      "evidence": {
+        "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=43551",
+        "checkedAt": "2026-10-22T08:25:24.014705Z",
+        "title": "Sparkling Daydream (\"中二病でも恋がしたい!\"OP)",
+        "artist": "ZAQ",
+        "responseSha256": "21850f1191e5acd2b4a9035653a8ab553588d1791fb5143bff02fa51ce54a203"
+      },
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다."
+    },
+    {
+      "songId": "jpop-playlist-sumika-ファンファ-レ-45373ff110",
+      "provider": "tj",
+      "action": "confirm",
+      "expectedObservedNumber": "28937",
+      "number": "28937",
+      "evidence": {
+        "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=28937&strWord=Y",
+        "checkedAt": "2026-10-22T08:25:28.006783Z",
+        "title": "ファンファーレ(映画'君の膵臓をたべたい' OST)",
+        "artist": "sumika",
+        "responseSha256": "9df71a11a490d0685ea3912485a22c72d6d20d1327a7160dbf02b7fa18d98def"
+      },
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다."
+    },
+    {
+      "songId": "jpop-playlist-sumika-ファンファ-レ-45373ff110",
+      "provider": "ky",
+      "action": "confirm",
+      "expectedObservedNumber": "44321",
+      "number": "44321",
+      "evidence": {
+        "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=44321",
+        "checkedAt": "2026-10-22T08:25:33.316730Z",
+        "title": "ファンファーレ (\"君の膵臓をたべたい\"OST)",
+        "artist": "sumika",
+        "responseSha256": "6857acdc713a3c97331b7b57ef5115232f1d532ddfd0d7ae579436e02fce6c66"
+      },
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다."
     }
   ]
 }
