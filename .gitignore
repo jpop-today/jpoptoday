@@ -10,3 +10,4 @@ playwright-report/
 .wrangler/
 .release/
 __pycache__/
+data/provider-cache/

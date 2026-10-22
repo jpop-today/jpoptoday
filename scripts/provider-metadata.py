@@ -10,7 +10,10 @@ from pathlib import Path
 import re
 import sys
 import tempfile
+import time
+import unicodedata
 import urllib.request
+from difflib import SequenceMatcher
 import urllib.error
 from html.parser import HTMLParser
 
@@ -20,7 +23,7 @@ ERROR_CODES = frozenset({
     'response_too_large', 'invalid_utf8', 'malformed_html', 'result_count',
     'missing_identity', 'number_mismatch', 'http_status', 'final_url',
     'network_error', 'output_exists', 'unsafe_output', 'invalid_record',
-    'write_failed', 'invalid_arguments',
+    'write_failed', 'invalid_arguments', 'invalid_targets',
 })
 
 
@@ -359,6 +362,115 @@ def write_candidate(path, record):
                 pass
 
 
+# --- Batch review queue -------------------------------------------------------
+# Targets come from scripts/build-review-targets.mjs. Every result stays a
+# candidate with approve=None; only scripts/promote-reviewed.mjs writes the ledger.
+
+_PUNCT = re.compile(r'[\s\.,\'"’`()\[\]{}<>\-_/・:;!！?？~〜～&＆+*#、。「」『』【】（）]+')
+
+
+def normalize_identity(value):
+    return _PUNCT.sub('', unicodedata.normalize('NFKC', value).casefold())
+
+
+def compare_identity(catalog_title, catalog_artist, official_title, official_artist):
+    """exact: both normalized fields equal. variant: close enough for a person to judge. mismatch otherwise."""
+    title_a, title_b = normalize_identity(catalog_title), normalize_identity(official_title)
+    artist_a, artist_b = normalize_identity(catalog_artist), normalize_identity(official_artist)
+    if title_a == title_b and artist_a == artist_b:
+        return 'exact'
+    title_close = (title_a in title_b or title_b in title_a
+                   or SequenceMatcher(None, title_a, title_b).ratio() >= 0.6)
+    artist_close = (artist_a in artist_b or artist_b in artist_a
+                    or SequenceMatcher(None, artist_a, artist_b).ratio() >= 0.6)
+    return 'variant' if title_close and artist_close else 'mismatch'
+
+
+def _exact_reason(provider):
+    label = 'TJ' if provider == 'tj' else '금영'
+    return f'{label} 공식 번호 검색의 제목과 가수가 관리 목록 표기와 일치합니다.'
+
+
+def queue_entry(target, record):
+    entry = {'songId': target['songId'], 'provider': target['provider'], 'number': target['number'],
+             'catalog': {'title': target['title'], 'artist': target['artist']}, 'approve': None}
+    if 'error' in record:
+        entry['error'] = record['error']
+        return entry
+    match = compare_identity(target['title'], target['artist'], record['title'], record['artist'])
+    entry.update({
+        'official': {'title': record['title'], 'artist': record['artist']},
+        'match': match,
+        # A mismatch suggests the observed number belongs to another song; a person decides.
+        'action': 'suppress' if match == 'mismatch' else 'confirm',
+        'reason': _exact_reason(target['provider']) if match == 'exact' else '',
+        'evidence': {'url': record['url'], 'checkedAt': record['checkedAt'], 'title': record['title'],
+                     'artist': record['artist'], 'responseSha256': record['responseSha256']},
+    })
+    return entry
+
+
+def _load_targets(path):
+    try:
+        data = json.loads(Path(path).read_text(encoding='utf-8'))
+        targets = data['targets']
+        for target in targets:
+            official_url(target['provider'], target['number'])
+            if not all(isinstance(target[k], str) and target[k].strip() for k in ('songId', 'title', 'artist')):
+                raise ReviewError('invalid_targets')
+        return targets
+    except ReviewError:
+        raise
+    except Exception:
+        raise ReviewError('invalid_targets') from None
+
+
+def run_batch(targets, *, cache_dir, interval=3.0, fetch=None, sleep=time.sleep):
+    """Fetch each target once, reusing cached records, with at least `interval` seconds between requests."""
+    fetch = fetch or fetch_metadata
+    cache = Path(cache_dir)
+    cache.mkdir(parents=True, exist_ok=True)
+    entries, requested = [], False
+    for target in targets:
+        cached = cache / f"{target['provider']}-{target['number']}.json"
+        record = None
+        if cached.is_file():
+            try:
+                record = json.loads(cached.read_text(encoding='utf-8'))
+                _validate_record(record)
+            except Exception:
+                record = None
+        if record is None:
+            if requested:
+                sleep(interval)
+            requested = True
+            try:
+                record = fetch(target['provider'], target['number'])
+                cached.write_text(json.dumps(record, ensure_ascii=False, sort_keys=True) + '\n', encoding='utf-8')
+            except ReviewError as error:
+                record = {'error': error.code}
+            except Exception:
+                record = {'error': 'network_error'}
+        entries.append(queue_entry(target, record))
+    return entries
+
+
+def write_queue(path, entries):
+    """Exclusive write: an existing queue (possibly already being reviewed) is never replaced."""
+    destination = Path(path)
+    if destination.suffix != '.json' or any(p.lower() in {'reviewed', 'staging'} for p in destination.parts):
+        raise ReviewError('unsafe_output')
+    payload = json.dumps({'version': 1, 'purpose': 'provider-review-queue', 'entries': entries},
+                         ensure_ascii=False, indent=2) + '\n'
+    try:
+        with open(destination, 'x', encoding='utf-8') as handle:
+            handle.write(payload)
+    except FileExistsError:
+        raise ReviewError('output_exists') from None
+    except Exception:
+        raise ReviewError('write_failed') from None
+
+
 def main(argv=None):
     args = list(sys.argv[1:] if argv is None else argv)
     try:
@@ -369,6 +481,11 @@ def main(argv=None):
         elif len(args) == 5 and args[0] == 'fetch' and args[3] == '--output':
             result = fetch_metadata(args[1], args[2])
             write_candidate(args[4], result)
+        elif len(args) == 6 and args[0] == 'batch' and args[2] == '--output' and args[4] == '--cache':
+            entries = run_batch(_load_targets(args[1]), cache_dir=args[5])
+            write_queue(args[3], entries)
+            result = {'entries': len(entries), 'errors': sum('error' in e for e in entries),
+                      'exact': sum(e.get('match') == 'exact' for e in entries)}
         else:
             raise ReviewError('invalid_arguments')
         print(json.dumps(result, ensure_ascii=False, sort_keys=True))
