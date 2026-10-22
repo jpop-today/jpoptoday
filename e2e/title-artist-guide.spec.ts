@@ -1,4 +1,5 @@
 import { test, expect } from '@playwright/test';
+import { publishedGuideCount } from './helpers/guides';
 import { sitemapRoutes } from './helpers/sitemap';
 
 const path = '/guides/title-artist-variants/';
@@ -57,7 +58,7 @@ test('guide index reaches the comparison guide without JavaScript at 360px and l
   page.on('pageerror', error => errors.push(error.message));
   page.on('console', message => { if (message.type() === 'error') errors.push(message.text()); });
   await page.goto('/guides/');
-  await expect(page.locator('.guide-list > li').filter({ hasNotText: '(작성 중)' })).toHaveCount(6);
+  await expect(page.locator('.guide-list > li').filter({ hasNotText: '(작성 중)' })).toHaveCount(publishedGuideCount);
   const entry = page.getByRole('link', { name: title, exact: true });
   await entry.focus();
   await expect(entry).toBeFocused();
