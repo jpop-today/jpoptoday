@@ -22,7 +22,8 @@
     "inspect:cloudflare": "python3 scripts/inspect-cloudflare.py",
     "deploy:production": "node scripts/deploy-production.mjs",
     "manage:production": "python3 scripts/manage-production.py",
-    "verify:deployment": "node scripts/verify-deployment.mjs"
+    "verify:deployment": "node scripts/verify-deployment.mjs",
+    "release:production": "bash scripts/release-production.sh"
   },
   "dependencies": {
     "astro": "^7.3.8"
