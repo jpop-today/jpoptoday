@@ -11,3 +11,4 @@ playwright-report/
 .release/
 __pycache__/
 data/provider-cache/
+.idea/
