@@ -1,6 +1,7 @@
 import { readdirSync, readFileSync, existsSync } from 'node:fs';
 import { songs, currentSongs, artistPages, type Song } from './catalog';
 import { confirmedNumbers } from '../../contracts/public-catalog.mjs';
+import { isJpop, loadSongClassification } from '../../contracts/artists.mjs';
 import type { GuideTable } from '../../contracts/guides.mjs';
 
 export type GuideTableResult =
@@ -8,6 +9,7 @@ export type GuideTableResult =
   | { kind: 'coverage'; caption: string; rows: { label: string; tj: number; ky: number }[] };
 
 const byId = new Map(songs.map(song => [song.id, song]));
+const classification = loadSongClassification();
 const confirmedFirst = (list: Song[]) => [...list].sort((a, b) =>
   Number(confirmedNumbers(b).length > 0) - Number(confirmedNumbers(a).length > 0) || a.titleOriginal.localeCompare(b.titleOriginal, 'ja'));
 
@@ -37,7 +39,8 @@ export function buildGuideTable(table: GuideTable): GuideTableResult {
       return { kind: 'songs', caption: `${page.name} 노래방 번호 (공식 확인 ${page.confirmedCount}곡 / 전체 ${page.songs.length}곡)`, songs: page.songs, empty: '' };
     }
     case 'tags': {
-      const list = confirmedFirst(currentSongs.filter(song => table.tags.some(tag => song.tags.includes(tag))));
+      // Tag lists are JPOP guides: drop songs reviewed as non-JPOP (unknown stays, as on artist pages).
+      const list = confirmedFirst(currentSongs.filter(song => isJpop(classification, song) !== false && table.tags.some(tag => song.tags.includes(tag))));
       return { kind: 'songs', caption: `관리 목록에서 고른 ${list.slice(0, table.limit ?? 30).length}곡 (공식 확인곡 먼저)`, songs: list.slice(0, table.limit ?? 30), empty: '조건에 맞는 곡이 아직 없습니다.' };
     }
     case 'songs': {
