@@ -2,6 +2,7 @@
 name: "宇多田ヒカル"
 artists: ["宇多田ヒカル"]
 # 같은 가수로 묶을지 사람이 정할 다른 표기(묶으려면 artists에 추가): 米津玄師，宇多田ヒカル
-draft: true
+draft: false
 ---
 
+宇多田ヒカル는 1998년 Automatic으로 데뷔했고, 첫 앨범 First Love가 일본에서 역대 가장 많이 팔린 앨범으로 남아 있는 싱어송라이터예요. 에반게리온 신극장판 주제가 Beautiful World도 이 사람 곡이에요. 여기서는 Automatic, Beautiful World, COLORS의 번호를 공식 확인했어요. 박자를 살짝 끌면서 부르는 창법이라 악보대로만 부르면 느낌이 잘 안 살아서, 원곡을 몇 번 듣고 리듬감을 먼저 익혀 두는 걸 추천해요.
