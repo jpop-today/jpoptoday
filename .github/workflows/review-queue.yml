@@ -1,0 +1,52 @@
+name: review-queue
+on:
+  workflow_dispatch:
+    inputs:
+      songs:
+        description: Songs to look up (official lookups for both providers per song)
+        default: '50'
+permissions:
+  contents: write
+  pull-requests: write
+concurrency:
+  group: review-queue
+  cancel-in-progress: false
+jobs:
+  queue:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      # Official responses already fetched are reused instead of requested again.
+      - uses: actions/cache@v4
+        with:
+          path: data/provider-cache
+          key: provider-cache-${{ github.run_id }}
+          restore-keys: provider-cache-
+      - name: Build today's review queue
+        env:
+          SONGS: ${{ inputs.songs }}
+        run: |
+          DATE=$(TZ=Asia/Seoul date +%F)
+          echo "DATE=$DATE" >> "$GITHUB_ENV"
+          node scripts/build-review-targets.mjs "$RUNNER_TEMP/targets.json" "$SONGS"
+          python3 scripts/provider-metadata.py batch "$RUNNER_TEMP/targets.json" --output "data/review-queue/$DATE.json" --cache data/provider-cache
+      - name: Open review PR for the operator
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          BRANCH="review/$DATE"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git switch -c "$BRANCH"
+          git add "data/review-queue/$DATE.json"
+          git commit -m "review: $DATE"
+          git push origin "$BRANCH"
+          gh pr create --base main --head "$BRANCH" --title "review: $DATE" \
+            --body "공식 번호 대조 후보입니다. data/review-queue/README.md 의 순서대로 approve 를 채운 뒤 promote 를 실행하세요."
