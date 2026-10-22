@@ -154,14 +154,14 @@
         "title": "Brave Shine",
         "artist": "Aimer"
       },
-      "approve": null,
+      "approve": true,
       "official": {
         "title": "Brave Shine(Fate/stay night UBW OP)",
         "artist": "Aimer"
       },
       "match": "variant",
       "action": "confirm",
-      "reason": "",
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다.",
       "evidence": {
         "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=28020&strWord=Y",
         "checkedAt": "2026-10-22T06:32:44.983021Z",
@@ -178,14 +178,14 @@
         "title": "Brave Shine",
         "artist": "Aimer"
       },
-      "approve": null,
+      "approve": true,
       "official": {
         "title": "Brave Shine(\"Fate/stay night Unlimited Blade..",
         "artist": "Aimer"
       },
       "match": "variant",
       "action": "confirm",
-      "reason": "",
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다.",
       "evidence": {
         "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=43925",
         "checkedAt": "2026-10-22T06:32:50.258613Z",
@@ -394,14 +394,14 @@
         "title": "THE DAY",
         "artist": "ポルノグラフィティ"
       },
-      "approve": null,
+      "approve": true,
       "official": {
         "title": "THE DAY(僕のヒーローアカデミア OP)",
         "artist": "ポルノグラフィティ"
       },
       "match": "variant",
       "action": "confirm",
-      "reason": "",
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다.",
       "evidence": {
         "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=27917&strWord=Y",
         "checkedAt": "2026-10-22T06:33:31.124171Z",
@@ -442,14 +442,14 @@
         "title": "Winding Road",
         "artist": "ポルノグラフィティ"
       },
-      "approve": null,
+      "approve": true,
       "official": {
         "title": "Winding Road(天保異聞 妖奇士 ED)",
         "artist": "ポルノグラフィティ"
       },
       "match": "variant",
       "action": "confirm",
-      "reason": "",
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다.",
       "evidence": {
         "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=26236&strWord=Y",
         "checkedAt": "2026-10-22T06:33:40.713810Z",
@@ -490,14 +490,14 @@
         "title": "ADAMAS",
         "artist": "LiSA"
       },
-      "approve": null,
+      "approve": true,
       "official": {
         "title": "ADAMAS(ソードアート・オンライン アリシゼーション OP)",
         "artist": "LISA"
       },
       "match": "variant",
       "action": "confirm",
-      "reason": "",
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다.",
       "evidence": {
         "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=28972&strWord=Y",
         "checkedAt": "2026-10-22T06:33:50.766461Z",
@@ -514,14 +514,14 @@
         "title": "ADAMAS",
         "artist": "LiSA"
       },
-      "approve": null,
+      "approve": true,
       "official": {
         "title": "ADAMAS (\"ソードアート・オンライン アリシゼ..",
         "artist": "LiSA"
       },
       "match": "variant",
       "action": "confirm",
-      "reason": "",
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다.",
       "evidence": {
         "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=44353",
         "checkedAt": "2026-10-22T06:33:56.429502Z",
@@ -538,14 +538,14 @@
         "title": "ASH",
         "artist": "LiSA"
       },
-      "approve": null,
+      "approve": true,
       "official": {
         "title": "Ash(Fate/Apocrypha OP)",
         "artist": "LISA"
       },
       "match": "variant",
       "action": "confirm",
-      "reason": "",
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다.",
       "evidence": {
         "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=28808&strWord=Y",
         "checkedAt": "2026-10-22T06:34:00.534202Z",
@@ -562,14 +562,14 @@
         "title": "ASH",
         "artist": "LiSA"
       },
-      "approve": null,
+      "approve": true,
       "official": {
         "title": "ASH (\"Fate/Apocrypha\"OP)",
         "artist": "LiSA"
       },
       "match": "variant",
       "action": "confirm",
-      "reason": "",
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다.",
       "evidence": {
         "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=44231",
         "checkedAt": "2026-10-22T06:34:05.406864Z",
@@ -586,14 +586,14 @@
         "title": "Catch the Moment",
         "artist": "LiSA"
       },
-      "approve": null,
+      "approve": true,
       "official": {
         "title": "Catch The Moment(劇場版 ソードアート・オンラインオーディナル・スケー OST)",
         "artist": "LISA"
       },
       "match": "variant",
       "action": "confirm",
-      "reason": "",
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다.",
       "evidence": {
         "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=28670&strWord=Y",
         "checkedAt": "2026-10-22T06:34:09.704299Z",
@@ -610,14 +610,14 @@
         "title": "Catch the Moment",
         "artist": "LiSA"
       },
-      "approve": null,
+      "approve": true,
       "official": {
         "title": "Catch the Moment(\"劇場版ソードアート・オンライン\"OST)",
         "artist": "LiSA"
       },
       "match": "variant",
       "action": "confirm",
-      "reason": "",
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다.",
       "evidence": {
         "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=44134",
         "checkedAt": "2026-10-22T06:34:15.142757Z",
@@ -682,14 +682,14 @@
         "title": "Good-bye days",
         "artist": "YUI"
       },
-      "approve": null,
+      "approve": true,
       "official": {
         "title": "Good-bye days",
         "artist": "YUI for 雨音薫"
       },
       "match": "variant",
       "action": "confirm",
-      "reason": "",
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다.",
       "evidence": {
         "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=26209&strWord=Y",
         "checkedAt": "2026-10-22T06:34:32.303279Z",
@@ -706,14 +706,14 @@
         "title": "Good-bye days",
         "artist": "YUI"
       },
-      "approve": null,
+      "approve": true,
       "official": {
         "title": "Good-bye days (映画\"タイヨウのうた\")",
         "artist": "YUI for 雨音薫"
       },
       "match": "variant",
       "action": "confirm",
-      "reason": "",
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다.",
       "evidence": {
         "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=40593",
         "checkedAt": "2026-10-22T06:34:37.385443Z",
@@ -778,14 +778,14 @@
         "title": "TAIDADA",
         "artist": "ずっと真夜中でいいのに。｜ZUTOMAYO"
       },
-      "approve": null,
+      "approve": true,
       "official": {
         "title": "TAIDADA(TVアニメ 'ダンダダン' OST)",
         "artist": "ずっと真夜中でいいのに。"
       },
       "match": "variant",
       "action": "confirm",
-      "reason": "",
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다.",
       "evidence": {
         "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=52929&strWord=Y",
         "checkedAt": "2026-10-22T06:34:50.327585Z",
@@ -802,14 +802,14 @@
         "title": "TAIDADA",
         "artist": "ずっと真夜中でいいのに。｜ZUTOMAYO"
       },
-      "approve": null,
+      "approve": true,
       "official": {
         "title": "TAIDADA (\"ダンダダン\"ED)",
         "artist": "ずっと真夜中でいいのに。"
       },
       "match": "variant",
       "action": "confirm",
-      "reason": "",
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다.",
       "evidence": {
         "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=57799",
         "checkedAt": "2026-10-22T06:34:55.973133Z",
@@ -826,14 +826,14 @@
         "title": "お勉強しといてよ",
         "artist": "ずっと真夜中でいいのに。｜ZUTOMAYO"
       },
-      "approve": null,
+      "approve": true,
       "official": {
         "title": "お勉強しといてよ",
         "artist": "ずっと真夜中でいいのに。"
       },
       "match": "variant",
       "action": "confirm",
-      "reason": "",
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다.",
       "evidence": {
         "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=68270&strWord=Y",
         "checkedAt": "2026-10-22T06:34:59.982655Z",
@@ -850,14 +850,14 @@
         "title": "お勉強しといてよ",
         "artist": "ずっと真夜中でいいのに。｜ZUTOMAYO"
       },
-      "approve": null,
+      "approve": true,
       "official": {
         "title": "お勉強しといてよ",
         "artist": "ずっと真夜中でいいのに。"
       },
       "match": "variant",
       "action": "confirm",
-      "reason": "",
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다.",
       "evidence": {
         "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=44590",
         "checkedAt": "2026-10-22T06:35:05.551883Z",
@@ -874,14 +874,14 @@
         "title": "ヒューマノイド",
         "artist": "ずっと真夜中でいいのに。｜ZUTOMAYO"
       },
-      "approve": null,
+      "approve": true,
       "official": {
         "title": "ヒューマノイド",
         "artist": "ずっと真夜中でいいのに。"
       },
       "match": "variant",
       "action": "confirm",
-      "reason": "",
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다.",
       "evidence": {
         "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=28992&strWord=Y",
         "checkedAt": "2026-10-22T06:35:09.357751Z",
@@ -898,14 +898,14 @@
         "title": "ヒューマノイド",
         "artist": "ずっと真夜中でいいのに。｜ZUTOMAYO"
       },
-      "approve": null,
+      "approve": true,
       "official": {
         "title": "ヒューマノイド",
         "artist": "ずっと真夜中でいいのに。"
       },
       "match": "variant",
       "action": "confirm",
-      "reason": "",
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다.",
       "evidence": {
         "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=44367",
         "checkedAt": "2026-10-22T06:35:14.494526Z",
@@ -922,14 +922,14 @@
         "title": "さみしがりや",
         "artist": "HoneyWorks"
       },
-      "approve": null,
+      "approve": true,
       "official": {
         "title": "さみしがりや",
         "artist": "HoneyWorks(Feat.江口拓也,島﨑信長)"
       },
       "match": "variant",
       "action": "confirm",
-      "reason": "",
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다.",
       "evidence": {
         "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=68367&strWord=Y",
         "checkedAt": "2026-10-22T06:35:18.669601Z",
@@ -946,14 +946,14 @@
         "title": "さみしがりや",
         "artist": "HoneyWorks"
       },
-      "approve": null,
+      "approve": true,
       "official": {
         "title": "さみしがりや feat.江口拓也・島崎信長",
         "artist": "HoneyWorks"
       },
       "match": "variant",
       "action": "confirm",
-      "reason": "",
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다.",
       "evidence": {
         "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=44626",
         "checkedAt": "2026-10-22T06:35:24.017585Z",
@@ -970,14 +970,14 @@
         "title": "シス×ラブ",
         "artist": "HoneyWorks"
       },
-      "approve": null,
+      "approve": true,
       "official": {
         "title": "シス×ラブ(HoneyWorks Premium Live(ハニプレ) OST)",
         "artist": "HoneyWorks(Feat.雨宮天,夏川椎菜)"
       },
       "match": "variant",
       "action": "confirm",
-      "reason": "",
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다.",
       "evidence": {
         "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=68315&strWord=Y",
         "checkedAt": "2026-10-22T06:35:27.766807Z",
@@ -994,14 +994,14 @@
         "title": "シス×ラブ",
         "artist": "HoneyWorks"
       },
-      "approve": null,
+      "approve": true,
       "official": {
         "title": "シス×ラブ feat.雨宮天・夏川椎菜",
         "artist": "HoneyWorks"
       },
       "match": "variant",
       "action": "confirm",
-      "reason": "",
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다.",
       "evidence": {
         "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=44659",
         "checkedAt": "2026-10-22T06:35:32.738251Z",
@@ -1018,14 +1018,14 @@
         "title": "スキキライ",
         "artist": "HoneyWorks"
       },
-      "approve": null,
+      "approve": true,
       "official": {
         "title": "スキキライ",
         "artist": "HoneyWorks(Feat.鏡音リン,鏡音レン)"
       },
       "match": "variant",
       "action": "confirm",
-      "reason": "",
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다.",
       "evidence": {
         "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=28651&strWord=Y",
         "checkedAt": "2026-10-22T06:35:36.515699Z",
@@ -1042,14 +1042,14 @@
         "title": "スキキライ",
         "artist": "HoneyWorks"
       },
-      "approve": null,
+      "approve": true,
       "official": {
         "title": "スキキライ",
         "artist": "HoneyWorks feat.鏡音リン・レン"
       },
       "match": "variant",
       "action": "confirm",
-      "reason": "",
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다.",
       "evidence": {
         "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=44111",
         "checkedAt": "2026-10-22T06:35:41.896343Z",
@@ -1066,14 +1066,14 @@
         "title": "I AM YOUR SINGER",
         "artist": "サザンオールスターズ｜Southern All Stars"
       },
-      "approve": null,
+      "approve": true,
       "official": {
         "title": "I AM YOUR SINGER",
         "artist": "Southern All Stars"
       },
       "match": "variant",
       "action": "confirm",
-      "reason": "",
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다.",
       "evidence": {
         "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=26804&strWord=Y",
         "checkedAt": "2026-10-22T06:35:45.654127Z",
@@ -1090,14 +1090,14 @@
         "title": "I AM YOUR SINGER",
         "artist": "サザンオールスターズ｜Southern All Stars"
       },
-      "approve": null,
+      "approve": true,
       "official": {
         "title": "I AM YOUR SINGER",
         "artist": "SOUTHERN ALL STARS"
       },
       "match": "variant",
       "action": "confirm",
-      "reason": "",
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다.",
       "evidence": {
         "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=42859",
         "checkedAt": "2026-10-22T06:35:50.497645Z",
@@ -1114,14 +1114,14 @@
         "title": "LOVE AFFAIR～秘密のデート",
         "artist": "サザンオールスターズ｜Southern All Stars"
       },
-      "approve": null,
+      "approve": true,
       "official": {
         "title": "Love Affair ~秘密のデート~",
         "artist": "Southern All Stars"
       },
       "match": "variant",
       "action": "confirm",
-      "reason": "",
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다.",
       "evidence": {
         "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=6788&strWord=Y",
         "checkedAt": "2026-10-22T06:35:54.289977Z",
@@ -1138,14 +1138,14 @@
         "title": "LOVE AFFAIR～秘密のデート",
         "artist": "サザンオールスターズ｜Southern All Stars"
       },
-      "approve": null,
+      "approve": true,
       "official": {
         "title": "LOVE AFFAIR ~秘密のデート",
         "artist": "SOUTHERN ALL STARS"
       },
       "match": "variant",
       "action": "confirm",
-      "reason": "",
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다.",
       "evidence": {
         "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=42189",
         "checkedAt": "2026-10-22T06:35:59.324994Z",
@@ -1162,14 +1162,14 @@
         "title": "TSUNAMI",
         "artist": "サザンオールスターズ｜Southern All Stars"
       },
-      "approve": null,
+      "approve": true,
       "official": {
         "title": "TSUNAMI",
         "artist": "Southern All Stars"
       },
       "match": "variant",
       "action": "confirm",
-      "reason": "",
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다.",
       "evidence": {
         "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=6940&strWord=Y",
         "checkedAt": "2026-10-22T06:36:03.109563Z",
@@ -1186,14 +1186,14 @@
         "title": "TSUNAMI",
         "artist": "サザンオールスターズ｜Southern All Stars"
       },
-      "approve": null,
+      "approve": true,
       "official": {
         "title": "TSUNAMI",
         "artist": "SOUTHERN ALL STARS"
       },
       "match": "variant",
       "action": "confirm",
-      "reason": "",
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다.",
       "evidence": {
         "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=41013",
         "checkedAt": "2026-10-22T06:36:08.246074Z",
@@ -1210,14 +1210,14 @@
         "title": "BOY",
         "artist": "King Gnu"
       },
-      "approve": null,
+      "approve": true,
       "official": {
         "title": "BOY(王様ランキング OP)",
         "artist": "King Gnu"
       },
       "match": "variant",
       "action": "confirm",
-      "reason": "",
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다.",
       "evidence": {
         "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=68533&strWord=Y",
         "checkedAt": "2026-10-22T06:36:11.992821Z",
@@ -1234,14 +1234,14 @@
         "title": "BOY",
         "artist": "King Gnu"
       },
-      "approve": null,
+      "approve": true,
       "official": {
         "title": "BOY (\"王様ランキング\"OP)",
         "artist": "King Gnu"
       },
       "match": "variant",
       "action": "confirm",
-      "reason": "",
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다.",
       "evidence": {
         "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=44728",
         "checkedAt": "2026-10-22T06:36:17.122771Z",
@@ -1258,14 +1258,14 @@
         "title": "Prayer X",
         "artist": "King Gnu"
       },
-      "approve": null,
+      "approve": true,
       "official": {
         "title": "Prayer X(BANANA FISH ED)",
         "artist": "King Gnu"
       },
       "match": "variant",
       "action": "confirm",
-      "reason": "",
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다.",
       "evidence": {
         "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=68164&strWord=Y",
         "checkedAt": "2026-10-22T06:36:20.968268Z",
@@ -1282,14 +1282,14 @@
         "title": "Prayer X",
         "artist": "King Gnu"
       },
-      "approve": null,
+      "approve": true,
       "official": {
         "title": "Prayer X (\"BANANA FISH\"ED)",
         "artist": "King Gnu"
       },
       "match": "variant",
       "action": "confirm",
-      "reason": "",
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다.",
       "evidence": {
         "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=44496",
         "checkedAt": "2026-10-22T06:36:26.057693Z",
@@ -1306,14 +1306,14 @@
         "title": "SPECIALZ",
         "artist": "King Gnu"
       },
-      "approve": null,
+      "approve": true,
       "official": {
         "title": "SPECIALZ(アニメ '呪術廻戦 第2期' OP)",
         "artist": "King Gnu"
       },
       "match": "variant",
       "action": "confirm",
-      "reason": "",
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다.",
       "evidence": {
         "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=68876&strWord=Y",
         "checkedAt": "2026-10-22T06:36:29.831938Z",
@@ -1330,14 +1330,14 @@
         "title": "SPECIALZ",
         "artist": "King Gnu"
       },
-      "approve": null,
+      "approve": true,
       "official": {
         "title": "SPECIALZ (\"呪術廻戦 渋谷事変\"OP)",
         "artist": "King Gnu"
       },
       "match": "variant",
       "action": "confirm",
-      "reason": "",
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다.",
       "evidence": {
         "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=75838",
         "checkedAt": "2026-10-22T06:36:34.715745Z",
@@ -1498,14 +1498,14 @@
         "title": "Angelic Angel",
         "artist": "μ's"
       },
-      "approve": null,
+      "approve": true,
       "official": {
         "title": "Angelic Angel(ラブライブ! OST)",
         "artist": "μ's"
       },
       "match": "variant",
       "action": "confirm",
-      "reason": "",
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다.",
       "evidence": {
         "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=28012&strWord=Y",
         "checkedAt": "2026-10-22T06:37:05.499403Z",
@@ -1546,14 +1546,14 @@
         "title": "Dancing stars on me!",
         "artist": "μ's"
       },
-      "approve": null,
+      "approve": true,
       "official": {
         "title": "Dancing stars on me!(ラブライブ! OST)",
         "artist": "μ's"
       },
       "match": "variant",
       "action": "confirm",
-      "reason": "",
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다.",
       "evidence": {
         "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=27791&strWord=Y",
         "checkedAt": "2026-10-22T06:37:14.345767Z",
@@ -1594,14 +1594,14 @@
         "title": "KiRa-KiRa Sensation!",
         "artist": "μ's"
       },
-      "approve": null,
+      "approve": true,
       "official": {
         "title": "KiRa-KiRa Sensation!(ラブライブ! OST)",
         "artist": "μ's"
       },
       "match": "variant",
       "action": "confirm",
-      "reason": "",
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다.",
       "evidence": {
         "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=27850&strWord=Y",
         "checkedAt": "2026-10-22T06:37:23.470016Z",
@@ -1666,14 +1666,14 @@
         "title": "Cube",
         "artist": "星野源"
       },
-      "approve": null,
+      "approve": true,
       "official": {
         "title": "Cube (映画\"CUBE 一度入ったら、最後\")",
         "artist": "星野源"
       },
       "match": "variant",
       "action": "confirm",
-      "reason": "",
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다.",
       "evidence": {
         "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=44725",
         "checkedAt": "2026-10-22T06:37:37.620606Z",
@@ -1690,14 +1690,14 @@
         "title": "Family Song",
         "artist": "星野源"
       },
-      "approve": null,
+      "approve": true,
       "official": {
         "title": "Family Song(ドラマ'過保護のカホコ' OST)",
         "artist": "星野源"
       },
       "match": "variant",
       "action": "confirm",
-      "reason": "",
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다.",
       "evidence": {
         "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=28743&strWord=Y",
         "checkedAt": "2026-10-22T06:37:41.775631Z",
@@ -1714,14 +1714,14 @@
         "title": "Family Song",
         "artist": "星野源"
       },
-      "approve": null,
+      "approve": true,
       "official": {
         "title": "Family Song (ドラマ\"過保護のカホコ\")",
         "artist": "星野源"
       },
       "match": "variant",
       "action": "confirm",
-      "reason": "",
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다.",
       "evidence": {
         "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=44189",
         "checkedAt": "2026-10-22T06:37:48.586400Z",
@@ -1738,14 +1738,14 @@
         "title": "SUN",
         "artist": "星野源"
       },
-      "approve": null,
+      "approve": true,
       "official": {
         "title": "SUN(ドラマ心がポキッとね OST)",
         "artist": "星野源"
       },
       "match": "variant",
       "action": "confirm",
-      "reason": "",
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다.",
       "evidence": {
         "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=27924&strWord=Y",
         "checkedAt": "2026-10-22T06:37:52.604833Z",
@@ -1762,14 +1762,14 @@
         "title": "SUN",
         "artist": "星野源"
       },
-      "approve": null,
+      "approve": true,
       "official": {
         "title": "SUN (ドラマ\"心がポキっとね\")",
         "artist": "星野源"
       },
       "match": "variant",
       "action": "confirm",
-      "reason": "",
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다.",
       "evidence": {
         "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=44000",
         "checkedAt": "2026-10-22T06:37:57.991175Z",
@@ -1786,14 +1786,14 @@
         "title": "ANTI-HERO",
         "artist": "SEKAI NO OWARI"
       },
-      "approve": null,
+      "approve": true,
       "official": {
         "title": "ANTI-HERO(映画'進撃の巨人 ATTACK ON TITAN'OST)",
         "artist": "SEKAI NO OWARI"
       },
       "match": "variant",
       "action": "confirm",
-      "reason": "",
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다.",
       "evidence": {
         "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=27940&strWord=Y",
         "checkedAt": "2026-10-22T06:38:02.071980Z",
@@ -1810,14 +1810,14 @@
         "title": "ANTI-HERO",
         "artist": "SEKAI NO OWARI"
       },
-      "approve": null,
+      "approve": true,
       "official": {
         "title": "ANTI-HERO (映画\"進撃の巨人 ATTACK ON TITAN\")",
         "artist": "SEKAI NO OWARI"
       },
       "match": "variant",
       "action": "confirm",
-      "reason": "",
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다.",
       "evidence": {
         "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=43941",
         "checkedAt": "2026-10-22T06:38:07.392255Z",
@@ -1834,14 +1834,14 @@
         "title": "Diary",
         "artist": "SEKAI NO OWARI"
       },
-      "approve": null,
+      "approve": true,
       "official": {
         "title": "Diary(未来日記 OST)",
         "artist": "SEKAI NO OWARI"
       },
       "match": "variant",
       "action": "confirm",
-      "reason": "",
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다.",
       "evidence": {
         "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=25014&strWord=Y",
         "checkedAt": "2026-10-22T06:38:11.375214Z",
@@ -2074,14 +2074,14 @@
         "title": "CLEAR",
         "artist": "坂本真綾"
       },
-      "approve": null,
+      "approve": true,
       "official": {
         "title": "CLEAR(カードキャプターさくら OP)",
         "artist": "坂本真綾"
       },
       "match": "variant",
       "action": "confirm",
-      "reason": "",
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다.",
       "evidence": {
         "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=28818&strWord=Y",
         "checkedAt": "2026-10-22T06:38:58.191398Z",
@@ -2098,14 +2098,14 @@
         "title": "CLEAR",
         "artist": "坂本真綾"
       },
-      "approve": null,
+      "approve": true,
       "official": {
         "title": "CLEAR (\"カードキャプターさくら クリアカード編\"OP)",
         "artist": "坂本真綾"
       },
       "match": "variant",
       "action": "confirm",
-      "reason": "",
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다.",
       "evidence": {
         "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=44248",
         "checkedAt": "2026-10-22T06:39:03.118793Z",
@@ -2122,14 +2122,14 @@
         "title": "Gift",
         "artist": "坂本真綾"
       },
-      "approve": null,
+      "approve": true,
       "official": {
         "title": "Gift(CLAMP学園探偵団 ED)",
         "artist": "坂本真綾"
       },
       "match": "variant",
       "action": "confirm",
-      "reason": "",
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다.",
       "evidence": {
         "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=28060&strWord=Y",
         "checkedAt": "2026-10-22T06:39:07.421871Z",
@@ -2146,14 +2146,14 @@
         "title": "Gift",
         "artist": "坂本真綾"
       },
-      "approve": null,
+      "approve": true,
       "official": {
         "title": "Gift (\"CLAMP学園探偵団\"ED)",
         "artist": "坂本真綾"
       },
       "match": "variant",
       "action": "confirm",
-      "reason": "",
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다.",
       "evidence": {
         "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=42310",
         "checkedAt": "2026-10-22T06:39:12.811435Z",
@@ -2170,14 +2170,14 @@
         "title": "gravity",
         "artist": "坂本真綾"
       },
-      "approve": null,
+      "approve": true,
       "official": {
         "title": "gravity(WOLF'S RAIN ED)",
         "artist": "坂本真綾"
       },
       "match": "variant",
       "action": "confirm",
-      "reason": "",
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다.",
       "evidence": {
         "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=25507&strWord=Y",
         "checkedAt": "2026-10-22T06:39:16.693589Z",
@@ -2194,14 +2194,14 @@
         "title": "gravity",
         "artist": "坂本真綾"
       },
-      "approve": null,
+      "approve": true,
       "official": {
         "title": "gravity (\"WOLF'S RAIN\"ED)",
         "artist": "坂本真綾"
       },
       "match": "variant",
       "action": "confirm",
-      "reason": "",
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다.",
       "evidence": {
         "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=42355",
         "checkedAt": "2026-10-22T06:39:21.645272Z",
@@ -2218,14 +2218,14 @@
         "title": "Breeze",
         "artist": "林原めぐみ"
       },
-      "approve": null,
+      "approve": true,
       "official": {
         "title": "Breeze(スレイヤーズTRY OP)",
         "artist": "林原めぐみ"
       },
       "match": "variant",
       "action": "confirm",
-      "reason": "",
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다.",
       "evidence": {
         "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=25320&strWord=Y",
         "checkedAt": "2026-10-22T06:39:25.690008Z",
@@ -2242,14 +2242,14 @@
         "title": "Breeze",
         "artist": "林原めぐみ"
       },
-      "approve": null,
+      "approve": true,
       "official": {
         "title": "Breeze (\"スレイヤーズTRY\"OP)",
         "artist": "林原めぐみ"
       },
       "match": "variant",
       "action": "confirm",
-      "reason": "",
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다.",
       "evidence": {
         "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=41539",
         "checkedAt": "2026-10-22T06:39:30.381547Z",
@@ -2266,14 +2266,14 @@
         "title": "Front breaking",
         "artist": "林原めぐみ"
       },
-      "approve": null,
+      "approve": true,
       "official": {
         "title": "Front Breaking(スレイヤーズEVOLUTION-R OP)",
         "artist": "林原めぐみ"
       },
       "match": "variant",
       "action": "confirm",
-      "reason": "",
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다.",
       "evidence": {
         "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=28641&strWord=Y",
         "checkedAt": "2026-10-22T06:39:34.479909Z",
@@ -2301,14 +2301,14 @@
         "title": "Give a reason",
         "artist": "林原めぐみ"
       },
-      "approve": null,
+      "approve": true,
       "official": {
         "title": "Give a reason(スレイヤーズ NEXT OP)",
         "artist": "林原めぐみ"
       },
       "match": "variant",
       "action": "confirm",
-      "reason": "",
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다.",
       "evidence": {
         "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=25197&strWord=Y",
         "checkedAt": "2026-10-22T06:39:43.154661Z",
@@ -2325,14 +2325,14 @@
         "title": "Give a reason",
         "artist": "林原めぐみ"
       },
-      "approve": null,
+      "approve": true,
       "official": {
         "title": "Give a reason (\"スレイヤーズNEXT\"OP)",
         "artist": "林原めぐみ"
       },
       "match": "variant",
       "action": "confirm",
-      "reason": "",
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다.",
       "evidence": {
         "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=41417",
         "checkedAt": "2026-10-22T06:39:50.162413Z",
@@ -2421,14 +2421,14 @@
         "title": "LOVE LOVE LOVE",
         "artist": "DREAMS COME TRUE"
       },
-      "approve": null,
+      "approve": true,
       "official": {
         "title": "LOVE LOVE LOVE (ドラマ\"愛していると言ってくれ\")",
         "artist": "Dreams Come True"
       },
       "match": "variant",
       "action": "confirm",
-      "reason": "",
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다.",
       "evidence": {
         "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=41140",
         "checkedAt": "2026-10-22T06:40:07.863426Z",
@@ -2469,14 +2469,14 @@
         "title": "きみにしか聞こえない",
         "artist": "DREAMS COME TRUE"
       },
-      "approve": null,
+      "approve": true,
       "official": {
         "title": "きみにしか聞こえない (映画\"きみにしか聞こえない\")",
         "artist": "Dreams Come True"
       },
       "match": "variant",
       "action": "confirm",
-      "reason": "",
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다.",
       "evidence": {
         "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=42457",
         "checkedAt": "2026-10-22T06:40:16.709642Z",
@@ -2541,14 +2541,14 @@
         "title": "さよならごっこ",
         "artist": "amazarashi"
       },
-      "approve": null,
+      "approve": true,
       "official": {
         "title": "さよならごっこ(どろろ ED)",
         "artist": "amazarashi"
       },
       "match": "variant",
       "action": "confirm",
-      "reason": "",
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다.",
       "evidence": {
         "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=28976&strWord=Y",
         "checkedAt": "2026-10-22T06:40:29.737844Z",
@@ -2565,14 +2565,14 @@
         "title": "さよならごっこ",
         "artist": "amazarashi"
       },
-      "approve": null,
+      "approve": true,
       "official": {
         "title": "さよならごっこ (\"どろろ\"ED)",
         "artist": "amazarashi"
       },
       "match": "variant",
       "action": "confirm",
-      "reason": "",
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다.",
       "evidence": {
         "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=44378",
         "checkedAt": "2026-10-22T06:40:34.871105Z",
@@ -2589,14 +2589,14 @@
         "title": "スピードと摩擦",
         "artist": "amazarashi"
       },
-      "approve": null,
+      "approve": true,
       "official": {
         "title": "スピードと摩擦(乱歩奇譚 OP)",
         "artist": "amazarashi"
       },
       "match": "variant",
       "action": "confirm",
-      "reason": "",
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다.",
       "evidence": {
         "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=28219&strWord=Y",
         "checkedAt": "2026-10-22T06:40:38.637418Z",
@@ -2613,14 +2613,14 @@
         "title": "スピードと摩擦",
         "artist": "amazarashi"
       },
-      "approve": null,
+      "approve": true,
       "official": {
         "title": "スピードと摩擦 (\"乱歩奇譚 Game of Laplace\"OP)",
         "artist": "amazarashi"
       },
       "match": "variant",
       "action": "confirm",
-      "reason": "",
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다.",
       "evidence": {
         "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=43947",
         "checkedAt": "2026-10-22T06:40:43.566697Z",
@@ -2661,14 +2661,14 @@
         "title": "KISS OF LIFE",
         "artist": "平井 堅"
       },
-      "approve": null,
+      "approve": true,
       "official": {
         "title": "KISS OF LIFE (ドラマ\"ラブ・レボリューション\")",
         "artist": "平井堅"
       },
       "match": "variant",
       "action": "confirm",
-      "reason": "",
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다.",
       "evidence": {
         "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=41025",
         "checkedAt": "2026-10-22T06:40:52.331295Z",
@@ -2709,14 +2709,14 @@
         "title": "POP STAR",
         "artist": "平井 堅"
       },
-      "approve": null,
+      "approve": true,
       "official": {
         "title": "POP STAR (ドラマ\"危険なアネキ\")",
         "artist": "平井堅"
       },
       "match": "variant",
       "action": "confirm",
-      "reason": "",
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다.",
       "evidence": {
         "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=40202",
         "checkedAt": "2026-10-22T06:41:04.032233Z",
@@ -2757,14 +2757,14 @@
         "title": "Ring",
         "artist": "平井 堅"
       },
-      "approve": null,
+      "approve": true,
       "official": {
         "title": "Ring (ドラマ\"サイコドクター\")",
         "artist": "平井堅"
       },
       "match": "variant",
       "action": "confirm",
-      "reason": "",
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다.",
       "evidence": {
         "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=41530",
         "checkedAt": "2026-10-22T06:41:13.369270Z",
@@ -2781,14 +2781,14 @@
         "title": "LADYBUG",
         "artist": "緑黄色社会"
       },
-      "approve": null,
+      "approve": true,
       "official": {
         "title": "LADYBUG(テレビ朝日 'サタデーステーション', 'サンデーステーション' OST)",
         "artist": "緑黄色社会"
       },
       "match": "variant",
       "action": "confirm",
-      "reason": "",
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다.",
       "evidence": {
         "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=52599&strWord=Y",
         "checkedAt": "2026-10-22T06:41:17.272016Z",
@@ -2877,14 +2877,14 @@
         "title": "Party!!",
         "artist": "緑黄色社会"
       },
-      "approve": null,
+      "approve": true,
       "official": {
         "title": "Party!!(アニメ 'ダンジョン飯 ～Delicious in Dungeon～' ED)",
         "artist": "緑黄色社会"
       },
       "match": "variant",
       "action": "confirm",
-      "reason": "",
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다.",
       "evidence": {
         "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=68954&strWord=Y",
         "checkedAt": "2026-10-22T06:41:37.342505Z",
@@ -2901,14 +2901,14 @@
         "title": "Party!!",
         "artist": "緑黄色社会"
       },
-      "approve": null,
+      "approve": true,
       "official": {
         "title": "Party!! (\"ダンジョン飯\"ED)",
         "artist": "緑黄色社会"
       },
       "match": "variant",
       "action": "confirm",
-      "reason": "",
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다.",
       "evidence": {
         "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=75946",
         "checkedAt": "2026-10-22T06:41:42.703056Z",
@@ -2925,14 +2925,14 @@
         "title": "Can Do",
         "artist": "GRANRODEO"
       },
-      "approve": null,
+      "approve": true,
       "official": {
         "title": "Can Do(黒子のバスケ OP)",
         "artist": "GRANRODEO"
       },
       "match": "variant",
       "action": "confirm",
-      "reason": "",
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다.",
       "evidence": {
         "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=27661&strWord=Y",
         "checkedAt": "2026-10-22T06:41:46.972972Z",
@@ -2949,14 +2949,14 @@
         "title": "Can Do",
         "artist": "GRANRODEO"
       },
-      "approve": null,
+      "approve": true,
       "official": {
         "title": "Can Do (\"黒子のバスケ\"OP)",
         "artist": "GRANRODEO"
       },
       "match": "variant",
       "action": "confirm",
-      "reason": "",
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다.",
       "evidence": {
         "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=43494",
         "checkedAt": "2026-10-22T06:41:52.440496Z",
@@ -2973,14 +2973,14 @@
         "title": "Punky Funky Love",
         "artist": "GRANRODEO"
       },
-      "approve": null,
+      "approve": true,
       "official": {
         "title": "Punky Funky Love(黒子のバスケ OP)",
         "artist": "GRANRODEO"
       },
       "match": "variant",
       "action": "confirm",
-      "reason": "",
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다.",
       "evidence": {
         "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=28106&strWord=Y",
         "checkedAt": "2026-10-22T06:41:56.630783Z",
@@ -2997,14 +2997,14 @@
         "title": "Punky Funky Love",
         "artist": "GRANRODEO"
       },
-      "approve": null,
+      "approve": true,
       "official": {
         "title": "Punky Funky Love (\"黒子のバスケ\"OP)",
         "artist": "GRANRODEO"
       },
       "match": "variant",
       "action": "confirm",
-      "reason": "",
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다.",
       "evidence": {
         "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=43888",
         "checkedAt": "2026-10-22T06:42:02.047645Z",
@@ -3021,14 +3021,14 @@
         "title": "RIMFIRE",
         "artist": "GRANRODEO"
       },
-      "approve": null,
+      "approve": true,
       "official": {
         "title": "Rimfire(黒子のバスケ OP)",
         "artist": "GRANRODEO"
       },
       "match": "variant",
       "action": "confirm",
-      "reason": "",
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다.",
       "evidence": {
         "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=28118&strWord=Y",
         "checkedAt": "2026-10-22T06:42:05.977102Z",
@@ -3045,14 +3045,14 @@
         "title": "RIMFIRE",
         "artist": "GRANRODEO"
       },
-      "approve": null,
+      "approve": true,
       "official": {
         "title": "RIMFIRE (\"黒子のバスケ\"OP)",
         "artist": "GRANRODEO"
       },
       "match": "variant",
       "action": "confirm",
-      "reason": "",
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다.",
       "evidence": {
         "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=43526",
         "checkedAt": "2026-10-22T06:42:11.535772Z",
@@ -3093,14 +3093,14 @@
         "title": "HEAVEN",
         "artist": "福山雅治"
       },
-      "approve": null,
+      "approve": true,
       "official": {
         "title": "HEAVEN (ドラマ\"OUT~妻たちの犯罪\")",
         "artist": "福山雅治"
       },
       "match": "variant",
       "action": "confirm",
-      "reason": "",
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다.",
       "evidence": {
         "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=41019",
         "checkedAt": "2026-10-22T06:42:21.897504Z",
@@ -3189,14 +3189,14 @@
         "title": "東京にもあったんだ",
         "artist": "福山雅治"
       },
-      "approve": null,
+      "approve": true,
       "official": {
         "title": "東京にもあったんだ (映画\"東京タワー オカンとボクと、時々、オトン\")",
         "artist": "福山雅治"
       },
       "match": "variant",
       "action": "confirm",
-      "reason": "",
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다.",
       "evidence": {
         "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=42592",
         "checkedAt": "2026-10-22T06:42:39.925750Z",
@@ -3213,14 +3213,14 @@
         "title": "アイのシナリオ(まじっく快斗1412 OP)",
         "artist": "CHiCO"
       },
-      "approve": null,
+      "approve": true,
       "official": {
         "title": "アイのシナリオ(まじっく快斗1412 OP)",
         "artist": "CHiCO with HoneyWorks"
       },
       "match": "variant",
       "action": "confirm",
-      "reason": "",
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다.",
       "evidence": {
         "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=27705&strWord=Y",
         "checkedAt": "2026-10-22T06:42:43.807810Z",
@@ -3237,14 +3237,14 @@
         "title": "アイのシナリオ(まじっく快斗1412 OP)",
         "artist": "CHiCO"
       },
-      "approve": null,
+      "approve": true,
       "official": {
         "title": "アイのシナリオ (\"まじっく快斗1412\"OP)",
         "artist": "CHiCO with HoneyWorks"
       },
       "match": "variant",
       "action": "confirm",
-      "reason": "",
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다.",
       "evidence": {
         "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=43894",
         "checkedAt": "2026-10-22T06:42:48.737319Z",
@@ -3261,14 +3261,14 @@
         "title": "ウルフ",
         "artist": "CHiCO"
       },
-      "approve": null,
+      "approve": true,
       "official": {
         "title": "ウルフ",
         "artist": "CHiCO with HoneyWorks"
       },
       "match": "variant",
       "action": "confirm",
-      "reason": "",
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다.",
       "evidence": {
         "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=28862&strWord=Y",
         "checkedAt": "2026-10-22T06:42:52.565027Z",
@@ -3285,14 +3285,14 @@
         "title": "ウルフ",
         "artist": "CHiCO"
       },
-      "approve": null,
+      "approve": true,
       "official": {
         "title": "ウルフ",
         "artist": "CHiCO with HoneyWorks"
       },
       "match": "variant",
       "action": "confirm",
-      "reason": "",
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다.",
       "evidence": {
         "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=44280",
         "checkedAt": "2026-10-22T06:42:58.071472Z",
@@ -3309,14 +3309,14 @@
         "title": "ハートの主張",
         "artist": "CHiCO"
       },
-      "approve": null,
+      "approve": true,
       "official": {
         "title": "ハートの主張",
         "artist": "CHiCO with HoneyWorks"
       },
       "match": "variant",
       "action": "confirm",
-      "reason": "",
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다.",
       "evidence": {
         "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=68827&strWord=Y",
         "checkedAt": "2026-10-22T06:43:01.897536Z",
@@ -3333,14 +3333,14 @@
         "title": "ハートの主張",
         "artist": "CHiCO"
       },
-      "approve": null,
+      "approve": true,
       "official": {
         "title": "ハートの主張",
         "artist": "CHiCO with HoneyWorks"
       },
       "match": "variant",
       "action": "confirm",
-      "reason": "",
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다.",
       "evidence": {
         "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=44958",
         "checkedAt": "2026-10-22T06:43:08.011719Z",
@@ -3357,14 +3357,14 @@
         "title": "Growing of my heart",
         "artist": "倉木麻衣"
       },
-      "approve": null,
+      "approve": true,
       "official": {
         "title": "Growing of my heart(名探偵コナン ED)",
         "artist": "倉木麻衣"
       },
       "match": "variant",
       "action": "confirm",
-      "reason": "",
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다.",
       "evidence": {
         "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=28432&strWord=Y",
         "checkedAt": "2026-10-22T06:43:11.888433Z",
@@ -3381,14 +3381,14 @@
         "title": "Growing of my heart",
         "artist": "倉木麻衣"
       },
-      "approve": null,
+      "approve": true,
       "official": {
         "title": "Growing of my heart (\"名探偵コナン\"OP)",
         "artist": "倉木麻衣"
       },
       "match": "variant",
       "action": "confirm",
-      "reason": "",
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다.",
       "evidence": {
         "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=40183",
         "checkedAt": "2026-10-22T06:43:17.080415Z",
@@ -3405,14 +3405,14 @@
         "title": "Revive",
         "artist": "倉木麻衣"
       },
-      "approve": null,
+      "approve": true,
       "official": {
         "title": "Revive(名探偵コナン OP)",
         "artist": "倉木麻衣"
       },
       "match": "variant",
       "action": "confirm",
-      "reason": "",
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다.",
       "evidence": {
         "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=28117&strWord=Y",
         "checkedAt": "2026-10-22T06:43:21.375487Z",
@@ -3429,14 +3429,14 @@
         "title": "Revive",
         "artist": "倉木麻衣"
       },
-      "approve": null,
+      "approve": true,
       "official": {
         "title": "Revive (\"名探偵コナン\"OP)",
         "artist": "倉木麻衣"
       },
       "match": "variant",
       "action": "confirm",
-      "reason": "",
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다.",
       "evidence": {
         "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=42969",
         "checkedAt": "2026-10-22T06:43:26.238673Z",
@@ -3453,14 +3453,14 @@
         "title": "Secret of my heart",
         "artist": "倉木麻衣"
       },
-      "approve": null,
+      "approve": true,
       "official": {
         "title": "Secret of my heart(名探偵コナン ED)",
         "artist": "倉木麻衣"
       },
       "match": "variant",
       "action": "confirm",
-      "reason": "",
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다.",
       "evidence": {
         "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=25007&strWord=Y",
         "checkedAt": "2026-10-22T06:43:30.217440Z",
@@ -3477,14 +3477,14 @@
         "title": "Secret of my heart",
         "artist": "倉木麻衣"
       },
-      "approve": null,
+      "approve": true,
       "official": {
         "title": "Secret of my heart(\"名探偵コナン\"ED)",
         "artist": "倉木麻衣"
       },
       "match": "variant",
       "action": "confirm",
-      "reason": "",
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다.",
       "evidence": {
         "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=41147",
         "checkedAt": "2026-10-22T06:43:35.144247Z",
@@ -3645,14 +3645,14 @@
         "title": "あのバンド",
         "artist": "結束バンド"
       },
-      "approve": null,
+      "approve": true,
       "official": {
         "title": "あのバンド('ぼっち・ざ・ろっく！' OST)",
         "artist": "結束バンド"
       },
       "match": "variant",
       "action": "confirm",
-      "reason": "",
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다.",
       "evidence": {
         "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=68751&strWord=Y",
         "checkedAt": "2026-10-22T06:44:05.649734Z",
@@ -3669,14 +3669,14 @@
         "title": "あのバンド",
         "artist": "結束バンド"
       },
-      "approve": null,
+      "approve": true,
       "official": {
         "title": "あのバンド (\"ぼっち・ざ・ろっく!\"OST)",
         "artist": "結束バンド"
       },
       "match": "variant",
       "action": "confirm",
-      "reason": "",
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다.",
       "evidence": {
         "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=44893",
         "checkedAt": "2026-10-22T06:44:11.008553Z",
@@ -3693,14 +3693,14 @@
         "title": "カラカラ",
         "artist": "結束バンド"
       },
-      "approve": null,
+      "approve": true,
       "official": {
         "title": "カラカラ(アニメ 'ぼっち・ざ・ろっく！' 挿入歌)",
         "artist": "結束バンド"
       },
       "match": "variant",
       "action": "confirm",
-      "reason": "",
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다.",
       "evidence": {
         "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=68713&strWord=Y",
         "checkedAt": "2026-10-22T06:44:14.882980Z",
@@ -3717,14 +3717,14 @@
         "title": "カラカラ",
         "artist": "結束バンド"
       },
-      "approve": null,
+      "approve": true,
       "official": {
         "title": "カラカラ (\"ぼっち・ざ・ろっく!\"ED)",
         "artist": "結束バンド"
       },
       "match": "variant",
       "action": "confirm",
-      "reason": "",
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다.",
       "evidence": {
         "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=44863",
         "checkedAt": "2026-10-22T06:44:19.974179Z",
@@ -3741,14 +3741,14 @@
         "title": "ギターと孤独と蒼い惑星",
         "artist": "結束バンド"
       },
-      "approve": null,
+      "approve": true,
       "official": {
         "title": "ギターと孤独と蒼い惑星(アニメ'ぼっち・ざ・ろっく!' 挿入歌)",
         "artist": "結束バンド"
       },
       "match": "variant",
       "action": "confirm",
-      "reason": "",
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다.",
       "evidence": {
         "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=68697&strWord=Y",
         "checkedAt": "2026-10-22T06:44:23.767110Z",
@@ -3765,14 +3765,14 @@
         "title": "ギターと孤独と蒼い惑星",
         "artist": "結束バンド"
       },
-      "approve": null,
+      "approve": true,
       "official": {
         "title": "ギターと孤独と蒼い惑星 (\"ぼっち・ざ..",
         "artist": "結束バンド"
       },
       "match": "variant",
       "action": "confirm",
-      "reason": "",
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다.",
       "evidence": {
         "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=44872",
         "checkedAt": "2026-10-22T06:44:29.519872Z",
@@ -4029,14 +4029,14 @@
         "title": "そばかす",
         "artist": "JUDY AND MARY"
       },
-      "approve": null,
+      "approve": true,
       "official": {
         "title": "そばかす(るろうに剣心 OP)",
         "artist": "Judy and Mary"
       },
       "match": "variant",
       "action": "confirm",
-      "reason": "",
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다.",
       "evidence": {
         "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=6809&strWord=Y",
         "checkedAt": "2026-10-22T06:45:23.100653Z",
@@ -4053,14 +4053,14 @@
         "title": "そばかす",
         "artist": "JUDY AND MARY"
       },
-      "approve": null,
+      "approve": true,
       "official": {
         "title": "そばかす (\"るろうに剣心\"OST)",
         "artist": "JUDY AND MARY"
       },
       "match": "variant",
       "action": "confirm",
-      "reason": "",
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다.",
       "evidence": {
         "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=41215",
         "checkedAt": "2026-10-22T06:45:28.534251Z",
@@ -4077,14 +4077,14 @@
         "title": "FPS",
         "artist": "Neru"
       },
-      "approve": null,
+      "approve": true,
       "official": {
         "title": "FPS",
         "artist": "Neru(Feat.鏡音レン)"
       },
       "match": "variant",
       "action": "confirm",
-      "reason": "",
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다.",
       "evidence": {
         "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=28863&strWord=Y",
         "checkedAt": "2026-10-22T06:45:32.433072Z",
@@ -4101,14 +4101,14 @@
         "title": "FPS",
         "artist": "Neru"
       },
-      "approve": null,
+      "approve": true,
       "official": {
         "title": "FPS",
         "artist": "Neru feat.鏡音レン"
       },
       "match": "variant",
       "action": "confirm",
-      "reason": "",
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다.",
       "evidence": {
         "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=44273",
         "checkedAt": "2026-10-22T06:45:37.861315Z",
@@ -4125,14 +4125,14 @@
         "title": "SNOBBISM (feat. z'5)",
         "artist": "Neru"
       },
-      "approve": null,
+      "approve": false,
       "official": {
         "title": "SNOBBISM",
         "artist": "Neru(Feat.鏡音リン,鏡音レン)"
       },
       "match": "variant",
       "action": "confirm",
-      "reason": "",
+      "reason": "관리 목록은 feat. z'5 버전이고 공식 검색은 보컬로이드(鏡音リン・レン) 원곡이라 다른 버전으로 봅니다.",
       "evidence": {
         "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=28867&strWord=Y",
         "checkedAt": "2026-10-22T06:45:42.081689Z",
@@ -4149,14 +4149,14 @@
         "title": "SNOBBISM (feat. z'5)",
         "artist": "Neru"
       },
-      "approve": null,
+      "approve": false,
       "official": {
         "title": "SNOBBISM",
         "artist": "Neru feat.鏡音リン・レン"
       },
       "match": "variant",
       "action": "confirm",
-      "reason": "",
+      "reason": "관리 목록은 feat. z'5 버전이고 공식 검색은 보컬로이드(鏡音リン・レン) 원곡이라 다른 버전으로 봅니다.",
       "evidence": {
         "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=44279",
         "checkedAt": "2026-10-22T06:45:47.626285Z",
@@ -4173,14 +4173,14 @@
         "title": "イドラのサーカス",
         "artist": "Neru"
       },
-      "approve": null,
+      "approve": true,
       "official": {
         "title": "イドラのサーカス",
         "artist": "Neru(Feat.鏡音リン)"
       },
       "match": "variant",
       "action": "confirm",
-      "reason": "",
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다.",
       "evidence": {
         "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=28833&strWord=Y",
         "checkedAt": "2026-10-22T06:45:51.689284Z",
@@ -4197,14 +4197,14 @@
         "title": "イドラのサーカス",
         "artist": "Neru"
       },
-      "approve": null,
+      "approve": true,
       "official": {
         "title": "イドラのサーカス",
         "artist": "Neru feat.鏡音リン"
       },
       "match": "variant",
       "action": "confirm",
-      "reason": "",
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다.",
       "evidence": {
         "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=44243",
         "checkedAt": "2026-10-22T06:45:56.806245Z",
@@ -4221,14 +4221,14 @@
         "title": "DAN DAN 心魅かれてく",
         "artist": "ZARD"
       },
-      "approve": null,
+      "approve": true,
       "official": {
         "title": "DAN DAN 心魅かれてく(ドラゴンボールGT OP)",
         "artist": "ZARD"
       },
       "match": "variant",
       "action": "confirm",
-      "reason": "",
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다.",
       "evidence": {
         "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=28034&strWord=Y",
         "checkedAt": "2026-10-22T06:46:00.873356Z",
@@ -4269,14 +4269,14 @@
         "title": "Don't you see!",
         "artist": "ZARD"
       },
-      "approve": null,
+      "approve": true,
       "official": {
         "title": "Don't you see(ドラゴンボール Gt ED)",
         "artist": "ZARD"
       },
       "match": "variant",
       "action": "confirm",
-      "reason": "",
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다.",
       "evidence": {
         "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=6349&strWord=Y",
         "checkedAt": "2026-10-22T06:46:10.064429Z",
@@ -4293,14 +4293,14 @@
         "title": "Don't you see!",
         "artist": "ZARD"
       },
-      "approve": null,
+      "approve": true,
       "official": {
         "title": "Don't you see!(\"ドラゴンボールGT\"ED)",
         "artist": "ZARD"
       },
       "match": "variant",
       "action": "confirm",
-      "reason": "",
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다.",
       "evidence": {
         "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=41833",
         "checkedAt": "2026-10-22T06:46:15.339347Z",
@@ -4317,14 +4317,14 @@
         "title": "グロリアスマインド",
         "artist": "ZARD"
       },
-      "approve": null,
+      "approve": true,
       "official": {
         "title": "グロリアスマインド(名探偵コナン OP)",
         "artist": "ZARD"
       },
       "match": "variant",
       "action": "confirm",
-      "reason": "",
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다.",
       "evidence": {
         "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=28203&strWord=Y",
         "checkedAt": "2026-10-22T06:46:19.413288Z",
@@ -4341,14 +4341,14 @@
         "title": "グロリアスマインド",
         "artist": "ZARD"
       },
-      "approve": null,
+      "approve": true,
       "official": {
         "title": "グロリアスマインド(\"名探偵コナン\"OP)",
         "artist": "ZARD"
       },
       "match": "variant",
       "action": "confirm",
-      "reason": "",
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다.",
       "evidence": {
         "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=42615",
         "checkedAt": "2026-10-22T06:46:24.719007Z",
@@ -4365,14 +4365,14 @@
         "title": "チェリー",
         "artist": "スピッツ｜Spitz"
       },
-      "approve": null,
+      "approve": true,
       "official": {
         "title": "チェリー",
         "artist": "Spitz"
       },
       "match": "variant",
       "action": "confirm",
-      "reason": "",
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다.",
       "evidence": {
         "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=25008&strWord=Y",
         "checkedAt": "2026-10-22T06:46:28.864357Z",
@@ -4389,14 +4389,14 @@
         "title": "チェリー",
         "artist": "スピッツ｜Spitz"
       },
-      "approve": null,
+      "approve": true,
       "official": {
         "title": "チェリー",
         "artist": "Spitz"
       },
       "match": "variant",
       "action": "confirm",
-      "reason": "",
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다.",
       "evidence": {
         "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=41564",
         "checkedAt": "2026-10-22T06:46:34.732566Z",
@@ -4413,14 +4413,14 @@
         "title": "ロビンソン",
         "artist": "スピッツ｜Spitz"
       },
-      "approve": null,
+      "approve": true,
       "official": {
         "title": "ロビンソン",
         "artist": "Spitz"
       },
       "match": "variant",
       "action": "confirm",
-      "reason": "",
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다.",
       "evidence": {
         "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=25401&strWord=Y",
         "checkedAt": "2026-10-22T06:46:38.855477Z",
@@ -4437,14 +4437,14 @@
         "title": "ロビンソン",
         "artist": "スピッツ｜Spitz"
       },
-      "approve": null,
+      "approve": true,
       "official": {
         "title": "ロビンソン (ドラマ\"白線流し\")",
         "artist": "Spitz"
       },
       "match": "variant",
       "action": "confirm",
-      "reason": "",
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다.",
       "evidence": {
         "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=41844",
         "checkedAt": "2026-10-22T06:46:45.366190Z",
@@ -4461,14 +4461,14 @@
         "title": "正夢",
         "artist": "スピッツ｜Spitz"
       },
-      "approve": null,
+      "approve": true,
       "official": {
         "title": "正夢",
         "artist": "Spitz"
       },
       "match": "variant",
       "action": "confirm",
-      "reason": "",
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다.",
       "evidence": {
         "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=26604&strWord=Y",
         "checkedAt": "2026-10-22T06:46:49.603898Z",
@@ -4485,14 +4485,14 @@
         "title": "正夢",
         "artist": "スピッツ｜Spitz"
       },
-      "approve": null,
+      "approve": true,
       "official": {
         "title": "正夢 (ドラマ\"めだか\")",
         "artist": "Spitz"
       },
       "match": "variant",
       "action": "confirm",
-      "reason": "",
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다.",
       "evidence": {
         "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=41846",
         "checkedAt": "2026-10-22T06:46:54.643330Z",
@@ -4509,14 +4509,14 @@
         "title": "GO! GO! MANIAC",
         "artist": "放課後ティータイム"
       },
-      "approve": null,
+      "approve": true,
       "official": {
         "title": "GO! GO! MANIAC(けいおん!! OP)",
         "artist": "放課後ティータイム"
       },
       "match": "variant",
       "action": "confirm",
-      "reason": "",
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다.",
       "evidence": {
         "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=27047&strWord=Y",
         "checkedAt": "2026-10-22T06:46:58.649021Z",
@@ -4533,14 +4533,14 @@
         "title": "GO! GO! MANIAC",
         "artist": "放課後ティータイム"
       },
-      "approve": null,
+      "approve": true,
       "official": {
         "title": "GO! GO! MANIAC (\"けいおん!!\"OP)",
         "artist": "放課後ティータイム"
       },
       "match": "variant",
       "action": "confirm",
-      "reason": "",
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다.",
       "evidence": {
         "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=43230",
         "checkedAt": "2026-10-22T06:47:03.929649Z",
@@ -4557,14 +4557,14 @@
         "title": "Listen!!",
         "artist": "放課後ティータイム"
       },
-      "approve": null,
+      "approve": true,
       "official": {
         "title": "Listen!!(けいおん!! ED)",
         "artist": "放課後ティータイム"
       },
       "match": "variant",
       "action": "confirm",
-      "reason": "",
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다.",
       "evidence": {
         "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=27051&strWord=Y",
         "checkedAt": "2026-10-22T06:47:07.801959Z",
@@ -4581,14 +4581,14 @@
         "title": "Listen!!",
         "artist": "放課後ティータイム"
       },
-      "approve": null,
+      "approve": true,
       "official": {
         "title": "Listen!! (\"けいおん!!\"ED)",
         "artist": "放課後ティータイム"
       },
       "match": "variant",
       "action": "confirm",
-      "reason": "",
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다.",
       "evidence": {
         "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=43228",
         "checkedAt": "2026-10-22T06:47:13.321325Z",
@@ -4605,14 +4605,14 @@
         "title": "NO, Thank You!",
         "artist": "放課後ティータイム"
       },
-      "approve": null,
+      "approve": true,
       "official": {
         "title": "NO, Thank You!(けいおん!! ED)",
         "artist": "放課後ティータイム"
       },
       "match": "variant",
       "action": "confirm",
-      "reason": "",
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다.",
       "evidence": {
         "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=27159&strWord=Y",
         "checkedAt": "2026-10-22T06:47:17.047626Z",
@@ -4629,14 +4629,14 @@
         "title": "NO, Thank You!",
         "artist": "放課後ティータイム"
       },
-      "approve": null,
+      "approve": true,
       "official": {
         "title": "NO, Thank You! (\"けいおん!!\"ED)",
         "artist": "放課後ティータイム"
       },
       "match": "variant",
       "action": "confirm",
-      "reason": "",
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다.",
       "evidence": {
         "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=43268",
         "checkedAt": "2026-10-22T06:47:22.641706Z",
@@ -4677,14 +4677,14 @@
         "title": "キセキ",
         "artist": "GReeeeN"
       },
-      "approve": null,
+      "approve": true,
       "official": {
         "title": "キセキ (ドラマ\"ROOKIES\")",
         "artist": "GReeeeN"
       },
       "match": "variant",
       "action": "confirm",
-      "reason": "",
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다.",
       "evidence": {
         "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=42779",
         "checkedAt": "2026-10-22T06:47:33.675439Z",
@@ -4701,14 +4701,14 @@
         "title": "ミセナイナミダハ、きっといつか",
         "artist": "GReeeeN"
       },
-      "approve": null,
+      "approve": true,
       "official": {
         "title": "ミセナイナミダハ, きっといつか(ストロベリーナイト OST)",
         "artist": "GReeeeN"
       },
       "match": "variant",
       "action": "confirm",
-      "reason": "",
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다.",
       "evidence": {
         "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=27286&strWord=Y",
         "checkedAt": "2026-10-22T06:47:37.488921Z",
@@ -4725,14 +4725,14 @@
         "title": "ミセナイナミダハ、きっといつか",
         "artist": "GReeeeN"
       },
-      "approve": null,
+      "approve": true,
       "official": {
         "title": "ミセナイナミダハ、きっといつか (\"ストロベリーナイト\")",
         "artist": "GReeeeN"
       },
       "match": "variant",
       "action": "confirm",
-      "reason": "",
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다.",
       "evidence": {
         "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=43483",
         "checkedAt": "2026-10-22T06:47:42.970213Z",
@@ -4797,14 +4797,14 @@
         "title": "ANIMA",
         "artist": "ReoNa"
       },
-      "approve": null,
+      "approve": true,
       "official": {
         "title": "ANIMA(ソードアート・オンライン OP)",
         "artist": "ReoNa"
       },
       "match": "variant",
       "action": "confirm",
-      "reason": "",
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다.",
       "evidence": {
         "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=68286&strWord=Y",
         "checkedAt": "2026-10-22T06:47:56.498769Z",
@@ -4821,14 +4821,14 @@
         "title": "ANIMA",
         "artist": "ReoNa"
       },
-      "approve": null,
+      "approve": true,
       "official": {
         "title": "ANIMA (\"ソードアート・オンライン アリシ..",
         "artist": "ReoNa"
       },
       "match": "variant",
       "action": "confirm",
-      "reason": "",
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다.",
       "evidence": {
         "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=44597",
         "checkedAt": "2026-10-22T06:48:05.137065Z",
@@ -4845,14 +4845,14 @@
         "title": "Lost",
         "artist": "ReoNa"
       },
-      "approve": null,
+      "approve": true,
       "official": {
         "title": "Lost(月姫 -A piece of blue glass moon- OST)",
         "artist": "ReoNa"
       },
       "match": "variant",
       "action": "confirm",
-      "reason": "",
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다.",
       "evidence": {
         "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=68581&strWord=Y",
         "checkedAt": "2026-10-22T06:48:09.054016Z",
@@ -4869,14 +4869,14 @@
         "title": "Lost",
         "artist": "ReoNa"
       },
-      "approve": null,
+      "approve": true,
       "official": {
         "title": "Lost (\"月姫-A piece of blue glass moon..",
         "artist": "ReoNa"
       },
       "match": "variant",
       "action": "confirm",
-      "reason": "",
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다.",
       "evidence": {
         "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=44778",
         "checkedAt": "2026-10-22T06:48:14.128024Z",
@@ -4893,14 +4893,14 @@
         "title": "R.I.P.",
         "artist": "ReoNa"
       },
-      "approve": null,
+      "approve": true,
       "official": {
         "title": "R.I.P.(アニメ 'アークナイツ 冬隠帰路' ED)",
         "artist": "ReoNa"
       },
       "match": "variant",
       "action": "confirm",
-      "reason": "",
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다.",
       "evidence": {
         "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=68925&strWord=Y",
         "checkedAt": "2026-10-22T06:48:17.935256Z",
@@ -4917,14 +4917,14 @@
         "title": "R.I.P.",
         "artist": "ReoNa"
       },
-      "approve": null,
+      "approve": true,
       "official": {
         "title": "R.I.P. (\"アークナイツ【冬隠帰路/PERISH..",
         "artist": "ReoNa"
       },
       "match": "variant",
       "action": "confirm",
-      "reason": "",
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다.",
       "evidence": {
         "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=75867",
         "checkedAt": "2026-10-22T06:48:24.866629Z",
@@ -5343,14 +5343,14 @@
         "title": "アフターダーク",
         "artist": "ASIAN KUNG-FU GENERATION"
       },
-      "approve": null,
+      "approve": true,
       "official": {
         "title": "アフターダーク(BLEACH OP)",
         "artist": "ASIAN KUNG-FU GENERATION"
       },
       "match": "variant",
       "action": "confirm",
-      "reason": "",
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다.",
       "evidence": {
         "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=28167&strWord=Y",
         "checkedAt": "2026-10-22T06:49:58.323764Z",
@@ -5367,14 +5367,14 @@
         "title": "アフターダーク",
         "artist": "ASIAN KUNG-FU GENERATION"
       },
-      "approve": null,
+      "approve": true,
       "official": {
         "title": "アフターダーク (\"BLEACH\"OP)",
         "artist": "ASIAN KUNG-FU GENERATION"
       },
       "match": "variant",
       "action": "confirm",
-      "reason": "",
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다.",
       "evidence": {
         "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=42599",
         "checkedAt": "2026-10-22T06:50:05.318188Z",
@@ -5391,14 +5391,14 @@
         "title": "ソラニン",
         "artist": "ASIAN KUNG-FU GENERATION"
       },
-      "approve": null,
+      "approve": true,
       "official": {
         "title": "ソラニン(ソラニン OST)",
         "artist": "ASIAN KUNG-FU GENERATION"
       },
       "match": "variant",
       "action": "confirm",
-      "reason": "",
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다.",
       "evidence": {
         "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=27615&strWord=Y",
         "checkedAt": "2026-10-22T06:50:09.397334Z",
@@ -5415,14 +5415,14 @@
         "title": "ソラニン",
         "artist": "ASIAN KUNG-FU GENERATION"
       },
-      "approve": null,
+      "approve": true,
       "official": {
         "title": "ソラニン (映画\"ソラニン\")",
         "artist": "ASIAN KUNG-FU GENERATION"
       },
       "match": "variant",
       "action": "confirm",
-      "reason": "",
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다.",
       "evidence": {
         "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=43221",
         "checkedAt": "2026-10-22T06:50:14.645591Z",
@@ -5439,14 +5439,14 @@
         "title": "CORE PRIDE",
         "artist": "UVERworld"
       },
-      "approve": null,
+      "approve": true,
       "official": {
         "title": "Core Pride(青の祓魔師 OP)",
         "artist": "UVERworld"
       },
       "match": "variant",
       "action": "confirm",
-      "reason": "",
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다.",
       "evidence": {
         "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=27198&strWord=Y",
         "checkedAt": "2026-10-22T06:50:18.867826Z",
@@ -5463,14 +5463,14 @@
         "title": "CORE PRIDE",
         "artist": "UVERworld"
       },
-      "approve": null,
+      "approve": true,
       "official": {
         "title": "CORE PRIDE (\"青の祓魔師\"OP)",
         "artist": "UVERworld"
       },
       "match": "variant",
       "action": "confirm",
-      "reason": "",
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다.",
       "evidence": {
         "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=43364",
         "checkedAt": "2026-10-22T06:50:24.122349Z",
@@ -5487,14 +5487,14 @@
         "title": "Chance!",
         "artist": "UVERworld"
       },
-      "approve": null,
+      "approve": true,
       "official": {
         "title": "Chance!(BLEACH-ヒート・ザ・ソウル- OP)",
         "artist": "UVERworld"
       },
       "match": "variant",
       "action": "confirm",
-      "reason": "",
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다.",
       "evidence": {
         "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=28025&strWord=Y",
         "checkedAt": "2026-10-22T06:50:28.241621Z",
@@ -5511,14 +5511,14 @@
         "title": "Chance!",
         "artist": "UVERworld"
       },
-      "approve": null,
+      "approve": true,
       "official": {
         "title": "CHANCE! (\"BLEACH-ヒート・ザ・ソウル2-\"OP)",
         "artist": "UVERworld"
       },
       "match": "variant",
       "action": "confirm",
-      "reason": "",
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다.",
       "evidence": {
         "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=42714",
         "checkedAt": "2026-10-22T06:50:33.654311Z",
@@ -5535,14 +5535,14 @@
         "title": "D-tecnoLife",
         "artist": "UVERworld"
       },
-      "approve": null,
+      "approve": true,
       "official": {
         "title": "D-tecno Life (BLEACH 2nd OP)",
         "artist": "UVERworld"
       },
       "match": "variant",
       "action": "confirm",
-      "reason": "",
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다.",
       "evidence": {
         "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=26327&strWord=Y",
         "checkedAt": "2026-10-22T06:50:37.869548Z",
@@ -5559,14 +5559,14 @@
         "title": "D-tecnoLife",
         "artist": "UVERworld"
       },
-      "approve": null,
+      "approve": true,
       "official": {
         "title": "D-tecnoLife (\"BLEACH\"OP)",
         "artist": "UVERworld"
       },
       "match": "variant",
       "action": "confirm",
-      "reason": "",
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다.",
       "evidence": {
         "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=40099",
         "checkedAt": "2026-10-22T06:50:43.099482Z",
@@ -5583,14 +5583,14 @@
         "title": "すーぱーぬこになりたい",
         "artist": "まふまふ"
       },
-      "approve": null,
+      "approve": false,
       "official": {
         "title": "すーぱーぬこに なれんかった",
         "artist": "まふまふ(Feat.鏡音レン)"
       },
       "match": "variant",
       "action": "confirm",
-      "reason": "",
+      "reason": "공식 제목이 すーぱーぬこになれんかった로 관리 목록의 すーぱーぬこになりたい와 다른 곡입니다.",
       "evidence": {
         "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=68244&strWord=Y",
         "checkedAt": "2026-10-22T06:50:47.492896Z",
@@ -5607,14 +5607,14 @@
         "title": "すーぱーぬこになりたい",
         "artist": "まふまふ"
       },
-      "approve": null,
+      "approve": false,
       "official": {
         "title": "すーぱーぬこになれんかった",
         "artist": "まふまふ feat.鏡音レン"
       },
       "match": "variant",
       "action": "confirm",
-      "reason": "",
+      "reason": "공식 제목이 すーぱーぬこになれんかった로 관리 목록의 すーぱーぬこになりたい와 다른 곡입니다.",
       "evidence": {
         "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=44546",
         "checkedAt": "2026-10-22T06:50:53.011100Z",
@@ -5631,14 +5631,14 @@
         "title": "ジグソーパズル",
         "artist": "まふまふ"
       },
-      "approve": null,
+      "approve": true,
       "official": {
         "title": "ジグソーパズル",
         "artist": "まふまふ(Feat.鏡音レン)"
       },
       "match": "variant",
       "action": "confirm",
-      "reason": "",
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다.",
       "evidence": {
         "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=28963&strWord=Y",
         "checkedAt": "2026-10-22T06:50:57.194537Z",
@@ -5655,14 +5655,14 @@
         "title": "ジグソーパズル",
         "artist": "まふまふ"
       },
-      "approve": null,
+      "approve": true,
       "official": {
         "title": "ジグソーパズル",
         "artist": "まふまふ feat.鏡音レン"
       },
       "match": "variant",
       "action": "confirm",
-      "reason": "",
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다.",
       "evidence": {
         "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=44348",
         "checkedAt": "2026-10-22T06:51:02.676354Z",
@@ -5679,14 +5679,14 @@
         "title": "ハローディストピア",
         "artist": "まふまふ"
       },
-      "approve": null,
+      "approve": true,
       "official": {
         "title": "ハローディストピア",
         "artist": "まふまふ(Feat.鏡音リン,鏡音レン)"
       },
       "match": "variant",
       "action": "confirm",
-      "reason": "",
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다.",
       "evidence": {
         "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=28873&strWord=Y",
         "checkedAt": "2026-10-22T06:51:06.581970Z",
@@ -5703,14 +5703,14 @@
         "title": "ハローディストピア",
         "artist": "まふまふ"
       },
-      "approve": null,
+      "approve": true,
       "official": {
         "title": "ハローディストピア",
         "artist": "まふまふ feat.鏡音リン・レン"
       },
       "match": "variant",
       "action": "confirm",
-      "reason": "",
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다.",
       "evidence": {
         "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=44290",
         "checkedAt": "2026-10-22T06:51:12.185203Z",
@@ -5727,14 +5727,14 @@
         "title": "Ah Yeah!!",
         "artist": "スキマスイッチ"
       },
-      "approve": null,
+      "approve": true,
       "official": {
         "title": "Ah Yeah!!(ハイキュー!! OP)",
         "artist": "スキマスイッチ"
       },
       "match": "variant",
       "action": "confirm",
-      "reason": "",
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다.",
       "evidence": {
         "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=27658&strWord=Y",
         "checkedAt": "2026-10-22T06:51:16.049862Z",
@@ -5751,14 +5751,14 @@
         "title": "Ah Yeah!!",
         "artist": "スキマスイッチ"
       },
-      "approve": null,
+      "approve": true,
       "official": {
         "title": "Ah Yeah!! (\"ハイキュー!!\"OP)",
         "artist": "スキマスイッチ"
       },
       "match": "variant",
       "action": "confirm",
-      "reason": "",
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다.",
       "evidence": {
         "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=43819",
         "checkedAt": "2026-10-22T06:51:21.044741Z",
@@ -5775,14 +5775,14 @@
         "title": "Hello Especially",
         "artist": "スキマスイッチ"
       },
-      "approve": null,
+      "approve": true,
       "official": {
         "title": "Hello Especially(銀の匙 Silver Spoon ED)",
         "artist": "スキマスイッチ"
       },
       "match": "variant",
       "action": "confirm",
-      "reason": "",
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다.",
       "evidence": {
         "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=27730&strWord=Y",
         "checkedAt": "2026-10-22T06:51:24.923401Z",
@@ -5799,14 +5799,14 @@
         "title": "Hello Especially",
         "artist": "スキマスイッチ"
       },
-      "approve": null,
+      "approve": true,
       "official": {
         "title": "Hello Especially (\"銀の匙 Silver Spoon\"ED)",
         "artist": "スキマスイッチ"
       },
       "match": "variant",
       "action": "confirm",
-      "reason": "",
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다.",
       "evidence": {
         "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=43916",
         "checkedAt": "2026-10-22T06:51:30.122139Z",
@@ -5823,14 +5823,14 @@
         "title": "ゴールデンタイムラバー",
         "artist": "スキマスイッチ"
       },
-      "approve": null,
+      "approve": true,
       "official": {
         "title": "ゴールデンタイムラバー(鋼の錬金術師 FULLMETAL ALCHEMIST OP)",
         "artist": "スキマスイッチ"
       },
       "match": "variant",
       "action": "confirm",
-      "reason": "",
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다.",
       "evidence": {
         "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=26976&strWord=Y",
         "checkedAt": "2026-10-22T06:51:33.847368Z",
@@ -5847,14 +5847,14 @@
         "title": "ゴールデンタイムラバー",
         "artist": "スキマスイッチ"
       },
-      "approve": null,
+      "approve": true,
       "official": {
         "title": "ゴールデンタイムラバー (\"鋼の錬金術師 FULLMETAL ALCHEMIST\"OP)",
         "artist": "スキマスイッチ"
       },
       "match": "variant",
       "action": "confirm",
-      "reason": "",
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다.",
       "evidence": {
         "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=43147",
         "checkedAt": "2026-10-22T06:51:39.025681Z",
@@ -5871,14 +5871,14 @@
         "title": "明日晴れるかな",
         "artist": "桑田佳祐"
       },
-      "approve": null,
+      "approve": true,
       "official": {
         "title": "明日晴れるかな(プロポーズ大作戦 OST)",
         "artist": "桑田佳祐"
       },
       "match": "variant",
       "action": "confirm",
-      "reason": "",
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다.",
       "evidence": {
         "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=26496&strWord=Y",
         "checkedAt": "2026-10-22T06:51:42.982808Z",
@@ -5895,14 +5895,14 @@
         "title": "明日晴れるかな",
         "artist": "桑田佳祐"
       },
-      "approve": null,
+      "approve": true,
       "official": {
         "title": "明日晴れるかな (ドラマ\"プロポーズ大作戦\")",
         "artist": "桑田佳祐"
       },
       "match": "variant",
       "action": "confirm",
-      "reason": "",
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다.",
       "evidence": {
         "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=42418",
         "checkedAt": "2026-10-22T06:51:48.073500Z",
@@ -6159,14 +6159,14 @@
         "title": "Fantastic Departure!",
         "artist": "Aqours"
       },
-      "approve": null,
+      "approve": true,
       "official": {
         "title": "Fantastic Departure!(ラブライブ!サンシャイン!! OST)",
         "artist": "Aqours"
       },
       "match": "variant",
       "action": "confirm",
-      "reason": "",
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다.",
       "evidence": {
         "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=68296&strWord=Y",
         "checkedAt": "2026-10-22T06:52:38.232220Z",
@@ -6183,14 +6183,14 @@
         "title": "Fantastic Departure!",
         "artist": "Aqours"
       },
-      "approve": null,
+      "approve": true,
       "official": {
         "title": "Fantastic Departure! (\"ラブライブ! サン..",
         "artist": "Aqours"
       },
       "match": "variant",
       "action": "confirm",
-      "reason": "",
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다.",
       "evidence": {
         "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=44585",
         "checkedAt": "2026-10-22T06:52:43.216653Z",
@@ -6207,14 +6207,14 @@
         "title": "HAPPY PARTY TRAIN",
         "artist": "Aqours"
       },
-      "approve": null,
+      "approve": true,
       "official": {
         "title": "HAPPY PARTY TRAIN(ラブライブ!サンシャイン‼ OST)",
         "artist": "Aqours"
       },
       "match": "variant",
       "action": "confirm",
-      "reason": "",
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다.",
       "evidence": {
         "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=68003&strWord=Y",
         "checkedAt": "2026-10-22T06:52:47.098700Z",
@@ -6231,14 +6231,14 @@
         "title": "HAPPY PARTY TRAIN",
         "artist": "Aqours"
       },
-      "approve": null,
+      "approve": true,
       "official": {
         "title": "HAPPY PARTY TRAIN (\"ラブライブ! サンシャイン..",
         "artist": "Aqours"
       },
       "match": "variant",
       "action": "confirm",
-      "reason": "",
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다.",
       "evidence": {
         "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=44406",
         "checkedAt": "2026-10-22T06:52:52.053128Z",
@@ -6255,14 +6255,14 @@
         "title": "君のこころは 輝いてるかい?",
         "artist": "Aqours"
       },
-      "approve": null,
+      "approve": true,
       "official": {
         "title": "君のこころは 輝いてるかい?(ラブライブ!サンシャイン!! OST)",
         "artist": "Aqours"
       },
       "match": "variant",
       "action": "confirm",
-      "reason": "",
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다.",
       "evidence": {
         "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=27955&strWord=Y",
         "checkedAt": "2026-10-22T06:52:55.902883Z",
@@ -6279,14 +6279,14 @@
         "title": "君のこころは 輝いてるかい?",
         "artist": "Aqours"
       },
-      "approve": null,
+      "approve": true,
       "official": {
         "title": "君のこころは輝いてるかい? (\"ラブライブ! サンシャイン\")",
         "artist": "Aqours"
       },
       "match": "variant",
       "action": "confirm",
-      "reason": "",
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다.",
       "evidence": {
         "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=44076",
         "checkedAt": "2026-10-22T06:53:01.464824Z",
@@ -6351,14 +6351,14 @@
         "title": "ぼくらの",
         "artist": "Eve"
       },
-      "approve": null,
+      "approve": true,
       "official": {
         "title": "ぼくらの(アニメ'僕のヒーローアカデミア 第6期' OP 2)",
         "artist": "Eve"
       },
       "match": "variant",
       "action": "confirm",
-      "reason": "",
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다.",
       "evidence": {
         "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=68800&strWord=Y",
         "checkedAt": "2026-10-22T06:53:14.238276Z",
@@ -6375,14 +6375,14 @@
         "title": "ぼくらの",
         "artist": "Eve"
       },
-      "approve": null,
+      "approve": true,
       "official": {
         "title": "ぼくらの (\"僕のヒーローアカデミア\"OP)",
         "artist": "Eve"
       },
       "match": "variant",
       "action": "confirm",
-      "reason": "",
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다.",
       "evidence": {
         "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=44937",
         "checkedAt": "2026-10-22T06:53:19.455988Z",
@@ -6399,14 +6399,14 @@
         "title": "インソムニア",
         "artist": "Eve"
       },
-      "approve": null,
+      "approve": true,
       "official": {
         "title": "インソムニア(映画 'マイホームヒーロー' OST)",
         "artist": "Eve"
       },
       "match": "variant",
       "action": "confirm",
-      "reason": "",
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다.",
       "evidence": {
         "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=52876&strWord=Y",
         "checkedAt": "2026-10-22T06:53:23.448540Z",
@@ -6423,14 +6423,14 @@
         "title": "インソムニア",
         "artist": "Eve"
       },
-      "approve": null,
+      "approve": true,
       "official": {
         "title": "インソムニア (映画\"マイホームヒーロー\")",
         "artist": "Eve"
       },
       "match": "variant",
       "action": "confirm",
-      "reason": "",
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다.",
       "evidence": {
         "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=57800",
         "checkedAt": "2026-10-22T06:53:28.725925Z",
@@ -6495,14 +6495,14 @@
         "title": "Dried Flower",
         "artist": "imase"
       },
-      "approve": null,
+      "approve": true,
       "official": {
         "title": "Dried Flower(映画 'スマホを落としただけなのに' OST)",
         "artist": "imase"
       },
       "match": "variant",
       "action": "confirm",
-      "reason": "",
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다.",
       "evidence": {
         "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=52771&strWord=Y",
         "checkedAt": "2026-10-22T06:53:41.430720Z",
@@ -6519,14 +6519,14 @@
         "title": "FRIENDS!!!",
         "artist": "imase"
       },
-      "approve": null,
+      "approve": true,
       "official": {
         "title": "FRIENDS!!!(Pococha xヤマハ 'みんなの演奏会' OST)",
         "artist": "imase"
       },
       "match": "variant",
       "action": "confirm",
-      "reason": "",
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다.",
       "evidence": {
         "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=52932&strWord=Y",
         "checkedAt": "2026-10-22T06:53:45.466044Z",
@@ -6591,14 +6591,14 @@
         "title": "スカー",
         "artist": "キタニタツヤ"
       },
-      "approve": null,
+      "approve": true,
       "official": {
         "title": "スカー('BLEACH 千年血戦篇' ED)",
         "artist": "キタニタツヤ"
       },
       "match": "variant",
       "action": "confirm",
-      "reason": "",
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다.",
       "evidence": {
         "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=68725&strWord=Y",
         "checkedAt": "2026-10-22T06:53:58.729712Z",
@@ -6615,14 +6615,14 @@
         "title": "スカー",
         "artist": "キタニタツヤ"
       },
-      "approve": null,
+      "approve": true,
       "official": {
         "title": "スカー (\"BLEACH 千年血戦篇\"OP)",
         "artist": "キタニタツヤ"
       },
       "match": "variant",
       "action": "confirm",
-      "reason": "",
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다.",
       "evidence": {
         "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=44869",
         "checkedAt": "2026-10-22T06:54:04.003351Z",
@@ -6783,14 +6783,14 @@
         "title": "心臓を捧げよ!",
         "artist": "Linked Horizon"
       },
-      "approve": null,
+      "approve": true,
       "official": {
         "title": "心臓を捧げよ!(進撃の巨人 2nd OP)",
         "artist": "Linked Horizon"
       },
       "match": "variant",
       "action": "confirm",
-      "reason": "",
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다.",
       "evidence": {
         "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=28706&strWord=Y",
         "checkedAt": "2026-10-22T06:54:34.284180Z",
@@ -6807,14 +6807,14 @@
         "title": "心臓を捧げよ!",
         "artist": "Linked Horizon"
       },
-      "approve": null,
+      "approve": true,
       "official": {
         "title": "心臓を捧げよ! (\"進撃の巨人 Season 2\"OP)",
         "artist": "Linked Horizon"
       },
       "match": "variant",
       "action": "confirm",
-      "reason": "",
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다.",
       "evidence": {
         "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=44160",
         "checkedAt": "2026-10-22T06:54:39.411917Z",
@@ -6831,14 +6831,14 @@
         "title": "紅蓮の弓矢",
         "artist": "Linked Horizon"
       },
-      "approve": null,
+      "approve": true,
       "official": {
         "title": "紅蓮の弓矢(進撃の巨人 OP)",
         "artist": "Linked Horizon"
       },
       "match": "variant",
       "action": "confirm",
-      "reason": "",
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다.",
       "evidence": {
         "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=27457&strWord=Y",
         "checkedAt": "2026-10-22T06:54:43.346182Z",
@@ -6855,14 +6855,14 @@
         "title": "紅蓮の弓矢",
         "artist": "Linked Horizon"
       },
-      "approve": null,
+      "approve": true,
       "official": {
         "title": "紅蓮の弓矢 (\"進撃の巨人\"OP)",
         "artist": "Linked Horizon"
       },
       "match": "variant",
       "action": "confirm",
-      "reason": "",
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다.",
       "evidence": {
         "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=43633",
         "checkedAt": "2026-10-22T06:54:48.762521Z",
@@ -6879,14 +6879,14 @@
         "title": "自由の翼",
         "artist": "Linked Horizon"
       },
-      "approve": null,
+      "approve": true,
       "official": {
         "title": "自由の翼(進撃の巨人 OP)",
         "artist": "Linked Horizon"
       },
       "match": "variant",
       "action": "confirm",
-      "reason": "",
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다.",
       "evidence": {
         "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=28382&strWord=Y",
         "checkedAt": "2026-10-22T06:54:52.512212Z",
@@ -6903,14 +6903,14 @@
         "title": "自由の翼",
         "artist": "Linked Horizon"
       },
-      "approve": null,
+      "approve": true,
       "official": {
         "title": "自由の翼 (\"進撃の巨人\"OP)",
         "artist": "Linked Horizon"
       },
       "match": "variant",
       "action": "confirm",
-      "reason": "",
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다.",
       "evidence": {
         "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=43634",
         "checkedAt": "2026-10-22T06:54:57.787289Z",
@@ -6927,14 +6927,14 @@
         "title": "Numbness like a ginger",
         "artist": "UNISON SQUARE GARDEN"
       },
-      "approve": null,
+      "approve": true,
       "official": {
         "title": "Numbness like a ginger(アニメ 'ブルーロック' ED)",
         "artist": "UNISON SQUARE GARDEN"
       },
       "match": "variant",
       "action": "confirm",
-      "reason": "",
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다.",
       "evidence": {
         "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=68808&strWord=Y",
         "checkedAt": "2026-10-22T06:55:01.820616Z",
@@ -6951,14 +6951,14 @@
         "title": "Numbness like a ginger",
         "artist": "UNISON SQUARE GARDEN"
       },
-      "approve": null,
+      "approve": true,
       "official": {
         "title": "Numbness like a ginger (\"ブルーロック\"ED)",
         "artist": "UNISON SQUARE GARDEN"
       },
       "match": "variant",
       "action": "confirm",
-      "reason": "",
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다.",
       "evidence": {
         "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=44943",
         "checkedAt": "2026-10-22T06:55:06.830297Z",
@@ -6975,14 +6975,14 @@
         "title": "fake town baby",
         "artist": "UNISON SQUARE GARDEN"
       },
-      "approve": null,
+      "approve": true,
       "official": {
         "title": "fake town baby(血界戦線 OP)",
         "artist": "Unison Square Garden"
       },
       "match": "variant",
       "action": "confirm",
-      "reason": "",
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다.",
       "evidence": {
         "url": "https://www.tjmedia.com/song/accompaniment_search?nationType=JPN&strType=16&searchTxt=28788&strWord=Y",
         "checkedAt": "2026-10-22T06:55:10.726515Z",
@@ -6999,14 +6999,14 @@
         "title": "fake town baby",
         "artist": "UNISON SQUARE GARDEN"
       },
-      "approve": null,
+      "approve": true,
       "official": {
         "title": "fake town baby (\"血界戦線 & BEYOND\"OP)",
         "artist": "UNISON SQUARE GARDEN"
       },
       "match": "variant",
       "action": "confirm",
-      "reason": "",
+      "reason": "공식 제목은 관리 목록 제목에 타이업(작품·OST·CM) 표기, 대소문자·구두점·feat. 표기, 가수 별칭 차이만 있는 같은 곡입니다.",
       "evidence": {
         "url": "https://kygabang.com/chart/search_list.php?mode=SongSearch&val=44218",
         "checkedAt": "2026-10-22T06:55:15.831748Z",
