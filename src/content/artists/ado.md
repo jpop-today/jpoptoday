@@ -2,6 +2,7 @@
 name: "Ado"
 artists: ["Ado"]
 # 같은 가수로 묶을지 사람이 정할 다른 표기(묶으려면 artists에 추가): jon-YAKITORY feat. Ado
-draft: true
+draft: false
 ---
 
+Ado는 얼굴을 공개하지 않고 목소리만으로 활동하는 보컬리스트입니다. 거친 목소리와 맑은 고음을 오가는 창법이 특징이라, 노래방에서 따라 부르기는 어렵지만 그만큼 도전하는 재미가 있습니다. ONE PIECE FILM RED에서 우타의 노래로 쓰인 逆光과 함께 DIGNITY, MIRROR의 번호를 이 사이트에서 공식 확인했습니다. 저는 逆光처럼 원곡 키가 높은 곡은 기기에서 키를 한두 단계 내려 부르는 방법도 추천합니다.
