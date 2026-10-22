@@ -1,4 +1,5 @@
 import { createHash } from 'node:crypto';
+import { publishedGuideCount } from './helpers/guides';
 import { readFileSync } from 'node:fs';
 import { test, expect, type Locator, type Page } from '@playwright/test';
 import type { Song } from '../src/lib/catalog';
@@ -160,7 +161,7 @@ for (const item of cases) test(`${item.key} guide to exact detail, evidence and 
   const problems = observePage(page);
   try {
     await page.goto('/guides/');
-    await expect(page.locator('.guide-list > li').filter({ hasNotText: '(작성 중)' })).toHaveCount(6);
+    await expect(page.locator('.guide-list > li').filter({ hasNotText: '(작성 중)' })).toHaveCount(publishedGuideCount);
     const entry = page.getByRole('link', { name: guideTitle, exact: true });
     await tabTo(page, entry);
     await page.keyboard.press('Enter');

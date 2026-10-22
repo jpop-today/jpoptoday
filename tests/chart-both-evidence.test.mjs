@@ -83,10 +83,12 @@ test('actual projection eligibility equals independent ledger/post-correction mu
   for (const id of ambiguous) assert.ok(!sets.ky.has(id), 'A matching TJ result cannot resolve separate KY identity uncertainty');
 });
 
-test('the six published guide paths keep their reviewed dates and Issue51 setlist facts after the markdown move', () => {
+test('the original six published guide paths keep their reviewed dates and Issue51 setlist facts after the markdown move', () => {
   // Guides moved from src/content/guides.ts to markdown in Phase 4; object hashes no longer apply.
   const guides = loadGuides().filter(guide => !guide.draft);
-  assert.deepEqual(guides.map(guide => guide.slug).sort(), ['build-your-setlist', 'checking-song-numbers', 'find-japanese-songs', 'read-tj-chart', 'title-artist-variants', 'tj-ky-numbers']);
+  const slugs = new Set(guides.map(guide => guide.slug));
+  for (const slug of ['build-your-setlist', 'checking-song-numbers', 'find-japanese-songs', 'read-tj-chart', 'title-artist-variants', 'tj-ky-numbers'])
+    assert.ok(slugs.has(slug), `${slug} stays published`);
   assert.equal(guides.find(guide => guide.slug === 'read-tj-chart').reviewedAt, '2026-10-20');
   // Issue51 intentionally extends this existing guide with a distinct ID backup.
   const setlist = guides.find(guide => guide.slug === 'build-your-setlist');
