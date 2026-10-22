@@ -20,3 +20,9 @@
 - 공식 근거 없는 곡은 noindex. `unknown`은 미수록을 뜻하지 않는다. preview는 전체 noindex·광고 없음.
 - 표·목록·번호는 데이터에서 생성하고, 해설 문단은 사람이 쓴다. 해설이 없는 글은 `draft: true`(noindex).
 - 가사 전문 금지. 광고 스크립트를 넣지 않는다. 비밀 값은 출력·커밋하지 않는다.
+
+## 검색 노출 설정
+
+- `sitemap.xml`은 `sitemap-pages.xml`(고정·가이드·가수)과 `sitemap-songs.xml`(곡)을 묶는 색인 파일이다. 가이드 피드는 `/guides/rss.xml`.
+- Search Console·네이버 서치어드바이저 소유 확인 값은 production 빌드 환경변수 `GOOGLE_SITE_VERIFICATION`, `NAVER_SITE_VERIFICATION`으로 넣는다. preview에는 출력되지 않는다.
+- 공유 이미지는 `scripts/og-template.html`을 고친 뒤 `node scripts/render-og.mjs`로 `public/og/default.png`를 다시 만들어 커밋한다.

@@ -23,7 +23,16 @@ await walk(dist);
 const indexed = routes.filter(route => robotsFor(info.target, route, recordFor(route)) === 'index, follow');
 const escaped = value => value.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 const urlFor = route => 'https://jpop.today' + route.split('/').map(encodeURIComponent).join('/');
-await writeFile(new URL('sitemap.xml', dist), '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' + indexed.map(route => `<url><loc>${escaped(urlFor(route))}</loc></url>`).join('') + '</urlset>\n');
+const urlset = list => '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' + list.map(route => `<url><loc>${escaped(urlFor(route))}</loc></url>`).join('') + '</urlset>\n';
+// sitemap.xml is an index so song pages and editorial pages can be watched separately in Search Console.
+const sitemaps = { 'sitemap-pages.xml': indexed.filter(route => !route.startsWith('/songs/')), 'sitemap-songs.xml': indexed.filter(route => route.startsWith('/songs/')) };
+for (const [name, list] of Object.entries(sitemaps)) await writeFile(new URL(name, dist), urlset(list));
+await writeFile(new URL('sitemap.xml', dist), '<?xml version="1.0" encoding="UTF-8"?>\n<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' + Object.keys(sitemaps).map(name => `<sitemap><loc>https://jpop.today/${name}</loc></sitemap>`).join('') + '</sitemapindex>\n');
+// The guide feed lists only guides this target indexes, newest review first.
+const feedGuides = [...guideBySlug.values()].filter(guide => indexed.includes(`/guides/${guide.slug}/`))
+  .sort((a, b) => (b.reviewedAt ?? '').localeCompare(a.reviewedAt ?? '') || a.slug.localeCompare(b.slug));
+const feedItem = guide => `<item><title>${escaped(guide.title)}</title><link>${urlFor(`/guides/${guide.slug}/`)}</link><guid>${urlFor(`/guides/${guide.slug}/`)}</guid><description>${escaped(guide.description)}</description>${guide.reviewedAt ? `<pubDate>${new Date(`${guide.reviewedAt}T00:00:00+09:00`).toUTCString()}</pubDate>` : ''}</item>`;
+await writeFile(new URL('guides/rss.xml', dist), '<?xml version="1.0" encoding="UTF-8"?>\n<rss version="2.0"><channel><title>jpop.today 가이드</title><link>https://jpop.today/guides/</link><description>J-POP 노래방 번호 확인과 선곡 가이드</description><language>ko</language>' + feedGuides.map(feedItem).join('') + '</channel></rss>\n');
 const common = '/*\n  X-Content-Type-Options: nosniff\n  Referrer-Policy: strict-origin-when-cross-origin\n  Permissions-Policy: camera=(), microphone=(), geolocation=()\n';
 await writeFile(new URL('_headers', dist), info.target === 'preview' ? common + '  X-Robots-Tag: noindex, nofollow\n' : common + '\n/catalog.json\n  X-Robots-Tag: noindex\n/build-info.json\n  X-Robots-Tag: noindex\n');
 await writeFile(new URL('robots.txt', dist), info.target === 'preview' ? 'User-agent: *\nDisallow: /\n' : 'User-agent: *\nAllow: /\nSitemap: https://jpop.today/sitemap.xml\n');

@@ -55,7 +55,7 @@ async function walk(directory, relative = '') {
     if (stat.isDirectory()) files.push(...await walk(file, child));
     else {
       requireCondition(stat.isFile(), `${child}: only regular files may be published`);
-      const permitted = ['_headers', '_redirects', 'robots.txt', 'ads.txt', 'catalog.json', 'build-info.json', 'sitemap.xml'].includes(child)
+      const permitted = ['_headers', '_redirects', 'robots.txt', 'ads.txt', 'catalog.json', 'build-info.json', 'sitemap.xml', 'sitemap-pages.xml', 'sitemap-songs.xml', 'guides/rss.xml', 'og/default.png'].includes(child)
         || child.endsWith('.html')
         || /^_astro\/[A-Za-z0-9_.-]+\.(?:css|js)$/.test(child);
       requireCondition(permitted, `${child}: unapproved artifact file type or location`);
@@ -92,7 +92,6 @@ function verifyCatalog(catalog, expected) {
     }
     requireCondition(expectedById.has(song.id) && isDeepStrictEqual(song, expectedById.get(song.id)), `${song.id}: public fields differ from the staging projection`);
   }
-  requireCondition(catalog.songs.filter(song => song.availability === 'current').length === 3313, 'catalog.json: expected 3,313 current IDs and four archived IDs');
 }
 
 function decodeEntities(value) {
@@ -391,7 +390,7 @@ export async function verifyDist({ distPath = path.join(projectRoot, 'dist'), st
   const directory = path.resolve(distPath);
   const files = await walk(directory);
   const fileSet = new Set(files);
-  for (const required of ['index.html', '404.html', 'catalog.json', 'build-info.json', '_headers', 'robots.txt', 'artists/index.html', 'guides/title-artist-variants/index.html']) requireCondition(fileSet.has(required), `dist: missing ${required}; run the complete build first`);
+  for (const required of ['index.html', '404.html', 'catalog.json', 'build-info.json', '_headers', 'robots.txt', 'artists/index.html', 'guides/title-artist-variants/index.html', 'sitemap.xml', 'sitemap-pages.xml', 'sitemap-songs.xml', 'guides/rss.xml', 'og/default.png']) requireCondition(fileSet.has(required), `dist: missing ${required}; run the complete build first`);
   const staging = parseJson(await readText(stagingPath, 'staging'), 'staging');
   const catalogText = await readText(path.join(directory, 'catalog.json'), 'catalog.json');
   const catalog = parseJson(catalogText, 'catalog.json');
@@ -399,6 +398,8 @@ export async function verifyDist({ distPath = path.join(projectRoot, 'dist'), st
   const chart = parseJson(await readText(path.join(projectRoot, 'data/chart-snapshot.json'), 'chart'), 'chart');
   validateChartSnapshot(chart, staging);
   verifyCatalog(catalog, applyProviderCorrections(buildPublicCatalog(staging).songs, staging, ledger));
+  // Counts follow the reviewed staging projection, so new staged songs do not need a verifier edit.
+  const currentSongs = catalog.songs.filter(song => song.availability === 'current').length;
   const metadata = parseJson(await readText(path.join(directory, 'build-info.json'), 'build-info.json'), 'build-info.json');
   exactFields(metadata, metadataFields, 'build-info.json');
   requireCondition(metadata.schemaVersion === 2 && fullSha(metadata.sourceSha), 'build-info.json: sourceSha must be a full lowercase commit SHA');
@@ -411,7 +412,7 @@ export async function verifyDist({ distPath = path.join(projectRoot, 'dist'), st
   requireCondition(!expectedSourceSha || metadata.sourceSha === expectedSourceSha, 'build-info.json: sourceSha differs from the CI source SHA');
   requireCondition(metadata.legacyRevision === staging.revision && fullSha(metadata.legacyRevision), 'build-info.json: legacy revision differs from staging');
   requireCondition(metadata.catalogSha256 === digest(Buffer.from(catalogText)), 'build-info.json: catalog bytes do not match catalogSha256');
-  requireCondition(metadata.songCount === catalog.songs.length && metadata.currentSongCount === 3313 && typeof metadata.dirty === 'boolean', 'build-info.json: invalid counts or dirty flag');
+  requireCondition(metadata.songCount === catalog.songs.length && metadata.currentSongCount === currentSongs && typeof metadata.dirty === 'boolean', 'build-info.json: invalid counts or dirty flag');
   if (expectedSourceSha) requireCondition(metadata.dirty === false, 'build-info.json: CI build must use a clean source tree');
   const songByFile = new Map(catalog.songs.map(song => [`songs/${song.id}/index.html`, song]));
   for (const file of songByFile.keys()) requireCondition(fileSet.has(file), `${file}: missing static legacy detail`);
@@ -422,6 +423,11 @@ export async function verifyDist({ distPath = path.join(projectRoot, 'dist'), st
   const canonicals = new Set();
   let htmlCount = 0;
   for (const file of files) {
+    if (file === 'og/default.png') {
+      const png = await readFile(path.join(directory, file));
+      requireCondition(png.subarray(0, 8).equals(Buffer.from([0x89, 0x50, 0x4e, 0x47, 0x0d, 0x0a, 0x1a, 0x0a])), `${file}: expected a PNG image`);
+      continue;
+    }
     const text = await readText(path.join(directory, file), file);
     requireCondition(!/(?:adsbygoogle|googlesyndication\.com|doubleclick\.net|googleadservices\.com)/i.test(text), `${file}: advertising code is forbidden in this preview`);
     verifyPrivateBoundary(text, file);
@@ -435,13 +441,20 @@ export async function verifyDist({ distPath = path.join(projectRoot, 'dist'), st
   }
   verifyHeaders(await readText(path.join(directory, '_headers'), '_headers'), await readText(path.join(directory, 'robots.txt'), 'robots.txt'), metadata.target);
   const sitemap = await readText(path.join(directory, 'sitemap.xml'), 'sitemap.xml');
+  const children = ['sitemap-pages.xml', 'sitemap-songs.xml'];
+  requireCondition(sitemap.includes('<sitemapindex') && isDeepStrictEqual([...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map(match => match[1]),
+    children.map(name => `https://jpop.today/${name}`)), 'sitemap.xml: expected an index of the page and song sitemaps');
+  const childText = (await Promise.all(children.map(name => readText(path.join(directory, name), name)))).join('');
   const expectedUrls = files.filter(file => file.endsWith('.html')).filter(file => {
     const route = file === 'index.html' ? '/' : file.endsWith('/index.html') ? '/' + file.slice(0, -'index.html'.length) : '/' + file;
     return robotsFor(metadata.target, route, songByFile.get(file) ?? recordByFile.get(file)) === 'index, follow';
   }).map(canonicalFor).sort();
-  const sitemapUrls = [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map(match => decodeEntities(match[1])).sort();
+  const sitemapUrls = [...childText.matchAll(/<loc>([^<]+)<\/loc>/g)].map(match => decodeEntities(match[1])).sort();
   requireCondition(isDeepStrictEqual(sitemapUrls, expectedUrls), 'sitemap.xml: differs from reviewed indexable routes');
-  return { sourceSha: metadata.sourceSha, target: metadata.target, indexedPages: expectedUrls.length, dirty: metadata.dirty, files: files.length, htmlPages: htmlCount, songs: catalog.songs.length, currentSongs: 3313, archivedSongs: 4 };
+  const feed = await readText(path.join(directory, 'guides/rss.xml'), 'guides/rss.xml');
+  const feedUrls = [...feed.matchAll(/<link>([^<]+)<\/link>/g)].map(match => decodeEntities(match[1])).filter(url => url !== 'https://jpop.today/guides/');
+  requireCondition(feedUrls.every(url => /^https:\/\/jpop\.today\/guides\/[a-z0-9-]+\/$/.test(url) && expectedUrls.includes(url)), 'guides/rss.xml: lists a guide that is not indexed');
+  return { sourceSha: metadata.sourceSha, target: metadata.target, indexedPages: expectedUrls.length, dirty: metadata.dirty, files: files.length, htmlPages: htmlCount, songs: catalog.songs.length, currentSongs, archivedSongs: catalog.songs.length - currentSongs };
 }
 
 if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {

@@ -17,3 +17,16 @@ export function indexableRoute(pathname, record) {
 export function robotsFor(target, pathname, record) {
   return buildTarget(target) === 'production' && indexableRoute(pathname, record) ? 'index, follow' : 'noindex, follow';
 }
+
+/**
+ * Search Console / Naver ownership tokens come from the environment and appear only in production.
+ * A malformed token fails the build instead of shipping a broken meta tag.
+ */
+export function siteVerification(target, env = process.env) {
+  if (target !== 'production') return [];
+  const tags = [['google-site-verification', env.GOOGLE_SITE_VERIFICATION], ['naver-site-verification', env.NAVER_SITE_VERIFICATION]];
+  return tags.filter(([, value]) => value).map(([name, value]) => {
+    if (!/^[A-Za-z0-9_-]{8,128}$/.test(value)) throw new Error(`${name}: invalid verification token`);
+    return { name, content: value };
+  });
+}
