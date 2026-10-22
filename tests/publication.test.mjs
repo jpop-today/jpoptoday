@@ -30,7 +30,8 @@ test('production exposes reviewed song content while utility and compatibility r
   for (const pathname of ['/search/', '/favorites/', '/song/', '/song.html', '/filter.html', '/404.html', '/missing/'])
     assert.equal(robotsFor('production', pathname, song()), 'noindex, follow');
   assert.equal(robotsFor('production', '/', song()), 'index, follow');
-  assert.equal(robotsFor('production', '/guides/tj-ky-numbers/'), 'index, follow');
+  assert.equal(robotsFor('production', '/guides/tj-ky-numbers/', { indexable: true }), 'index, follow');
+  assert.equal(robotsFor('production', '/guides/unwritten-draft/', { indexable: false }), 'noindex, follow');
   assert.equal(robotsFor('production', '/artists/'), 'index, follow');
   assert.equal(robotsFor('preview', '/artists/'), 'noindex, follow');
   assert.equal(robotsFor('production', '/artists/unreviewed-biography/'), 'noindex, follow');
