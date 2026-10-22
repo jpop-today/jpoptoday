@@ -14,7 +14,7 @@
 2. 가수·가이드 화면은 검토를 마친 것(`indexable: true`)만, 고정 화면은 정해 둔 9개 경로만 색인합니다.
 3. 미리보기 빌드는 전부 `noindex`이고, 검색 엔진 소유 확인 값은 운영 빌드에만 넣으며 형식이 틀리면 빌드를 멈춥니다.
 
-2026-10-22 운영 빌드(`JPOP_BUILD_TARGET=production npm run build`, 커밋 9703e04) 기준으로 곡 화면 3,317개 중 91개가 색인 대상이고, 사이트맵에는 곡 91개와 고정 화면 9개·가이드 6개가 들어갑니다. 이 정책을 문제·결정·결과로 정리한 글은 [devlog 포트폴리오 사례 5](https://devlog.life/portfolio#jpop)입니다.
+2026-10-22 운영 빌드(`JPOP_BUILD_TARGET=production npm run build`, 커밋 a68df00) 기준으로 곡 화면 3,317개 중 91개가 색인 대상이고, 사이트맵에는 곡 91개와 고정 화면 9개·가수 25개·가이드 11개가 들어갑니다. 이 정책을 문제·결정·결과로 정리한 글은 [devlog 포트폴리오 사례 5](https://devlog.life/portfolio#jpop)입니다.
 
 ## 현재 구현
 
