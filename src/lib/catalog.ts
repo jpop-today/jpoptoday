@@ -33,3 +33,6 @@ export const buildInfo = {
   dirty: Boolean(execFileSync('git', ['status', '--porcelain', '--untracked-files=no'], { encoding: 'utf8' }).trim()),
 };
 export { songHref };
+import { buildArtistPages, loadArtistIntros, loadSongClassification } from '../../contracts/artists.mjs';
+export const artistPages = buildArtistPages(songs, loadArtistIntros(), loadSongClassification());
+export type { ArtistPage } from "../../contracts/artists.mjs";

@@ -20,9 +20,6 @@
     "audit:legacy": "node scripts/audit-legacy-source.mjs",
     "import:legacy": "node scripts/import-legacy-staging.mjs",
     "inspect:cloudflare": "python3 scripts/inspect-cloudflare.py",
-    "report:morning": "node scripts/build-report.mjs morning",
-    "report:completed": "node scripts/build-report.mjs completed",
-    "notify:discord": "node scripts/discord-notify.mjs",
     "deploy:production": "node scripts/deploy-production.mjs",
     "manage:production": "python3 scripts/manage-production.py",
     "verify:deployment": "node scripts/verify-deployment.mjs"

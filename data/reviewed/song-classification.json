@@ -1,0 +1,1552 @@
+{
+  "version": 1,
+  "purpose": "reviewed-song-classification",
+  "note": "isJpop이 없는 곡은 판정 근거가 없는 null이다. 가수 페이지·가이드의 제외 로직은 isJpop === false만 본다. 항목을 추가할 때 basis에 판정 근거를 적는다.",
+  "entries": [
+    {
+      "songId": "jpop-playlist-0089-35a9c7a64a",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-0089-8375ff35d9",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-0089-bbd3f711ec",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-0089-db89bd951b",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-0089-pretender-b66d1992ba",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-0421-028be68b15",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-1-49c92116fb",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-100-b64bcd94b1",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-10cm-8fe0ad831b",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-2-52bd9fb6d7",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-2-a623624e82",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-2-d277c50f38",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-2-ost-f256a8407c",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-21-2b0265b982",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-3-e4c7a3b0b6",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-4-fbcac30c58",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-999-e5f1974eeb",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-acoustic-ver-8e10f0ec70",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-acoustic-ver-da8921bf09",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-ah-puh-b246242dbe",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-and-ca590e9244",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-another-world-b1ea890581",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-attention-e474692151",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-beginning-8ef6c4b882",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-bk-57e5ba8573",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-buzz-3c4fce38ed",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-buzz-9869e5b0ae",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-cliche-969ad9207f",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-cutie-street-ecc539e9cc",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-drama-5b44f93806",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-edm-ver-7d78d93e37",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-ending-2aa3e096aa",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-ex-c012080f32",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-faith-9913e91041",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-feat-6179d3f542",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-feat-dd94843673",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-final-ver-a2d45087b5",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-forever-516e8a1bf2",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-friends-f615968be9",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-ft-5639468512",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-ft-ab4611caca",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-ft-b5019c4069",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-ft-of-9eff8f7ad8",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-hero-037166a261",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-honey-06878ab2f6",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-i-feat-1a8357ba49",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-i-stan-u-ed3346ad66",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-illit-90945f3791",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-ive-e42577302a",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-j-fla-f5dc061ba1",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-jqt-77e757b14d",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-kidding-b3abac1c6c",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-lilac-33b7fd7b72",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-lockdown-7306d58e3d",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-m-ind-2009-64f459b8dc",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-main-7800feeaf8",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-miiro-3c67832015",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-my-sea-3f87aee36c",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-nct-wish-ecc63a2a95",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-night-flower-158bb168c1",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-op-253da7a6b8",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-op-435d506121",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-op-fd70f3ab29",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-orbit-of-yours-1d6746265d",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-over-705c48a2d0",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-panorama-6ce5ca9b2d",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-pick-me-08254a1aac",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-pt-1-b2d789ad1c",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-pt-2-f682b64cd1",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-something-new-ft-801c716876",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-00f5162130",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-0b464f4b97",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-0d08bc9dce",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-0e193bd4db",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-0f957f5ba4",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-1571b44128",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-165110b0e2",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-17a21a7555",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-1877ee03ad",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-1aab9d2045",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-1b02b86827",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-1b9e62ceca",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-1bf7568796",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-1cc3a5c355",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-1cf18a5568",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-1eded82e7b",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-1f7ee73186",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-1f8559ea99",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-2081513fd4",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-2090ab0c33",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-20a9cad4c4",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-22f9a6121c",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-239f51a1d0",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-23b515e8d2",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-23bdf31841",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-249837916a",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-26124e9b37",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-27a40d219d",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-27fc99116b",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-288139ef74",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-28f2b40f89",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-29401b786f",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-298fe2798a",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-29f6389fec",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-2b2b6ec7fa",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-2c9d6dcff8",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-2f70a7b93f",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-32f370f749",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-337de21d37",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-33eb3cc8ba",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-35f3c9c536",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-376bd94e18",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-37d4b31c7e",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-37e658997d",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-389d8ed8a8",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-38cc0287b5",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-3b5a620861",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-3b65c72778",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-3bcd92074f",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-3c17e01578",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-3c6b8850a0",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-3d96105340",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-3e0061b242",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-3e44c23d49",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-410f6d8d2b",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-415cf95fb6",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-4360662a2d",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-4518982428",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-46b5d542d4",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-46e711e978",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-470dd28de1",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-48315a2b26",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-484ca022e6",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-492eb7ee40",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-49abaef4fb",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-4a50f3691f",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-4adbba8715",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-4b02ad3841",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-4bb88294ae",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-4ca19409d0",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-4cf8d26cd2",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-4d0150b305",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-4d26d7ef24",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-4f9b0f29b7",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-5001510725",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-531d281b43",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-54a588433f",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-55e58a9ec5",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-56dc2ed0d5",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-56f7fa3dd1",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-59d1164663",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-5ccb872e95",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-5de4246cbb",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-5e9cda8840",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-5f8b048d9a",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-61624ec212",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-61e923df6f",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-6366ac1f7f",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-63e137ed9c",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-67b134eeb7",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-692583164f",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-69a3647dc5",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-6ef5558221",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-6f713f672c",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-7004dd95af",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-706ef84155",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-70c6c3777c",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-72f0332b87",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-7593bbe2ae",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-7ba7e9cd1b",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-7bda69446d",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-7c501981ce",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-8015ebc184",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-870a40fcdb",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-879e7ff178",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-881e974176",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-8875d7abaf",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-8875f9ca77",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-88cb72e0a1",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-896c208e35",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-8a3861602c",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-8b0d53d5e4",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-8b4dc3bebe",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-8c03b67a86",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-8cf58d17e4",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-8d6ac8ef17",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-8dbc516a24",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-8ed84369aa",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-8ee319d406",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-8f2bae8f7f",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-8f86d56369",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-900ddc18dc",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-903fc956ec",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-91a8946c9b",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-935233e60e",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-9499384439",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-953dce2302",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-96d4fa0adf",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-9741c8036f",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-981403870c",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-988baeff8a",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-99451ac170",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-9a95493471",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-9dfb13d3b2",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-9f59f8f034",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-9fb556a4d8",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-a0318835de",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-a66e59979f",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-a6c0e4994f",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-a85a3fb10a",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-a90e11b538",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-a9ab46307a",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-ab32df9d53",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-adc4ffc079",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-ae1ea43d10",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-aec66ad07a",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-b0cab49c0c",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-b14f96900a",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-b1c0471005",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-b362aaf53e",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-b3b53748bf",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-b55ae68b01",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-b5fc5f6f53",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-b70f3dc735",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-b781ffa754",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-b7c5f67ec5",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-ba65906109",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-bc46188122",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-bc6d029038",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-bd08f029bf",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-bd0a9000ec",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-be65051e4b",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-c08afc1684",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-c119e1092e",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-c2c4662cf0",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-c38d01912f",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-c3d31d73c7",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-c3ebe635cb",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-c53b3bbed9",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-c5d563a521",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-c6516e4afd",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-c68576a21f",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-c83d2ad04f",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-c844e35610",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-c929b630b9",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-c9796b607c",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-ca5ea83091",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-cbe842f9c8",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-cbf9303b95",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-cd6acdca9a",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-cdd8eb50f6",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-ce2363bccb",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-cfbbfe6e41",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-cfff4e4cd6",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-d1bfc9c19e",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-d1fcdd4667",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-d206570d2f",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-d2319128df",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-d34c7892f7",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-d379ce93f0",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-d3b8696b99",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-d425460e6e",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-d445ddab55",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-d5ed9229ec",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-d674a7b03b",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-d77523f81f",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-d7afa92097",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-d7d42fd990",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-d7e8103283",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-d98d74cf86",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-e3ecfcefe5",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-e466e62740",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-e658897c44",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-e91c003173",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-e9e5673642",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-ea4968b6ba",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-ef16ea564a",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-f20b1d372b",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-f21d699874",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-f23698db79",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-f432c25cf3",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-f5624de341",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-f79eb99ccb",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-f8d66f80f6",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-f9a6eb3c2d",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-faff339feb",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-fe712feb3f",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-song-fed170caf0",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-superhero-fcf633f488",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-tak-2e1a894833",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-the-grace-f40a819132",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-tim-60c281bd99",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-tori-4d1e317947",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-tula-19beaf6cad",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-tula-1ddc1b6461",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-tula-ac0f58c504",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-tula-e8c87ac194",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-tula-evolution-b688763df7",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-tula-ft-tula-50c2024601",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-tula-higher-40ff9abea4",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-turtles-c8e2947dcb",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-tv-a144ef74d4",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-u-go-girl-c992286b96",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-v-4e5572671d",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-v-bad862d428",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-w-and-whale-b6273cb2b4",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-white-f43a8ed1f6",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-winter-4c00bf37e6",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    },
+    {
+      "songId": "jpop-playlist-中島美嘉-3c88d9a0a8",
+      "isJpop": false,
+      "basis": "원제(titleOriginal)에 한글이 들어 있는 한국어 곡명"
+    }
+  ]
+}

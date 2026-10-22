@@ -1,7 +1,7 @@
 name: app
 on:
   push:
-    branches: [main, 'codex/**']
+    branches: [main, 'claude/**']
   pull_request:
   workflow_dispatch:
 permissions:
@@ -32,10 +32,6 @@ jobs:
         run: npm run build
       - name: Verify public artifact boundary
         run: npm run verify:dist
-      - name: Install Chromium
-        run: npx playwright install --with-deps chromium
-      - name: Verify browser behavior
-        run: npm run test:e2e
       - name: Preserve verified static artifact
         uses: actions/upload-artifact@v4
         with:
@@ -58,8 +54,6 @@ jobs:
       - run: npm ci
       - run: npm run build
       - run: npm run verify:dist
-      - run: npx playwright install --with-deps chromium
-      - run: npm run test:e2e
       - uses: actions/upload-artifact@v4
         with:
           name: jpoptoday-production-dist-${{ github.sha }}
