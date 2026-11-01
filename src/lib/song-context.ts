@@ -39,7 +39,8 @@ export const chartRankFor = (song: Song) => chartRank.get(song.id);
 /** First paragraph of a published intro (plain text), for quoting on song pages. */
 export function introExcerpt(page: ArtistPage | undefined): string | null {
   if (!page?.intro || page.intro.draft || !page.intro.body) return null;
-  const first = page.intro.body.split(/\n\s*\n/)[0].replace(/[*_`>#\[\]]/g, '').replace(/\(([^)]*)\)/g, '').trim();
+  // Skip section headings so a structured intro quotes its first real paragraph.
+  const first = (page.intro.body.split(/\n\s*\n/).find(block => !/^\s*#/.test(block)) ?? '').replace(/[*_`>#\[\]]/g, '').replace(/\(([^)]*)\)/g, '').trim();
   return first || null;
 }
 

@@ -6,7 +6,7 @@ import { confirmedNumbers } from './public-catalog.mjs';
 
 export const ARTIST_INDEX_MIN_CONFIRMED = 3;
 /** A short blurb over a number list reads as a template; only a full written guide to the artist is indexed. */
-export const ARTIST_INDEX_MIN_INTRO_CHARS = 900;
+export const ARTIST_INDEX_MIN_INTRO_CHARS = 500;
 /** Visible characters of an intro body: markdown marks and whitespace removed. */
 export const introLength = body => (body ?? '').replace(/<!--[\s\S]*?-->/g, '').replace(/[#*_>`\[\]()\s-]/g, '').length;
 export const SLUG = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
