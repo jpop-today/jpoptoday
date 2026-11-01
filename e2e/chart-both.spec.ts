@@ -110,7 +110,7 @@ test('chart both-provider discovery matches independent raw, ledger, public and 
   await expected.summary.click(); await expect(expected.disclosure).toHaveAttribute('open', '');
   await checkOpened(page, catalog.songs);
   await expect(page.locator('link[rel="canonical"]')).toHaveAttribute('href', 'https://jpop.today/chart/');
-  await expect(page.locator('meta[name="robots"]')).toHaveAttribute('content', build.target === 'production' ? 'index, follow' : 'noindex, follow');
+  await expect(page.locator('meta[name="robots"]')).toHaveAttribute('content', 'noindex, follow');
   await expect(page.locator('ins.adsbygoogle, iframe[src*="doubleclick"], script[src*="googlesyndication"]')).toHaveCount(0);
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
   expect(problems).toEqual([]);

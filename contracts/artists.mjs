@@ -5,6 +5,10 @@ import { pathToFileURL } from 'node:url';
 import { confirmedNumbers } from './public-catalog.mjs';
 
 export const ARTIST_INDEX_MIN_CONFIRMED = 3;
+/** A short blurb over a number list reads as a template; only a full written guide to the artist is indexed. */
+export const ARTIST_INDEX_MIN_INTRO_CHARS = 900;
+/** Visible characters of an intro body: markdown marks and whitespace removed. */
+export const introLength = body => (body ?? '').replace(/<!--[\s\S]*?-->/g, '').replace(/[#*_>`\[\]()\s-]/g, '').length;
 export const SLUG = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
 const compare = (left, right) => left < right ? -1 : left > right ? 1 : 0;
 // Resolved from the working directory: Astro bundles this module, so import.meta.url is not the source path.
@@ -91,7 +95,7 @@ export function buildArtistPages(songs, intros, classification) {
     const ordered = [...pageSongs].sort((a, b) =>
       (confirmedNumbers(b).length > 0) - (confirmedNumbers(a).length > 0) ||
       compare(a.titleOriginal, b.titleOriginal) || compare(a.id, b.id));
-    const indexable = Boolean(page.intro && !page.intro.draft && page.intro.body) && confirmed.length >= ARTIST_INDEX_MIN_CONFIRMED;
+    const indexable = Boolean(page.intro && !page.intro.draft && introLength(page.intro.body) >= ARTIST_INDEX_MIN_INTRO_CHARS) && confirmed.length >= ARTIST_INDEX_MIN_CONFIRMED;
     return { ...page, songs: ordered, confirmedCount: confirmed.length, indexable };
   }).sort((a, b) => compare(a.slug, b.slug));
 }
