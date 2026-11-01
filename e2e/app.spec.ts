@@ -183,14 +183,13 @@ test('actual sitemap and route metadata enforce preview and reviewed-production 
     expect(await response.text(), route).toContain('content="noindex, follow"');
     expect(sitemap, route).not.toContain('https://jpop.today' + route);
   }
+  // Song pages are lookup data: reachable, but never indexed even when reviewed (written pages carry the index).
   const reviewedHtml = await (await request.get(pathFor(reviewed.id))).text();
-  if (info.target === 'preview') {
-    expect(reviewedHtml).toContain('content="noindex, follow"');
-    expect(sitemap).not.toContain('<loc>');
-  } else {
+  expect(reviewedHtml).toContain('content="noindex, follow"');
+  expect(sitemap).not.toContain('https://jpop.today/songs/');
+  if (info.target === 'preview') expect(sitemap).not.toContain('<loc>');
+  else {
     expect(info.target).toBe('production');
-    expect(reviewedHtml).toContain('content="index, follow"');
-    expect(sitemap).toContain('<loc>https://jpop.today' + pathFor(reviewed.id) + '</loc>');
     expect(sitemap).toContain('<loc>https://jpop.today/</loc>');
   }
 });

@@ -121,7 +121,7 @@ test('chart SSR counts and provider shortcuts independently match frozen ranks a
   await expect(page.locator('body')).not.toContainText('Internal Server Error');
   await checkChart(page, catalog.songs);
   await expect(page.locator('link[rel="canonical"]')).toHaveAttribute('href', 'https://jpop.today/chart/');
-  await expect(page.locator('meta[name="robots"]')).toHaveAttribute('content', info.target === 'production' ? 'index, follow' : 'noindex, follow');
+  await expect(page.locator('meta[name="robots"]')).toHaveAttribute('content', 'noindex, follow');
   await expect(page.locator('ins.adsbygoogle, iframe[src*="doubleclick"], script[src*="googlesyndication"]')).toHaveCount(0);
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
   expect(problems).toEqual([]);

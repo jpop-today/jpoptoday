@@ -8,11 +8,15 @@ export function indexableSong(song) {
     song.karaoke[provider].status === 'provider-confirmed' &&
     song.karaoke[provider].evidence && !song.karaoke[provider].conflict);
 }
-/** `record` is the song for /songs/{id}/, the artist page for /artists/{slug}/ and the guide for /guides/{slug}/. */
+/**
+ * `record` is the song for /songs/{id}/, the artist page for /artists/{slug}/ and the guide for /guides/{slug}/.
+ * Song pages, the chart copy and the coverage table are lookup data without original writing, so they stay
+ * reachable for visitors but out of search (AdSense 2026-10-31 "low value content"). Only written pages index.
+ */
 export function indexableRoute(pathname, record) {
-  if (pathname.startsWith('/songs/')) return Boolean(indexableSong(record));
+  if (pathname.startsWith('/songs/')) return false;
   if (/^\/(?:artists|guides)\/[a-z0-9-]+\/$/.test(pathname)) return record?.indexable === true;
-  return ['/', '/about/', '/contact/', '/privacy/', '/faq/', '/coverage/', '/chart/', '/guides/', '/artists/'].includes(pathname);
+  return ['/', '/about/', '/contact/', '/privacy/', '/faq/', '/guides/', '/artists/'].includes(pathname);
 }
 export function robotsFor(target, pathname, record) {
   return buildTarget(target) === 'production' && indexableRoute(pathname, record) ? 'index, follow' : 'noindex, follow';

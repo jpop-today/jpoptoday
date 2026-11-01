@@ -25,8 +25,10 @@ test('archived, unverified, unknown, conflicting and missing-evidence songs neve
   assert.equal(robotsFor('production', '/songs/missing/'), 'noindex, follow');
 });
 
-test('production exposes reviewed song content while utility and compatibility routes remain noindex', () => {
-  assert.equal(robotsFor('production', '/songs/reviewed-fixture/', song()), 'index, follow');
+test('production indexes written pages only; song, chart and coverage lookups stay noindex', () => {
+  assert.equal(Boolean(indexableSong(song())), true);
+  for (const pathname of ['/songs/reviewed-fixture/', '/chart/', '/coverage/'])
+    assert.equal(robotsFor('production', pathname, song()), 'noindex, follow');
   for (const pathname of ['/search/', '/favorites/', '/song/', '/song.html', '/filter.html', '/404.html', '/missing/'])
     assert.equal(robotsFor('production', pathname, song()), 'noindex, follow');
   assert.equal(robotsFor('production', '/', song()), 'index, follow');
