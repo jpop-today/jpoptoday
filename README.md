@@ -4,6 +4,18 @@
 
 [운영 사이트](https://jpop.today) · [제품 스펙과 운영 문서](https://github.com/jpop-today/docs) · [조직 규칙](https://github.com/jpop-today/.github)
 
+## 한 장 요약
+
+한국어로 JPOP를 찾아 TJ·금영 노래방 번호를 비교하는 정적 사이트(Astro)입니다.
+
+데이터 신뢰성 정책은 [`contracts/publication.mjs`](contracts/publication.mjs) 한 파일이 정합니다.
+
+1. 곡 화면은 현재 수록곡이면서 TJ·금영 중 한 곳 이상이 공식 확인(`provider-confirmed`, 제공사 조회 근거 있음, 충돌 없음)일 때만 `index, follow`이고, 나머지 곡은 `noindex, follow`입니다.
+2. 가수·가이드 화면은 검토를 마친 것(`indexable: true`)만, 고정 화면은 정해 둔 9개 경로만 색인합니다.
+3. 미리보기 빌드는 전부 `noindex`이고, 검색 엔진 소유 확인 값은 운영 빌드에만 넣으며 형식이 틀리면 빌드를 멈춥니다.
+
+2026-10-22 운영 빌드(`JPOP_BUILD_TARGET=production npm run build`, 커밋 a68df00) 기준으로 곡 화면 3,317개 중 91개가 색인 대상이고, 사이트맵에는 곡 91개와 고정 화면 9개·가수 25개·가이드 11개가 들어갑니다. 이 정책을 문제·결정·결과로 정리한 글은 [devlog 포트폴리오 사례 5](https://devlog.life/portfolio#jpop)입니다.
+
 ## 현재 구현
 
 Astro + TypeScript 정적 페이지, 브라우저 검색·번호 복사·즐겨찾기, 데이터 계약·실패 보존 하네스를 포함합니다. 기존 3,317개 ID를 유지하며 현재 검색 3,313개와 보관 4개를 구분합니다. 각 곡 상세와 가이드는 JavaScript 없이 본문을 읽을 수 있습니다. 이전 `/song?id=`, `/filter`, `.html`, `/#favorites-view`와 `jpop_today_favorites` 문자열·객체 저장 형식을 지원합니다.
